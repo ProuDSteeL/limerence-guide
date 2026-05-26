@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Гайд по подключению бота · Limerence Stories</title>
 <meta name="description" content="Пошаговый гайд: регистрация у провайдеров, пополнение, создание API-ключей и настройка Telegram-бота для ролевых историй.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<meta name="theme-color" content="#0f0b1e">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
 <style>
 :root{
   --bg:#0f0b1e; --bg2:#161029; --card:#1d1636; --card2:#241a44;
@@ -12,21 +16,33 @@
   --acc:#b388ff; --acc2:#ff8fc7; --ok:#7ee0a8; --warn:#ffd166; --danger:#ff7a8a;
   --grad:linear-gradient(135deg,#b388ff 0%,#ff8fc7 100%);
   --shadow:0 18px 50px -18px rgba(0,0,0,.7);
+  --navbg:rgba(15,11,30,.82);
+  --glow:.14; --imgborder:var(--line);
+  --hero1:#2a1f4d; --hero2:#3a2150;
+}
+html[data-theme="light"]{
+  --bg:#f5f1fb; --bg2:#ffffff; --card:#ffffff; --card2:#f4eefc;
+  --ink:#2b2347; --muted:#6f6592; --line:#e7dff6;
+  --acc:#8b5cf6; --acc2:#e8519b; --ok:#2fa46a; --warn:#c9930a; --danger:#e0566a;
+  --shadow:0 18px 44px -20px rgba(108,76,168,.35);
+  --navbg:rgba(245,241,251,.85);
+  --glow:.22; --imgborder:#e7dff6;
+  --hero1:#e7dbff; --hero2:#ffd9ec;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:radial-gradient(1200px 700px at 80% -10%,#2a1f4d 0,transparent 60%),
-  radial-gradient(900px 600px at -10% 10%,#3a2150 0,transparent 55%),var(--bg);
+  margin:0;background:radial-gradient(1200px 700px at 80% -10%,var(--hero1) 0,transparent 60%),
+  radial-gradient(900px 600px at -10% 10%,var(--hero2) 0,transparent 55%),var(--bg);
   color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased;transition:background .35s,color .35s;
 }
 a{color:var(--acc)}
 .wrap{max-width:920px;margin:0 auto;padding:0 20px}
 
 /* hero */
 .hero{position:relative;text-align:center;padding:84px 20px 56px;overflow:hidden}
-.hero .glow{position:absolute;inset:0;background:var(--grad);opacity:.14;filter:blur(40px);z-index:0}
+.hero .glow{position:absolute;inset:0;background:var(--grad);opacity:var(--glow);filter:blur(40px);z-index:0}
 .hero-inner{position:relative;z-index:1}
 .kicker{display:inline-block;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--acc2);
   border:1px solid var(--line);padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.03)}
@@ -37,7 +53,7 @@ a{color:var(--acc)}
 .hero .bot code{color:var(--acc)}
 
 /* progress nav */
-.nav{position:sticky;top:0;z-index:30;background:rgba(15,11,30,.82);backdrop-filter:blur(12px);
+.nav{position:sticky;top:0;z-index:30;background:var(--navbg);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
 .nav .wrap::-webkit-scrollbar{display:none}
@@ -66,8 +82,8 @@ main{padding:46px 0 40px}
 
 /* screenshots */
 .shot{margin:18px 0;text-align:center}
-.shot img{max-width:100%;border-radius:14px;border:1px solid var(--line);
-  box-shadow:0 14px 34px -14px rgba(0,0,0,.75);cursor:zoom-in;transition:transform .2s,box-shadow .2s}
+.shot img{max-width:100%;border-radius:14px;border:1px solid var(--imgborder);
+  box-shadow:var(--shadow);cursor:zoom-in;transition:transform .2s,box-shadow .2s}
 .shot img:hover{transform:translateY(-3px);box-shadow:0 22px 44px -14px rgba(0,0,0,.85)}
 .shot.phone img{max-width:300px}
 .shot figcaption{margin-top:9px;font-size:13px;color:var(--muted)}
@@ -116,7 +132,18 @@ table.models tr:last-child td{border-bottom:0}
 footer{text-align:center;color:var(--muted);padding:40px 20px 60px;font-size:14px;border-top:1px solid var(--line)}
 footer .heart{color:var(--acc2)}
 
+/* theme toggle */
+.theme-toggle{position:fixed;top:13px;right:16px;z-index:50;width:42px;height:42px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+  display:grid;place-items:center;font-size:19px;box-shadow:var(--shadow);transition:transform .15s,background .3s,border-color .3s}
+.theme-toggle:hover{transform:translateY(-2px) rotate(-8deg)}
+.theme-toggle .sun{display:none}
+.theme-toggle .moon{display:block}
+html[data-theme="light"] .theme-toggle .sun{display:block}
+html[data-theme="light"] .theme-toggle .moon{display:none}
+
 @media(max-width:560px){
+  .theme-toggle{top:10px;right:12px;width:38px;height:38px}
   .step{padding:20px}
   .badge{width:46px;height:46px;font-size:20px;border-radius:13px}
   .step-head h2{font-size:21px}
@@ -124,6 +151,7 @@ footer .heart{color:var(--acc2)}
 </style>
 </head>
 <body>
+<button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Светлая / тёмная тема"><span class="moon">🌙</span><span class="sun">☀️</span></button>
 <header class="hero">
   <div class="glow"></div>
   <div class="hero-inner wrap">
@@ -304,6 +332,14 @@ document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',asyn
   const t=b.textContent;b.textContent='Скопировано ✓';b.classList.add('done');
   setTimeout(()=>{b.textContent=t;b.classList.remove('done');},1500);
 }));
+// theme toggle
+const tt=document.getElementById('themeToggle');
+tt.addEventListener('click',()=>{
+  const cur=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';
+  document.documentElement.setAttribute('data-theme',cur);
+  try{localStorage.setItem('theme',cur);}catch(e){}
+  const m=document.querySelector('meta[name=theme-color]');if(m)m.content=cur==='light'?'#f5f1fb':'#0f0b1e';
+});
 // lightbox
 const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
 document.querySelectorAll('.shot img').forEach(img=>img.addEventListener('click',()=>{
