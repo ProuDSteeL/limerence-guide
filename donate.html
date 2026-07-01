@@ -107,8 +107,8 @@ footer a{color:var(--muted)}
   <!-- ═══════════════ РЕДАКТИРОВАТЬ ЗДЕСЬ (можно менять руками) ═══════════════ -->
   <script>
     // 1) Цель и сколько уже собрано, в рублях:
-    var DONATE_GOAL = 25000;      // цель сбора, ₽ в месяц
-    var DONATE_COLLECTED = 0;     // сколько уже собрано, ₽ (обновлять вручную)
+    var DONATE_GOAL = 25000;      // цель сбора, ₽ в месяц (запасное значение)
+    var DONATE_COLLECTED = 400;   // запасное значение; живая цифра — в progress.json (её меняет бот)
 
     // 2) Список «на что копим». Каждая строка в формате:
     //    ["эмодзи", "Заголовок", "пояснение"],
@@ -150,13 +150,21 @@ footer a{color:var(--muted)}
 
 <script>
 (function(){
-  var goal = Number(DONATE_GOAL) || 0;
-  var collected = Number(DONATE_COLLECTED) || 0;
-  var pct = goal > 0 ? Math.max(0, Math.min(100, (collected / goal) * 100)) : 0;
-  document.getElementById('amountText').innerHTML =
-    collected.toLocaleString('ru-RU') + ' ₽ <small>из ' + goal.toLocaleString('ru-RU') + ' ₽</small>';
-  document.getElementById('pctText').textContent = Math.round(pct) + '%';
-  document.getElementById('barFill').style.width = pct + '%';
+  function renderProgress(goal, collected){
+    goal = Number(goal) || 0; collected = Number(collected) || 0;
+    var pct = goal > 0 ? Math.max(0, Math.min(100, (collected / goal) * 100)) : 0;
+    document.getElementById('amountText').innerHTML =
+      collected.toLocaleString('ru-RU') + ' ₽ <small>из ' + goal.toLocaleString('ru-RU') + ' ₽</small>';
+    document.getElementById('pctText').textContent = Math.round(pct) + '%';
+    document.getElementById('barFill').style.width = pct + '%';
+  }
+  // Мгновенно рисуем из значений в файле (fallback), затем подтягиваем живую цифру
+  // из progress.json (тот же домен, без CORS) — её обновляет бот командой /donate.
+  renderProgress(DONATE_GOAL, DONATE_COLLECTED);
+  fetch('progress.json?t=' + (new Date().getTime()), {cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ if(d){ renderProgress(d.goal != null ? d.goal : DONATE_GOAL, d.collected != null ? d.collected : DONATE_COLLECTED); } })
+    .catch(function(){});
 
   // Рендер списка «на что копим» из DONATE_SPEND (textContent — без риска сломать вёрстку).
   var list = document.getElementById('spendList');
