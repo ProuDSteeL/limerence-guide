@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Гайд по боту · Limerence Stories</title>
+<meta name="description" content="Полный гайд по Limerence Stories Bot: быстрый старт, подключение провайдера, карточки, пресеты, память, оплата и часто задаваемые вопросы.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<meta name="theme-color" content="#0f0b1e">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="assets/site.css">
+<style>
+/* screenshots */
+.shot{margin:18px 0;text-align:center}
+.shot img{max-width:100%;border-radius:14px;border:1px solid var(--imgborder);
+  box-shadow:var(--shadow);cursor:zoom-in;transition:transform .2s,box-shadow .2s}
+.shot img:hover{transform:translateY(-3px);box-shadow:0 22px 44px -14px rgba(0,0,0,.85)}
+.shot.phone img{max-width:300px}
+.shot figcaption{margin-top:9px;font-size:13px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0}
+.gallery .shot{margin:0}
+
+/* copy */
+.copybox{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--card2);border:1px solid var(--line);
+  border-radius:12px;padding:10px 12px;margin:12px 0}
+.copybox code{flex:1;min-width:200px;color:#d9c6ff;font-family:ui-monospace,Menlo,Consolas,monospace}
+.copybtn{border:0;background:var(--grad);color:#1a1030;font-weight:700;padding:8px 14px;border-radius:9px;cursor:pointer;transition:.15s}
+.copybtn:hover{filter:brightness(1.06)}
+.copybtn.done{background:var(--ok)}
+
+/* keys */
+.keys{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+.keychip{display:flex;align-items:center;gap:10px;background:var(--card2);border:1px solid var(--line);
+  padding:12px 16px;border-radius:13px}
+.keychip .kn{color:var(--acc2);font-weight:800}
+.keychip code{font-size:1.05em}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(6,4,14,.92);display:none;align-items:center;justify-content:center;
+  z-index:100;padding:24px;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:92vh;border-radius:12px;box-shadow:0 30px 80px -20px #000}
+
+/* quickstart — «начать играть за 3 шага» */
+.quickstart{padding:48px 20px 12px}
+.quickstart h2{font-size:clamp(24px,4vw,34px);margin:0 0 8px;text-align:center}
+.qs-sub{color:var(--muted);text-align:center;max-width:640px;margin:0 auto 32px}
+.qs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.qs-step{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);
+  border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.qs-num{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;
+  font-size:17px;font-weight:800;color:#1a1030;background:var(--grad);margin-bottom:12px}
+.qs-step h3{margin:0 0 8px;font-size:18px}
+.qs-step p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+.qs-note{color:var(--muted);text-align:center;max-width:680px;margin:28px auto 0;font-size:14px}
+
+/* telegram-мокап компонент */
+.tg-figure{margin:18px 0;text-align:center}
+.tg-mock{max-width:320px;margin:0 auto;background:var(--bg2);border:1px solid var(--line);
+  border-radius:18px;box-shadow:var(--shadow);padding:14px}
+.tg-mock.wide{max-width:400px}
+.tg-mock-bar{display:flex;align-items:center;gap:10px;padding-bottom:10px;margin-bottom:10px;
+  border-bottom:1px dashed var(--line);text-align:left}
+.tg-mock-avatar{flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  background:var(--grad);color:#1a1030;font-weight:800;font-size:15px}
+.tg-mock-bar .name{font-weight:700;font-size:14px}
+.tg-mock-bar .sub{color:var(--muted);font-size:12px}
+.tg-sys{text-align:center;margin:8px 0}
+.tg-sys span{display:inline-block;background:var(--card2);color:var(--muted);border-radius:999px;
+  padding:5px 12px;font-size:12px}
+.tg-msg{display:flex;margin:8px 0}
+.tg-msg.user{justify-content:flex-end}
+.tg-bubble{display:inline-block;max-width:85%;border-radius:14px;padding:9px 13px;font-size:13.5px;
+  line-height:1.5;text-align:left;white-space:pre-wrap}
+.tg-msg.bot .tg-bubble{background:var(--card2);color:var(--ink);border-bottom-left-radius:4px}
+.tg-msg.user .tg-bubble{background:var(--grad);color:#1a1030;font-weight:600;border-bottom-right-radius:4px}
+.tg-kb-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tg-kb-row.col{flex-direction:column}
+.tg-btn{background:var(--card);border:1px solid var(--line);border-radius:9px;color:var(--acc);
+  padding:7px 10px;font-size:12.5px;text-align:center}
+.tg-point{outline:2px solid var(--acc2);outline-offset:3px;border-radius:14px}
+.tg-tag{display:flex;align-items:center;justify-content:center;gap:6px;color:var(--acc2);
+  font-weight:700;font-size:13px;margin-top:8px}
+.tg-tag .arw{font-weight:800}
+
+@media(max-width:560px){
+  .qs-grid{grid-template-columns:1fr}
+  .tg-mock,.tg-mock.wide{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="dot"></span>Limerence Stories</a>
+  <div class="links">
+    <a class="link" href="index.html">Главная</a>
+    <a class="link active" href="guide.html">Гайд</a>
+    <a class="link" href="faq.html">FAQ</a>
+    <a class="link" href="donate.html">Донаты</a>
+    <a class="link" href="about.html">О проекте</a>
+    <span class="soon" title="Появится позже">Каталог · скоро</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Светлая / тёмная тема"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="glow"></div>
+  <div class="hero-inner wrap">
+    <span class="kicker">Полный гайд</span>
+    <h1>Гайд по боту</h1>
+    <p class="sub">Всё в одном месте — от первого запуска до тонкостей памяти. Каждый раздел самодостаточен.</p>
+    <p class="bot">Бот: <code>@Limerence_Stories_bot</code></p>
+  </div>
+</header>
+
+<section class="quickstart wrap" id="quickstart">
+  <h2>Начать играть за 3 шага</h2>
+  <p class="qs-sub">Вся игра происходит внутри Темы в твоей группе Telegram — не в личке с ботом.</p>
+  <div class="qs-grid">
+
+    <div class="qs-step">
+      <div class="qs-num">1</div>
+      <h3>Добавь бота в группу</h3>
+      <p>Создай приватную группу → включи «Темы» → добавь <code>@Limerence_Stories_bot</code> администратором → создай первую Тему.</p>
+      <div class="tg-mock">
+        <div class="tg-sys"><span>Тема «Ведьмак» создана</span></div>
+        <div class="tg-sys"><span>➕ Limerence_Stories_bot добавлен в группу</span></div>
+        <div class="tg-point"><div class="tg-sys"><span>👑 Bot — администратор</span></div></div>
+      </div>
+      <div class="tg-tag"><span class="arw">↑</span>права: читать, отправлять, управлять темами</div>
+    </div>
+
+    <div class="qs-step">
+      <div class="qs-num">2</div>
+      <h3>Подключи ключ провайдера</h3>
+      <p>В Теме введи <code>/api</code> → «➕ Добавить нового» — бот пришлёт кнопку и перенесёт мастер в личку: ключ никогда не вводится в группе.</p>
+      <div class="tg-mock">
+        <div class="tg-mock-bar">
+          <div class="tg-mock-avatar">L</div>
+          <div><div class="name">Limerence Stories</div><div class="sub">бот · личка</div></div>
+        </div>
+        <div class="tg-msg bot"><div class="tg-bubble">🔑 Добавляем ключ — шаг 1 из 3
+
+Введи адрес (base_url) своего ИИ-сервиса.
+Обычно оканчивается на /v1.</div></div>
+        <div class="tg-msg user"><div class="tg-bubble">https://api.polza.ai/api/v1</div></div>
+        <div class="tg-msg bot"><div class="tg-bubble">Шаг 2 из 3 — как назвать этот ключ?</div></div>
+        <div class="tg-msg user"><div class="tg-bubble">Основной</div></div>
+        <div class="tg-sys"><span>🔒 Ключ получен и сразу удалён из чата</span></div>
+        <div class="tg-point"><div class="tg-msg bot"><div class="tg-bubble">✅ Ключ добавлен!
+
+Всё готово — создай первую историю прямо сейчас.</div></div></div>
+      </div>
+      <div class="tg-tag"><span class="arw">↑</span>три вопроса в личке — и ключ подключён</div>
+    </div>
+
+    <div class="qs-step">
+      <div class="qs-num">3</div>
+      <h3>Пиши в Тему</h3>
+      <p>Просто пиши сообщения — бот отвечает, память собирается сама.</p>
+      <div class="tg-mock">
+        <div class="tg-msg user"><div class="tg-bubble">Толкаю дверь таверны и захожу внутрь</div></div>
+        <div class="tg-msg bot"><div class="tg-bubble">Скрип половиц тонет в гуле голосов — Геральт поднимает взгляд от кружки эля...</div></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="qs-note">Игра идёт только внутри Темы группы. Личка боту нужна только для <code>/start</code>, <code>/premium</code>, <code>/forget_me</code> и похожих команд.</p>
+</section>
+
+<nav class="nav"><div class="wrap">
+  <a href="#step1"><span class="num">1</span>Быстрый старт</a>
+  <a href="#step2"><span class="num">2</span>Подключение ключа</a>
+  <a href="#step3"><span class="num">3</span>Карточки и пресеты</a>
+  <a href="#step4"><span class="num">4</span>Настройки</a>
+  <a href="#step5"><span class="num">5</span>Память</a>
+  <a href="#step6"><span class="num">6</span>Бесплатный режим</a>
+  <a href="#step7"><span class="num">7</span>Оплата</a>
+  <a href="#step8"><span class="num">8</span>Приватность</a>
+  <a href="faq.html"><span class="num">❓</span>FAQ</a>
+</div></nav>
+
+<main class="wrap">
+
+  <!-- ===== 1. Быстрый старт ===== -->
+  <section class="step" id="step1">
+    <header class="step-head">
+      <div class="badge">1</div>
+      <div>
+        <h2>Что это за бот и быстрый старт</h2>
+        <p class="lead">RP-бот с памятью, карточками персонажей, лором и поддержкой пресетов SillyTavern. Пять шагов — и ты в игре.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <h3 class="subhead">Шаг 1 — Запуск и согласие</h3>
+      <p>Открой <b>@Limerence_Stories_bot</b> в личке (DM) и напиши <code>/start</code>. Бот покажет банер — поставь обе галочки:</p>
+      <ul>
+        <li>Условия использования (ToS) + оферта</li>
+        <li>Согласие на обработку персональных данных</li>
+      </ul>
+      <p>Без этих галочек бот по закону ничего не делает. После согласия открывается <b>7-дневный пробный период</b> (полный доступ бесплатно) — отсчёт начинается не сразу, а с твоего первого сообщения в Теме, так что на настройку пробные дни не тратятся. Бот сразу называет точную дату окончания и сам напомнит за день до и в день окончания. Продлить в любой момент — команда <code>/premium</code>.</p>
+
+      <figure class="tg-figure">
+        <div class="tg-mock">
+          <div class="tg-msg bot"><div class="tg-bubble">⚙️ Аккаунт · Тариф: 🎁 Пробный период · до 09.07.2026 (7 дн.)
+
+Выбери раздел:</div></div>
+        </div>
+        <div class="tg-tag"><span class="arw">↑</span>дата и остаток дней видны в /menu в любой момент</div>
+      </figure>
+
+      <h3 class="subhead">Шаг 2 — Группа с Темами</h3>
+      <p>Каждая история живёт в отдельной «Теме» внутри твоей приватной группы Telegram.</p>
+      <ol>
+        <li>Создай приватную группу — название любое.</li>
+        <li>В настройках группы включи <b>«Темы»</b> (Topics / Forum).</li>
+        <li>Добавь бота <b>@Limerence_Stories_bot</b> и сделай его администратором (базовых прав хватает: читать, отправлять, управлять темами).</li>
+        <li>Создай первую Тему — назови как угодно («Ведьмак», «Аня и Кэйн»).</li>
+      </ol>
+      <div class="callout note"><span class="ic">📝</span><div>Каждая Тема — отдельный сюжет со своей памятью и настройками. Тем можно держать сколько угодно и переключаться между ними.</div></div>
+
+      <h3 class="subhead">Шаг 3 — Подключи ключ провайдера</h3>
+      <p>В Теме введи <code>/api</code> → «➕ Добавить нового» — бот пришлёт кнопку и перенесёт мастер в личку (три вопроса: URL, имя, ключ). Подробно — в разделе 2.</p>
+
+      <h3 class="subhead">Шаг 4 — Выбери модель</h3>
+      <p>В Теме введи <code>/settings</code> → «🎭 RP (игра)» → впиши имя модели. Подробно — в разделе 4.</p>
+
+      <h3 class="subhead">Шаг 5 — Пиши в Тему</h3>
+      <p>Просто пиши сообщения — бот ответит. Память собирается сама, ничего дополнительно настраивать не нужно.</p>
+
+    </div>
+  </section>
+
+  <!-- ===== 2. Подключение ключа ===== -->
+  <section class="step" id="step2">
+    <header class="step-head">
+      <div class="badge">2</div>
+      <div>
+        <h2>Подключение нейросети — команда <code>/api</code></h2>
+        <p class="lead">Провайдер — это сайт, который даёт доступ к моделям. У тебя есть ключ — бот через него обращается к модели.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <h3 class="subhead">Как добавить ключ (3 шага)</h3>
+      <p>В Теме введи <code>/api</code> → «➕ Добавить нового» — бот пришлёт кнопку «🔑 Открыть ввод ключа в личке». Ключ — секрет, поэтому вводится только в личке с ботом, никогда в группе. Жми кнопку, и бот в личке задаст три вопроса по порядку:</p>
+      <table class="models">
+        <thead><tr><th>Вопрос</th><th>Что вписать</th></tr></thead>
+        <tbody>
+          <tr><td><b>URL</b></td><td>Адрес API провайдера — строка вида <code>https://api.linkapi.ai/v1</code></td></tr>
+          <tr><td><b>Имя</b></td><td>Любое, для себя — например «Link all» или «Основной»</td></tr>
+          <tr><td><b>Ключ</b></td><td>Скопированный API-ключ. Бот сразу удалит твоё сообщение и сохранит ключ в зашифрованном виде</td></tr>
+        </tbody>
+      </table>
+      <p>После добавления бот проверит ключ:</p>
+      <table class="models">
+        <thead><tr><th>Что написал бот</th><th>Что значит</th></tr></thead>
+        <tbody>
+          <tr><td>Провайдер добавлен и готов к работе</td><td>Всё хорошо</td></tr>
+          <tr><td>Ключ недействителен</td><td>Ключ скопирован не целиком, отозван или истёк</td></tr>
+          <tr><td>Нет баланса / квоты</td><td>Пополни кошелёк у провайдера</td></tr>
+          <tr><td>Провайдер недоступен</td><td>Проверь URL — чаще всего нужен суффикс <code>/v1</code></td></tr>
+          <tr><td>Таймаут</td><td>Сервис не ответил за 5 секунд — проверь адрес и попробуй снова</td></tr>
+        </tbody>
+      </table>
+      <div class="callout important"><span class="ic">⚠️</span><div>Никому не показывай свой ключ. У кого ключ — тот тратит твои деньги.</div></div>
+
+      <h3 class="subhead">Другие кнопки <code>/api</code></h3>
+      <table class="models">
+        <thead><tr><th>Кнопка</th><th>Что делает</th></tr></thead>
+        <tbody>
+          <tr><td><b>🔑 Свой ключ для памяти</b></td><td>Подключить отдельный дешёвый ключ (Comet или Polza) специально под память — по желанию</td></tr>
+          <tr><td><b>📋 Список и активный</b></td><td>Показать все ключи; кнопка «🌟 Сменить активного» выбирает, какой ключ основной</td></tr>
+          <tr><td><b>✏️ Редактировать</b></td><td>Изменить имя, URL, ключ или назначение</td></tr>
+          <tr><td><b>❌ Удалить</b></td><td>Убрать ключ</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="subhead">Провайдеры — кого выбрать</h3>
+      <table class="models">
+        <thead><tr><th>Провайдер</th><th>URL для бота</th><th>Оплата</th><th>Примечание</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>LinkApi</b></td>
+            <td><code>https://api.linkapi.ai/v1</code></td>
+            <td>через Discord discord.gg/kanonmama (карты РФ / СБП)</td>
+            <td>Хороший старт для новичков. Имена моделей короткие: <code>[次]gemini-2.5-pro</code></td>
+          </tr>
+          <tr>
+            <td><b>Polza</b></td>
+            <td><code>https://api.polza.ai/api/v1</code></td>
+            <td>рубли напрямую (карты РФ / СБП)</td>
+            <td>Оригинальные модели, рубли без посредников. Имена через <code>/</code>: <code>google/gemini-2.5-pro</code>. Для DeepSeek дописывай провайдера: <code>deepseek/deepseek-chat@provider=DeepSeek</code></td>
+          </tr>
+          <tr>
+            <td><b>Rout.me</b></td>
+            <td><code>https://api.rout.my/v1</code></td>
+            <td>Boosty / Patreon</td>
+            <td>Подписка вместо кошелька (5 тарифов: Free / Basic $15 / Plus $25 / Pro $45 / Apex $65). Оригинальные модели, кэш (~47% экономии). Имена через <code>/</code>: <code>anthropic/claude-opus-4.7</code></td>
+          </tr>
+          <tr>
+            <td><b>CometAPI</b></td>
+            <td><code>https://api.cometapi.com/v1</code></td>
+            <td>рубли (через Stripe)</td>
+            <td>Оригинальные модели, на 20% дешевле официальных. Имена короткие: <code>claude-sonnet-4-6</code></td>
+          </tr>
+          <tr>
+            <td><b>CloseRouter</b></td>
+            <td><code>https://api.closerouter.dev/v1</code></td>
+            <td>СБП</td>
+            <td>Самые низкие цены, но провайдер нестабильный — клади мелкими суммами (~100 ₽). Нет эмбеддингов — память подключи вторым ключом (Polza или Comet)</td>
+          </tr>
+          <tr>
+            <td><b>OpenRouter</b></td>
+            <td><code>https://openrouter.ai/api/v1</code></td>
+            <td>зарубежные карты</td>
+            <td>Есть всё, но дорого и оплата из России затруднена. Имена через <code>/</code>: <code>anthropic/claude-opus-4.6</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout note"><span class="ic">📝</span><div>Можно подключить несколько провайдеров одновременно и переключаться через <code>/settings</code> → «🔀 Ключ игры (эта тема)».</div></div>
+
+      <h3 class="subhead">Рекомендуемая связка для начала</h3>
+      <p>Если берёшь LinkApi — в <code>/settings</code> → «🎭 RP» пиши <code>[次]gemini-2.5-pro</code>. Это лучшая модель для RP у LinkApi.</p>
+
+      <h3 class="subhead">Пример: регистрация на Polza и LinkApi</h3>
+      <p>Для Polza переходи по ссылке:</p>
+      <a class="btn-link" href="https://polza.ai/register?referral=aKfGBxbJ6M" target="_blank" rel="noopener">Открыть Polza.ai<span class="arr">↗</span></a>
+      <p>Регистрируйся, пополняй баланс на 100–150 ₽, создай API-ключ во вкладке «API-ключи» и скопируй его — он понадобится один раз при вводе.</p>
+      <div class="callout important"><span class="ic">⚠️</span><div>Ключ Polza можно скопировать только один раз сразу после создания! Если не успел — удали и создай новый.</div></div>
+      <p>Для LinkApi переходи по ссылке и регистрируйся:</p>
+      <a class="btn-link" href="https://linkapi.ai/" target="_blank" rel="noopener">Открыть LinkAPI<span class="arr">↗</span></a>
+      <p>Пополнение кошелька LinkApi — через Discord-сообщество:</p>
+      <a class="btn-link" href="https://discord.gg/kanonmama" target="_blank" rel="noopener">Discord — kanonmama<span class="arr">↗</span></a>
+      <p>В Discord найди вкладку <b>#подтверждение-возраста</b>, нажми смайлик (18), затем перейди в <b>#оплата-linkapi</b>, выбери тариф — и после оплаты получишь код для зачисления кредитов.</p>
+      <figure class="shot "><img loading="lazy" src="assets/img/img22.png" alt="Старт бота" data-full="assets/img/img22.png"><figcaption>Старт бота — /start в личке</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ===== 3. Карточки и пресеты ===== -->
+  <section class="step" id="step3">
+    <header class="step-head">
+      <div class="badge">3</div>
+      <div>
+        <h2>Игра: карточки, персоны, лор и пресеты</h2>
+        <p class="lead">Импортируй готовых персонажей, загружай лор и применяй пресеты SillyTavern.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <h3 class="subhead">Карточки персонажей — <code>/import</code> и <code>/cards</code></h3>
+      <p>Карточка — это готовое описание NPC с именем, внешностью, характером и приветствием. Можно скачать с chub.ai, characterhub.org, janitor.ai или сделать свою.</p>
+      <p><b>Поддерживаемые форматы:</b></p>
+      <ul>
+        <li>Tavern V2 / V3 PNG — картинка с данными внутри</li>
+        <li>Janitor.AI JSON — экспорт с janitor.ai</li>
+        <li>SillyTavern preset JSON — пресет с системным промптом</li>
+      </ul>
+      <p><b>Как импортировать:</b></p>
+      <ol>
+        <li>В личке с ботом просто пришли файл (PNG или JSON), или введи <code>/import</code> в Теме.</li>
+        <li>Бот покажет превью: имя, описание, теги. Кнопки: ✅ Принять / ❌ Отказаться / 📋 Подробнее.</li>
+        <li>Нажми ✅ Принять — карточка сохранится в твою библиотеку.</li>
+        <li>Зайди в нужную Тему → <code>/cards</code> → нажми на карточку, чтобы активировать.</li>
+      </ol>
+      <div class="callout note"><span class="ic">📝</span><div>Если приветствие на английском — бот автоматически переводит его на русский.</div></div>
+      <p><b>Управление через <code>/cards</code>:</b></p>
+      <ul>
+        <li>Нажать на имя — активировать карточку в текущей Теме</li>
+        <li>⚙️ Изменить / удалить — переименовать (✏️) или удалить (🗑️) карточку</li>
+        <li>🚫 Без карточки — вернуть Тему в свободный режим</li>
+      </ul>
+
+      <h3 class="subhead">Создать карточку с нуля — <code>/newcard</code></h3>
+      <p>Команда запускает анкету (5 шагов по образцу Janitor): имя → описание → персонаж → мир → приветствие. На выходе — карточка в формате Tavern V3, которую можно скачать как JSON или сразу использовать в боте.</p>
+
+      <h3 class="subhead">Regex-скрипты — <code>/regex</code> и <code>/regex_add</code></h3>
+      <p>Карточки формата V3 могут содержать regex-скрипты — правила «найди и заменить», которые применяются к тексту: убирают теги, форматируют речь, скрывают размышления модели.</p>
+      <p>Управление — команда <code>/regex</code> (или кнопка «🔤 Regex-скрипты» в <code>/settings</code>):</p>
+      <ul>
+        <li>Список скриптов со статусом (✅ вкл / ⛔ выкл) — нажать, чтобы переключить</li>
+        <li>⚙️ — подробности, изменить Find / Замену</li>
+        <li>⬇️ Скачать / ⬇️ Скачать все — выгрузить скрипты</li>
+        <li>➕ Добавить свой — мастер из 4 шагов</li>
+        <li>📥 Из файла — загрузить скрипты JSON-файлом</li>
+        <li>❓ Как написать — памятка по формату</li>
+      </ul>
+
+      <h3 class="subhead">Персоны — <code>/profile</code></h3>
+      <p>Персона — это ты в игре: кем играешь, как выглядишь, как себя ведёшь. Персон можно держать несколько и выбирать нужную под разные истории. Команда <code>/profile</code> — создать, переименовать, выбрать активную или удалить персону.</p>
+
+      <h3 class="subhead">Лор — <code>/lore</code></h3>
+      <p>Лор — это заранее заготовленные записи о твоём мире: фракции, локации, история, законы вселенной.</p>
+      <table class="models">
+        <thead><tr><th>Система</th><th>Как добавить</th><th>Как попадает в ответ</th></tr></thead>
+        <tbody>
+          <tr><td><b>Книги (файлы)</b></td><td>загрузка <code>.txt</code> через меню лора или <code>/lore</code></td><td>бот сам ищет по смыслу перед сценой</td></tr>
+          <tr><td><b>Карточки лорбука</b></td><td><code>/lore add ключ1, ключ2: текст</code></td><td>автоматически, когда ключ встречается в сообщениях</td></tr>
+        </tbody>
+      </table>
+      <div class="callout note"><span class="ic">📝</span><div>Ключи в карточках лорбука давай во всех падежах и формах — «Эллохар» не поймает «Эллохара».</div></div>
+      <p><code>/clear</code> стирает всю память Темы, но книги и карточки лора сохраняет.</p>
+
+      <h3 class="subhead">Пресеты SillyTavern — <code>/preset</code></h3>
+      <p>Бот поддерживает пресеты SillyTavern (формат chat-completion preset <code>.json</code>). Пресет содержит готовые блоки системного промпта с макросами — быстрый способ полностью настроить стиль игры.</p>
+      <ol>
+        <li>Пришли файл <code>.json</code> пресета в чат с ботом (или в Тему) — бот покажет превью.</li>
+        <li>Нажми «Сохранить» — пресет попадёт в твою библиотеку.</li>
+        <li>Команда <code>/preset</code> → список сохранённых пресетов → выбери, чтобы применить к Теме, или отключи.</li>
+      </ol>
+
+      <h3 class="subhead">Развилки сюжета — <code>/fork</code></h3>
+      <p>Хочешь попробовать «а что, если здесь всё пошло иначе» — не теряя текущую ветку?</p>
+      <ol>
+        <li>В Теме найди сообщение, до которого хочешь сохранить историю.</li>
+        <li>Ответь на него (Reply) командой <code>/fork</code>.</li>
+        <li>Бот спросит имя новой Темы → введи его.</li>
+        <li>Бот создаёт новую Тему-ветку с историей и памятью до точки развилки.</li>
+      </ol>
+      <p>Обе ветки живут независимо. Старая Тема остаётся как была.</p>
+
+      <h3 class="subhead">OOC-вопросы (вне роли) — <code>/ooc</code></h3>
+      <p>Хочешь спросить не в игре — почему персонаж так поступил, куда движется сюжет? Бот ответит как автор истории, не двигая сцену и не попадая в память.</p>
+      <p>Как спросить (любой способ):</p>
+      <ul>
+        <li>В двойных скобках: <code>((почему Алекс так резко ответил?))</code></li>
+        <li>С пометкой: <code>оос: какой сейчас этап сюжета?</code></li>
+        <li>Командой: <code>/ooc что мешает персонажу довериться?</code></li>
+        <li>Ответом (Reply) на сообщение бота с такой пометкой</li>
+      </ul>
+      <div class="callout note"><span class="ic">📝</span><div>Одиночные скобки <code>(он усмехнулся)</code> — это НЕ OOC, это часть текста игры.</div></div>
+
+      <h3 class="subhead">Свайпы и сохранённые варианты — ответ бота</h3>
+      <p>Под последним ответом бота есть карусель:</p>
+      <table class="models">
+        <thead><tr><th>Кнопка</th><th>Что делает</th></tr></thead>
+        <tbody>
+          <tr><td>🔄 Ещё вариант</td><td>Сгенерировать другой вариант этого хода — старый не теряется</td></tr>
+          <tr><td>⬅️ / ➡️</td><td>Пролистать между уже сгенерированными вариантами. Показанный вариант становится основным — именно его помнит бот дальше</td></tr>
+          <tr><td>N/M</td><td>Счётчик — какой вариант сейчас показан из скольких всего</td></tr>
+          <tr><td>💾</td><td>Сохранить показанный вариант «для почитать» — в личные заметки этой Темы</td></tr>
+        </tbody>
+      </table>
+      <figure class="tg-figure">
+        <div class="tg-mock">
+          <div class="tg-msg bot"><div class="tg-bubble">Дверь тихо скрипнула, впуская сквозняк со двора...</div></div>
+          <div class="tg-point">
+            <div class="tg-kb-row">
+              <div class="tg-btn">⬅️</div>
+              <div class="tg-btn">2/3</div>
+              <div class="tg-btn">➡️</div>
+              <div class="tg-btn">🔄 Ещё вариант</div>
+              <div class="tg-btn">💾</div>
+            </div>
+          </div>
+        </div>
+        <div class="tg-tag"><span class="arw">↑</span>работает только для последнего ответа; N/M — какой вариант показан; 🔄 добавляет новый, 💾 сохраняет показанный</div>
+      </figure>
+      <div class="callout note"><span class="ic">📝</span><div>Карусель работает только для ПОСЛЕДНЕГО ответа бота — как только пишешь следующий ход, набор вариантов фиксируется. Лимит — 6 вариантов на ход.</div></div>
+
+      <h3 class="subhead"><code>/saved</code> — читалка сохранённых отрывков</h3>
+      <p>Список твоих заметок 💾 в этой Теме (новые сверху, до 50 штук). Нажми запись, чтобы прочитать целиком; под текстом — кнопка 🗑 Удалить заметку. На память бота сохранённые отрывки не влияют — это только «для почитать».</p>
+      <figure class="tg-figure">
+        <div class="tg-mock">
+          <div class="tg-msg bot"><div class="tg-bubble">📚 Сохранённые отрывки — 2 шт.</div></div>
+          <div class="tg-point">
+            <div class="tg-kb-row col">
+              <div class="tg-btn">📖 02.07 21:14 · вариант 2</div>
+              <div class="tg-btn">📖 01.07 19:03 · вариант 1</div>
+            </div>
+          </div>
+        </div>
+        <div class="tg-tag"><span class="arw">↑</span>нажми запись, чтобы прочитать целиком</div>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ===== 4. Настройки ===== -->
+  <section class="step" id="step4">
+    <header class="step-head">
+      <div class="badge">4</div>
+      <div>
+        <h2>Настройки — команда <code>/settings</code></h2>
+        <p class="lead">Настройки работают внутри Темы и относятся только к ней.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <p>Введи <code>/settings</code> в Теме — откроется меню с кнопками:</p>
+      <table class="models">
+        <thead><tr><th>Кнопка</th><th>Что настраивает</th></tr></thead>
+        <tbody>
+          <tr><td><b>🎭 RP (игра)</b></td><td>Главная модель — она отвечает в сюжете. Задать обязательно</td></tr>
+          <tr><td><b>🔀 Ключ игры (эта тема)</b></td><td>Использовать в этой Теме другой ключ, не меняя активного глобально</td></tr>
+          <tr><td><b>📦 Контекст</b></td><td>Сколько токенов модель видит за ход. Старт ~15000, потом можно поднять</td></tr>
+          <tr><td><b>🌡️ Temp</b></td><td>«Фантазия» модели. 0.85 — золотая середина для RP</td></tr>
+          <tr><td><b>📤 Макс</b></td><td>Максимальная длина ответа бота (рекомендуется 4000)</td></tr>
+          <tr><td><b>📥 Мин</b></td><td>Минимальная длина ответа (можно оставить выкл)</td></tr>
+          <tr><td><b>📏 Кап канона</b></td><td>Ограничение объёма памяти и лора за один ход</td></tr>
+          <tr><td><b>📝 Промпт</b></td><td>Системный промпт темы — инструкции, которые бот видит каждый ход</td></tr>
+          <tr><td><b>✏️ Имя</b></td><td>Название этой истории</td></tr>
+          <tr><td><b>📝 Заметка автора</b></td><td>Короткая инструкция, которую бот видит КАЖДЫЙ ход (не разово, как системный промпт)</td></tr>
+          <tr><td><b>🏷️ Шапка сцены</b></td><td>Служебная строка в начале хода (локация, время, одежда и т.п.)</td></tr>
+          <tr><td><b>🪄 Префилл</b></td><td>Необязательное начало ответа бота — направляет генерацию, скрыт из вывода</td></tr>
+          <tr><td><b>📊 Стат-панель</b></td><td>Включает трекер игровых статов (HP, золото и т.п.) — панель печатается под каждым ответом</td></tr>
+          <tr><td><b>📋 Статы…</b></td><td>Список отслеживаемых статов (до 12 через запятую)</td></tr>
+          <tr><td><b>🔤 Regex-скрипты</b></td><td>Управление скриптами форматирования из карточек</td></tr>
+          <tr><td><b>🚨 Уведомления о сбоях</b></td><td>Бот сам напишет, когда провайдер снова заработает</td></tr>
+          <tr><td><b>🗑️ Удалить тему</b></td><td>Удалить эту историю со всеми настройками</td></tr>
+        </tbody>
+      </table>
+      <div class="callout note"><span class="ic">📝</span><div>На бесплатном тарифе контекст ограничен 15000 — выше поднять не получится. Больше — на премиуме (<code>/premium</code>).</div></div>
+      <p>Числовые кнопки (📦 📤 📥 🌡️ 📏) переключаются по кругу при нажатии.</p>
+
+      <h3 class="subhead">Шапка сцены — варианты</h3>
+      <ul>
+        <li>📋 Полный — локация · день · дата · время · одежда</li>
+        <li>📋 Компакт — локация · время · одежда</li>
+        <li>✏️ Свой шаблон — своя строка до 200 символов</li>
+        <li>🚫 Выключить</li>
+      </ul>
+
+      <h3 class="subhead">Промпт</h3>
+      <p>Лимит одного сообщения в Telegram — 4000 символов. Если промпт длиннее — пришли его файлом <code>.txt</code> (без лимита).</p>
+
+      <h3 class="subhead">Заметка автора и стат-панель</h3>
+      <p><b>📝 Заметка автора</b> — короткая инструкция, которую бот держит перед глазами КАЖДЫЙ ход (в отличие от системного промпта — это не разовая часть контекста, а активная подсказка). Пример: «пиши мрачнее», «сейчас зима, все мёрзнут». Лимит — 500 символов, убрать — пришли <code>-</code>.</p>
+      <figure class="tg-figure">
+        <div class="tg-mock wide">
+          <div class="tg-kb-row">
+            <div class="tg-btn">📝 Промпт: задан</div>
+            <div class="tg-btn">✏️ Имя: Ведьмак</div>
+          </div>
+          <div class="tg-point">
+            <div class="tg-kb-row">
+              <div class="tg-btn">📝 Заметка автора: ✓</div>
+            </div>
+          </div>
+          <div class="tg-point">
+            <div class="tg-kb-row">
+              <div class="tg-btn">📊 Стат-панель: вкл ✅</div>
+              <div class="tg-btn">📋 Статы…</div>
+            </div>
+          </div>
+        </div>
+        <div class="tg-tag"><span class="arw">↑</span>«Заметка автора» и «Стат-панель» — новые кнопки настроек</div>
+      </figure>
+      <p><b>📊 Стат-панель</b> — трекер игровых статов (HP, золото, настроение и что угодно ещё). Бот сам следит за изменениями в сюжете и печатает панель «📊 Статы:» под каждым ответом. Список статов — в «📋 Статы…» (до 12 через запятую, например <code>hp, gold, репутация</code>), по умолчанию <code>hp, gold, настроение</code>. Не путать с <code>/stats</code> (раздел 5) — там расход токенов и денег, а не игровые характеристики.</p>
+      <figure class="tg-figure">
+        <div class="tg-mock wide">
+          <div class="tg-msg bot"><div class="tg-bubble">Геральт вытирает меч о плащ и опускается на скамью у костра.
+
+———
+📊 Статы:
+hp: Геральт = 8/10
+gold: Геральт = 42</div></div>
+        </div>
+        <div class="tg-tag"><span class="arw">↑</span>печатается в хвосте ответа — в память не попадает</div>
+      </figure>
+
+      <div class="callout note"><span class="ic">📝</span><div>Если включён бесплатный режим — в меню <code>/settings</code> появятся кнопки «🆓 Бесплатный режим» и «🧠 Память: бесплатно/свой ключ». Подробно — в разделе 6.</div></div>
+
+      <figure class="shot phone"><img loading="lazy" src="assets/img/img38.png" alt="Меню /settings" data-full="assets/img/img38.png"><figcaption>Меню /settings в Теме</figcaption></figure>
+
+    </div>
+  </section>
+
+  <!-- ===== 5. Память ===== -->
+  <section class="step" id="step5">
+    <header class="step-head">
+      <div class="badge">5</div>
+      <div>
+        <h2>Память бота</h2>
+        <p class="lead">Бот помнит твою историю даже спустя сотни сообщений — три слоя памяти работают автоматически.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <h3 class="subhead">Как устроена память</h3>
+      <ul>
+        <li><b>Синопсис</b> — хронологический скелет всего сюжета (~800 токенов). Бот всегда видит его.</li>
+        <li><b>Сцена-дайджест</b> — короткая сводка текущей сцены (кто здесь, где, что происходит). Тоже всегда.</li>
+        <li><b>Факты</b> — сотни маленьких отдельных утверждений с категорией и важностью. На каждый ход поднимается только то, что близко по смыслу к текущей реплике.</li>
+      </ul>
+      <p>Факты появляются не после каждого сообщения, а когда промпт начинает упираться в лимит контекста. В этот момент бот в фоне берёт старые сообщения, извлекает из них факты и обновляет дайджест. Твой ход при этом не блокируется.</p>
+      <div class="callout note"><span class="ic">📝</span><div>Тебе ничего настраивать не нужно — память работает сама. Просто играй.</div></div>
+
+      <h3 class="subhead">Если бот что-то не так помнит — <code>/memfix</code></h3>
+      <p>Команда доступна тестерам. Напиши <code>/memfix рана была в руке, а не в бедре</code> или ответь (Reply) на ошибочное сообщение командой <code>/memfix</code>.</p>
+      <p>Бот сверится с архивом и вернёт один из ответов:</p>
+      <ul>
+        <li><b>✅ Похоже, ты прав(а)</b> — нашёл подтверждение. Покажет кнопки «Исправить» / «Отмена». Память меняется только если нажмёшь «Исправить».</li>
+        <li><b>🟢 Память верна</b> — архив подтверждает, что бот помнит правильно. Ничего не меняет.</li>
+        <li><b>🤔 Не нашёл подтверждения</b> — в архиве нет чёткого ответа. Уточни детали и попробуй снова.</li>
+      </ul>
+      <table class="models">
+        <thead><tr><th>Ситуация</th><th>Что делать</th></tr></thead>
+        <tbody>
+          <tr><td>Бот помнит неверно то, что реально было в игре</td><td><code>/memfix</code> — он сверится с архивом</td></tr>
+          <tr><td>Бот прямо сейчас выдумал то, чего не было</td><td><code>/undo</code> — удалить это сообщение</td></tr>
+          <tr><td>Бот выдал кривую реплику, хочешь другую версию</td><td><code>/undo</code> → отправь своё сообщение заново</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="subhead"><code>/clear</code> — стереть память Темы</h3>
+      <p><code>/clear</code> стирает всю память текущей Темы: сообщения, факты, сцену, синопсис, дайджест.</p>
+      <p>Сохраняется: настройки из <code>/settings</code>, лорбук, карточки персонажей, персоны, ключи провайдеров.</p>
+      <div class="callout note"><span class="ic">📝</span><div><code>/clear</code> не удаляет саму Тему. Чтобы удалить Тему полностью — <code>/settings</code> → «🗑️ Удалить тему».</div></div>
+
+      <h3 class="subhead"><code>/undo</code> — отменить последний обмен</h3>
+      <p><code>/undo</code> — удаляет последний обмен (твой ход + ответ бота).<br>
+      <code>/undo 3</code> — удаляет 3 последних обмена.<br>
+      Удалённые сообщения можно вернуть командой <code>/restore</code>.</p>
+
+      <h3 class="subhead"><code>/rewrite</code> — переписать своё сообщение</h3>
+      <p>Переписать последнее отправленное тобой сообщение — бот сгенерирует новый ответ.</p>
+
+      <h3 class="subhead"><code>/memory_export</code> — выгрузить память</h3>
+      <p>Выгружает всё, что бот помнит по текущей Теме, в файл <code>.txt</code>. Команда доступна тестерам.</p>
+
+      <h3 class="subhead">Другие команды памяти</h3>
+      <table class="models">
+        <thead><tr><th>Команда</th><th>Что делает</th></tr></thead>
+        <tbody>
+          <tr><td><code>/current</code></td><td>Что сейчас за модель и контекст в Теме</td></tr>
+          <tr><td><code>/diag</code></td><td>Сообщить о проблеме: опиши баг, бот сам соберёт технические данные и передаст владелице (можно приложить скриншоты)</td></tr>
+          <tr><td><code>/stats</code></td><td>Сколько потрачено токенов и денег в ₽ (по провайдерам)</td></tr>
+          <tr><td><code>/storage</code></td><td>Сколько места занимают Темы, книги, сообщения и память</td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+
+  <!-- ===== 6. Бесплатный режим ===== -->
+  <section class="step" id="step6">
+    <header class="step-head">
+      <div class="badge">6</div>
+      <div>
+        <h2>Бесплатный режим</h2>
+        <p class="lead">Игра на бесплатной модели через общий ключ — без необходимости заводить своего провайдера.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <p>Если бесплатный режим включён глобально, в <code>/settings</code> появляется кнопка «🆓 Бесплатный режим». Включи её в Теме — и игра в этой Теме пойдёт на бесплатной модели <code>openrouter/owl-alpha</code> через общий ключ владельца. Ключ провайдера вводить не нужно.</p>
+      <p>Дополнительная кнопка «🧠 Память: бесплатно/свой ключ» — переключает, работает ли память на бесплатной owl или на твоём собственном ключе (Polza).</p>
+
+      <h3 class="subhead">Особенности бесплатного режима</h3>
+      <ul>
+        <li>Бесплатная модель медленнее платных и может быть нестабильной.</li>
+        <li>Лимит контекста 15000 токенов.</li>
+        <li><code>owl-alpha</code> — альфа-модель, её могут временно убрать.</li>
+        <li>Общий ключ имеет ограниченный суточный лимит на всех пользователей.</li>
+      </ul>
+
+      <h3 class="subhead">Альтернатива: OpenRouter без оплаты</h3>
+      <p>Если хочешь попробовать бесплатно без зависимости от общего ключа — заведи свой ключ на openrouter.ai (регистрация бесплатная, кошелёк пополнять не нужно). В <code>/api</code> добавь:</p>
+      <div class="copybox"><code>https://openrouter.ai/api/v1</code><button class="copybtn" data-copy="https://openrouter.ai/api/v1">Копировать</button></div>
+      <p>Ключ — твой <code>sk-or-...</code> с openrouter.ai. В <code>/settings</code> → «🎭 RP» впиши: <code>openrouter/owl-alpha</code></p>
+      <div class="callout note"><span class="ic">📝</span><div>На сайте OpenRouter зайди в Settings → Privacy и включи разрешение на бесплатные модели (галочка «free / may train on inputs»), иначе модель может не отвечать.</div></div>
+
+    </div>
+  </section>
+
+  <!-- ===== 7. Оплата ===== -->
+  <section class="step" id="step7">
+    <header class="step-head">
+      <div class="badge">7</div>
+      <div>
+        <h2>Оплата — <code>/premium</code> и Tribute</h2>
+        <p class="lead">Команда <code>/premium</code> работает только в личке с ботом (старое имя <code>/upgrade</code> по-прежнему работает как алиас).</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <h3 class="subhead">Тарифы</h3>
+      <table class="models">
+        <thead><tr><th>Тариф</th><th>Что включает</th></tr></thead>
+        <tbody>
+          <tr><td>Trial — 7 дней</td><td>Полный доступ, активируется первым сообщением в Теме (настройка бота пробные дни не тратит). Бот называет точную дату окончания (видна и в <code>/menu</code>), напоминает за день до и в день окончания. По просьбе можно продлить до 14 дней</td></tr>
+          <tr><td>Тестерам</td><td>Специальная цена для тех, кто помогает на старте</td></tr>
+          <tr><td>Подписка</td><td>300 ₽/мес (актуальную цену показывает сама команда <code>/premium</code>)</td></tr>
+        </tbody>
+      </table>
+      <div class="callout note"><span class="ic">📝</span><div>Подписка — это только за сам бот (память, лор, карточки, хранилище). Модели оплачиваешь отдельно у провайдера своим ключом.</div></div>
+
+      <h3 class="subhead">Как оплатить (российская карта / СБП)</h3>
+      <ol>
+        <li>В личке введи <code>/premium</code>.</li>
+        <li>Если есть промокод — нажми «🎟 Да, есть промокод» → введи код (фиксирует скидку навсегда).</li>
+        <li>Нажми «Продолжить» — бот покажет реквизиты карты.</li>
+        <li>Переведи нужную сумму → сделай скриншот (видна сумма, дата, последние 4 цифры карты) → пришли скриншот боту.</li>
+        <li>Бот передаёт скриншот администратору. После ручного подтверждения получишь уведомление об активации.</li>
+      </ol>
+      <figure class="tg-figure">
+        <div class="tg-mock wide">
+          <div class="tg-msg bot"><div class="tg-bubble">💎 Премиум: 300₽/мес (1 месяц).
+
+<em>Это оплата доступа к боту, не самой модели ИИ — модель отдельно (свой ключ или общий ключ памяти).</em>
+
+Выбери способ оплаты:</div></div>
+          <div class="tg-point">
+            <div class="tg-kb-row col">
+              <div class="tg-btn">💳 Иностранная карта (Tribute)</div>
+              <div class="tg-btn">📱 СБП (через QR)</div>
+              <div class="tg-btn">💎 Крипта (USDT)</div>
+              <div class="tg-btn">📷 Скриншотом перевода</div>
+              <div class="tg-btn">↩ Отмена</div>
+            </div>
+          </div>
+        </div>
+        <div class="tg-tag"><span class="arw">↑</span>цена подставляется динамически — актуальную видно прямо в /premium</div>
+      </figure>
+
+      <h3 class="subhead">Иностранная карта — Tribute</h3>
+      <p>В меню <code>/premium</code> есть кнопка «💳 Иностранная карта (Tribute)». Оплата через Tribute добавляет тебя в премиум-группу автоматически — без скриншотов и ручного подтверждения.</p>
+
+    </div>
+  </section>
+
+  <!-- ===== 8. Приватность ===== -->
+  <section class="step" id="step8">
+    <header class="step-head">
+      <div class="badge">8</div>
+      <div>
+        <h2>Приватность — <code>/forget_me</code> и шифрование</h2>
+        <p class="lead">Все данные хранятся зашифрованными. Удалить всё можно в любой момент.</p>
+      </div>
+    </header>
+    <div class="step-body">
+
+      <h3 class="subhead">Шифрование данных</h3>
+      <p>Все приватные данные хранятся зашифрованными: тексты сообщений, факты памяти, синопсис, сцена-дайджест, лорбук, персоны, карточки. У каждого пользователя свой ключ шифрования — дамп базы без серверного секрета ничего не открывает.</p>
+      <p>API-ключи провайдеров тоже хранятся в зашифрованном виде — автор бота их не видит.</p>
+
+      <h3 class="subhead">Что будет, если закончится подписка</h3>
+      <p>Ничего не удаляется. Доступ к игре закрывается до продления, но все данные — истории, память, карточки, персоны, лорбук — остаются целы и зашифрованы. Вернёшься — продолжишь с того же места. Удалённые сообщения можно вернуть через <code>/restore</code> (корзина хранится 14 дней), а выгрузить свои данные командой <code>/export</code> можно в любой момент — подписка для этого не нужна.</p>
+
+      <h3 class="subhead"><code>/forget_me</code> — удалить все данные</h3>
+      <p>Команда работает в личке с ботом. Запрашивает удаление всех твоих данных. Есть задержка подтверждения — в течение неё можно отменить. После подтверждения ключ шифрования удаляется и все зашифрованные данные мгновенно становятся нечитаемыми (crypto-shred).</p>
+
+      <h3 class="subhead"><code>/docs</code> — документы</h3>
+      <p>Показывает ссылки на Условия использования, Политику конфиденциальности и Публичную оферту.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Сделано с <span class="heart">&#9829;</span> для игроков Limerence Stories<br>
+  Желаю хорошей игры и потрясающих сюжетов!<br>
+  💬 <a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Группа сообщества</a> — вопросы и новости
+  <div class="legal">18+ ·
+    <a href="roadmap.html">Дорожная карта</a> ·
+    <a href="legal/tos.html">Условия использования</a> ·
+    <a href="legal/privacy.html">Политика конфиденциальности</a> ·
+    <a href="legal/offer.html">Оферта</a>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+<script>
+// active nav highlight (страничный ToC)
+const links=[...document.querySelectorAll('.nav a[href^="#"]')];
+const secs=[...document.querySelectorAll('.step')];
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  const id=e.target.id;links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+id));}});
+},{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>io.observe(s));
+// copy buttons
+document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',async()=>{
+  try{await navigator.clipboard.writeText(b.dataset.copy);}catch(e){}
+  const t=b.textContent;b.textContent='Скопировано ✓';b.classList.add('done');
+  setTimeout(()=>{b.textContent=t;b.classList.remove('done');},1500);
+}));
+// lightbox
+const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+document.querySelectorAll('.shot img').forEach(img=>img.addEventListener('click',()=>{
+  lbImg.src=img.dataset.full;lb.classList.add('open');}));
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
