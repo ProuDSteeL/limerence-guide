@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Команды Limerence: полный справочник · Справочник · Limerence</title>
+<meta name="description" content="Все пользовательские команды Limerence с объяснением: /menu, /settings, /current, /stop, /undo, /rewrite, /fork, /clear, /restore, /scene, /day, /export, /lore, /cards, /api, /help, /diag, /appeal и другие.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/komandy-limerence-spravochnik.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#spravochnik">Справочник</a></p>
+<h1>Команды Limerence: полный справочник</h1>
+<h2>Основные команды истории</h2>
+<p>Ниже — команды, которые полезно знать при обычной игре.</p>
+<hr />
+<h2>🧭 <code>/menu</code></h2>
+<p>Открывает главное меню.</p>
+<p>В Теме:</p>
+<blockquote>
+<p>меню текущей истории.</p>
+</blockquote>
+<p>В личке:</p>
+<blockquote>
+<p>меню аккаунта.</p>
+</blockquote>
+<p>Если не знаете, где искать функцию — <code>/menu</code> обычно хороший первый шаг.</p>
+<hr />
+<h2>⚙️ <code>/settings</code></h2>
+<p>Открывает настройки текущей истории.</p>
+<p>Здесь можно управлять:</p>
+<ul>
+<li>моделью;</li>
+<li>провайдером истории;</li>
+<li>памятью диалога;</li>
+<li>длиной ответа;</li>
+<li>промптом;</li>
+<li>Заметкой автора;</li>
+<li>расширенными настройками;</li>
+<li>DeepSeek-настройками;</li>
+<li>внешним видом ответа;</li>
+<li>самой Темой.</li>
+</ul>
+<p>Используйте внутри игровой группы.</p>
+<p>Подробнее:</p>
+<p><a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Основные настройки истории</a></p>
+<p>и:</p>
+<p><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки истории</a></p>
+<hr />
+<h2>🔎 <code>/current</code></h2>
+<p>Показывает <strong>фактическую текущую конфигурацию истории</strong>.</p>
+<p>Особенно полезно для диагностики.</p>
+<p>Можно проверить, например:</p>
+<ul>
+<li>какая игровая модель используется;</li>
+<li>через какой провайдер идёт запрос;</li>
+<li>есть ли отдельный провайдер именно для этой Темы;</li>
+<li>какие модели используются вспомогательными системами;</li>
+<li>состояние контекста и памяти.</li>
+</ul>
+<p>Если кажется:</p>
+<blockquote>
+<p>«Я точно выбрала один API, а отвечает как будто другой»</p>
+</blockquote>
+<p>— первым делом имеет смысл посмотреть <code>/current</code>.</p>
+<p>Команда работает внутри Темы.</p>
+<hr />
+<h2>⏹ <code>/stop</code></h2>
+<p>Останавливает генерацию, которая идёт прямо сейчас.</p>
+<p>Полезно, если:</p>
+<ul>
+<li>модель зависла;</li>
+<li>провайдер отвечает слишком долго;</li>
+<li>вы случайно отправили неправильное сообщение;</li>
+<li>генерация явно пошла не туда и ждать её окончания бессмысленно.</li>
+</ul>
+<p>Отправьте внутри той же Темы:</p>
+<p><code>/stop</code></p>
+<hr />
+<h2>Что именно делает <code>/stop</code></h2>
+<p>Поведение зависит от того, что сейчас генерируется.</p>
+<h3>Обычный игровой ход</h3>
+<p>Если вы отправили реплику и Limerence ещё генерирует ответ:</p>
+<p><code>/stop</code></p>
+<p>остановит ход.</p>
+<p>В этом случае ваша реплика не сохраняется как завершённый игровой обмен.</p>
+<p>Можно исправить её и отправить снова.</p>
+<h3>Новый вариант ответа</h3>
+<p>Если остановить генерацию после:</p>
+<p><strong>«🔄 Ещё вариант»</strong></p>
+<p>предыдущий готовый ответ останется на месте.</p>
+<h3>Rewrite</h3>
+<p>Если остановить ответ во время Rewrite:</p>
+<p>сама правка вашего сообщения уже может быть сохранена, но новый ответ к ней не будет завершён.</p>
+<p>После этого можно продолжить игру или при необходимости использовать <code>/undo</code>.</p>
+<hr />
+<h2>Когда <code>/stop</code> уже не поможет</h2>
+<p>Если ответ модели уже полностью готов и отправляется в Telegram, остановить генерацию поздно.</p>
+<p>Если такой ответ не нужен:</p>
+<p><code>/undo</code></p>
+<hr />
+<h2>↩️ <code>/undo</code></h2>
+<p>Отменяет последний игровой обмен.</p>
+<p>Обмен — это обычно:</p>
+<p><strong>ваша реплика + ответ модели.</strong></p>
+<p>Просто:</p>
+<p><code>/undo</code></p>
+<p>удаляет последний обмен.</p>
+<p>Можно указать количество:</p>
+<p><code>/undo 2</code></p>
+<p><code>/undo 3</code></p>
+<p>и так далее.</p>
+<hr />
+<h2>Большой Undo попросит подтверждение</h2>
+<p>Если вы пытаетесь удалить больше нескольких обменов сразу, Limerence попросит подтверждение.</p>
+<p>Это защита от ситуации:</p>
+<blockquote>
+<p>хотела <code>/undo 4</code>, случайно написала <code>/undo 40</code>, а жизнь мгновенно приобрела философский характер.</p>
+</blockquote>
+<p>Подтверждение запрашивается начиная с четвёртого обмена за один вызов.</p>
+<p>Больше 200 обменов за раз Limerence не удалит вообще — такой запрос отклоняется без диалога. Никакое подтверждение не делает разовое удаление пяти тысяч ходов безопасным.</p>
+<p>Удалённые через Undo данные архивируются и могут быть восстановлены через <code>/restore</code> в течение 14 дней.</p>
+<p>Подробнее:</p>
+<p><a href="upravlenie-istoriey-varianty-otkat-vetki.html">Управление историей</a></p>
+<hr />
+<h2>♻️ <code>/rewrite</code></h2>
+<p>Позволяет переписать старое <strong>своё</strong> сообщение и пересобрать всё продолжение после него.</p>
+<p>Использование:</p>
+<ol>
+<li>сделайте Reply на своё старое сообщение;</li>
+<li>отправьте:</li>
+</ol>
+<p><code>/rewrite новый текст сообщения</code></p>
+<p>Например:</p>
+<p><code>/rewrite Я не открываю дверь. Вместо этого отступаю к окну.</code></p>
+<p>Limerence заменит старый ход и пересоберёт историю после него.</p>
+<hr />
+<h2>Можно просто отредактировать своё сообщение Telegram</h2>
+<p>Если Telegram ещё позволяет изменить старое сообщение, обычное редактирование тоже может запустить Rewrite.</p>
+<p>Команда <code>/rewrite</code> особенно полезна, когда Telegram уже не даёт нормально изменить старое сообщение.</p>
+<hr />
+<h2>Rewrite может изменить большой кусок истории</h2>
+<p>Если после переписываемого сообщения уже произошло много событий, они зависят от старой версии хода.</p>
+<p>Поэтому Limerence может попросить подтверждение перед большим каскадным изменением.</p>
+<p>Rewrite также откатывает связанные слои памяти и сцены.</p>
+<p>Подробнее:</p>
+<p><a href="upravlenie-istoriey-varianty-otkat-vetki.html">Управление историей</a></p>
+<hr />
+<h2>🌱 <code>/fork</code></h2>
+<p>Создаёт новую ветку истории.</p>
+<p>Используйте, когда хочется сохранить текущий сюжет, но попробовать другой вариант развития.</p>
+<p>Например:</p>
+<blockquote>
+<p>А что было бы, если бы она всё-таки открыла дверь?</p>
+</blockquote>
+<p>Сделайте Reply на нужное сообщение и отправьте:</p>
+<p><code>/fork</code></p>
+<p>После этого Limerence попросит название новой Темы.</p>
+<p>Например:</p>
+<blockquote>
+<p>Она открыла дверь</p>
+</blockquote>
+<p>Будет создана новая Telegram-Тема с историей и состоянием, скопированными до выбранной точки.</p>
+<p>Оригинальная история останется нетронутой.</p>
+<hr />
+<h2>Fork — это не копия навсегда связанная с оригиналом</h2>
+<p>После создания ветки обе истории развиваются независимо.</p>
+<p>Изменения в новой ветке не переписывают старую.</p>
+<p>Поэтому Fork отлично подходит для:</p>
+<ul>
+<li>альтернативных решений;</li>
+<li>AU;</li>
+<li>проверки разных вариантов сцены;</li>
+<li>сохранения точки перед важным сюжетным выбором.</li>
+</ul>
+<p>Подробнее:</p>
+<p><a href="upravlenie-istoriey-varianty-otkat-vetki.html">Управление историей</a></p>
+<hr />
+<h2>🧹 <code>/clear</code></h2>
+<p>Полностью очищает сюжетное содержимое текущей Темы.</p>
+<p>Команда удаляет:</p>
+<ul>
+<li>историю;</li>
+<li>факты памяти;</li>
+<li>состояние сцены;</li>
+<li>сюжетные сводки.</li>
+</ul>
+<p>Перед очисткой Limerence попросит подтверждение.</p>
+<hr />
+<h2>Что <code>/clear</code> НЕ удаляет</h2>
+<p><code>/clear</code> специально оставляет конфигурацию истории.</p>
+<p>Например:</p>
+<ul>
+<li>модель;</li>
+<li>настройки генерации;</li>
+<li>Character Card;</li>
+<li>персону;</li>
+<li>lorebook;</li>
+<li>провайдеры.</li>
+</ul>
+<p>Поэтому <code>/clear</code> удобно использовать, если вы хотите:</p>
+<blockquote>
+<p>начать новую игру в той же Теме с теми же настройками.</p>
+</blockquote>
+<p>Удалённое помещается в корзину и доступно через <code>/restore</code> ограниченное время.</p>
+<hr />
+<h2>♻️ <code>/restore</code> и <code>/trash</code></h2>
+<p>Это две команды для одного экрана корзины текущей Темы:</p>
+<p><code>/restore</code></p>
+<p>или:</p>
+<p><code>/trash</code></p>
+<p>Здесь отображаются недавние удаления.</p>
+<p>Например:</p>
+<ul>
+<li>Undo;</li>
+<li>Rewrite;</li>
+<li>Clear;</li>
+<li>удалённые варианты;</li>
+<li>другие поддерживаемые откаты.</li>
+</ul>
+<hr />
+<h2>Каждая запись корзины восстанавливается отдельно</h2>
+<p>Корзина не работает как:</p>
+<blockquote>
+<p>«вернуть вообще всё, что когда-либо удалялось».</p>
+</blockquote>
+<p>Каждая запись соответствует конкретному действию.</p>
+<p>Вы выбираете, какое именно удаление восстановить.</p>
+<p>Данные хранятся в корзине:</p>
+<p><strong>14 дней.</strong></p>
+<p>После этого восстановление не гарантируется.</p>
+<hr />
+<h2>Можно очистить корзину насовсем</h2>
+<p>В <code>/restore</code> есть действие:</p>
+<p><strong>«🧹 Очистить корзину»</strong></p>
+<p>Оно удаляет содержимое корзины текущей Темы без возможности восстановления.</p>
+<p>Перед этим Limerence попросит подтверждение.</p>
+<hr />
+<h2>🎬 <code>/scene</code></h2>
+<p>Показывает текущее состояние сцены, которое отслеживает Limerence.</p>
+<p>Например, там может находиться информация о:</p>
+<ul>
+<li>текущей обстановке;</li>
+<li>положении персонажей;</li>
+<li>одежде;</li>
+<li>важных предметах;</li>
+<li>других деталях сцены.</li>
+</ul>
+<p>Команда полезна, если кажется:</p>
+<blockquote>
+<p>«Почему модель решила, что он всё ещё держит бокал?»</p>
+</blockquote>
+<p>или:</p>
+<blockquote>
+<p>«Она вообще помнит, где мы сейчас находимся?»</p>
+</blockquote>
+<p>Используйте:</p>
+<p><code>/scene</code></p>
+<hr />
+<h2>Если состояние сцены неправильное</h2>
+<p>Сам экран <code>/scene</code> предназначен прежде всего для просмотра.</p>
+<p>Исправить обычную деталь можно прямо следующим игровым ходом.</p>
+<p>Например:</p>
+<blockquote>
+<p>Она всё ещё в пальто и не успела переодеться.</p>
+</blockquote>
+<p>Для игрового дня существует отдельная <code>/day</code>.</p>
+<p>Если проблема возникла из-за последнего ошибочного хода — можно использовать <code>/undo</code>.</p>
+<hr />
+<h2>📅 <code>/day</code></h2>
+<p>Показывает и изменяет игровой день и календарную дату.</p>
+<p>Просто:</p>
+<p><code>/day</code></p>
+<p>показывает текущее состояние.</p>
+<hr />
+<h2>Установить игровой день</h2>
+<p>Например:</p>
+<p><code>/day 63</code></p>
+<p>Теперь текущий игровой день — 63.</p>
+<hr />
+<h2>Установить календарную дату</h2>
+<p>Например:</p>
+<p><code>/day 22.01.2026</code></p>
+<p>Дата будет привязана к текущему игровому дню.</p>
+<hr />
+<h2>Установить день и дату сразу</h2>
+<p>Например:</p>
+<p><code>/day 63 22.01.2026</code></p>
+<p>Limerence запомнит:</p>
+<blockquote>
+<p>день 63 = 22 января 2026 года.</p>
+</blockquote>
+<p>После этого календарная дата может двигаться вместе с игровыми днями.</p>
+<hr />
+<h2>Убрать дату</h2>
+<p>Если календарная дата больше не нужна:</p>
+<p><code>/day дата выкл</code></p>
+<p>или:</p>
+<p><code>/day дата off</code></p>
+<p>После этого поле «дата» в шапке сцены снова заполняет сама модель.</p>
+<hr />
+<h2>Отдельной команды <code>/date</code> сейчас нет</h2>
+<p>Для даты используйте:</p>
+<p><code>/day</code></p>
+<p>или:</p>
+<p><code>/settings</code> → <strong>Расширенные → Вид → День и дата</strong></p>
+<p>Это важно, потому что в старых инструкциях или сообщениях можно встретить упоминание отдельной <code>/date</code>.</p>
+<p>В текущей версии она не нужна.</p>
+<hr />
+<h2>📜 <code>/export</code></h2>
+<p>Экспортирует текущую историю в Markdown-файл.</p>
+<p>Используйте внутри Темы:</p>
+<p><code>/export</code></p>
+<p>Limerence сформирует <code>.md</code> с текстом истории.</p>
+<p>В экспорт входят:</p>
+<ul>
+<li>реплики игрока;</li>
+<li>ответы модели;</li>
+<li>OOC-сообщения с соответствующей пометкой.</li>
+</ul>
+<p>Экспорт предназначен для удобного сохранения сюжета, а не для полного технического резервного копирования памяти и настроек.</p>
+<hr />
+<h2>📚 <code>/lore</code></h2>
+<p>Открывает лор текущей истории.</p>
+<p>Через него можно:</p>
+<ul>
+<li>создавать карточки лора;</li>
+<li>редактировать существующие;</li>
+<li>загружать большие лор-файлы;</li>
+<li>импортировать World Book;</li>
+<li>подключать книги, переименовывать их и удалять из библиотеки;</li>
+<li>смотреть, что из лора попало модели на последнем ходу и почему остальное нет;</li>
+<li>экспортировать lorebook.</li>
+</ul>
+<p>Лор относится к контексту конкретной истории, хотя сохранённые библиотечные книги могут использоваться в нескольких Темах.</p>
+<p>Подробнее:</p>
+<p><a href="lor-i-ustroystvo-mira.html">Лор и канон</a></p>
+<hr />
+<h2>🃏 <code>/cards</code></h2>
+<p>Открывает коллекцию Character Cards.</p>
+<p>Через неё можно:</p>
+<ul>
+<li>выбрать персонажа для текущей Темы;</li>
+<li>перейти в свободный режим без карточки;</li>
+<li>управлять сохранёнными карточками;</li>
+<li>создавать новые.</li>
+</ul>
+<p>Сами карточки хранятся на уровне аккаунта.</p>
+<p>Но <strong>активная карточка выбирается для конкретной истории</strong>.</p>
+<p>Подробнее:</p>
+<p><a href="personazhi-i-kartochki.html">Персонажи и карточки</a></p>
+<hr />
+<h2>🆕 <code>/newcard</code></h2>
+<p>Запускает создание новой Character Card вручную.</p>
+<p>Limerence последовательно попросит:</p>
+<ol>
+<li>имя;</li>
+<li>описание;</li>
+<li>характер;</li>
+<li>сценарий;</li>
+<li>первое сообщение.</li>
+</ol>
+<p>Для более подробного редактирования карточек можно использовать Кабинет.</p>
+<hr />
+<h2>📥 <code>/import</code></h2>
+<p>Импортирует готовую Character Card.</p>
+<p>Поддерживаются совместимые:</p>
+<ul>
+<li>PNG;</li>
+<li>JSON;</li>
+<li>Tavern Character Cards;</li>
+<li>карточки из распространённых совместимых сервисов.</li>
+</ul>
+<p>Команда особенно полезна для карточек из SillyTavern, Janitor.AI и Chub.</p>
+<p>Подробнее:</p>
+<p><a href="personazhi-i-kartochki.html">Персонажи и карточки</a></p>
+<hr />
+<h2>👤 <code>/profile</code></h2>
+<p>Управляет <strong>персоной игрока</strong>.</p>
+<p>Character Card отвечает:</p>
+<blockquote>
+<p>кем играет модель?</p>
+</blockquote>
+<p>Персона отвечает:</p>
+<blockquote>
+<p>кем в этой истории являетесь вы?</p>
+</blockquote>
+<p>Можно иметь общую персону по умолчанию и отдельный выбор для конкретной Темы.</p>
+<p>Подробнее:</p>
+<p><a href="personazhi-i-kartochki.html">Персонажи и карточки</a></p>
+<hr />
+<h2>🧩 <code>/preset</code></h2>
+<p>Открывает сохранённые генерационные пресеты.</p>
+<p>Можно:</p>
+<ul>
+<li>выбрать пресет для текущей истории;</li>
+<li>выключить его;</li>
+<li>управлять его блоками;</li>
+<li>вернуть исходную конфигурацию.</li>
+</ul>
+<p>Пресет выбирается отдельно для каждой Темы.</p>
+<p>Подробнее:</p>
+<p><a href="presety-kak-oni-rabotayut.html">Пресеты: как они работают и как их использовать</a></p>
+<hr />
+<h2>🔤 <code>/regex</code></h2>
+<p>Открывает Regex-скрипты текущей истории.</p>
+<p>Regex может автоматически преобразовывать:</p>
+<ul>
+<li>текст игрока;</li>
+<li>ответ модели;</li>
+<li>текст до отправки модели;</li>
+<li>отображаемый пользователю результат.</li>
+</ul>
+<p>Некоторые Regex приходят вместе с Character Cards или пресетами.</p>
+<p>Используйте осторожно: Regex обладает удивительной способностью за три символа сделать с текстом то, ради чего обычному багу понадобилась бы неделя разработки.</p>
+<hr />
+<h2>📦 <code>/storage</code></h2>
+<p>Открывает управление хранилищем Limerence.</p>
+<p>Здесь можно посмотреть:</p>
+<ul>
+<li>используемый объём;</li>
+<li>данные по историям;</li>
+<li>общее использование хранилища;</li>
+<li>доступные действия очистки.</li>
+</ul>
+<p>Это уже скорее функция уровня аккаунта, а не управление одним игровым ходом.</p>
+<hr />
+<h2>Команды API и модели</h2>
+<hr />
+<h2>🔑 <code>/api</code></h2>
+<p>Открывает управление API-провайдерами.</p>
+<p>Можно:</p>
+<ul>
+<li>добавить свой провайдер;</li>
+<li>сохранить API-ключ;</li>
+<li>посмотреть подключённые ключи;</li>
+<li>выбрать активный;</li>
+<li>удалить ненужный.</li>
+</ul>
+<p>Сам ввод секретного API-ключа переводится в личный чат с ботом.</p>
+<p>После подключения модель для конкретной истории выбирается через:</p>
+<p><code>/settings</code></p>
+<p>Подробнее:</p>
+<p><a href="kak-vybrat-model-i-podklyuchit-api-klyuch.html">Модели и API-ключи</a></p>
+<hr />
+<h2><code>/current</code></h2>
+<p>Если <code>/api</code> отвечает на вопрос:</p>
+<blockquote>
+<p>какие провайдеры вообще есть у моего аккаунта?</p>
+</blockquote>
+<p>то <code>/current</code> отвечает:</p>
+<blockquote>
+<p>что реально используется прямо сейчас в этой Теме?</p>
+</blockquote>
+<p>Это очень полезное различие.</p>
+<hr />
+<h2>Аккаунт, подписка и Кабинет</h2>
+<hr />
+<h2>💎 <code>/premium</code> и <code>/upgrade</code></h2>
+<p>Открывают один и тот же тарифный экран.</p>
+<p>Здесь находятся:</p>
+<ul>
+<li>Premium;</li>
+<li>DeepSeek;</li>
+<li>текущие сроки;</li>
+<li>доступные способы оплаты;</li>
+<li>другие доступные дополнения.</li>
+</ul>
+<p>Подробнее:</p>
+<p><a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата</a></p>
+<hr />
+<h2>📊 <code>/stats</code></h2>
+<p>Показывает доступную статистику использования DeepSeek.</p>
+<p>Особенно полезно для контроля дневного пула на соответствующем тарифе.</p>
+<p>Подробнее:</p>
+<p><a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата</a></p>
+<hr />
+<h2>🎟 <code>/promo КОД</code></h2>
+<p>Активирует промокод.</p>
+<p>Например:</p>
+<p><code>/promo SUMMER26</code></p>
+<p>Промокод может давать скидку или доступ в зависимости от его типа.</p>
+<hr />
+<h2>🗂 <code>/app</code> и <code>/cabinet</code></h2>
+<p>Открывают Кабинет Limerence.</p>
+<p>Из игровой Темы Кабинет открывается через личный чат, но Limerence может передать ему именно текущую историю.</p>
+<p>В Кабинете удобнее работать с:</p>
+<ul>
+<li>большими промптами;</li>
+<li>карточками;</li>
+<li>персонами;</li>
+<li>Regex;</li>
+<li>настройками;</li>
+<li>историей Тем;</li>
+<li>статистикой.</li>
+</ul>
+<p>Подробнее:</p>
+<p><a href="kabinet-limerence-obzor-istorii.html">Кабинет Limerence</a></p>
+<hr />
+<h2>Помощь и документы</h2>
+<hr />
+<h2>🛟 <code>/help</code></h2>
+<p>Открывает главный экран помощи.</p>
+<p>Здесь можно:</p>
+<ul>
+<li>перейти к гайду;</li>
+<li>задать вопрос;</li>
+<li>сообщить о баге;</li>
+<li>открыть документы;</li>
+<li>посмотреть свои баги;</li>
+<li>перейти к обжалованию блокировки.</li>
+</ul>
+<p>Если не знаете нужную команду — <code>/help</code> является хорошей точкой входа.</p>
+<hr />
+<h2><code>/guide</code></h2>
+<p>Открывает тот же Help Hub.</p>
+<p>Это дополнительный короткий путь к справке.</p>
+<hr />
+<h2>📄 <code>/docs</code></h2>
+<p>Показывает действующие юридические документы Limerence:</p>
+<ul>
+<li>Условия использования;</li>
+<li>Политику приватности;</li>
+<li>публичную оферту.</li>
+</ul>
+<hr />
+<h2>✍️ <code>/support</code></h2>
+<p>Используйте, если вам нужна помощь человека.</p>
+<p>Например:</p>
+<ul>
+<li>вопрос по настройке;</li>
+<li>проблема с оплатой;</li>
+<li>непонятное поведение интерфейса;</li>
+<li>вопрос по API;</li>
+<li>помощь с функцией.</li>
+</ul>
+<p>Для технического бага лучше использовать <code>/diag</code>.</p>
+<hr />
+<h2>🐛 <code>/diag</code></h2>
+<p>Создаёт баг-репорт.</p>
+<p>Если проблема относится к конкретной истории, вызывайте <code>/diag</code> <strong>внутри этой Темы</strong>.</p>
+<p>Так к обращению можно привязать диагностику именно проблемной истории.</p>
+<p>Подробнее:</p>
+<p><a href="esli-limerence-rabotaet-nepravilno.html">Если Limerence работает неправильно</a></p>
+<hr />
+<h2>⚖️ <code>/appeal</code></h2>
+<p>Открывает форму обжалования ограничения или блокировки.</p>
+<p>Используйте её, если считаете, что мера модерации была применена ошибочно.</p>
+<p>Не используйте <code>/appeal</code> вместо обычной поддержки для вопросов вроде:</p>
+<blockquote>
+<p>почему модель отвечает коротко?</p>
+</blockquote>
+<p>или:</p>
+<blockquote>
+<p>как подключить OpenRouter?</p>
+</blockquote>
+<p>Для этого существует <code>/support</code>.</p>
+<p>Правила и обжалования подробно разобраны в статье:</p>
+<p><a href="moderaciya-blokirovki-apellyacii.html">Правила, модерация и блокировки</a></p>
+<hr />
+<h2>🗑 <code>/forget_me</code></h2>
+<p>Запускает полное удаление данных аккаунта Limerence.</p>
+<p>Это совсем не то же самое, что:</p>
+<p><code>/clear</code></p>
+<p>или удаление одной Темы.</p>
+<p>После подтверждения запускается отдельная процедура удаления всего аккаунта с периодом на отмену.</p>
+<p>Используйте только если действительно хотите удалить пользовательские данные Limerence целиком.</p>
+<p>Подробнее:</p>
+<p><a href="dannye-i-privatnost.html">Данные и приватность</a></p>
+<hr />
+<h2><code>/cancel</code></h2>
+<p>Многие пошаговые формы Limerence можно отменить командой:</p>
+<p><code>/cancel</code></p>
+<p>Например:</p>
+<ul>
+<li>создание карточки;</li>
+<li>импорт;</li>
+<li>настройку;</li>
+<li>создание ветки;</li>
+<li>обращение;</li>
+<li>апелляцию.</li>
+</ul>
+<p>Если бот сейчас ждёт от вас:</p>
+<blockquote>
+<p>имя</p>
+<p>файл</p>
+<p>текст</p>
+<p>API-ключ</p>
+<p>следующий шаг формы</p>
+</blockquote>
+<p>и вы передумали — <code>/cancel</code> обычно является правильным выходом.</p>
+<hr />
+<h2>Команды и обычный текст — это разные вещи</h2>
+<p>Сообщение:</p>
+<p><code>/undo</code></p>
+<p>является командой.</p>
+<p>А:</p>
+<blockquote>
+<p>Она делает шаг назад и смотрит на него.</p>
+</blockquote>
+<p>является игровым ходом.</p>
+<p>Не нужно ставить <code>/</code> перед обычными репликами.</p>
+<p>Просто пишите в Теме — Limerence поймёт это как продолжение RP.</p>
+<hr />
+<h2>А скобки <code>(OOC)</code>?</h2>
+<p>Для разговора вне роли можно написать, например:</p>
+<p><code>(Почему он решил, что дверь открыта?)</code></p>
+<p>или использовать OOC через меню под последним ответом.</p>
+<p>OOC не является обычным сюжетным ходом и обрабатывается отдельно.</p>
+<p>Подробнее:</p>
+<p><a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">Память Limerence</a></p>
+<hr />
+<h2>Что происходит, если отправить команду не туда</h2>
+<p>Обычно ничего страшного.</p>
+<p>Если команда требует Тему, а вы отправили её в личке или вне Topic, Limerence сообщит, что действие нужно выполнить внутри истории.</p>
+<p>Если функция относится к аккаунту, наоборот, бот может перевести вас в личный чат.</p>
+<p>Например:</p>
+<p><code>/app</code></p>
+<p>из группы открывает Кабинет через личку.</p>
+<p>Добавление секретного API-ключа также переводится в личный чат.</p>
+<hr />
+<h2>Почему Limerence иногда переводит действие в личку</h2>
+<p>Есть вещи, которые не стоит делать внутри игровой группы.</p>
+<p>Например:</p>
+<ul>
+<li>вводить API-ключ;</li>
+<li>управлять оплатой;</li>
+<li>открывать некоторые account-level экраны.</li>
+</ul>
+<p>Поэтому вы можете начать действие в группе, а завершить его в личном чате с ботом.</p>
+<p>Это не создание второй истории и не потеря текущей Темы.</p>
+<hr />
+<h2>Быстрая шпаргалка</h2>
+<p>Если хотите…</p>
+<p><strong>открыть меню истории</strong><br />
+→ <code>/menu</code></p>
+<p><strong>изменить настройки</strong><br />
+→ <code>/settings</code></p>
+<p><strong>проверить реальную модель и провайдер</strong><br />
+→ <code>/current</code></p>
+<p><strong>остановить зависшую генерацию</strong><br />
+→ <code>/stop</code></p>
+<p><strong>отменить последний обмен</strong><br />
+→ <code>/undo</code></p>
+<p><strong>переписать старую реплику</strong><br />
+→ <code>/rewrite</code></p>
+<p><strong>создать альтернативную ветку</strong><br />
+→ <code>/fork</code></p>
+<p><strong>начать историю заново с теми же настройками</strong><br />
+→ <code>/clear</code></p>
+<p><strong>вернуть удалённое</strong><br />
+→ <code>/restore</code></p>
+<p><strong>посмотреть состояние текущей сцены</strong><br />
+→ <code>/scene</code></p>
+<p><strong>исправить игровой день или дату</strong><br />
+→ <code>/day</code></p>
+<p><strong>сохранить историю файлом</strong><br />
+→ <code>/export</code></p>
+<p><strong>настроить лор</strong><br />
+→ <code>/lore</code></p>
+<p><strong>выбрать персонажа</strong><br />
+→ <code>/cards</code></p>
+<p><strong>настроить своего героя</strong><br />
+→ <code>/profile</code></p>
+<p><strong>выбрать генерационный пресет</strong><br />
+→ <code>/preset</code></p>
+<p><strong>управлять Regex</strong><br />
+→ <code>/regex</code></p>
+<p><strong>посмотреть хранилище</strong><br />
+→ <code>/storage</code></p>
+<p><strong>настроить API</strong><br />
+→ <code>/api</code></p>
+<p><strong>открыть Кабинет</strong><br />
+→ <code>/app</code></p>
+<p><strong>задать вопрос поддержке</strong><br />
+→ <code>/support</code></p>
+<p><strong>сообщить о баге</strong><br />
+→ <code>/diag</code></p>
+<p><strong>обжаловать блокировку</strong><br />
+→ <code>/appeal</code></p>
+<hr />
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="temy-gruppy-i-komandy.html">Темы, группы и команды</a></li>
+<li><a href="upravlenie-istoriey-varianty-otkat-vetki.html">Управление историей</a></li>
+<li><a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Основные настройки истории</a></li>
+<li><a href="esli-limerence-rabotaet-nepravilno.html">Если Limerence работает неправильно</a></li>
+<li><a href="glossariy-limerence-osnovnye-terminy.html">Глоссарий Limerence: основные термины</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Справочник»</h2><ul><li><a href="glossariy-limerence-osnovnye-terminy.html">Глоссарий Limerence: основные термины</a></li><li><a href="glossariy-limerence-generaciya.html">Глоссарий Limerence: генерация, история и поддержка</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

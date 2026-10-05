@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Основные настройки истории · Справочник · Limerence</title>
+<meta name="description" content="Меню /settings: режим DeepSeek, модель и ключ истории, длина ответов, промпт, Заметка автора и расширенные настройки.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/kak-nastroit-istoriyu-osnovnye-nastroyki.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#nastroyki-istorii">Настройки истории</a></p>
+<h1>Основные настройки истории</h1>
+<p>У каждой истории в Limerence есть собственные настройки.</p>
+<p>Здесь можно включить DeepSeek, выбрать модель и <a href="kak-vybrat-model-i-podklyuchit-api-klyuch.html">API-ключ</a>, настроить длину ответов, добавить собственный <a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">промпт</a> и Заметку автора.</p>
+<p>Если вы только начинаете, не нужно настраивать всё подряд. Для нормального старта достаточно разобраться с несколькими основными пунктами.</p>
+<h2>Как открыть настройки</h2>
+<p>Откройте нужную Тему в своей игровой группе и отправьте <code>/settings</code>.</p>
+<p>Команда работает внутри Темы. Если у вас несколько историй, у каждой из них будут собственные настройки.</p>
+<hr />
+<h2>Режим DeepSeek</h2>
+<p>Самый простой способ начать играть — использовать встроенный <a href="rasshirennye-nastroyki-otygrysh-deepseek.html">режим DeepSeek</a>.</p>
+<p>Он доступен сразу и не требует собственного API-ключа.</p>
+<p>В <a href="dostup-podpiski-i-oplata.html">пробный период</a> доступно 50 ходов DeepSeek в день.</p>
+<p>После окончания пробного периода встроенный режим DeepSeek продолжает работать только с <strong>Тарифом DeepSeek</strong> — это дополнение к Премиуму, поэтому он требует действующей подписки Премиум. Без него для игры понадобится собственный API-ключ.</p>
+<p>Чтобы использовать его, откройте <code>/settings</code> и убедитесь, что:</p>
+<blockquote>
+<p><strong>«🤖 Режим DeepSeek» → вкл ✅</strong></p>
+</blockquote>
+<p>Если режим выключен, нажмите на кнопку один раз.</p>
+<p>Когда DeepSeek включён, Limerence использует свой ключ. Подключать сторонний API-провайдер для игры в этом режиме не нужно.</p>
+<p>Лимит обновляется каждый день в 00:00 МСК.</p>
+<p>Посмотреть использование DeepSeek можно командой <code>/stats</code>.</p>
+<p>Если история играет через собственный API-ключ, эта команда сообщит, что подробная статистика отключена.</p>
+<p>Если дневные ходы закончились, можно дождаться обновления лимита или переключить историю на собственный API-ключ.</p>
+<hr />
+<h2>Модель игры</h2>
+<p>Кнопка <strong>«🎭 Модель игры»</strong> определяет, какая ИИ-модель будет писать ответы в этой истории.</p>
+<p>Если вы используете встроенный режим DeepSeek, отдельно настраивать модель для него не требуется.</p>
+<p>Эта настройка в первую очередь нужна тем, кто подключил собственный API-ключ и хочет использовать Claude, Gemini, GPT, DeepSeek или другую модель своего провайдера.</p>
+<p>После нажатия Limerence попросит прислать ID модели. Например:</p>
+<ul>
+<li><code>anthropic/claude-sonnet-4-5</code></li>
+<li><code>google/gemini-2.5-flash</code></li>
+<li><code>openai/gpt-4o</code></li>
+</ul>
+<p>ID модели нужно брать у вашего API-провайдера. Это не произвольное название: если провайдер не знает такой ID, модель не запустится.</p>
+<p>Подробнее о подключении ключей и моделей — в статье <strong>«Модели и API-ключи»</strong>.</p>
+<hr />
+<h2>Ключ игры для этой истории</h2>
+<p>Кнопка <strong>«🔀 Ключ игры (эта тема)»</strong> позволяет выбрать, через какой из ваших сохранённых API-провайдеров будет работать именно эта история.</p>
+<p>Это полезно, если у вас несколько ключей.</p>
+<p>Например, одна история может работать через OpenRouter, другая — через LiteRouter, а третья — через другой подключённый сервис.</p>
+<p>Если здесь стоит <strong>«по умолчанию»</strong>, Limerence использует ваш основной активный провайдер.</p>
+<p>Если вы играете через встроенный DeepSeek, эту настройку можно не трогать.</p>
+<hr />
+<h2>Максимальная и минимальная длина ответа</h2>
+<p>В главном меню есть две кнопки:</p>
+<ul>
+<li><strong>«📤 Макс»</strong> — максимальная длина ответа;</li>
+<li><strong>«📥 Мин»</strong> — желаемая минимальная длина ответа.</li>
+</ul>
+<p>При нажатии значение переключается по кругу.</p>
+<h3>Максимальная длина</h3>
+<p>Максимум — это верхний предел того, насколько длинным может быть ответ модели.</p>
+<p>Большое значение не означает, что каждый ответ обязательно будет огромным. Оно даёт модели больше пространства, если сцене нужен длинный ответ.</p>
+<p>Если ответы регулярно обрываются на середине сцены, слишком маленький максимум может быть одной из причин.</p>
+<p>Для начала эту настройку обычно можно оставить как есть.</p>
+<h3>Минимальная длина</h3>
+<p>Минимум подсказывает модели желаемый нижний предел ответа.</p>
+<p>Это полезно, если модель постоянно пишет слишком коротко.</p>
+<p>Но увеличение минимальной длины не исправляет само по себе стиль, характер персонажей или качество текста. Если модель пишет плохо, большой минимум иногда просто превращает короткий плохой ответ в длинный плохой ответ.</p>
+<p>Сначала лучше настроить промпт и поведение модели, а длину использовать именно для управления объёмом.</p>
+<hr />
+<h2>Промпт — главная настройка истории</h2>
+<p>Кнопка <strong>«📝 Промпт»</strong> задаёт постоянные инструкции для этой истории.</p>
+<p>Проще всего понимать промпт как ответ на вопрос: <strong>«Как модель должна вести эту историю каждый ход?»</strong></p>
+<p>В нём можно определить стиль повествования, POV, поведение персонажей, инициативность NPC, темп отношений, особенности диалогов и другие постоянные правила отыгрыша.</p>
+<h3>Что важно знать сразу</h3>
+<p>Limerence всегда использует собственный базовый RP-промпт, а ваш добавляется к нему — объяснять модели, что идёт ролевая игра, не нужно.</p>
+<p>Пользовательский промпт учитывается <strong>отдельно</strong> от контекста истории и памяти, поэтому большой промпт не отнимает место у отыгрыша. Фиксированного лимита на его размер со стороны Limerence нет.</p>
+<p>Подробно — структура, типичные ошибки, готовый шаблон и разбор слабого промпта — в статье <a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры</a>.</p>
+<h3>Как добавить промпт</h3>
+<p>Откройте <code>/settings</code> → <strong>«📝 Промпт»</strong> и отправьте текст.</p>
+<p>Если промпт большой, его можно загрузить файлом <code>.txt</code> или <code>.md</code>.</p>
+<p>Чтобы полностью удалить пользовательский промпт, отправьте <code>none</code> или <code>-</code>.</p>
+<p>После этого история продолжит использовать базовый промпт Limerence.</p>
+<hr />
+<h2>Заметка автора</h2>
+<p>Рядом с промптом находится <strong>«📝 Заметка автора»</strong>.</p>
+<p>Она тоже передаёт модели инструкции, но предназначена для другой задачи.</p>
+<p><strong>Промпт</strong> — это постоянные правила всей истории. Например:</p>
+<blockquote>
+<p>Не управляй персонажем игрока. Пиши в третьем лице. NPC должны самостоятельно проявлять инициативу.</p>
+</blockquote>
+<p><strong>Заметка автора</strong> — это информация или указание, которое особенно важно прямо сейчас. Например:</p>
+<blockquote>
+<p>Сейчас середина зимы, на улице сильный снег.</p>
+<p>Пока не раскрывай, кто убийца.</p>
+<p>В следующих сценах сделай атмосферу тревожнее.</p>
+<p>Персонаж всё ещё скрывает от остальных свою травму.</p>
+</blockquote>
+<p>Limerence добавляет Заметку автора модели каждый ход рядом с текущим действием, поэтому она хорошо подходит для временных режиссёрских указаний.</p>
+<h3>Как добавить Заметку автора</h3>
+<p>Откройте <code>/settings</code> → <strong>«📝 Заметка автора»</strong> и отправьте текст.</p>
+<p>Максимальный размер Заметки автора — 6000 символов.</p>
+<p>Если текст не помещается в одно сообщение Telegram, его можно отправить файлом <code>.txt</code> или добавить продолжение отдельным сообщением, начав его с <code>+</code>.</p>
+<p>Чтобы удалить Заметку автора, отправьте <code>-</code>.</p>
+<hr />
+<h2>Промпт, Заметка автора, карточка или лор?</h2>
+<p>Короткое правило, куда что класть:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Что это</th>
+<th>Где хранить</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Постоянные правила повествования</td>
+<td>Промпт</td>
+</tr>
+<tr>
+<td>Временные указания «важно прямо сейчас»</td>
+<td>Заметка автора</td>
+</tr>
+<tr>
+<td>Описание персонажа</td>
+<td>Карточка персонажа</td>
+</tr>
+<tr>
+<td>Устройство мира, места, организации, термины</td>
+<td>Лор</td>
+</tr>
+<tr>
+<td>События, уже произошедшие в истории</td>
+<td>Память Limerence</td>
+</tr>
+</tbody>
+</table></div>
+<p>Разбор с примерами — в статье <a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры</a>.</p>
+<hr />
+<h2>Расширенные настройки</h2>
+<p>Кнопка <strong>«⚙️ Расширенные →»</strong> открывает дополнительные параметры.</p>
+<p>Там находятся:</p>
+<ul>
+<li><strong>🎭 Отыгрыш</strong> — поведение и стиль ролевой игры;</li>
+<li><strong>🧪 Генерация</strong> — температура, контекст и другие параметры модели;</li>
+<li><strong>🖼 Вид</strong> — оформление и отображение;</li>
+<li><strong>🗂 Тема</strong> — настройки самой истории.</li>
+</ul>
+<p>Новичку не обязательно менять эти параметры.</p>
+<p>Базовые значения уже подходят для обычной игры. Расширенные настройки полезны, когда вы понимаете, что конкретно хотите изменить: например, увеличить объём контекста, изменить температуру или настроить поведение отыгрыша.</p>
+<p>Их мы разбираем отдельно в более подробных статьях.</p>
+<hr />
+<h2>Что настроить новичку</h2>
+<p>Для <a href="kak-nachat-i-sozdat-pervuyu-istoriyu.html">первого запуск</a>а достаточно:</p>
+<ol>
+<li>Открыть нужную Тему и отправить <code>/settings</code>.</li>
+<li>Включить DeepSeek, если хотите использовать встроенную модель.</li>
+<li>Добавить промпт с постоянными правилами своей истории.</li>
+<li>При необходимости добавить Заметку автора с текущими указаниями.</li>
+<li>Длину ответа сначала оставить как есть.</li>
+<li>В расширенные настройки заходить уже тогда, когда понятно, что именно хочется изменить.</li>
+</ol>
+<p>После этого можно вернуться в Тему и продолжить историю.</p>
+<p>Все эти настройки относятся к конкретной истории, поэтому разные Темы можно настраивать совершенно по-разному.</p>
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры</a></li>
+<li><a href="kak-nastroit-povedenie-i-stil-istorii.html">Стиль и поведение истории</a></li>
+<li><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация</a></li>
+<li><a href="rasshirennye-nastroyki-otygrysh-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
+<li><a href="kabinet-limerence-obzor-istorii.html">Кабинет Limerence: обзор, истории и настройки</a></li>
+<li><a href="komandy-limerence-spravochnik.html">Команды Limerence: полный справочник</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Настройки истории»</h2><ul><li><a href="kak-nastroit-povedenie-i-stil-istorii.html">Стиль и поведение истории</a></li><li><a href="rasshirennye-nastroyki-otygrysh-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li><li><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация</a></li><li><a href="rasshirennye-nastroyki-vid-i-tema.html">Расширенные настройки: вид и Тема</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

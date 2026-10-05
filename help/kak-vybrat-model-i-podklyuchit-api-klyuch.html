@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Модели и API-ключи · Справочник · Limerence</title>
+<meta name="description" content="Пробный DeepSeek, свой API-провайдер, выбор модели для истории и разбор частых ошибок.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/kak-vybrat-model-i-podklyuchit-api-klyuch.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#start">Начало работы</a></p>
+<h1>Модели и API-ключи</h1>
+<p>Чтобы начать играть в Limerence, свой API-ключ не обязателен. Во время <a href="dostup-podpiski-i-oplata.html">пробного периода</a> можно сразу использовать DeepSeek на ключе Limerence — до 50 ходов в день в течение 7 дней.</p>
+<p>Если хочется выбрать другую модель — Claude, Gemini, GPT или любую другую доступную у вашего провайдера — можно подключить собственный API-ключ.</p>
+<p>Если собственного API-ключа нет, в новой истории Limerence автоматически может использовать пробный DeepSeek. В старой Теме бот при необходимости предложит кнопку <strong>«🎁 Включить DeepSeek-режим»</strong>.</p>
+<p>Если подключить собственный API-ключ, лимит в 50 ходов DeepSeek на игру через этот ключ не распространяется. При этом ограничения и стоимость самого API-провайдера зависят уже от него.</p>
+<blockquote>
+<p>После окончания 7-дневного пробного периода для продолжения работы Limerence потребуется Premium — в том числе если вы играете через собственный API-ключ.</p>
+</blockquote>
+<hr />
+<h2>Что такое API-провайдер</h2>
+<p>API-провайдер — сервис, через который Limerence получает доступ к моделям.</p>
+<p>Например, один провайдер может давать доступ сразу к Claude, Gemini, GPT, DeepSeek и другим моделям.</p>
+<p>У провайдера обычно есть три вещи:</p>
+<ul>
+<li><strong>API URL</strong> — адрес, по которому Limerence обращается к сервису;</li>
+<li><strong>API-ключ</strong> — секретный ключ вашего аккаунта;</li>
+<li><strong>ID модели</strong> — точное название модели, которую нужно вызвать.</li>
+</ul>
+<blockquote>
+<p>Подписка Limerence и расходы у API-провайдера — разные вещи. Если вы используете собственный ключ, запросы к модели оплачиваются по правилам выбранного провайдера.</p>
+</blockquote>
+<hr />
+<h2>Как подключить свой API-ключ</h2>
+<p>Откройте свою игровую группу и отправьте <code>/api</code>.</p>
+<p>Нажмите <strong>«➕ Добавить нового»</strong>.</p>
+<p>Limerence предложит продолжить настройку в личной переписке с ботом. Это сделано специально: API-ключ не нужно отправлять в групповом чате.</p>
+<p>Дальше бот проведёт через три шага.</p>
+<h3>Шаг 1. Укажите API URL</h3>
+<p>Введите адрес API своего провайдера.</p>
+<p>Обычно он заканчивается на <code>/v1</code>.</p>
+<p>Для некоторых популярных сервисов Limerence уже показывает готовые варианты:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Провайдер</th>
+<th>API URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LiteRouter</td>
+<td><code>https://api.literouter.com/v1</code></td>
+</tr>
+<tr>
+<td>OpenRouter</td>
+<td><code>https://openrouter.ai/api/v1</code></td>
+</tr>
+<tr>
+<td>CometAPI</td>
+<td><code>https://api.cometapi.com/v1</code></td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><code>https://api.openai.com/v1</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>Можно использовать и другой сервис, если он предоставляет совместимый API.</p>
+<blockquote>
+<p>Важно указывать именно адрес API, а не обычный адрес сайта провайдера.</p>
+</blockquote>
+<h3>Шаг 2. Назовите ключ</h3>
+<p>Введите любое удобное название. Например: <code>Основной</code>, <code>OpenRouter</code>, <code>Claude</code>, <code>Резерв</code>.</p>
+<p>Это название видно только вам и помогает различать несколько подключённых провайдеров.</p>
+<h3>Шаг 3. Отправьте API-ключ</h3>
+<p>Скопируйте ключ из кабинета своего провайдера и отправьте его боту одним сообщением.</p>
+<p>Limerence:</p>
+<ul>
+<li>удалит сообщение с ключом после получения;</li>
+<li>проверит, отвечает ли провайдер;</li>
+<li>сохранит ключ в за<a href="dannye-i-privatnost.html">шифрованном</a> виде.</li>
+</ul>
+<p>Если это первый добавленный провайдер, он автоматически станет основным.</p>
+<p>После успешного добавления вернитесь в игровую Тему.</p>
+<hr />
+<h2>Как выбрать модель</h2>
+<p>Откройте Тему, в которой хотите играть, и отправьте <code>/settings</code>.</p>
+<p>Нажмите <strong>«🎭 Модель игры»</strong>.</p>
+<p>Бот попросит прислать ID модели одним сообщением.</p>
+<p>Например, ID может выглядеть так:</p>
+<ul>
+<li><code>anthropic/claude-sonnet-4-5</code></li>
+<li><code>google/gemini-2.5-flash</code></li>
+<li><code>openai/gpt-4o</code></li>
+</ul>
+<p>Точное название зависит от вашего API-провайдера. Скопируйте ID из списка моделей или документации именно того сервиса, чей ключ вы подключили.</p>
+<p>После сохранения новая модель начнёт использоваться в этой Теме.</p>
+<blockquote>
+<p>Подключить ключ и выбрать модель — две разные операции. Наличие API-ключа само по себе не определяет, какой моделью должна пользоваться история.</p>
+</blockquote>
+<p>Чтобы сбросить выбранную модель, откройте <code>/settings</code> → <strong>«Модель игры»</strong> и отправьте <code>none</code>, <code>сброс</code> или <code>-</code>.</p>
+<hr />
+<h2>Если подключено несколько провайдеров</h2>
+<p>Limerence позволяет хранить несколько API-ключей одновременно.</p>
+<p>Откройте <code>/api</code>.</p>
+<p>Через <strong>«📋 Список и активный»</strong> можно посмотреть сохранённые ключи и выбрать основной.</p>
+<p>Основной провайдер используется по умолчанию для историй, в которых не задан другой ключ.</p>
+<h3>Как выбрать отдельный ключ для конкретной истории</h3>
+<p>Иногда удобно играть разные истории через разные сервисы.</p>
+<p>Например:</p>
+<ul>
+<li>одна Тема использует OpenRouter;</li>
+<li>другая — LiteRouter;</li>
+<li>третья — другой ваш провайдер.</li>
+</ul>
+<p>Откройте нужную Тему: <code>/settings</code> → <strong>«🔀 Ключ игры (эта тема)»</strong> и выберите провайдера.</p>
+<p>Этот выбор относится только к текущей истории и не меняет основной ключ для остальных Тем.</p>
+<hr />
+<h2>Как проверить, какой ключ и модель используются</h2>
+<p>Внутри нужной Темы отправьте <code>/current</code>.</p>
+<p>Limerence покажет основную информацию о текущей истории, в том числе:</p>
+<ul>
+<li>модель игры;</li>
+<li>ключ для игры;</li>
+<li>часть параметров генерации;</li>
+<li>техническую информацию о памяти.</li>
+</ul>
+<p>Это полезно, если подключено несколько ключей и непонятно, через какой именно сейчас работает история.</p>
+<hr />
+<h2>Ключ игры и ключ памяти — не одно и то же</h2>
+<p>Собственный API-ключ для игры не требуется для работы памяти.</p>
+<p>По умолчанию фоновая <a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">память Limerence</a> работает через общий служебный ключ.</p>
+<p>Поэтому обычному пользователю достаточно настроить только:</p>
+<ul>
+<li><code>/api</code> → ключ для игры;</li>
+<li><code>/settings</code> → модель игры.</li>
+</ul>
+<p>Отдельный <strong>«Свой ключ для памяти»</strong> в меню <code>/api</code> — дополнительная возможность. Она нужна только если вы сознательно хотите оплачивать операции памяти собственным ключом.</p>
+<p>Для <a href="kak-nachat-i-sozdat-pervuyu-istoriyu.html">первого запуск</a>а её можно вообще не трогать.</p>
+<hr />
+<h2>Как изменить или удалить API-ключ</h2>
+<p>Откройте <code>/api</code>.</p>
+<p>Через <strong>«✏️ Редактировать»</strong> можно изменить:</p>
+<ul>
+<li>название;</li>
+<li>API URL;</li>
+<li>сам API-ключ;</li>
+<li>назначение провайдера.</li>
+</ul>
+<p>Через <strong>«❌ Удалить»</strong> можно удалить сохранённый провайдер.</p>
+<blockquote>
+<p>Будьте внимательны: если удалить ключ, который используется текущими историями, они не смогут продолжить игру через него, пока вы не выберете другой.</p>
+</blockquote>
+<hr />
+<h2>Частые проблемы</h2>
+<p><strong>«Сначала выбери модель для этой истории»</strong>
+API-ключ уже есть, но для Темы не указана модель. Откройте <code>/settings</code> → <strong>«Модель игры»</strong> и отправьте точный ID модели.</p>
+<p><strong>«Нужен API-ключ для игры»</strong>
+У истории есть модель, но Limerence не нашёл подходящий провайдер. Откройте <code>/api</code> и добавьте ключ либо проверьте <code>/settings</code> → <strong>«Ключ игры (эта тема)»</strong>.</p>
+<p><strong>Ключ недействителен</strong>
+Провайдер отклонил авторизацию. Проверьте, что:</p>
+<ul>
+<li>ключ скопирован полностью;</li>
+<li>в нём нет пробелов или лишнего текста;</li>
+<li>ключ не был удалён или отозван в кабинете провайдера.</li>
+</ul>
+<p><strong>«Нет баланса / исчерпана квота»</strong>
+Ключ работает, но сам провайдер не разрешает новые запросы. Проверьте баланс и лимиты в кабинете API-провайдера.</p>
+<p><strong>Провайдер недоступен или неверный API URL</strong>
+Проверьте адрес API. Очень частая ошибка — вставить адрес обычного сайта вместо API или забыть <code>/v1</code>.</p>
+<p><strong>Модель не найдена</strong>
+Провайдер не знает указанный ID модели. Не угадывайте название модели вручную: скопируйте точный ID из документации или списка моделей вашего провайдера. Одинаковая модель у разных сервисов может называться по-разному.</p>
+<p><strong>Закончились 50 пробных ходов DeepSeek</strong>
+Пробный DeepSeek даёт до 50 ходов в день. Новый дневной лимит появится в 00:00 МСК. Если хочется продолжить раньше, можно подключить собственный API-ключ.</p>
+<hr />
+<p>Для самого простого старта ничего подключать не нужно: создайте Тему и используйте пробный DeepSeek.</p>
+<p>Собственный API-ключ имеет смысл подключать, когда вы хотите выбрать другую модель, использовать конкретного провайдера или не зависеть от дневного лимита пробного DeepSeek.</p>
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Основные настройки истории</a></li>
+<li><a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата</a></li>
+<li><a href="rasshirennye-nastroyki-otygrysh-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
+<li><a href="dannye-i-privatnost.html">Данные и приватность</a></li>
+<li><a href="razbor-problem-model-pamyat-lor.html">Разбор проблем: модель, память, лор и оплата</a></li>
+<li><a href="glossariy-limerence-osnovnye-terminy.html">Глоссарий Limerence: основные термины</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Начало работы»</h2><ul><li><a href="kak-nachat-i-sozdat-pervuyu-istoriyu.html">Первый запуск Limerence</a></li><li><a href="temy-gruppy-i-komandy.html">Темы, группы и команды</a></li><li><a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

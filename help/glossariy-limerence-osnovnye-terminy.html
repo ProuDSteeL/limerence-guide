@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Глоссарий Limerence: основные термины · Справочник · Limerence</title>
+<meta name="description" content="Быстрый словарь: Тема, история, ход, модель, провайдер, API-ключ, промпт, Заметка автора, контекст, память, лор, lorebook, World Book, Character Card, персона.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/glossariy-limerence-osnovnye-terminy.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#spravochnik">Справочник</a></p>
+<h1>Глоссарий Limerence: основные термины</h1>
+<p>Здесь собраны основные термины, которые встречаются в Limerence и статьях Справочного центра.</p>
+<p>Если вы только начинаете пользоваться ботом, необязательно запоминать всё сразу.</p>
+<p>Главное для начала:</p>
+<p><strong>Тема = отдельная история.</strong></p>
+<p><strong>Модель = ИИ, который пишет ответ.</strong></p>
+<p><strong>Промпт = ваши постоянные инструкции этой истории.</strong></p>
+<p><strong>Память = то, что Limerence сохраняет о произошедшем сюжете.</strong></p>
+<p><strong>Лор = заранее заданный канон мира и персонажей.</strong></p>
+<p>Остальное спокойно приходит по мере использования.</p>
+<hr />
+<h2>Аккаунт</h2>
+<p>Ваш пользовательский профиль Limerence, связанный с Telegram-аккаунтом.</p>
+<p>На уровне аккаунта хранятся, например:</p>
+<ul>
+<li>статус Premium;</li>
+<li>тариф DeepSeek;</li>
+<li>подключённые API-провайдеры;</li>
+<li>библиотека Character Cards;</li>
+<li>персоны;</li>
+<li>сохранённые пресеты;</li>
+<li>общие пользовательские настройки.</li>
+</ul>
+<p>При этом сами игровые истории разделены по Темам.</p>
+<hr />
+<h2>Группа</h2>
+<p>Приватная Telegram-группа, в которой обычно происходит игра.</p>
+<p>Группа может содержать множество Тем.</p>
+<p>Сама группа не является одной большой историей Limerence.</p>
+<p>Например, внутри одной группы можно иметь:</p>
+<blockquote>
+<p>Адриан — основной сюжет</p>
+<p>Адриан — AU</p>
+<p>Маркус</p>
+<p>Тест Gemini</p>
+</blockquote>
+<p>и каждая из этих Тем будет отдельной историей.</p>
+<p>Подробнее: <a href="temy-gruppy-i-komandy.html">Темы, группы и команды</a>.</p>
+<hr />
+<h2>Тема / Topic</h2>
+<p>Один Telegram Topic внутри игровой группы.</p>
+<p><strong>Тема — основная единица истории в Limerence.</strong></p>
+<p>У неё свои:</p>
+<ul>
+<li>сообщения;</li>
+<li>память;</li>
+<li>настройки;</li>
+<li>промпт;</li>
+<li>модель;</li>
+<li>лор;</li>
+<li>персона;</li>
+<li>Character Card;</li>
+<li>пресет;</li>
+<li>состояние сцены.</li>
+</ul>
+<p>Поэтому <code>/undo</code>, <code>/clear</code>, <code>/lore</code> и большинство игровых команд работают именно с текущей Темой.</p>
+<hr />
+<h2>История</h2>
+<p>Игровая сессия Limerence, связанная с конкретной Темой.</p>
+<p>В обычной речи <strong>«Тема» и «история» часто почти взаимозаменяемы</strong>, но технически:</p>
+<p><strong>Тема</strong> — пространство в Telegram;</p>
+<p><strong>история</strong> — сохранённая Limerence игровая сессия внутри него.</p>
+<hr />
+<h2>Ход</h2>
+<p>Один шаг ролевой игры.</p>
+<p>Обычно:</p>
+<p><strong>сообщение игрока → ответ модели</strong></p>
+<p>образуют один игровой обмен.</p>
+<p>В контексте тарифов DeepSeek «ход» обычно означает успешно сгенерированный игровой ответ.</p>
+<hr />
+<h2>Модель</h2>
+<p>AI-модель, которая генерирует ответ персонажа.</p>
+<p>Например, это может быть модель семейства:</p>
+<ul>
+<li>DeepSeek;</li>
+<li>Claude;</li>
+<li>Gemini;</li>
+<li>OpenAI;</li>
+<li>другая модель через совместимого провайдера.</li>
+</ul>
+<p>Модель отвечает именно за генерацию текста.</p>
+<p>Limerence при этом предоставляет вокруг неё:</p>
+<ul>
+<li>память;</li>
+<li>историю;</li>
+<li>лор;</li>
+<li>карточки;</li>
+<li>управление контекстом;</li>
+<li>интерфейс;</li>
+<li>другие функции.</li>
+</ul>
+<hr />
+<h2>Провайдер</h2>
+<p>Сервис, через который Limerence получает доступ к AI-модели.</p>
+<p>Например, один провайдер может предоставлять сразу десятки разных моделей.</p>
+<p>Поэтому:</p>
+<p><strong>провайдер ≠ модель.</strong></p>
+<p>Условно:</p>
+<blockquote>
+<p>OpenRouter — провайдер.</p>
+<p>конкретный Claude через OpenRouter — модель.</p>
+</blockquote>
+<p>Провайдеры настраиваются через:</p>
+<p><code>/api</code></p>
+<hr />
+<h2>API</h2>
+<p>Интерфейс, через который Limerence отправляет запрос AI-сервису и получает ответ.</p>
+<p>Пользователю обычно не нужно разбираться в техническом устройстве API.</p>
+<p>Достаточно понимать:</p>
+<blockquote>
+<p>свой API позволяет использовать собственный доступ к моделям через Limerence.</p>
+</blockquote>
+<hr />
+<h2>API-ключ</h2>
+<p>Секретный ключ вашего аккаунта у API-провайдера.</p>
+<p>Он подтверждает:</p>
+<blockquote>
+<p>запросы можно оплачивать и выполнять от имени этого аккаунта.</p>
+</blockquote>
+<p>API-ключ нужно хранить как пароль.</p>
+<p>Не публикуйте его в:</p>
+<ul>
+<li>чатах;</li>
+<li>скриншотах;</li>
+<li>промптах;</li>
+<li>баг-репортах.</li>
+</ul>
+<p>Добавление и управление ключами:</p>
+<p><code>/api</code></p>
+<p>Подробнее: <a href="kak-vybrat-model-i-podklyuchit-api-klyuch.html">Модели и API-ключи</a>.</p>
+<hr />
+<h2>DeepSeek в Limerence</h2>
+<p>Готовый режим игры через DeepSeek, для которого пользователю не обязательно иметь собственный API-ключ.</p>
+<p>У DeepSeek также есть отдельные настройки отыгрыша:</p>
+<ul>
+<li>жанр;</li>
+<li>темп;</li>
+<li>инициативность;</li>
+<li>второстепенные персонажи;</li>
+<li>откровенность;</li>
+<li>другие параметры.</li>
+</ul>
+<p>Не путайте их с универсальными настройками генерации вроде Temperature.</p>
+<hr />
+<h2>Premium</h2>
+<p>Основная подписка на Limerence после завершения пробного периода.</p>
+<p>Premium даёт доступ к самому продукту и позволяет продолжать играть, в том числе используя собственные API-провайдеры.</p>
+<p>Это не то же самое, что оплата самой AI-модели у стороннего API-провайдера.</p>
+<p>Подробнее: <a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата</a>.</p>
+<hr />
+<h2>Пробный период / Trial</h2>
+<p>Период, в течение которого новый пользователь может попробовать полноценный Limerence до покупки Premium.</p>
+<p>Отсчёт начинается после первого успешного игрового ответа, а не просто после открытия бота.</p>
+<hr />
+<h2>Промпт</h2>
+<p>Постоянные пользовательские инструкции конкретной истории.</p>
+<p>Например, в промпте можно описать:</p>
+<ul>
+<li>персонажей;</li>
+<li>стиль;</li>
+<li>POV;</li>
+<li>правила поведения;</li>
+<li>устройство мира;</li>
+<li>ограничения отыгрыша;</li>
+<li>желаемую манеру повествования.</li>
+</ul>
+<p>Промпт передаётся модели каждый ход.</p>
+<p>Персонажа совершенно нормально описывать прямо в промпте — Character Card для этого не обязательна.</p>
+<p>Подробнее: <a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры</a>.</p>
+<hr />
+<h2>Системный промпт</h2>
+<p>Инструкции системного уровня, которые помогают определить поведение модели.</p>
+<p>В Limerence часть системной логики формируется самим продуктом.</p>
+<p>Дополнительные системные инструкции также могут присутствовать, например:</p>
+<ul>
+<li>внутри Character Card;</li>
+<li>внутри SillyTavern-пресета.</li>
+</ul>
+<p>Не путайте системный промпт карточки с вашим обычным промптом истории.</p>
+<hr />
+<h2>Заметка автора / Author Note</h2>
+<p>Короткая инструкция для текущего состояния или ближайшей части истории.</p>
+<p>Например:</p>
+<blockquote>
+<p>Адриан уже понял, кто предатель, но пока скрывает это.</p>
+</blockquote>
+<p>или:</p>
+<blockquote>
+<p>Сцена должна оставаться камерной и напряжённой.</p>
+</blockquote>
+<p>Если промпт задаёт <strong>общие правила истории</strong>, Заметка автора удобна для <strong>текущего акцента</strong>.</p>
+<hr />
+<h2>Контекст</h2>
+<p>Вся информация, которую модель получает непосредственно для текущего ответа.</p>
+<p>В контекст могут попадать:</p>
+<ul>
+<li>системные инструкции;</li>
+<li>ваш промпт;</li>
+<li>недавняя история;</li>
+<li>память;</li>
+<li>найденный лор;</li>
+<li>Character Card;</li>
+<li>персона;</li>
+<li>Заметка автора;</li>
+<li>другие служебные инструкции.</li>
+</ul>
+<p>Важно:</p>
+<p><strong>то, что Limerence хранит информацию, ещё не означает, что вся она целиком попадает в каждый запрос модели.</strong></p>
+<hr />
+<h2>Память диалога</h2>
+<p>Настройка объёма недавнего динамического контекста, который Limerence может использовать при генерации.</p>
+<p>В интерфейсе встречаются варианты вроде:</p>
+<blockquote>
+<p>15K</p>
+<p>25K</p>
+<p>35K</p>
+<p>50K</p>
+</blockquote>
+<p>Это не размер всей долговременной памяти и не лимит промпта.</p>
+<p>Подробнее: <a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки истории</a>.</p>
+<hr />
+<h2>Память Limerence</h2>
+<p>Система, которая сохраняет важную информацию о том, <strong>что произошло непосредственно в этой истории</strong>.</p>
+<p>Например:</p>
+<ul>
+<li>события;</li>
+<li>отношения;</li>
+<li>важные решения;</li>
+<li>изменения;</li>
+<li>факты о персонажах.</li>
+</ul>
+<p>Она нужна, чтобы длинная история не зависела только от нескольких последних сообщений.</p>
+<p>Память и лор — разные вещи.</p>
+<hr />
+<h2>Лор</h2>
+<p>Заранее заданная информация о мире, персонажах, местах, организациях, правилах и других элементах канона.</p>
+<p>Например:</p>
+<blockquote>
+<p>Совет Семи управляет вампирскими кланами.</p>
+<p>Блэкхолл принадлежит семье Валленов с XVII века.</p>
+<p>Адриан боится огня после пожара 1814 года.</p>
+</blockquote>
+<p>Лор обычно описывает:</p>
+<blockquote>
+<p>что является каноном мира.</p>
+</blockquote>
+<p>Память описывает:</p>
+<blockquote>
+<p>что произошло непосредственно в текущем RP.</p>
+</blockquote>
+<p>Подробнее: <a href="lor-i-ustroystvo-mira.html">Лор и канон</a>.</p>
+<hr />
+<h2>Lorebook / Лорбук</h2>
+<p>Организованный набор карточек лора.</p>
+<p>Каждая запись может иметь:</p>
+<ul>
+<li>ключи;</li>
+<li>текст;</li>
+<li>значимость;</li>
+<li>дополнительные параметры активации.</li>
+</ul>
+<p>Хороший lorebook работает как система контекстных знаний, а не как один гигантский текст.</p>
+<hr />
+<h2>Карточка лора / Lore Entry</h2>
+<p>Одна отдельная запись lorebook.</p>
+<p>Например:</p>
+<p><strong>Ключи:</strong></p>
+<blockquote>
+<p>Совет Семи, Совет</p>
+</blockquote>
+<p><strong>Текст:</strong></p>
+<blockquote>
+<p>Совет Семи управляет европейскими вампирскими кланами...</p>
+</blockquote>
+<p>Когда тема становится актуальной, запись может попасть в контекст модели.</p>
+<hr />
+<h2>Ключи лора</h2>
+<p>Слова или понятия, которые помогают определить, когда карточка лора становится актуальной.</p>
+<p>Например:</p>
+<blockquote>
+<p>Элизабет</p>
+<p>Совет Семи</p>
+<p>Блэкхолл</p>
+<p>Красная зима</p>
+</blockquote>
+<p>Ключи — это не просто название карточки.</p>
+<p>Они помогают Limerence понять:</p>
+<blockquote>
+<p>когда эту информацию стоит показать модели.</p>
+</blockquote>
+<hr />
+<h2>Постоянный лор / «Добавлять всегда»</h2>
+<p>Карточка лора, которая не ждёт обычного срабатывания по контексту и добавляется значительно стабильнее.</p>
+<p>Используется для особенно фундаментальных правил.</p>
+<p>Например:</p>
+<blockquote>
+<p>Вампиры этого мира не сгорают на солнце.</p>
+</blockquote>
+<p>Не стоит делать постоянным весь lorebook: тогда пропадает смысл контекстного подключения лора.</p>
+<hr />
+<h2>Значимость лора</h2>
+<p>Приоритет карточки, если одновременно подходит слишком много информации.</p>
+<p>Обычно:</p>
+<ul>
+<li>низкая;</li>
+<li>обычная;</li>
+<li>высокая.</li>
+</ul>
+<p>Это не показатель того, насколько запись «хорошая».</p>
+<p>Это подсказка:</p>
+<blockquote>
+<p>чем можно пожертвовать раньше, если для всего найденного лора не хватает места.</p>
+</blockquote>
+<hr />
+<h2>Лор-файл</h2>
+<p>Большой <code>.txt</code>, <code>.md</code> или другой поддерживаемый документ, используемый как база знаний.</p>
+<p>Limerence <strong>не отправляет весь файл модели каждый ход</strong>.</p>
+<p>Он ищет подходящие фрагменты и передаёт только часть материала.</p>
+<p>Поэтому большой лор-файл лучше представлять как:</p>
+<p><strong>библиотеку с поиском</strong></p>
+<p>а не:</p>
+<p><strong>огромный промпт, который модель всегда читает целиком.</strong></p>
+<hr />
+<h2>Поиск по смыслу</h2>
+<p>Способ находить информацию не только по точному совпадению слов, но и по смысловой близости.</p>
+<p>Он особенно важен для больших лор-файлов и других поисковых систем Limerence.</p>
+<p>Например, сцена может быть связана с понятием, даже если точное название из файла в ней не написано.</p>
+<hr />
+<h2>World Book</h2>
+<p>Распространённый формат lorebook из экосистемы SillyTavern.</p>
+<p>World Book может содержать множество записей с:</p>
+<ul>
+<li>ключами;</li>
+<li>приоритетами;</li>
+<li>условиями активации;</li>
+<li>постоянными записями;</li>
+<li>другими продвинутыми настройками.</li>
+</ul>
+<p>Limerence умеет импортировать совместимые World Books.</p>
+<hr />
+<h2>Character Book</h2>
+<p>Lorebook, встроенный непосредственно в Character Card.</p>
+<p>Он может содержать информацию, связанную именно с этим персонажем:</p>
+<ul>
+<li>родственников;</li>
+<li>организации;</li>
+<li>места;</li>
+<li>события прошлого;</li>
+<li>правила мира.</li>
+</ul>
+<p>Поэтому некоторые сложные Character Cards без своего родного Character Book действительно теряют значительную часть задуманного поведения.</p>
+<hr />
+<h2>Character Card / Карточка персонажа</h2>
+<p>Структурированное описание персонажа.</p>
+<p>Она может содержать:</p>
+<ul>
+<li>имя;</li>
+<li>описание;</li>
+<li>характер;</li>
+<li>сценарий;</li>
+<li>первое сообщение;</li>
+<li>примеры диалогов;</li>
+<li>альтернативные приветствия;</li>
+<li>дополнительные инструкции;</li>
+<li>Character Book.</li>
+</ul>
+<p>Character Card — удобный переносимый формат.</p>
+<p>Но использовать карточку необязательно: персонажа можно описать прямо в промпте.</p>
+<p>Подробнее: <a href="personazhi-i-kartochki.html">Персонажи и карточки</a>.</p>
+<hr />
+<h2>Tavern Card</h2>
+<p>Общее название карточек персонажей в форматах, происходящих из экосистемы Tavern / SillyTavern.</p>
+<p>Они часто распространяются как:</p>
+<ul>
+<li>PNG;</li>
+<li>JSON.</li>
+</ul>
+<p>Внутри PNG может быть не просто картинка, а встроенные данные персонажа.</p>
+<hr />
+<h2>Persona / Персона</h2>
+<p>Описание <strong>персонажа игрока</strong>.</p>
+<p>Это ответ на вопрос:</p>
+<blockquote>
+<p>кем в истории являюсь я?</p>
+</blockquote>
+<p>Например:</p>
+<blockquote>
+<p>Алиса Моррис, 24 года, реставратор...</p>
+</blockquote>
+<p>Не путайте:</p>
+<p><strong>Character Card</strong></p>
+<p>→ персонаж, которого обычно отыгрывает модель.</p>
+<p><strong>Persona</strong></p>
+<p>→ персонаж пользователя.</p>
+<hr />
+<h2>Freeform / Без карточки</h2>
+<p>Режим игры без активной Character Card.</p>
+<p>Персонаж и правила могут быть полностью описаны:</p>
+<ul>
+<li>в промпте;</li>
+<li>в лоре;</li>
+<li>непосредственно в истории.</li>
+</ul>
+<p>Это полноценный способ игры, а не «неправильно настроенная карточка».</p>
+<hr />
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="glossariy-limerence-generaciya.html">Глоссарий Limerence: генерация, история и поддержка</a></li>
+<li><a href="temy-gruppy-i-komandy.html">Темы, группы и команды</a></li>
+<li><a href="kak-nachat-i-sozdat-pervuyu-istoriyu.html">Первый запуск Limerence</a></li>
+<li><a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">Память Limerence</a></li>
+<li><a href="lor-i-ustroystvo-mira.html">Лор и канон</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Справочник»</h2><ul><li><a href="komandy-limerence-spravochnik.html">Команды Limerence: полный справочник</a></li><li><a href="glossariy-limerence-generaciya.html">Глоссарий Limerence: генерация, история и поддержка</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

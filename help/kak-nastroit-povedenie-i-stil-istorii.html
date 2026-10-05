@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Стиль и поведение истории · Справочник · Limerence</title>
+<meta name="description" content="Заметка автора, стиль, контекст, память диалога, температура, длина ответа, настройки отыгрыша, /settings.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/kak-nastroit-povedenie-i-stil-istorii.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#nastroyki-istorii">Настройки истории</a></p>
+<h1>Стиль и поведение истории</h1>
+<p>В Limerence не обязательно переписывать <a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">промпт</a> каждый раз, когда хочется немного изменить поведение модели.</p>
+<p>Для этого у истории есть несколько отдельных настроек: <a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Заметка автора</a>, длина ответа, <a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">память</a> диалога, температура и другие параметры генерации.</p>
+<p>Главное — понимать, какая настройка за что отвечает. Тогда вместо случайного тыканья кнопок можно менять именно то, что вам мешает.</p>
+<p>Все настройки конкретной истории открываются внутри её Темы командой <code>/settings</code>. Затем нажмите <strong>«⚙️ Расширенные →»</strong>.</p>
+<hr />
+<h2>Самое главное: какую настройку использовать</h2>
+<p>Если очень коротко:</p>
+<ul>
+<li><strong>Промпт</strong> → постоянные правила всей истории.</li>
+<li><strong>Заметка автора</strong> → временная инструкция, важная прямо сейчас.</li>
+<li><strong>Макс / Мин</strong> → насколько длинными должны быть ответы.</li>
+<li><strong>Память диалога</strong> → сколько недавнего отыгрыша и связанной памяти Limerence может передавать модели.</li>
+<li><strong>Температура</strong> → насколько предсказуемо или вариативно модель генерирует текст.</li>
+</ul>
+<p>Остальные технические параметры новичку обычно можно оставить без изменений.</p>
+<hr />
+<h2>Заметка автора</h2>
+<p>Заметка автора — одна из самых полезных настроек после промпта.</p>
+<p>Она находится прямо в основном меню: <code>/settings</code> → <strong>«📝 Заметка автора»</strong>.</p>
+<p>Это короткая инструкция, которую Limerence показывает модели на каждом ходе рядом с текущим действием.</p>
+<p>Именно поэтому она хорошо подходит для информации, которая важна сейчас, но не должна навсегда становиться правилом всей истории.</p>
+<p>Например:</p>
+<blockquote>
+<p>Сейчас зима. На улице сильный снег и мороз.</p>
+<p>Не раскрывай пока, кто убийца.</p>
+<p>Следующие несколько сцен должны быть более тревожными.</p>
+<p>Персонаж ранен и пытается скрыть это от остальных.</p>
+<p>Сейчас он злится на неё, даже если всё ещё испытывает к ней чувства.</p>
+</blockquote>
+<h3>Чем Заметка автора отличается от промпта</h3>
+<p>Самое простое правило:</p>
+<ul>
+<li><strong>Промпт</strong> = как играть вообще.</li>
+<li><strong>Заметка автора</strong> = что учитывать сейчас.</li>
+</ul>
+<p>Например:</p>
+<blockquote>
+<p>Не описывай действия персонажа игрока.</p>
+</blockquote>
+<p>Это промпт, потому что правило должно работать постоянно.</p>
+<p>А:</p>
+<blockquote>
+<p>Персонаж игрока сейчас не может нормально двигать левой рукой.</p>
+</blockquote>
+<p>Это Заметка автора, потому что речь идёт о текущем состоянии истории.</p>
+<p>Ещё пример:</p>
+<ul>
+<li>«Не форсируй развитие отношений» → <strong>Промпт</strong></li>
+<li>«После последней ссоры персонаж пока не готов первым идти на примирение» → <strong>Заметка автора</strong></li>
+</ul>
+<p>Не стоит постоянно переписывать большой промпт из-за каждой новой сцены. Для таких изменений и существует Заметка автора.</p>
+<h3>Как добавить или изменить Заметку автора</h3>
+<p>Откройте <code>/settings</code> → <strong>«📝 Заметка автора»</strong> и отправьте новый текст.</p>
+<p>Максимальный размер заметки — 6000 символов.</p>
+<p>Обычное сообщение Telegram не позволяет отправить такой объём целиком, поэтому длинную заметку можно загрузить файлом <code>.txt</code>.</p>
+<p>Также можно дописать текст к уже существующей заметке. Для этого начните новое сообщение со знака <code>+</code>. Например:</p>
+<blockquote>
+<ul>
+<li>Алексей всё ещё не знает о разговоре в больнице.</li>
+</ul>
+</blockquote>
+<p>Новый текст добавится к существующей Заметке автора.</p>
+<p>Чтобы удалить её, отправьте <code>-</code>.</p>
+<p>Изменения начинают действовать со следующего игрового хода.</p>
+<h3>Не превращайте Заметку автора во второй огромный промпт</h3>
+<p>Заметка автора передаётся модели каждый ход, поэтому лучше держать там именно актуальные указания.</p>
+<p>Если какое-то правило стало постоянным, его логичнее перенести в промпт.</p>
+<p>Например, плохая Заметка автора:</p>
+<blockquote>
+<p>Пиши от третьего лица. Не управляй моим персонажем. NPC должны быть самостоятельными. Диалоги естественные. Не повторяйся. Не форсируй отношения…</p>
+</blockquote>
+<p>Это уже набор постоянных правил — ему место в промпте.</p>
+<p>Хорошая Заметка автора:</p>
+<blockquote>
+<p>После произошедшего в гостинице Марк больше не доверяет Анне. Пока он скрывает это и ведёт себя внешне спокойно.</p>
+</blockquote>
+<p>Здесь модель получает именно актуальное состояние текущей истории.</p>
+<hr />
+<h2>Длина ответа</h2>
+<p>В основном меню <code>/settings</code> находятся две настройки:</p>
+<ul>
+<li><strong>«📤 Макс»</strong> — максимальная длина;</li>
+<li><strong>«📥 Мин»</strong> — желаемая минимальная длина.</li>
+</ul>
+<p>Они нужны, если ответы модели для вас слишком короткие или, наоборот, слишком длинные.</p>
+<h3>Максимальная длина</h3>
+<p>Максимум задаёт верхний предел ответа.</p>
+<p>Если поставить маленькое значение, модель должна уложить сцену в меньший объём.</p>
+<p>При большом значении ей разрешается писать гораздо подробнее.</p>
+<p>Высокий максимум не заставляет модель обязательно использовать весь доступный объём. Он прежде всего даёт ей пространство.</p>
+<p>Если текст регулярно обрывается посреди предложения или сцены, стоит проверить именно эту настройку.</p>
+<h3>Минимальная длина</h3>
+<p>Минимум подсказывает модели, насколько развёрнутым должен быть ответ.</p>
+<p>Это полезно, если вы постоянно получаете несколько коротких абзацев, хотя хотите полноценные сцены.</p>
+<p>Но длина и качество — разные вещи.</p>
+<p>Если проблема в том, что персонажи скучные, диалоги неестественные или модель неправильно ведёт сюжет, увеличение минимальной длины это не исправит. Она просто сможет писать ту же ерунду дольше — достижение сомнительное.</p>
+<p>Для поведения модели используйте прежде всего промпт и Заметку автора.</p>
+<hr />
+<h2>Технические параметры генерации</h2>
+<p>Эти ручки живут в <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🧪 Генерация»</strong> и работают одинаково в любом режиме игры.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Когда его трогают</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>📖 Память диалога</strong></td>
+<td>Модель теряет недавние события длинной истории</td>
+</tr>
+<tr>
+<td><strong>🌡 Температура</strong></td>
+<td>Текст слишком хаотичный или, наоборот, однообразный</td>
+</tr>
+<tr>
+<td><strong>🎚 Top P, ➕ Presence, 📉 Frequency</strong></td>
+<td>Нужен ручной контроль над выбором слов и повторами, и вы понимаете их назначение</td>
+</tr>
+<tr>
+<td><strong>✨ Анти-клише стиль</strong></td>
+<td>В ответах повторяются характерные шаблонные обороты модели</td>
+</tr>
+<tr>
+<td><strong>🪄 Префилл</strong></td>
+<td>Продвинутая настройка: задать служебное начало ответа и стабилизировать формат</td>
+</tr>
+</tbody>
+</table></div>
+<p>Что именно делает каждый параметр, какие у него значения, чем грозит перебор и почему на некоторых шлюзах префилл игнорируется — подробно разобрано в статье <a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация</a>.</p>
+<p>Здесь важно другое: менять их стоит <strong>по одному</strong> и только тогда, когда понятно, какую именно проблему вы решаете.</p>
+<hr />
+<h2>Что менять, если вам не нравится результат</h2>
+<p>Вместо случайного перебора всех настроек полезнее сначала определить саму проблему.</p>
+<ul>
+<li>Модель нарушает постоянные правила отыгрыша → исправьте <strong>Промпт</strong>.</li>
+<li>Нужно напомнить о текущем состоянии сцены или временно направить сюжет → используйте <strong>Заметку автора</strong>.</li>
+<li>Ответы слишком короткие или длинные → измените <strong>Мин / Макс</strong>.</li>
+<li>Модель теряет недавние события длинной истории → проверьте <strong>Память диалога</strong>.</li>
+<li>Текст слишком хаотичный или, наоборот, однообразный → можно попробовать изменить <strong>Температуру</strong>.</li>
+<li>Хотите вручную управлять техническими параметрами генерации → используйте <strong>Top_p, Presence и Frequency</strong>, если понимаете их назначение.</li>
+</ul>
+<hr />
+<h2>Что лучше оставить новичку</h2>
+<p>Для обычной игры не требуется вручную настраивать каждый параметр.</p>
+<p>Хорошая стартовая схема:</p>
+<ol>
+<li>Напишите понятный постоянный промпт.</li>
+<li>Используйте Заметку автора для временных указаний.</li>
+<li>Оставьте температуру и технические параметры по умолчанию.</li>
+<li>Меняйте длину ответа только если текущий объём вас не устраивает.</li>
+<li>Увеличивайте память диалога, когда для длинной истории действительно требуется больше недавнего контекста.</li>
+</ol>
+<p>Чем меньше настроек вы меняете просто «на всякий случай», тем легче потом понять, что именно улучшило или испортило результат.</p>
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация</a></li>
+<li><a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры</a></li>
+<li><a href="rasshirennye-nastroyki-otygrysh-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
+<li><a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">Память Limerence</a></li>
+<li><a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Основные настройки истории</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Настройки истории»</h2><ul><li><a href="rasshirennye-nastroyki-otygrysh-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li><li><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация</a></li><li><a href="rasshirennye-nastroyki-vid-i-tema.html">Расширенные настройки: вид и Тема</a></li><li><a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Основные настройки истории</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

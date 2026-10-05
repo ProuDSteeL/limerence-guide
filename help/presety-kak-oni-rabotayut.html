@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Пресеты: как они работают и как их использовать · Справочник · Limerence</title>
+<meta name="description" content="Пресет, SillyTavern, /preset, JSON, jailbreak, prompt manager, prompt order, блоки пресета, импорт пресета, стиль генерации, takeover, depth injection.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/presety-kak-oni-rabotayut.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#presety">Пресеты</a></p>
+<h1>Пресеты: как они работают и как их использовать</h1>
+<p>Пресет — одна из самых мощных и одновременно самых непонятных вещей в AI-ролевках.</p>
+<p>Если очень грубо, пресет — это готовая система инструкций и настроек для модели.</p>
+<p>Он может задавать:</p>
+<ul>
+<li>как модель пишет;</li>
+<li>как она ведёт персонажей;</li>
+<li>насколько подробно описывает сцену;</li>
+<li>каких литературных привычек избегает;</li>
+<li>как строит диалоги;</li>
+<li>как относится к действиям игрока;</li>
+<li>как обрабатывает NSFW;</li>
+<li>какие служебные инструкции получает до и после истории;</li>
+<li>какие параметры генерации использует;</li>
+<li>какие автоматические Regex-преобразования применяются к тексту.</li>
+</ul>
+<p>Поэтому хороший пресет может изменить одну и ту же модель очень сильно.</p>
+<p>Условно:</p>
+<ul>
+<li><strong>модель</strong> — это двигатель;</li>
+<li><strong><a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">промпт</a></strong> — ваши инструкции водителю;</li>
+<li><strong>пресет</strong> — настройка двигателя, коробки, подвески и ещё папка с инструкциями о том, как вообще надо ехать.</li>
+</ul>
+<p>Именно поэтому в сообществах SillyTavern люди могут часами обсуждать не только «какую модель использовать», но и «на каком пресете ты её запускаешь?».</p>
+<p>Потому что один и тот же Claude, Gemini или другая модель с двумя разными пресетами может ощущаться почти как две разные модели.</p>
+<hr />
+<h2>Пресет — это не просто Temperature</h2>
+<p>Слово «preset» немного обманчивое.</p>
+<p>Можно подумать, что это обычный набор вроде «<a href="rasshirennye-nastroyki-generaciya.html">Temperature</a> 0.8, Top P 0.95, Frequency 0.2».</p>
+<p>Такие параметры действительно могут находиться в пресете.</p>
+<p>Но полноценный SillyTavern Chat Completion Preset может содержать намного больше. Например:</p>
+<ul>
+<li><strong>Блок 1</strong> — «Ты участвуешь в художественной ролевой игре…»</li>
+<li><strong>Блок 2</strong> — «Сохраняй психологическую последовательность персонажей…»</li>
+<li><strong>Блок 3</strong> — «Избегай таких-то речевых клише…»</li>
+<li><strong>Блок 4</strong> — «Не заканчивай каждую сцену вопросом…»</li>
+<li><strong>Блок 5</strong> — «Правила для откровенных сцен…»</li>
+<li><strong>Блок 6</strong> — «Дополнительная инструкция непосредственно перед последним сообщением игрока…»</li>
+</ul>
+<p>Плюс порядок этих блоков. Плюс включено или выключено каждое правило. Плюс сэмплеры. Плюс Regex. Плюс макросы.</p>
+<p>Поэтому пресет правильнее представлять как маленькую конфигурацию ролевого движка, а не как одну настройку.</p>
+<hr />
+<h2>Откуда вообще взялись такие пресеты</h2>
+<p>Они особенно распространены в экосистеме SillyTavern.</p>
+<p>Пользователи и авторы создают собственные системы промптов для разных моделей: Claude, Gemini, DeepSeek, моделей через OpenRouter и другие шлюзы.</p>
+<p>Затем экспортируют их в <code>.json</code> и распространяют.</p>
+<p>Например, автор может написать пресет специально для Gemini 2.5 Pro и несколько недель настраивать системные инструкции, jailbreak, анти-повторы, формат диалогов, порядок блоков, Temperature, Min P и Regex.</p>
+<p>Другой пользователь скачивает один JSON — и получает всю эту конфигурацию.</p>
+<p>Limerence умеет импортировать Chat Completion пресеты SillyTavern и применять их к отдельной истории.</p>
+<hr />
+<h2>Не любой JSON из SillyTavern является пресетом</h2>
+<p>В экосистеме SillyTavern куча файлов <code>.json</code>, и все они на первый взгляд выглядят одинаково подозрительно.</p>
+<p>JSON может оказаться:</p>
+<ul>
+<li>Character Card;</li>
+<li><a href="lor-bolshie-fayly-worldbook-biblioteka.html">World Book</a>;</li>
+<li>Regex-набором;</li>
+<li>Chat Completion Preset;</li>
+<li>Instruct Preset;</li>
+<li>Context Preset;</li>
+<li>другим служебным экспортом.</li>
+</ul>
+<p>Limerence автоматически старается определить, что именно вы отправили.</p>
+<p>Для <code>/preset</code> поддерживаются именно Chat Completion presets.</p>
+<p>Если файл относится к другому типу пресета, Limerence сообщит об этом вместо того, чтобы притвориться, что всё замечательно импортировалось.</p>
+<h3>Как понять, что перед вами нужный файл</h3>
+<p>Обычно это <code>.json</code>, который автор прямо называет чем-то вроде «Chat Completion Preset», «Claude Preset», «Gemini Preset» или «ST Preset».</p>
+<p>Само название файла значения не гарантирует — решает его внутренняя структура. Limerence проверяет её при импорте.</p>
+<p>Максимальный размер файла пресета — 8 МБ.</p>
+<hr />
+<h2>Что происходит внутри полноценного пресета</h2>
+<p>Самая важная идея — пресет обычно состоит не из одного огромного промпта. В нём есть блоки. Например:</p>
+<ul>
+<li><strong>Main Prompt</strong> — основные правила ролевой игры.</li>
+<li><strong>Style</strong> — инструкции по стилю текста.</li>
+<li><strong>Character</strong> — напоминания о поведении персонажей.</li>
+<li><strong>NSFW</strong> — отдельные инструкции для откровенного контента.</li>
+<li><strong>Anti-Repetition</strong> — правила против повторов.</li>
+<li><strong>Jailbreak</strong> — специальные инструкции, влияющие на ограничения и поведение модели.</li>
+<li><strong>Post-History Instructions</strong> — инструкции, которые ставятся ближе к последним сообщениям истории.</li>
+</ul>
+<p>Названия полностью зависят от автора.</p>
+<p>Один пресет может иметь 5 блоков. Другой — 40. А какой-нибудь энтузиаст из Tavern, которому явно было мало простых человеческих радостей, вполне способен построить маленькую распределённую операционную систему на 80 блоков.</p>
+<h3>Почему блоки, а не один текст</h3>
+<p>Потому что место инструкции в запросе тоже имеет значение.</p>
+<p>Модель получает не просто мешок текста. У запроса есть структура. Очень упрощённо:</p>
+<blockquote>
+<p>системные инструкции → данные персонажа и контекст → история разговора → дополнительные инструкции возле конца истории → текущее сообщение игрока.</p>
+</blockquote>
+<p>Инструкция, находящаяся в начале, и инструкция прямо возле последнего пользовательского сообщения могут влиять на модель по-разному.</p>
+<p>Поэтому авторы хороших пресетов думают не только «что написать?», но и «куда это поставить?».</p>
+<hr />
+<h2>Что такое Prompt Order</h2>
+<p>В SillyTavern у полноценного Chat Completion Preset есть Prompt Order.</p>
+<p>Проще всего представить его как плейлист инструкций. Например:</p>
+<ol>
+<li>Main</li>
+<li>Roleplay Rules</li>
+<li>Character</li>
+<li>World Info</li>
+<li>Style</li>
+<li>Chat History</li>
+<li>Anti-Repetition</li>
+<li>Jailbreak</li>
+</ol>
+<p>Не только содержимое блоков, но и их порядок является частью пресета. Limerence сохраняет этот порядок.</p>
+<h3>Что такое Chat History в Prompt Order</h3>
+<p>Это специальная точка: вот здесь находится история переписки.</p>
+<p>Поэтому условный порядок «Main → Style → Chat History → Jailbreak» означает, что Main и Style идут до истории, а Jailbreak — после неё.</p>
+<p>Это принципиально.</p>
+<p>Инструкция после истории находится ближе к текущей генерации и может иметь очень сильное влияние на ответ.</p>
+<h3>Простая схема работы пресета в Limerence</h3>
+<p>Представьте текущий запрос модели примерно так:</p>
+<blockquote>
+<p>блоки пресета до истории → система Limerence + ваш промпт + данные истории → недавний отыгрыш → блоки пресета после истории → текущее сообщение игрока → ответ модели</p>
+</blockquote>
+<p>Это очень упрощённая картинка, но для понимания принципа её достаточно.</p>
+<hr />
+<h2>Пресет НЕ удаляет ваш промпт</h2>
+<p>Это особенно важно.</p>
+<p>При включении пресета ваш пользовательский промпт Limerence продолжает работать. То есть <code>/settings</code> → Промпт не становится бесполезным.</p>
+<p>Можно иметь:</p>
+<ul>
+<li><strong>пресет</strong>, который управляет общей манерой работы модели, стилем, структурой, jailbreak и сэмплерами;</li>
+<li>и одновременно <strong>ваш промпт</strong>, который описывает конкретных персонажей, POV, сюжетные правила и ваши личные предпочтения.</li>
+</ul>
+<p>Это нормальная и часто очень мощная комбинация.</p>
+<h3>Пресет не выключает память Limerence</h3>
+<p>Память также продолжает работать.</p>
+<p>При активном пресете Limerence по-прежнему использует свои механизмы текущей истории, памяти, сцены, <a href="lor-i-ustroystvo-mira.html">лора</a>, персонажей и пользовательского промпта.</p>
+<p>Пресет добавляет собственный слой управления генерацией.</p>
+<p>Поэтому импорт SillyTavern-пресета не превращает Limerence в SillyTavern один в один.</p>
+<p>Limerence берёт совместимые элементы пресета и соединяет их со своей собственной архитектурой памяти и истории.</p>
+<h3>Почему это важно</h3>
+<p>Допустим, в SillyTavern пресет рассчитан на схему «карточка → World Book → история → jailbreak».</p>
+<p>А Limerence дополнительно имеет собственную долговременную <a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">память</a>, состояние сцены, синопсис, поиск по старым событиям и <a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Заметку автора</a>.</p>
+<p>В результате та же модель и тот же пресет могут вести себя не абсолютно идентично SillyTavern.</p>
+<p>Это нормально. Пресет переносится, но среда вокруг него другая.</p>
+<hr />
+<h2>Что означает «takeover»</h2>
+<p>Внутри Limerence для активного полноценного пресета используется режим, который технически можно назвать prompt takeover.</p>
+<p>Название страшнее, чем смысл.</p>
+<p>Это <strong>не</strong> означает, что пресет удаляет всю систему Limerence и теперь полностью контролирует запрос.</p>
+<p>Это означает, что Limerence начинает учитывать собственный порядок активных блоков пресета и позволяет этому пресету управлять соответствующей частью промпта.</p>
+<p>Базовые механизмы Limerence, ваш пользовательский промпт и память остаются.</p>
+<hr />
+<h2>Некоторые блоки могут располагаться внутри истории</h2>
+<p>Продвинутые SillyTavern-пресеты используют depth injection.</p>
+<p>То есть инструкция может говорить: «вставь меня не просто до или после всей истории, а на глубине нескольких сообщений от её конца».</p>
+<p>Например, в истории из пяти сообщений специальный блок может быть вставлен условно между третьим и четвёртым.</p>
+<p>Зачем? Чтобы важное стилевое напоминание находилось ближе к текущему ответу модели.</p>
+<p>Limerence поддерживает такие depth-инъекции для совместимых блоков пресета.</p>
+<h3>Пример depth-инструкции</h3>
+<p>Автор хочет бороться с повторяющейся проблемой: модель постоянно описывает одни и те же жесты.</p>
+<p>Он может создать блок:</p>
+<blockquote>
+<p>Следи за предыдущими несколькими сообщениями. Не повторяй недавно использованные жесты, метафоры и конструкции.</p>
+</blockquote>
+<p>и поставить его близко к хвосту истории.</p>
+<p>Так эта инструкция оказывается рядом именно с тем текстом, который нужно сравнивать.</p>
+<hr />
+<h2>Что такое включённые и выключенные блоки</h2>
+<p>Не каждый блок внутри JSON обязательно активен.</p>
+<p>Автор пресета может включить одни блоки и оставить выключенными другие — например, экспериментальный jailbreak или альтернативный стиль.</p>
+<p>При первом включении пресета Limerence сохраняет состояние, которое было задано автором файла.</p>
+<h3>Блоками можно управлять вручную</h3>
+<p>После включения пресета откройте <code>/preset</code>.</p>
+<p>Рядом с активным пресетом появится <strong>⚙️</strong>.</p>
+<p>Внутри вы увидите его блоки:</p>
+<ul>
+<li>✅ — используется;</li>
+<li>⬜ — выключен.</li>
+</ul>
+<p>Нажмите на блок, чтобы изменить его состояние именно для этой Темы.</p>
+<h3>Зачем вообще отключать отдельные блоки</h3>
+<p>Предположим, вам нравится пресет целиком, но не нравится его NSFW-блок. Или авторский Style Booster. Или конкретный jailbreak.</p>
+<p>Не нужно редактировать JSON вручную или искать другую версию пресета. Можно выключить только этот блок.</p>
+<h3>Но отключать блоки наугад — плохая идея</h3>
+<p>Некоторые пресеты построены как система. Например, Block A задаёт формат, Block B объясняет модели правила этого формата, Block C использует формат.</p>
+<p>Вы выключили Block B. Теперь A и C смотрят друг на друга с искренним непониманием.</p>
+<p>Особенно осторожно относитесь к блокам с названиями вроде «System», «Main», «Jailbreak», «Core», «Instructions», «Framework».</p>
+<p>Отключение системного блока может сильно изменить или полностью сломать задумку автора.</p>
+<h3>Как вернуть исходную конфигурацию блоков</h3>
+<p>Если вы уже нажимали всё подряд и теперь сами не помните, что было изначально:</p>
+<p><code>/preset</code> → активный пресет → <strong>⚙️</strong> → <strong>«↩️ Сбросить все»</strong></p>
+<p>Limerence вернёт состояния блоков к тем, которые находились в исходном JSON.</p>
+<p>Никакого ритуального удаления и повторного импорта не требуется.</p>
+<hr />
+<p>Параметры генерации, Regex, макросы, импорт и разбор проблем — в продолжении: <strong>«Пресеты: сэмплеры, Regex, импорт и диагностика»</strong>.</p>
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="presety-semplery-regex-import.html">Пресеты: сэмплеры, Regex, импорт и диагностика</a></li>
+<li><a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры</a></li>
+<li><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация</a></li>
+<li><a href="lor-i-ustroystvo-mira.html">Лор: как настроить канон мира и персонажей</a></li>
+<li><a href="kabinet-limerence-obzor-istorii.html">Кабинет Limerence: обзор, истории и настройки</a></li>
+<li><a href="glossariy-limerence-osnovnye-terminy.html">Глоссарий Limerence: основные термины</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Пресеты»</h2><ul><li><a href="presety-semplery-regex-import.html">Пресеты: сэмплеры, Regex, импорт и диагностика</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

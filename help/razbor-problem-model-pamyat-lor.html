@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Разбор проблем: модель, память, лор и оплата · Справочник · Limerence</title>
+<meta name="description" content="Limerence не отвечает, модель не отвечает, память работает неправильно, лор игнорируется, API, ключ, провайдер, /current, оплата, Кабинет.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/razbor-problem-model-pamyat-lor.html">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<p class="crumbs"><a href="index.html">Справочник</a> › <a href="index.html#reshenie-problem">Решение проблем</a></p>
+<h1>Разбор проблем: модель, память, лор и оплата</h1>
+<p>Первая часть — «Если Limerence работает неправильно» — объясняет, чем <code>/support</code> отличается от <code>/diag</code>, как описать баг и что уходит вместе с репортом. Здесь разбираем конкретные сбои: что проверить, прежде чем звать диагностику.</p>
+<h2>Limerence вообще не отвечает</h2>
+<p>Если вместо ответа появляется ошибка, сначала посмотрите, что пишет сам бот.</p>
+<p>Частые причины:</p>
+<ul>
+<li><a href="kak-vybrat-model-i-podklyuchit-api-klyuch.html">API-провайдер</a> временно недоступен;</li>
+<li>у собственного API закончился баланс;</li>
+<li>ключ больше не действителен;</li>
+<li>модель отсутствует у выбранного провайдера;</li>
+<li>закончились DeepSeek-ходы;</li>
+<li>закончился <a href="dostup-podpiski-i-oplata.html">пробный период</a> или Premium;</li>
+<li>модель отвергла параметры запроса;</li>
+<li>произошёл временный сетевой сбой.</li>
+</ul>
+<h3>Проверьте <code>/current</code></h3>
+<p>В проблемной Теме отправьте <code>/current</code>.</p>
+<p>Команда показывает фактическую конфигурацию текущей истории.</p>
+<p>Там полезно проверить:</p>
+<ul>
+<li>игровую модель;</li>
+<li>используемый ключ/провайдер;</li>
+<li><a href="rasshirennye-nastroyki-generaciya.html">Temperature</a>;</li>
+<li><a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">память</a> диалога;</li>
+<li>техническое состояние маршрута.</li>
+</ul>
+<p>Особенно <code>/current</code> полезен, если у вас несколько API-провайдеров и вы уже сами перестали помнить, куда именно отправляется эта несчастная история.</p>
+<h3>Если используется собственный API</h3>
+<p>Проверьте:</p>
+<ol>
+<li>существует ли ключ у провайдера;</li>
+<li>есть ли на нём баланс;</li>
+<li>доступна ли выбранная модель;</li>
+<li>правильный ли API URL;</li>
+<li>работает ли сам сервис провайдера.</li>
+</ol>
+<p>Если проблема появляется только на одном провайдере, а после переключения на другой исчезает, это очень полезно указать в <code>/diag</code>.</p>
+<h3>Если используется DeepSeek</h3>
+<p>Проверьте:</p>
+<ul>
+<li>действует ли пробный период или Premium;</li>
+<li>не закончились ли дневные ходы;</li>
+<li>включён ли нужный режим;</li>
+<li>не исчерпан ли лимит текущего дня.</li>
+</ul>
+<p>Для платного DeepSeek статистику можно посмотреть через <code>/stats</code>.</p>
+<p>Дневной пул обновляется в 00:00 МСК.</p>
+<h3>Один временный сбой ещё не обязательно баг</h3>
+<p>AI-провайдеры иногда:</p>
+<ul>
+<li>отвечают 500;</li>
+<li>получают timeout;</li>
+<li>перегружены;</li>
+<li>временно теряют конкретную модель.</li>
+</ul>
+<p>Если ошибка произошла один раз, а следующая генерация прошла нормально, отдельный <a href="esli-limerence-rabotaet-nepravilno.html">баг-репорт</a> обычно не нужен.</p>
+<p>Если одно и то же повторяется 5 раз подряд, только в одной Теме, только после конкретной функции или каждый раз с одинаковой ошибкой — тогда <code>/diag</code> уже очень полезен.</p>
+<h2>Модель отвечает странно</h2>
+<p>Если ответ технически пришёл, но качество резко изменилось, сначала вспомните, что вы меняли.</p>
+<p>Проверьте:</p>
+<ul>
+<li>модель;</li>
+<li><a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">промпт</a>;</li>
+<li>активный <a href="presety-kak-oni-rabotayut.html">пресет</a>;</li>
+<li>блоки пресета;</li>
+<li>Regex;</li>
+<li>Temperature;</li>
+<li>Top P;</li>
+<li>Character Card;</li>
+<li>персону;</li>
+<li><a href="lor-i-ustroystvo-mira.html">лор</a>;</li>
+<li>настройки DeepSeek.</li>
+</ul>
+<p>Особенно подозрительно: вчера всё было нормально → сегодня импортировал новый preset → всё стало ненормально.</p>
+<p>Шерлок здесь не нужен.</p>
+<h3>Проверьте Regex</h3>
+<p>Если:</p>
+<ul>
+<li>исчезают куски ответа;</li>
+<li>меняется форматирование;</li>
+<li>модель получает не тот текст;</li>
+<li>появляются или пропадают служебные теги;</li>
+</ul>
+<p>проверьте <code>/regex</code>.</p>
+<p>Regex может менять как видимый ответ, так и текст, который получает модель.</p>
+<h3>Проверьте пресет</h3>
+<p>Если проблема появилась после импорта SillyTavern-пресета — <code>/preset</code>.</p>
+<p>Проверьте:</p>
+<ul>
+<li>какой preset активен;</li>
+<li>для какой модели он предназначен;</li>
+<li>какие блоки включены;</li>
+<li>нет ли вместе с ним Regex.</li>
+</ul>
+<p>Для теста можно временно снять preset и сравнить поведение.</p>
+<p>Если без пресета проблема исчезла, у нас уже есть чрезвычайно полезный диагностический факт.</p>
+<h2>Память запомнила неправильный факт</h2>
+<p>Если это не техническая поломка, а обычная ошибка памяти, сначала используйте встроенное исправление.</p>
+<p>Под последним RP-ответом: «⋯» → «💬 OOC» → «🔄 Поправить историю».</p>
+<p>После этого обычным текстом объясните, что было запомнено неверно.</p>
+<p>Например:</p>
+<blockquote>
+<p>Марк не погиб. Он был ранен и сейчас находится в больнице.</p>
+</blockquote>
+<p>Если Limerence корректно исправил память — баг-репорт не нужен.</p>
+<h3>Когда ошибка памяти уже является багом</h3>
+<p>Например:</p>
+<ul>
+<li>исправление подтвердилось, но старый факт продолжает возвращаться;</li>
+<li><code>/clear</code> выполнен, а старая память всё ещё влияет на новую историю;</li>
+<li>Rewrite удалил событие, но память продолжает его использовать;</li>
+<li>Undo откатил сцену, но факты из неё остались;</li>
+<li>память явно относится к другой Теме.</li>
+</ul>
+<p>Вот здесь уже вызывайте <code>/diag</code>.</p>
+<p>И для таких проблем особенно полезно разрешить использование недавнего контекста.</p>
+<h2>Лор будто игнорируется</h2>
+<p>Сначала помните: <strong>модель не получает весь lorebook на каждом ходе.</strong></p>
+<p>Проверьте:</p>
+<ul>
+<li>ключи карточки;</li>
+<li>включена ли она;</li>
+<li>её значимость;</li>
+<li>нужен ли режим «Добавлять всегда»;</li>
+<li>настроен ли поиск по смыслу для большого файла;</li>
+<li>действительно ли текущая сцена связана с этим лором.</li>
+</ul>
+<p>Подробнее — статья «Лор: как настроить канон мира и персонажей».</p>
+<p>Если карточка точно должна срабатывать, но вообще никогда не используется при очевидном ключе — тогда это уже повод для <code>/diag</code>.</p>
+<h2>После смены персонажа осталась старая информация</h2>
+<p>Если Character Card была заменена внутри уже сыгранной истории, старая сюжетная память автоматически не обязана исчезнуть.</p>
+<p>Это не всегда баг.</p>
+<p>Для полностью чистого нового персонажа безопаснее:</p>
+<ul>
+<li>создать новую Тему;</li>
+<li>либо очистить старую историю перед началом нового RP.</li>
+</ul>
+<p>Если же старая информация появляется после корректной очистки — уже сообщайте через <code>/diag</code>.</p>
+<h2>Не регенерируется фотография так, как ожидалось</h2>
+<p>Если исходное сообщение содержало изображение, старые байты картинки не хранятся вместе с каждым вариантом ответа.</p>
+<p>Поэтому при последующей регенерации Limerence может использовать только текстовую подпись.</p>
+<p>Если нужно снова сгенерировать ответ именно с изображением — <strong>отправьте фотографию заново</strong>.</p>
+<p>Это ограничение, а не баг.</p>
+<h2>Проблема с оплатой</h2>
+<p>Если вы оплатили счёт, но Premium не появился:</p>
+<ol>
+<li>вернитесь к сообщению со счётом;</li>
+<li>нажмите «✅ Я оплатил — проверить»;</li>
+<li>подождите несколько минут;</li>
+<li>откройте <code>/premium</code> заново.</li>
+</ol>
+<p>Если платёж подтверждён платёжным сервисом, а Limerence его не видит — <code>/support</code>.</p>
+<p>Для денежных вопросов поддержка обычно полезнее <code>/diag</code>.</p>
+<p>Не отправляйте в чат данные банковской карты.</p>
+<h2>Кабинет показывает старые настройки</h2>
+<p>Сначала:</p>
+<ol>
+<li>убедитесь, что открыта правильная история;</li>
+<li>полностью закройте Mini App;</li>
+<li>откройте снова через <code>/app</code>;</li>
+<li>сравните значение с <code>/settings</code>.</li>
+</ol>
+<p>Если бот и Кабинет продолжают показывать разные значения — это отличный баг-репорт.</p>
+<p>Приложите скриншот обоих экранов.</p>
+<h2>Что писать в особенно полезном баг-репорте</h2>
+<p>Идеальный отчёт примерно такой:</p>
+<blockquote>
+<p><strong>Что делала:</strong> <code>/rewrite</code> старого сообщения примерно на 20 ходов назад.</p>
+<p><strong>Что произошло:</strong> история после него пересобралась, но через несколько новых сообщений персонаж снова упомянул событие из удалённой части.</p>
+<p><strong>Что ожидала:</strong> после Rewrite удалённые события не должны влиять на продолжение.</p>
+<p><strong>Повторяемость:</strong> произошло два раза подряд.</p>
+<p><strong>Дополнительно:</strong> память до Rewrite работала нормально. Модель и preset не менялись.</p>
+<p>Приложила последние сообщения истории.</p>
+</blockquote>
+<p>Не обязательно использовать именно такой шаблон.</p>
+<p>Главное — передать ту же информацию.</p>
+<h2>Самое важное правило</h2>
+<p>Не пытайтесь самостоятельно поставить диагноз.</p>
+<p>Сообщайте <strong>наблюдаемые факты</strong>.</p>
+<p>Лучше:</p>
+<blockquote>
+<p>После <code>/undo 3</code> персонаж всё ещё помнит свадьбу из удалённых сообщений.</p>
+</blockquote>
+<p>чем:</p>
+<blockquote>
+<p>У вас, видимо, RAG не инвалидировал vector cache после transaction rollback.</p>
+</blockquote>
+<p>Первое можно проверить. Второе звучит красиво, но может отправить расследование прямиком в болото.</p>
+<h2>Коротко</h2>
+<p>Нужен человеческий ответ или помощь с настройкой — <code>/support</code>.</p>
+<p>Нашли техническую ошибку Limerence — <code>/diag</code>.</p>
+<p>Баг относится к конкретной истории — <strong>вызывайте <code>/diag</code> внутри этой Темы</strong>.</p>
+<p>Хорошее описание содержит: <strong>что сделали → что произошло → что ожидали → повторяется ли.</strong> Эти четыре строки Limerence показывает шаблоном прямо в форме — можно скопировать и заполнить.</p>
+<p>Можно приложить <strong>до 5 фото или файлов</strong>.</p>
+<p>Для контекстных проблем можно приложить снимок Темы — история, память, промпт и настройки сохраняются в момент отправки.</p>
+<p>API-ключи в диагностический снимок не включаются.</p>
+<p>После успешной отправки вы получите номер <code>BUG-N</code>. Следить за ним отдельно не нужно: «🛟 Помощь» → «📋 Мои баги» показывает статус всех ваших обращений.</p>
+<p>Одинаковый баг не нужно отправлять много раз.</p>
+<p>Когда придёт уведомление об исправлении — проверьте его и используйте «✅ Исправлено», «❌ Проблема осталась» или «🤔 Лучше, но не до конца».</p>
+<p>После подтверждения «BUG-N принят» свою историю можно чистить как угодно: контекст бага уже сохранён отдельно.</p>
+<hr />
+<h2>Читайте также</h2>
+<ul>
+<li><a href="esli-limerence-rabotaet-nepravilno.html">Если Limerence работает неправильно</a></li>
+<li><a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">Память Limerence</a></li>
+<li><a href="lor-i-ustroystvo-mira.html">Лор: как настроить канон мира и персонажей</a></li>
+<li><a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата</a></li>
+<li><a href="kabinet-limerence-obzor-istorii.html">Кабинет Limerence: обзор, истории и настройки</a></li>
+<li><a href="moderaciya-blokirovki-apellyacii.html">Модерация, блокировки и апелляции</a></li>
+</ul>
+<div class="help-more"><h2>Ещё в разделе «Решение проблем»</h2><ul><li><a href="esli-limerence-rabotaet-nepravilno.html">Если Limerence работает неправильно</a></li></ul></div>
+</div></main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

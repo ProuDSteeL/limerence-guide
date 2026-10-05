@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Справочник · Limerence</title>
+<meta name="description" content="Справочник Limerence: настройки, память, лор, персонажи и решение проблем.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="canonical" href="https://guide.limerence-ai.com/help/">
+<style>
+.help-search{display:block;width:100%;height:48px;padding:0 16px;margin:8px 0 28px;font:inherit;font-size:16px;color:var(--tx);background:var(--s1);border:1px solid var(--line2);border-radius:12px}
+.help-search::placeholder{color:var(--tx3)}
+.help-cat{margin:0 0 36px}
+.help-cat h2{margin:0 0 4px;font-size:20px;padding:0;border:0}
+.help-cat > p{margin:0 0 12px;color:var(--tx2);font-size:14px}
+.help-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.help-list li{margin:0;border-top:1px solid var(--line)}
+.help-list li:first-child{border-top:0}
+.help-list a{display:block;padding:14px 16px;min-height:48px;text-decoration:none;color:var(--tx);font-weight:500}
+.help-list small{display:block;margin-top:2px;font-weight:400;color:var(--tx2);font-size:13px;line-height:1.45}
+.help-list [hidden],.help-cat[hidden]{display:none}
+.help-empty{color:var(--tx2)}
+.crumbs{font-size:14px;color:var(--tx3);margin:0 0 16px}
+.crumbs a{text-decoration:none;color:var(--tx2)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.doc pre{overflow-x:auto;background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.doc pre code{border:0;padding:0;background:none}
+.doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
+.doc{overflow-wrap:anywhere}
+.help-more{margin-top:40px;padding-top:8px;border-top:1px solid var(--line)}
+.help-more h2{border:0;font-size:18px}
+</style>
+</head>
+<body>
+<nav class="sitenav"><div class="wrap">
+  <a class="brand" href="../index.html" aria-label="Limerence — на главную"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+  <div class="links" id="navLinks">
+    <a href="../index.html#kak">Как это работает</a>
+    <a href="../index.html#katalog">Каталог</a>
+    <a href="../roadmap.html">Дорожная карта</a>
+    <a href="../donate.html">Поддержать</a>
+    <a href="../about.html">О проекте</a>
+    <a href="index.html" aria-current="page">Помощь</a>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+  <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</div></nav>
+<main><div class="wrap narrow doc">
+<h1>Справочник</h1>
+<p class="muted">Как устроен Limerence: настройки, память, лор, персонажи и решение проблем.</p>
+<input id="helpSearch" class="help-search" type="search" placeholder="Поиск по справочнику" aria-label="Поиск по справочнику" autocomplete="off" enterkeyhint="search">
+<p id="helpEmpty" class="help-empty" hidden>Ничего не нашлось. Попробуйте другие слова.</p>
+<section class="help-cat" id="start"><h2>Начало работы</h2><p>Первый запуск, устройство Limerence, подписка и подключение моделей</p><ul class="help-list"><li data-slug="kak-nachat-i-sozdat-pervuyu-istoriyu"><a href="kak-nachat-i-sozdat-pervuyu-istoriyu.html">Первый запуск Limerence<small>Первый запуск бота, согласия, пробный период, приватная группа с Темами и первая история.</small></a></li><li data-slug="kak-vybrat-model-i-podklyuchit-api-klyuch"><a href="kak-vybrat-model-i-podklyuchit-api-klyuch.html">Модели и API-ключи<small>Пробный DeepSeek, свой API-провайдер, выбор модели для истории и разбор частых ошибок.</small></a></li><li data-slug="temy-gruppy-i-komandy"><a href="temy-gruppy-i-komandy.html">Темы, группы и команды<small>Как устроен Limerence: аккаунт, игровая группа и Тема. Почему Тема — это отдельная история, что хранится отдельно для каждой и где выполнять команды.</small></a></li><li data-slug="dostup-podpiski-i-oplata"><a href="dostup-podpiski-i-oplata.html">Доступ, подписки и оплата<small>пробный период, Premium, DeepSeek, 50 ходов, 400 ходов, цена, /premium, /upgrade, оплата картой, СБП, Tribute, криптовалюта, промокод, /promo, продление подписки.</small></a></li></ul></section>
+<section class="help-cat" id="nastroyki-istorii"><h2>Настройки истории</h2><p>Всё, что настраивается в /settings: модель, длина, генерация, вид и отыгрыш DeepSeek</p><ul class="help-list"><li data-slug="kak-nastroit-povedenie-i-stil-istorii"><a href="kak-nastroit-povedenie-i-stil-istorii.html">Стиль и поведение истории<small>Заметка автора, стиль, контекст, память диалога, температура, длина ответа, настройки отыгрыша, /settings.</small></a></li><li data-slug="rasshirennye-nastroyki-otygrysh-deepseek"><a href="rasshirennye-nastroyki-otygrysh-deepseek.html">Расширенные настройки: отыгрыш DeepSeek<small>Расширенные настройки, /settings, отыгрыш DeepSeek, жанры, откровенность, темп, слоуберн, кто ведёт сцену, второстепенные персонажи, длина ответа, несмягчаемый характер, дарк-режим.</small></a></li><li data-slug="rasshirennye-nastroyki-generaciya"><a href="rasshirennye-nastroyki-generaciya.html">Расширенные настройки: генерация<small>Расширенные настройки, /settings, температура, Top P, Presence, Frequency, память диалога, кап канона, префилл, анти-клише, regex, шапка сцены, статы, имя Темы.</small></a></li><li data-slug="rasshirennye-nastroyki-vid-i-tema"><a href="rasshirennye-nastroyki-vid-i-tema.html">Расширенные настройки: вид и Тема<small>Шапка сцены, день и дата, стат-панель, стриминг, оформление ответа, Regex-скрипты, имя Темы, уведомления о сбоях, «Персонаж пишет первым», мои темы и удаление Темы.</small></a></li><li data-slug="kak-nastroit-istoriyu-osnovnye-nastroyki"><a href="kak-nastroit-istoriyu-osnovnye-nastroyki.html">Основные настройки истории<small>Меню /settings: режим DeepSeek, модель и ключ истории, длина ответов, промпт, Заметка автора и расширенные настройки.</small></a></li></ul></section>
+<section class="help-cat" id="prompt-personazhi-lor"><h2>Промпт, персонажи и лор</h2><p>Чем наполняется история: постоянные инструкции, карточки персонажей и канон мира</p><ul class="help-list"><li data-slug="lor-i-ustroystvo-mira"><a href="lor-i-ustroystvo-mira.html">Лор: как настроить канон мира и персонажей<small>Лор, lorebook, World Book, /lore, ключи, карточки лора, персонажи, мир, канон, SillyTavern, Character Book, файл лора, поиск по смыслу, приоритет.</small></a></li><li data-slug="lor-bolshie-fayly-worldbook-biblioteka"><a href="lor-bolshie-fayly-worldbook-biblioteka.html">Лор: большие файлы, World Book и библиотека<small>Лор-файлы txt и md, поиск по смыслу, импорт World Book из SillyTavern, Character Book, библиотека книг, экспорт лорбука, удаление лора.</small></a></li><li data-slug="kak-napisat-horoshiy-prompt-dlya-istorii"><a href="kak-napisat-horoshiy-prompt-dlya-istorii.html">Промпт для ролевой игры<small>Промпт, system prompt, как настроить стиль, POV, персонажей, NPC, инициативу, темп, диалоги, запрет действий за игрока, большой промпт, шаблон промпта.</small></a></li><li data-slug="personazhi-i-kartochki"><a href="personazhi-i-kartochki.html">Персонажи и карточки<small>Персонажи, карточки, character card, /cards, /newcard, /import, PNG, JSON, SillyTavern, Janitor, chub, персона игрока, /profile.</small></a></li></ul></section>
+<section class="help-cat" id="pamyat-i-upravlenie"><h2>Память и управление историей</h2><p>Что Limerence помнит, как это исправлять, и как откатывать, переписывать и ветвить сюжет</p><ul class="help-list"><li data-slug="kak-rabotaet-pamyat-i-kak-ee-ispravlyat"><a href="kak-rabotaet-pamyat-i-kak-ee-ispravlyat.html">Память Limerence<small>Память, OOC, поправить историю, исправить память, что помнит Limerence, статус памяти, /storage, /clear, удалить тему, восстановить данные.</small></a></li><li data-slug="upravlenie-istoriey-varianty-otkat-vetki"><a href="upravlenie-istoriey-varianty-otkat-vetki.html">Управление историей: варианты, откат, ветки и восстановление<small>Перегенерация, другой вариант ответа, свайп, undo, отменить ход, rewrite, переписать сообщение, fork, ветка сюжета, clear, корзина, trash, restore, восстановить историю.</small></a></li></ul></section>
+<section class="help-cat" id="kabinet"><h2>Кабинет</h2><p>Mini App Limerence: истории, настройки, персоны и карточки</p><ul class="help-list"><li data-slug="kabinet-limerence-obzor-istorii"><a href="kabinet-limerence-obzor-istorii.html">Кабинет Limerence: обзор, истории и настройки<small>кабинет, Mini App, /app, /cabinet, истории, настройки, промпт, пресеты, лор, regex, сохранённые сообщения, статистика, тариф, память.</small></a></li><li data-slug="kabinet-limerence-persony-i-kartochki"><a href="kabinet-limerence-persony-i-kartochki.html">Кабинет Limerence: персоны, карточки и что остаётся в боте<small>кабинет, Mini App, персоны, карточки, Character Card, альтернативные приветствия, /profile, /import, что остаётся в боте.</small></a></li></ul></section>
+<section class="help-cat" id="presety"><h2>Пресеты</h2><p>Конфигурации SillyTavern: блоки, порядок промпта, сэмплеры, Regex и импорт</p><ul class="help-list"><li data-slug="presety-kak-oni-rabotayut"><a href="presety-kak-oni-rabotayut.html">Пресеты: как они работают и как их использовать<small>Пресет, SillyTavern, /preset, JSON, jailbreak, prompt manager, prompt order, блоки пресета, импорт пресета, стиль генерации, takeover, depth injection.</small></a></li><li data-slug="presety-semplery-regex-import"><a href="presety-semplery-regex-import.html">Пресеты: сэмплеры, Regex, импорт и диагностика<small>Пресет, сэмплеры, temperature, min p, top k, regex в пресете, макросы, FatPresets, full и partial, импорт JSON, /preset, диагностика проблем с пресетом.</small></a></li></ul></section>
+<section class="help-cat" id="spravochnik"><h2>Справочник</h2><p>Все команды и словарь терминов Limerence</p><ul class="help-list"><li data-slug="komandy-limerence-spravochnik"><a href="komandy-limerence-spravochnik.html">Команды Limerence: полный справочник<small>Все пользовательские команды Limerence с объяснением: /menu, /settings, /current, /stop, /undo, /rewrite, /fork, /clear, /restore, /scene, /day, /export, /lore, /cards, /api, /help, /diag, /appeal и другие.</small></a></li><li data-slug="glossariy-limerence-osnovnye-terminy"><a href="glossariy-limerence-osnovnye-terminy.html">Глоссарий Limerence: основные термины<small>Быстрый словарь: Тема, история, ход, модель, провайдер, API-ключ, промпт, Заметка автора, контекст, память, лор, lorebook, World Book, Character Card, персона.</small></a></li><li data-slug="glossariy-limerence-generaciya"><a href="glossariy-limerence-generaciya.html">Глоссарий Limerence: генерация, история и поддержка<small>Вторая часть словаря: пресет, Prompt Order, макросы, Regex, Temperature, Top P, сэмплеры, префилл, токены, OOC, Undo, Rewrite, Fork, Clear, корзина, баг-репорт, апелляция.</small></a></li></ul></section>
+<section class="help-cat" id="pravila-i-bezopasnost"><h2>Правила и безопасность</h2><p>Что запрещено, как работают предупреждения и блокировки, какие данные хранятся и как их удалить</p><ul class="help-list"><li data-slug="moderaciya-blokirovki-apellyacii"><a href="moderaciya-blokirovki-apellyacii.html">Модерация, блокировки и апелляции<small>Что запрещено в Limerence, чем модерация сервиса отличается от ограничений AI-модели, как работают предупреждения и блокировки, как подать апелляцию через /appeal.</small></a></li><li data-slug="dannye-i-privatnost"><a href="dannye-i-privatnost.html">Данные и приватность<small>приватность, данные, история, шифрование, API-ключи, удаление данных, /forget_me, удалить аккаунт, экспорт, /export, память, Telegram, поддержка, диагностика.</small></a></li></ul></section>
+<section class="help-cat" id="reshenie-problem"><h2>Решение проблем</h2><p>Что проверить самому, чем /support отличается от /diag и как оформить баг-репорт</p><ul class="help-list"><li data-slug="esli-limerence-rabotaet-nepravilno"><a href="esli-limerence-rabotaet-nepravilno.html">Если Limerence работает неправильно<small>ошибка, баг, /diag, поддержка, /support, баг-репорт, сообщить об ошибке, последние сообщения, слепок истории.</small></a></li><li data-slug="razbor-problem-model-pamyat-lor"><a href="razbor-problem-model-pamyat-lor.html">Разбор проблем: модель, память, лор и оплата<small>Limerence не отвечает, модель не отвечает, память работает неправильно, лор игнорируется, API, ключ, провайдер, /current, оплата, Кабинет.</small></a></li></ul></section>
+</div><script>
+(function(){
+  var input=document.getElementById('helpSearch'); if(!input) return;
+  var items=[].slice.call(document.querySelectorAll('.help-list li'));
+  var cats=[].slice.call(document.querySelectorAll('.help-cat'));
+  var empty=document.getElementById('helpEmpty'); var index=null, loading=false;
+  function norm(s){return (s||'').toLowerCase().replace(/ё/g,'е');}
+  function apply(){
+    var q=norm(input.value).trim(), words=q?q.split(/\s+/):[], shown=0;
+    items.forEach(function(li){
+      var hay=index?index[li.getAttribute('data-slug')]:norm(li.textContent);
+      var ok=words.every(function(w){return (hay||'').indexOf(w)!==-1;});
+      li.hidden=!ok; if(ok) shown++;
+    });
+    cats.forEach(function(c){c.hidden=!c.querySelector('li:not([hidden])');});
+    empty.hidden=shown!==0;
+  }
+  function load(cb){
+    if(index||loading) return cb&&cb(); loading=true;
+    fetch('search.json').then(function(r){return r.json();}).then(function(d){
+      index={}; d.forEach(function(a){index[a.slug]=norm(a.title+' '+a.description+' '+a.text);});
+      loading=false; apply();
+    }).catch(function(){loading=false;});
+  }
+  input.addEventListener('focus',function(){load();});
+  input.addEventListener('input',function(){load();apply();});
+})();
+</script>
+</main>
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="../index.html"><svg viewBox="1 2 14 12" aria-hidden="true"><path class="mark-fill" d="M8 5L10 3L12 3L14 5L14 7L8 13L2 7L2 5L4 3L6 3Z"/></svg><span>Limerence</span></a>
+      <p>Ролевые истории в Telegram, которые помнят тебя. Только для совершеннолетних, 18+.</p>
+    </div>
+    <div>
+      <h4>Проект</h4>
+      <ul>
+        <li><a href="../about.html">О проекте</a></li>
+        <li><a href="../roadmap.html">Дорожная карта</a></li>
+        <li><a href="../donate.html">Поддержать</a></li>
+        <li><a href="index.html" aria-current="page">Центр помощи</a></li>
+        <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <ul>
+        <li><a href="../legal/tos.html">Условия использования</a></li>
+        <li><a href="../legal/privacy.html">Конфиденциальность</a></li>
+        <li><a href="../legal/offer.html">Оферта</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-end">© Limerence · 18+</div>
+</div></footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
