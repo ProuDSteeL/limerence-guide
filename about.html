@@ -2,96 +2,108 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>О проекте · Limerence Stories</title>
-<meta name="description" content="Limerence Stories — инди-проект: Telegram-бот для иммерсивных ролевых историй с ИИ, который держит в памяти персонажей и историю отношений на протяжении сотен сообщений.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>О проекте · Limerence</title>
+<meta name="description" content="О проекте Limerence: что это за инструмент для ролевых историй, как он устроен и что уже работает.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://limerence-ai.com/about.html">
+<!-- site:head -->
+<link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="apple-touch-icon" href="assets/favicon.svg">
-<meta name="theme-color" content="#0f0b1e">
-<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js');var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('js');}})();</script>
 <link rel="stylesheet" href="assets/site.css">
-<style>
-main{padding:8px 0 40px}
-.about-card{margin:0 0 22px}
-.about-card h2{margin:0 0 6px;font-size:22px}
-.about-card p{margin:12px 0;color:var(--ink)}
-.about-card ul{margin:12px 0;padding-left:22px}
-.about-card li{margin:6px 0}
-.cta-center{text-align:center;margin-top:8px}
-</style>
+<!-- /site:head -->
 </head>
 <body>
-
-<nav class="sitenav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="dot"></span>Limerence Stories</a>
-  <div class="links">
-    <a class="link" href="index.html">Главная</a>
-    <a class="link" href="https://support.limerence-ai.com/hc/help/ru" target="_blank" rel="noopener">Гайд</a>
-    <a class="link" href="https://support.limerence-ai.com/hc/help/ru/categories/problemy" target="_blank" rel="noopener">FAQ</a>
-    <a class="link" href="donate.html">Донаты</a>
-    <a class="link active" href="about.html">О проекте</a>
-    <span class="soon" title="Появится позже">Каталог · скоро</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Светлая / тёмная тема"><span class="moon">🌙</span><span class="sun">☀️</span></button>
-  </div>
-</div></nav>
-
-<header class="hero">
-  <div class="glow"></div>
-  <div class="hero-inner wrap">
-    <span class="kicker">О проекте</span>
-    <h1>Истории, которые помнят вас</h1>
-    <p class="sub">Не только следующий ход, а вся история целиком — от первой сцены до сегодняшней.</p>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section class="card about-card">
-    <h2>Что это</h2>
-    <p>Limerence Stories — Telegram-бот (<code>@Limerence_Stories_bot</code>) для иммерсивных
-      ролевых историй с ИИ. Большинство ИИ-компаньонов теряют детали через 20–30 сообщений;
-      здесь память — не побочная фича, а главная задача бота: контекст, персонажи и история
-      отношений держатся сотнями сообщений.</p>
-    <p>Игра идёт в отдельной «Теме» твоей группы Telegram, со своими карточками персонажей,
-      лором и настройками — подробнее в <a href="https://support.limerence-ai.com/hc/help/ru" target="_blank" rel="noopener">базе знаний</a>. Сервис 18+.</p>
-  </section>
-
-  <section class="card about-card">
-    <h2>Что уже работает</h2>
-    <ul>
-      <li><b>Многослойная память</b> — собирается сама, по ходу игры, ничего настраивать не нужно.</li>
-      <li><b>Карточки персонажей</b> — готовые с chub.ai/characterhub.org/janitor.ai или свои с нуля.</li>
-      <li><b>Данные под замком</b> — у каждого свой ключ доступа, который не видит даже автор бота.</li>
-      <li><b>Граница безопасности контента</b> — работает всегда и не отключается.</li>
-      <li><b>Пробный период</b> — 7 дней полного доступа бесплатно, дальше доступная подписка на
-        самого бота (модель — отдельно, своим ключом у провайдера).</li>
-    </ul>
-    <p>Полный и честный список — на странице <a href="roadmap.html">дорожной карты</a>: что уже
-      работает, что в работе прямо сейчас и что впереди, без точных дат и лишних обещаний.</p>
-  </section>
-
-  <section class="card about-card">
-    <h2>Кто делает</h2>
-    <p>Limerence Stories — инди-проект, который живёт и растёт на поддержке тех, кто в нём играет.
-      Сервера и модели стоят денег каждый месяц вне зависимости от того, играешь ты сегодня или
-      нет — если хочешь помочь, загляни на страницу <a href="donate.html">донатов</a>.</p>
-  </section>
-
-  <p class="cta-center"><a class="btn-link" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Начать в Telegram<span class="arr">↗</span></a></p>
-
+<!-- site:header -->
+<header class="sitehead"><div class="hd">
+ <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="siteDrawer">
+  <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+ </button>
+ <a class="brand" href="index.html" aria-label="Limerence — на главную"><svg viewBox="0 0 356 301" aria-hidden="true"><polygon class="h" points="56,.5 96,.5 178,82.5 260,.5 300,.5 356,56.5 356,122 178,300 0,122 0,56.5"/><circle class="d" cx="299.5" cy="273.5" r="27"/></svg>Limerence</a>
+ <nav class="top" aria-label="Разделы сайта">
+  <a href="index.html" data-nav="home">Главная</a>
+  <a href="index.html#tarify" data-nav="tarify">Тарифы</a>
+  <a href="help/" data-nav="help">Справка</a>
+  <a href="roadmap.html" data-nav="roadmap">Дорожная карта</a>
+  <a href="about.html" data-nav="about" aria-current="page">О проекте</a>
+  <a href="donate.html" data-nav="donate">Поддержать</a>
+  <a href="legal/" data-nav="docs">Документы</a>
+ </nav>
+ <span class="sp"></span>
+ <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg></button>
+ <a class="btn primary sm cta" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Открыть бота <span class="ar">↗</span></a>
+</div></header>
+<div class="backdrop" id="siteBackdrop"></div>
+<nav class="drawer" id="siteDrawer" aria-label="Меню">
+ <div class="g">Продукт</div>
+ <a href="index.html" data-nav="home">Главная</a>
+ <a href="index.html#tarify" data-nav="tarify">Тарифы</a>
+ <a href="help/" data-nav="help">Справка</a>
+ <a href="roadmap.html" data-nav="roadmap">Дорожная карта</a>
+ <div class="g">Проект</div>
+ <a href="about.html" data-nav="about" aria-current="page">О проекте</a>
+ <a href="donate.html" data-nav="donate">Поддержать</a>
+ <a href="legal/" data-nav="docs">Документы</a>
+ <a class="btn primary" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Открыть бота ↗</a>
+</nav>
+<!-- /site:header -->
+<main class="pagemain">
+<div class="phead narrow">
+  <p class="eyebrow">О проекте<span class="age">18+</span></p>
+  <h1>О проекте</h1>
+  <p class="lead">Limerence — Telegram-бот <code>@Limerence_Stories_bot</code> для ролевых историй с ИИ. Его главная задача — память: персонажи, события и история отношений держатся сотнями сообщений.</p>
+ </div>
+ <div class="prose narrow">
+  <h2>Как это устроено</h2>
+  <p>Каждая история идёт в отдельной Теме твоей группы Telegram, со своими карточками персонажей, лором и настройками. Ты пишешь ходы, модель отвечает, Limerence по ходу игры собирает память. Подробности — в <a href="help/">справке</a>.</p>
+  <h2>Что уже работает</h2>
+  <ul>
+   <li><b>Память.</b> Собирается сама по ходу игры, настраивать ничего не нужно.</li>
+   <li><b>Карточки персонажей.</b> С chub.ai, characterhub.org и janitor.ai или свои с нуля.</li>
+   <li><b>Кабинет.</b> Экран внутри Telegram, открывается командой <code>/app</code>.</li>
+   <li><b>Свайпы и правки.</b> Перегенерировать ответ, отменить ход или поправить то, что бот запомнил неверно.</li>
+   <li><b>Шифрование.</b> Истории хранятся зашифрованными, у каждого игрока свой ключ.</li>
+   <li><b>Модерация.</b> Граница безопасности контента работает всегда и не отключается.</li>
+   <li><b>Пробный период.</b> 7 дней бесплатно, дальше подписка. Цены — в разделе <a href="index.html#tarify">Тарифы</a>.</li>
+  </ul>
+  <p>Что в работе и что впереди — в <a href="roadmap.html">дорожной карте</a>, без точных дат.</p>
+  <h2>Кто делает</h2>
+  <p>Limerence — инди-проект, который живёт на поддержке игроков. Серверы и модели стоят денег каждый месяц, играешь ты сегодня или нет. Помочь можно на странице <a href="donate.html">поддержки</a>.</p>
+  <div class="btn-row"><a class="btn primary" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Начать в Telegram <span class="ar">↗</span></a><a class="btn" href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество <span class="ar">↗</span></a></div>
+ </div>
 </main>
-
-<footer>
-  Сделано с <span class="heart">&#9829;</span> для игроков Limerence Stories<br>
-  💬 <a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Группа сообщества</a> — вопросы и новости
-  <div class="legal">18+ ·
-    <a href="roadmap.html">Дорожная карта</a> ·
-    <a href="legal/tos.html">Условия использования</a> ·
-    <a href="legal/privacy.html">Политика конфиденциальности</a> ·
-    <a href="legal/offer.html">Оферта</a>
+<!-- site:footer -->
+<footer class="sitefoot">
+ <div class="ft">
+  <div>
+   <a class="brand" href="index.html"><svg viewBox="0 0 356 301" aria-hidden="true"><polygon class="h" points="56,.5 96,.5 178,82.5 260,.5 300,.5 356,56.5 356,122 178,300 0,122 0,56.5"/><circle class="d" cx="299.5" cy="273.5" r="27"/></svg>Limerence</a>
+   <p>Инструмент для ролевых историй в Telegram. Только для совершеннолетних, 18+.</p>
   </div>
+  <div><h4>Продукт</h4><ul>
+   <li><a href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Открыть бота ↗</a></li>
+   <li><a href="index.html#tarify">Тарифы</a></li>
+   <li><a href="help/">Справка</a></li>
+   <li><a href="roadmap.html">Дорожная карта</a></li>
+  </ul></div>
+  <div><h4>Проект</h4><ul>
+   <li><a href="about.html">О проекте</a></li>
+   <li><a href="donate.html">Поддержать</a></li>
+   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+  </ul></div>
+  <div><h4>Документы</h4><ul>
+   <li><a href="legal/">Все документы</a></li>
+   <li><a href="legal/tos.html">Условия использования</a></li>
+   <li><a href="legal/privacy.html">Конфиденциальность</a></li>
+   <li><a href="legal/offer.html">Оферта</a></li>
+  </ul></div>
+ </div>
+ <div class="fend">© Limerence · 18+</div>
 </footer>
-
+<!-- /site:footer -->
 <script src="assets/site.js" defer></script>
 </body>
 </html>

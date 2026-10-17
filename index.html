@@ -2,135 +2,183 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Limerence Stories — ИИ-ролевые истории, которые помнят тебя</title>
-<meta name="description" content="Limerence Stories — Telegram-бот для иммерсивных ролевых историй с ИИ, который помнит контекст, персонажей и историю отношений от хода к ходу. Пробный период — 7 дней бесплатно.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Limerence — инструмент для ролевых историй в Telegram</title>
+<meta name="description" content="Limerence — инструмент для ролевых историй в Telegram: память, карточки персонажей, лор, выбор модели, пресеты. 18+.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://limerence-ai.com/">
+<!-- site:head -->
+<link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="apple-touch-icon" href="assets/favicon.svg">
-<meta name="theme-color" content="#0f0b1e">
-<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js');var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('js');}})();</script>
 <link rel="stylesheet" href="assets/site.css">
-<style>
-.hero{padding-top:40px}
-.hero .age{display:inline-block;margin-top:14px;font-size:12px;color:var(--muted);
-  border:1px solid var(--line);padding:4px 10px;border-radius:999px}
-.cta-row{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:26px}
-.cta-row .btn-link{font-size:17px;padding:15px 28px}
-.cta-note{color:var(--muted);font-size:13px}
-
-.section{padding:36px 20px}
-.section h2{text-align:center;font-size:clamp(22px,4vw,30px);margin:0 0 8px}
-.section .sub{color:var(--muted);text-align:center;max-width:560px;margin:0 auto 30px}
-
-.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.qcard{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
-a.qcard:hover{transform:translateY(-3px)}
-.qcard .qic{font-size:26px}
-.qcard h3{margin:2px 0 0;font-size:17px;color:var(--ink)}
-.qcard p{margin:0;color:var(--muted);font-size:14px;flex:1}
-.qcard .qarr{margin-top:4px;color:var(--acc2);font-size:13px;font-weight:700}
-.qcard.soon{opacity:.55}
-.qcard.soon .qarr{color:var(--muted)}
-
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:820px;margin:0 auto}
-.pillar{text-align:center;padding:6px}
-.pillar .pic{font-size:28px;margin-bottom:8px}
-.pillar h3{margin:0 0 6px;font-size:16px}
-.pillar p{margin:0;color:var(--muted);font-size:14px}
-
-@media(max-width:720px){
-  .qgrid,.pillars{grid-template-columns:1fr}
-}
-</style>
+<!-- /site:head -->
 </head>
 <body>
-
-<nav class="sitenav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="dot"></span>Limerence Stories</a>
-  <div class="links">
-    <a class="link active" href="index.html">Главная</a>
-    <a class="link" href="https://support.limerence-ai.com/hc/help/ru" target="_blank" rel="noopener">Гайд</a>
-    <a class="link" href="https://support.limerence-ai.com/hc/help/ru/categories/problemy" target="_blank" rel="noopener">FAQ</a>
-    <a class="link" href="donate.html">Донаты</a>
-    <a class="link" href="about.html">О проекте</a>
-    <!-- Каталог персонажей — Волна 3 (docs/reports/research/SITE-V2-DESIGN-2026-07-23.md §4), заменить на <a href="catalog/index.html"> когда появится -->
-    <span class="soon" title="Появится позже">Каталог · скоро</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему" title="Светлая / тёмная тема"><span class="moon">🌙</span><span class="sun">☀️</span></button>
+<!-- site:header -->
+<header class="sitehead"><div class="hd">
+ <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Меню" aria-expanded="false" aria-controls="siteDrawer">
+  <svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+ </button>
+ <a class="brand" href="index.html" aria-label="Limerence — на главную"><svg viewBox="0 0 356 301" aria-hidden="true"><polygon class="h" points="56,.5 96,.5 178,82.5 260,.5 300,.5 356,56.5 356,122 178,300 0,122 0,56.5"/><circle class="d" cx="299.5" cy="273.5" r="27"/></svg>Limerence</a>
+ <nav class="top" aria-label="Разделы сайта">
+  <a href="index.html" data-nav="home" aria-current="page">Главная</a>
+  <a href="index.html#tarify" data-nav="tarify">Тарифы</a>
+  <a href="help/" data-nav="help">Справка</a>
+  <a href="roadmap.html" data-nav="roadmap">Дорожная карта</a>
+  <a href="about.html" data-nav="about">О проекте</a>
+  <a href="donate.html" data-nav="donate">Поддержать</a>
+  <a href="legal/" data-nav="docs">Документы</a>
+ </nav>
+ <span class="sp"></span>
+ <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg></button>
+ <a class="btn primary sm cta" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Открыть бота <span class="ar">↗</span></a>
+</div></header>
+<div class="backdrop" id="siteBackdrop"></div>
+<nav class="drawer" id="siteDrawer" aria-label="Меню">
+ <div class="g">Продукт</div>
+ <a href="index.html" data-nav="home" aria-current="page">Главная</a>
+ <a href="index.html#tarify" data-nav="tarify">Тарифы</a>
+ <a href="help/" data-nav="help">Справка</a>
+ <a href="roadmap.html" data-nav="roadmap">Дорожная карта</a>
+ <div class="g">Проект</div>
+ <a href="about.html" data-nav="about">О проекте</a>
+ <a href="donate.html" data-nav="donate">Поддержать</a>
+ <a href="legal/" data-nav="docs">Документы</a>
+ <a class="btn primary" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Открыть бота ↗</a>
+</nav>
+<!-- /site:header -->
+<main class="pagemain">
+<div class="hero">
+  <div>
+   <p class="eyebrow">Ролевые истории в Telegram<span class="age">18+</span></p>
+   <h1>Инструмент для ролевых историй</h1>
+   <p class="lead">Ты пишешь, модель ведёт сцену, а Limerence держит карточки персонажей, лор, ветки сюжета и память. Персонаж помнит, как вы познакомились и что пообещали друг другу, даже спустя сотни сообщений.</p>
+   <div class="btn-row">
+    <a class="btn primary" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Начать в Telegram <span class="ar">↗</span></a>
+    <a class="btn" href="#tarify">Тарифы</a>
+   </div>
+   <p class="note">Первые 7 дней бесплатно, карта не нужна.</p>
   </div>
-</div></nav>
-
-<header class="hero">
-  <div class="glow"></div>
-  <div class="hero-inner wrap">
-    <span class="kicker">Immersive RP · Telegram</span>
-    <h1>Истории, которые помнят тебя</h1>
-    <p class="sub">Limerence Stories — бот для ролевых историй с ИИ, который держит в голове твоих
-      персонажей и всю историю отношений — не только следующий ход, а сотни сообщений назад.
-      Пиши в Telegram, а не читай инструкцию.</p>
-    <span class="age">18+</span>
-    <div class="cta-row">
-      <a class="btn-link" href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Начать в Telegram<span class="arr">↗</span></a>
-      <span class="cta-note">Первые 7 дней — бесплатно, без карты</span>
-    </div>
+  <div class="chat" aria-label="Пример игры">
+   <div class="smp">
+    <div class="msg me"><span class="who">Игрок</span><p>Я склоняю голову вбок, когда произношу:</p><p>— Вчера на ужине... Я ушла. Но причиной была не работа. Я... Я назвала твоё имя. Сказала, что еду к тебе.</p></div>
+    <div class="msg"><span class="who">Леон</span><div class="clip" id="exampleReply"><p>Турка на плите издала тихий щелчок — металл расширялся от жара. Леон не шевельнулся. Стоял спиной к ней, руки на краях плиты, и его лопатки под белой майкой замерли — как у человека, которого окликнули на минном поле.</p><p><i>Назвала моё имя. При нём.</i></p><p>Секунда. Две. Три. Кофе в турке начал подниматься — тёмная масса вспучилась, полезла к краям. Леон снял её с огня одним точным движением — автоматика, моторная память, тело работало отдельно от головы. Поставил на холодную конфорку. Развернулся.</p><p>Его лицо — ничего. Ни радости, ни тревоги, ни торжества. Плоское, как экран до загрузки. Но глаза — серо-голубые, светлые — двигались. Быстро. По ней — по её склонённой голове, по линии шеи, по пальцам, сжимающим телефон. Он <i>считывал</i>. Как всегда. Как на брифингах — только сейчас брифинг был о ней, о них, о том, что она только что сказала.</p><p>— При ком. — Не вопрос. Утверждение, требующее уточнения. Леон оттолкнулся от плиты, сделал шаг к стойке. Оперся ладонями — широко, вес на руках, корпус чуть наклонён вперёд. Между ними — гранитная поверхность, чашки, тарелка с остывшим тостом. — При родителях? При нём? При всех?</p><p><i>Она сказала «Леон» за столом, где сидел <mark>Рейнольдс</mark>. Она произнесла моё имя — и встала — и ушла к двери.</i></p><p>Мышца на его челюсти дёрнулась. Один раз — коротко, непроизвольно. Он перехватил это движение, расслабил зубы. Вдох через нос — медленный, контролируемый. Четыре секунды. Выдох.</p><p>— Подожди. — Леон поднял руку — ладонью к ней. Не «стой». Скорее — «дай мне секунду». Его пальцы сжались в кулак и разжались. Сжались и разжались. Потом — опустились на гранит. Плашмя. Десять пальцев на холодном камне. Он <i>заземлялся</i>. — Ты сказала им, что едешь ко мне. К Леону. К своему ассистенту — или просто «к Леону»? Без контекста? Без «по работе»?</p><p>Он знал ответ. Видел его в том, как она склонила голову — вбок, как делала, когда говорила что-то, за что не собиралась извиняться, но чего чуть-чуть стеснялась. Он знал этот жест. Полтора года наблюдений — это много. Это <i>слишком</i> много. Он знал её лучше, чем она думала.</p><p>— Потому что если ты сказала «Леон» без фамилии, без должности — просто имя — при <mark>Рейнольдс</mark>е... — Леон выпрямился. Убрал руки со стойки. Скрестил их на груди — и тут же <i>раскрестил</i>. Он не хотел быть закрытым. Не сейчас. Не с ней. Руки упали вдоль тела, и он стоял перед ней — открытый, в мятой майке, с двухдневной щетиной — и его лицо наконец <i>двинулось</i>. Что-то проступило из-под контроля. Не улыбка. Что-то до улыбки — как свет за горизонтом до рассвета. — Ты понимаешь, что ты сделала?</p><p><i>Она выбрала. Публично. При свидетелях. Не здесь, на моей кухне, где никто не видит. Там. За столом. При матерях, при отце, при нём.</i></p><p>Леон сделал шаг. Обошёл стойку — снова на её сторону. Встал перед ней. Не рядом — <i>перед</i>. Лицом к лицу. Его рост — сто восемьдесят три — заставлял его смотреть вниз, на неё, на барном стуле, в его серой футболке, с телефоном в руке после звонка отца. Расстояние — меньше полуметра. Он чувствовал запах своего же порошка для стирки от футболки на ней, и под ним — её. Тёплое. Сонное. <i>Своё</i>.</p><p>— Ты не просто ушла с ужина. — Тихо. Его голос стал тем — низким, личным, для двадцати сантиметров. — Ты дала ему имя. Ты дала ему <i>направление</i>. Он теперь знает, что есть кто-то. Что этот кто-то — Леон. Что ты к нему <i>поехала</i>. Посреди ужина, на котором решалась твоя помолвка.</p><p>Пауза. Леон закрыл глаза — на секунду. Веки дрогнули. Открыл.</p><p>— И это — самая безрассудная, самая глупая, самая... — Он не договорил. Его рука — правая — поднялась. Не к её лицу. К её волосам. Пальцы скользнули в них — у виска, у корней — и сжали. Не больно. Не нежно. <i>Ощутимо</i>. Как хватка человека, который держит то, что не хочет отпускать. — ...самая важная вещь, которую кто-либо для меня делал.</p><p>Он держал её волосы — секунду, две, три — и отпустил. Пальцы разжались. Скользнули вниз — по виску, по скуле, по линии челюсти. Один раз. Как тогда — утром, когда он впервые позволил себе коснуться. Но сейчас — иначе. Сейчас — с <i>весом</i>. С пониманием того, что она сделала. Что это значило.</p><p>Леон отступил. Полшага. Вернул себе рабочее расстояние — но оно уже не работало. Не после этого.</p><p>— Теперь — тактика. — Голос переключился. Не полностью — трещина осталась, тёплая, открытая — но поверх неё легла сталь. Привычная, надёжная. Рабочий режим. — <mark>Рейнольдс</mark> слышал имя «Леон». Знает, что я — кто-то, к кому ты едешь в воскресенье вечером вместо того, чтобы сидеть с ним. У него — деньги, связи, event-индустрия. Найти человека по имени и месту работы — дело часов. Даже не дней.</p><p>Леон вернулся к подоконнику. Взял телефон. Разблокировал — быстро, большим пальцем. Открыл приложение — не заметки на этот раз. Что-то другое. Тёмный интерфейс, строка поиска, логотип, который она не успела разглядеть.</p><p>— Мой LinkedIn — пустой. Соцсетей нет. Фото в открытом доступе — ноль. — Говорил, не поднимая глаз от экрана. Пальцы двигались по стеклу — быстро, точно. — Но корпоративный сайт твоей компании — там есть раздел «команда». И моё имя. И должность. И, если HR не послушала меня в прошлом году, — фото.</p><p><i>Надо было настоять. Надо было отказаться от этого чёртового корпоративного фото.</i></p><p>Леон набрал что-то — быстро, одной рукой — и положил телефон обратно. Экраном вниз.</p><p>— Я напишу Норе Хэк через три дня. Как планировали — по поводу ивента. Это даст мне легитимный повод выйти на его контору. И — увидеть, как он реагирует на моё имя. Знает ли он уже. Искал ли. — Леон повернулся к ней. Прислонился к подоконнику — спиной, руки вдоль тела, ладони на деревянной раме. Утреннее солнце падало ему на плечи. — А пока — твой отец.</p><p>Он посмотрел на телефон в её руке. На погасший экран — чёрное зеркало, в котором отражалось утреннее окно.</p><p>— Он сказал «против». Он позвонил в восемь утра в воскресенье. Сам. Без повода — кроме того, что его дочь вчера ушла с ужина, назвав чужое имя. — Леон чуть наклонил голову. Тот же жест, что она делала минуту назад — вбок, оценивающий. — Это значит, что он не спал. Думал. И пришёл к выводу, что <mark>Рейнольдс</mark> — не тот, кого он хочет видеть рядом с тобой. Вопрос: он пришёл к этому <i>сам</i> — или ему помогли? Кто-то сказал ему что-то вчера? После твоего ухода?</p><p>Турка на плите — забытая, остывающая. Кофе в ней — готовый, нетронутый, с пенкой, которая медленно оседала. Леон не вспомнил о нём. Впервые за утро — забыл о кофе. Потому что перед ним стояла задача: выстроить периметр. Использовать каждый ресурс. Отец — ресурс. Мощный, если правильно задействовать.</p><p>— Мне нужно знать: он <i>готов</i> отменить помолвку? Или просто — выразил неодобрение? Потому что «мне не нравится» и «я звоню адвокату» — это разные вещи. И если он готов — мне нужно с ним поговорить. Лично. Не как твой ассистент. Как... — Леон запнулся. Впервые за утро — <i>запнулся</i>. Слово застряло где-то между грудной клеткой и горлом. Он знал, какое слово. Не решался его произнести. Потому что они были <i>вместе</i> — что? Двенадцать часов? Меньше? Ничего не было решено. Ничего не было подписано. Она сказала «люблю», он сказал «хочу», но между «хочу» и «являюсь» — пропасть. — Как человек, которому ты небезразлична.</p><p><i>Трус. «Небезразлична». Ты только что держал её за волосы и сказал, что это самое важное в твоей жизни — а теперь «небезразлична».</i></p><p>Леон выдохнул. Коротко. Через нос.</p><p>— Как человек, который тебя любит. — Исправился. Тише. Жёстче. Без наклона головы, без смягчения. Прямо ей в глаза — серо-голубое в карее. — Если твой отец готов слушать — я готов говорить. Скажи мне, когда.</p><p>Его пальцы на подоконнике — правая рука — выстукивали ритм. Тихий, нервный, неосознанный. Два удара. Пауза. Два удара. Он ждал.</p></div><button type="button" class="more" aria-expanded="false" aria-controls="exampleReply">Развернуть</button></div>
+    <div class="mem">Рейнольдс появился в истории за 40 сообщений до этого ответа.</div>
+   </div>
+   <div class="cap">Отрывок из настоящей игры, текст целиком, без сокращений. Модель — Claude Opus по своему ключу.</div>
   </div>
-</header>
+ </div>
+ <div class="facts">
+  <div><b>Память</b><span>собирается сама, исправляется вручную</span></div>
+  <div><b>Карточки</b><span>свои или с chub.ai и janitor.ai</span></div>
+  <div><b>Модель</b><span>DeepSeek от нас или свой API-ключ</span></div>
+  <div><b>Пресеты</b><span>импорт из SillyTavern</span></div>
+ </div>
 
-<section class="section wrap">
-  <div class="pillars">
-    <div class="pillar"><div class="pic">🧠</div><h3>Помнит по-настоящему</h3><p>Контекст, персонажей и историю отношений — даже спустя сотни сообщений, без ручной настройки.</p></div>
-    <div class="pillar"><div class="pic">🎭</div><h3>Твои персонажи</h3><p>Готовые карточки с chub.ai/janitor.ai или свои с нуля, лор, пресеты SillyTavern.</p></div>
-    <div class="pillar"><div class="pic">🔒</div><h3>Данные под замком</h3><p>Сквозное шифрование: у каждого свой ключ, автор бота его не видит.</p></div>
+ <section class="blk" id="kak">
+  <p class="eyebrow">Начало</p>
+  <h2>Три шага до первой сцены</h2>
+  <div class="steps">
+   <div class="step"><span class="n">01</span><h3>Открой бота</h3><p>Подтверди, что тебе есть 18. Истории живут в твоей приватной группе с Темами — бот поможет её подключить, это делается один раз.</p></div>
+   <div class="step"><span class="n">02</span><h3>Выбери героя в каталоге</h3><p>Открой «Каталог героев» и выбери персонажа. Кнопка каталога есть в первой Теме группы.</p></div>
+   <div class="step"><span class="n">03</span><h3>Нажми «Начать историю»</h3><p>Бот откроет для неё отдельную Тему, и персонаж напишет первым. Дальше отвечай ему, как в обычной переписке.</p></div>
   </div>
-</section>
+  <p class="fine">Или загрузи свою карточку — PNG или JSON из SillyTavern, chub.ai, janitor.ai — или собери героя с нуля.</p>
+ </section>
 
-<section class="section wrap">
-  <h2>Куда дальше</h2>
-  <p class="sub">Выбери, что нужно прямо сейчас.</p>
-  <div class="qgrid">
-    <a class="qcard card" href="https://support.limerence-ai.com/hc/help/ru" target="_blank" rel="noopener">
-      <div class="qic">📖</div>
-      <h3>Гайд</h3>
-      <p>Как подключить бота и начать играть — шаг за шагом, в базе знаний.</p>
-      <span class="qarr">Открыть →</span>
-    </a>
-    <a class="qcard card" href="https://support.limerence-ai.com/hc/help/ru/categories/problemy" target="_blank" rel="noopener">
-      <div class="qic">❓</div>
-      <h3>FAQ</h3>
-      <p>Короткие ответы, если что-то не работает или неясно.</p>
-      <span class="qarr">Открыть →</span>
-    </a>
-    <a class="qcard card" href="donate.html">
-      <div class="qic">💛</div>
-      <h3>Донаты</h3>
-      <p>Помочь оплатить сервера и модели, если нравится играть.</p>
-      <span class="qarr">Открыть →</span>
-    </a>
-    <div class="qcard card soon">
-      <div class="qic">🗂️</div>
-      <h3>Каталог персонажей</h3>
-      <p>Витрина готовых персонажей для быстрого старта — скоро.</p>
-      <span class="qarr">Скоро</span>
-    </div>
-    <a class="qcard card" href="about.html">
-      <div class="qic">💭</div>
-      <h3>О проекте</h3>
-      <p>Что такое Limerence Stories и куда всё движется.</p>
-      <span class="qarr">Открыть →</span>
-    </a>
-  </div>
-</section>
+ <section class="blk" id="pamyat">
+  <p class="eyebrow">Главное</p>
+  <h2>Память</h2>
+  <p class="sec-lead">Многие собеседники-ИИ теряют детали через двадцать–тридцать сообщений. В Limerence память — главная задача бота.</p>
+  <ul class="ticks">
+   <li><b>События и люди</b><span>Кто есть кто, что произошло, как менялись отношения.</span></li>
+   <li><b>Мир и герои</b><span>Карточки персонажей и лор остаются опорой всей истории.</span></li>
+   <li><b>Работает сама</b><span>Вести записи вручную не нужно: память собирается по ходу игры.</span></li>
+   <li><b>Исправляется</b><span>Бот запомнил неверно — запись можно поправить. <a href="help/ispravit-pamyat.html">Как</a></span></li>
+  </ul>
+ </section>
 
-<footer>
-  Сделано с <span class="heart">&#9829;</span> для игроков Limerence Stories<br>
-  💬 <a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Группа сообщества</a> — вопросы и новости
-  <div class="legal">18+ ·
-    <a href="roadmap.html">Дорожная карта</a> ·
-    <a href="legal/tos.html">Условия использования</a> ·
-    <a href="legal/privacy.html">Политика конфиденциальности</a> ·
-    <a href="legal/offer.html">Оферта</a>
+ <section class="blk" id="vozmozhnosti">
+  <p class="eyebrow">Возможности</p>
+  <h2>Что умеет Limerence</h2>
+  <p class="sec-lead">Ты пишешь и режиссируешь, модель исполняет.</p>
+  <div class="cards">
+   <div class="card"><h3>Персонажи</h3><p>Загрузи готовую карточку из SillyTavern, chub.ai или janitor.ai либо опиши героя с нуля. Себя в истории описываешь отдельно, и персонажи знают, с кем говорят.</p><a class="more" href="help/import-kartochki.html">Подробнее →</a></div>
+   <div class="card"><h3>Лор</h3><p>Места, законы мира, его история и второстепенные герои. Запись попадает в сцену, когда о ней заходит речь. Можно загрузить готовый лорбук или большой текстовый файл.</p><a class="more" href="help/lor.html">Подробнее →</a></div>
+   <div class="card"><h3>Управление ходом</h3><p>Не понравился ответ — возьми другой вариант или отмени ход, любое сообщение можно поправить. Другой поворот можно проверить в отдельной ветке — основная история не изменится. Удалённое лежит в корзине.</p><a class="more" href="help/upravlenie-istoriey.html">Подробнее →</a></div>
+   <div class="card"><h3>Модель на выбор</h3><p>Играй на DeepSeek без своего ключа или подключи свой: OpenRouter и сервисы, совместимые с OpenAI.</p><a class="more" href="help/model-igry.html">Подробнее →</a></div>
+   <div class="card"><h3>Настройка отыгрыша</h3><p>Длина и темп ответов, жанр, откровенность, кто ведёт сцену. Пресеты и regex-скрипты из SillyTavern тоже работают.</p><a class="more" href="help/nastroyki.html">Подробнее →</a></div>
+   <div class="card"><h3>Истории по Темам</h3><p>Каждая история — отдельная Тема в твоей приватной группе в Telegram. Между ними переключаешься, как между чатами.</p><a class="more" href="help/gruppa-i-temy.html">Подробнее →</a></div>
+   <div class="card"><h3>Кабинет</h3><p>Истории, персонажи, лор, настройки и статистика на одном экране внутри Telegram.</p><a class="more" href="help/kabinet.html">Подробнее →</a></div>
+   <div class="card"><h3>Приватность</h3><p>Истории хранятся зашифрованными, у каждого игрока свой ключ. Выгрузить историю или удалить аккаунт можно в любой момент.</p><a class="more" href="legal/">Подробнее →</a></div>
   </div>
+ </section>
+
+ <section class="blk" id="tarify">
+  <p class="eyebrow">Тарифы</p>
+  <h2>Доступ и цены</h2>
+  <p class="sec-lead">Доступ к Limerence и модель оплачиваются отдельно. Premium открывает сам Limerence. DeepSeek — модель от нас для тех, у кого нет своего ключа.</p>
+  <div class="price">
+   <div class="plan"><div class="pn">Пробный период</div><div class="pv">0 ₽ <small>7 дней</small></div>
+    <ul><li>Premium на 7 дней</li><li>DeepSeek до 50 ходов в день</li><li>Отсчёт идёт с первого ответа в игре, а не с <code>/start</code></li><li>Карта не нужна</li></ul></div>
+   <div class="plan main"><div class="pn">Premium</div><div class="pv">700 ₽ <small>в месяц</small></div>
+    <ul><li>Доступ к Limerence после пробного периода</li><li>Свой API-ключ без лимита ходов с нашей стороны</li><li>100 МБ под память и лор</li></ul></div>
+   <div class="plan"><div class="pn">DeepSeek</div><div class="pv">+300 ₽ <small>в месяц</small></div>
+    <ul><li>До 400 ходов в день без своего ключа</li><li>Подключается к Premium</li></ul></div>
+  </div>
+  <p class="fine">Счётчик ходов обнуляется в 00:00 МСК. Точная цена для твоего аккаунта и оплата — в <code>/premium</code>: карта РФ и СБП, иностранная карта через Tribute, криптовалюта, если она сейчас включена. Условия — в <a href="legal/offer.html">оферте</a>, подробности — в <a href="help/razdel-tarify.html">справке</a>.</p>
+ </section>
+
+ <section class="blk narrow" id="faq">
+  <p class="eyebrow">Частые вопросы</p>
+  <h2>Коротко о главном</h2>
+  <details class="qa"><summary>Это бесплатно?</summary><p>Первые 7 дней — да, без карты. Дальше нужен Premium, 700 ₽ в месяц. Точную цену для аккаунта показывает <code>/premium</code>.</p></details>
+  <details class="qa"><summary>Нужен ли свой API-ключ?</summary><p>Нет. Можно играть на DeepSeek через Limerence: в пробный период до 50 ходов в день, на тарифе DeepSeek до 400. Свой ключ подключается через <code>/api</code>.</p></details>
+  <details class="qa"><summary>Что будет с историями после пробного периода?</summary><p>Они остаются. Игра встаёт на паузу, пока доступ не продлён.</p></details>
+  <details class="qa"><summary>Бот забыл деталь. Что делать?</summary><p>Её можно поправить в памяти, путь описан в <a href="help/ispravit-pamyat.html">справке</a>. Если ошибка повторяется, напиши в <code>/support</code>.</p></details>
+  <details class="qa"><summary>Можно привести своего персонажа?</summary><p>Да. Карточки с популярных площадок импортируются, а своего героя можно собрать с нуля прямо в боте.</p></details>
+  <details class="qa"><summary>Сколько мне должно быть лет?</summary><p>Сервис только для совершеннолетних, 18+. Подробности — в <a href="legal/tos.html">условиях использования</a>.</p></details>
+ </section>
+
+ <section class="blk" id="podderzhka">
+  <div class="band">
+   <div><h3>Проект живёт на поддержке игроков</h3><p>Серверы и модели стоят денег каждый месяц. Помочь можно любой суммой, это добровольно и ни на что в игре не влияет.</p></div>
+   <a class="btn" href="donate.html">Поддержать</a>
+  </div>
+ </section>
+</main>
+<!-- site:footer -->
+<footer class="sitefoot">
+ <div class="ft">
+  <div>
+   <a class="brand" href="index.html"><svg viewBox="0 0 356 301" aria-hidden="true"><polygon class="h" points="56,.5 96,.5 178,82.5 260,.5 300,.5 356,56.5 356,122 178,300 0,122 0,56.5"/><circle class="d" cx="299.5" cy="273.5" r="27"/></svg>Limerence</a>
+   <p>Инструмент для ролевых историй в Telegram. Только для совершеннолетних, 18+.</p>
+  </div>
+  <div><h4>Продукт</h4><ul>
+   <li><a href="https://t.me/Limerence_Stories_bot" target="_blank" rel="noopener">Открыть бота ↗</a></li>
+   <li><a href="index.html#tarify">Тарифы</a></li>
+   <li><a href="help/">Справка</a></li>
+   <li><a href="roadmap.html">Дорожная карта</a></li>
+  </ul></div>
+  <div><h4>Проект</h4><ul>
+   <li><a href="about.html">О проекте</a></li>
+   <li><a href="donate.html">Поддержать</a></li>
+   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+  </ul></div>
+  <div><h4>Документы</h4><ul>
+   <li><a href="legal/">Все документы</a></li>
+   <li><a href="legal/tos.html">Условия использования</a></li>
+   <li><a href="legal/privacy.html">Конфиденциальность</a></li>
+   <li><a href="legal/offer.html">Оферта</a></li>
+  </ul></div>
+ </div>
+ <div class="fend">© Limerence · 18+</div>
 </footer>
-
+<!-- /site:footer -->
 <script src="assets/site.js" defer></script>
 </body>
 </html>

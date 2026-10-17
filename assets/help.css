@@ -3,7 +3,11 @@
 body.hc{line-height:1.6}
 .hc :where(h1,h2,h3){letter-spacing:-.01em;line-height:1.2}
 .hc-head{position:sticky;top:0;z-index:20;display:flex;gap:10px;align-items:center;padding:10px 14px;background:var(--navbg);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.hc-brand{font-weight:700;text-decoration:none;white-space:nowrap}
+.hc-brand{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;white-space:nowrap}
+.hc-brand svg{width:26px;height:22px;flex:none}
+.hc-brand svg .h{fill:var(--tx)}
+.hc-brand svg .d{fill:var(--acc)}
+.hc-site{flex:none;padding:7px 10px;border-radius:8px;text-decoration:none;color:var(--tx2);font-size:14.5px}
 .hc-brand b{color:var(--acc)}
 .hc-menu{display:none;border:1px solid var(--line2);background:var(--s1);color:var(--tx);border-radius:10px;height:40px;min-width:44px;font-size:18px;cursor:pointer}
 .hc-search{position:relative;flex:1;max-width:520px;margin-left:auto}
@@ -70,8 +74,6 @@ body.hc{line-height:1.6}
 .hc-list a:first-child{border-top:0}
 .hc-list small{display:block;color:var(--tx2);font-size:13px;line-height:1.45}
 .hc-lead{color:var(--tx2)}
-.hc-foot{padding:24px 16px 40px;border-top:1px solid var(--line);font-size:13px;color:var(--tx3);text-align:center}
-.hc-foot a{color:var(--tx2)}
 .hc-backdrop{display:none}
 @media (hover:hover) and (pointer:fine){
   .hc-tree summary:hover,.hc-tree a:hover{background:var(--hl);color:var(--tx)}
@@ -80,7 +82,7 @@ body.hc{line-height:1.6}
 }
 @media (max-width:860px){
   .hc-menu{display:block}
-  .hc-brand span{display:none}
+  .hc-brand span,.hc-site{display:none}
   .hc-tree{position:fixed;top:0;left:0;bottom:0;height:auto;z-index:40;background:var(--bg);width:86vw;max-width:340px;transform:translateX(-100%);visibility:hidden;transition:transform .2s,visibility .2s;padding-top:16px;box-shadow:0 0 40px rgba(0,0,0,.3)}
   body.nav-open .hc-tree{transform:none;visibility:visible}
   body.nav-open .hc-backdrop{display:block;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:30}
