@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Глоссарий: генерация, история, поддержка · Справочник Limerence</title>
+<meta name="description" content="Вторая часть словаря: настройки генерации, управление историей, поддержка и модерация. Начало — в статье Глоссарий Limerence: основные термины .">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://guide.limerence-ai.com/help-b/help/glossariy-generaciya.html">
+<link rel="icon" href="https://guide.limerence-ai.com/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/help.css">
+</head>
+<body class="hc" data-base="/help-b/">
+<header class="hc-head">
+  <button class="hc-menu" id="hcMenu" type="button" aria-label="Разделы справочника">☰</button>
+  <a class="hc-brand" href="index.html">Limerence <b>·</b> <span>Справочник</span></a>
+  <div class="hc-search">
+    <input id="hcQ" type="search" placeholder="Поиск: память, /undo, промокод…" autocomplete="off" enterkeyhint="search" aria-label="Поиск по справочнику">
+    <div class="hc-results" id="hcRes" aria-live="polite"></div>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+</header>
+<div class="hc-backdrop" id="hcBackdrop"></div>
+<div class="hc-layout">
+<nav class="hc-tree" id="hcTree" aria-label="Разделы справочника">
+<details><summary>🚀 Начало</summary>
+<a href="pervyy-zapusk.html">Первый запуск</a>
+<a href="gruppa-i-temy.html">Группа и Темы</a>
+<a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
+<a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
+<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
+</details>
+<details><summary>🎭 Игра</summary>
+<div class="g">Управление ходом</div>
+<a href="upravlenie-istoriey.html">Управление историей: что выбрать</a>
+<a href="eshche-variant.html">Ещё вариант ответа</a>
+<a href="undo.html">Отменить ход (/undo)</a>
+<a href="rewrite.html">Переписать сообщение (/rewrite)</a>
+<a href="fork.html">Ветка сюжета (/fork)</a>
+<a href="clear.html">Начать сюжет заново (/clear)</a>
+<a href="korzina.html">Корзина и восстановление (/restore, /trash)</a>
+<a href="stop.html">Остановить ответ (/stop)</a>
+<div class="g">Сцена и разговор</div>
+<a href="ooc.html">Разговор вне роли (OOC)</a>
+<a href="scena.html">Сцена (/scene)</a>
+<a href="izobrazheniya-v-scene.html">Изображения в сцене</a>
+<a href="den-i-data.html">Игровой день и дата (/day)</a>
+<a href="personazh-pishet-pervym.html">Персонаж пишет первым</a>
+<a href="eksport.html">Экспорт истории (/export)</a>
+</details>
+<details><summary>🧠 Память и лор</summary>
+<div class="g">Память</div>
+<a href="kak-ustroena-pamyat.html">Как устроена память</a>
+<a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a>
+<a href="chto-kuda.html">Память, промпт, лор и карточка — что куда</a>
+<a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a>
+<a href="udalit-temu.html">Очистить историю или удалить Тему</a>
+<div class="g">Лор</div>
+<a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a>
+<a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a>
+<a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a>
+<a href="lor-sekrety.html">Секреты и границы знаний персонажей</a>
+<a href="lor-ne-srabotal.html">Почему запись лора не сработала</a>
+<a href="lor-struktura.html">Хороший lorebook: структура</a>
+<a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a>
+<a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
+<a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
+<div class="g">Персонажи</div>
+<a href="katalog-geroev.html">Каталог героев (/catalog)</a>
+<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
+<a href="privetstvie.html">Первое сообщение и приветствия</a>
+<a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
+<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
+<a href="persona-igroka.html">Персона игрока (/profile)</a>
+</details>
+<details><summary>⚙️ Настройки</summary>
+<div class="g">Основные</div>
+<a href="nastroyki.html">Настройки истории: обзор (/settings)</a>
+<a href="rezhim-deepseek.html">Режим DeepSeek</a>
+<a href="model-igry.html">Модель игры</a>
+<a href="dlina-otveta.html">Длина ответа</a>
+<a href="prompt.html">Промпт истории</a>
+<a href="prompt-kak-pisat.html">Как писать промпт</a>
+<a href="prompt-shablon.html">Шаблон и пример промпта</a>
+<a href="zametka-avtora.html">Заметка автора</a>
+<div class="g">Генерация</div>
+<a href="generaciya.html">Генерация: обзор</a>
+<a href="temperature.html">Temperature</a>
+<a href="pamyat-dialoga.html">Память диалога</a>
+<a href="top-p-top-k.html">Top P и Top K</a>
+<a href="shtrafy-povtorov.html">Presence и Frequency Penalty</a>
+<a href="kap-kanona.html">Кап канона</a>
+<a href="prefill.html">Префилл</a>
+<a href="anti-klishe.html">Анти-клише стиль</a>
+<div class="g">Отыгрыш DeepSeek</div>
+<a href="zhanry-otkrovennost.html">Жанры и откровенность</a>
+<a href="temp-razvitiya.html">Темп развития</a>
+<a href="kto-vedet-scenu.html">Кто ведёт сцену и второстепенные персонажи</a>
+<a href="harakter-dark.html">Несмягчаемый характер и дарк-режим</a>
+<div class="g">Вид и Тема</div>
+<a href="shapka-sceny.html">Шапка сцены</a>
+<a href="stat-panel.html">Стат-панель</a>
+<a href="striming-oformlenie.html">Стриминг и оформление ответа</a>
+<a href="regex.html">Regex-скрипты (/regex)</a>
+<a href="imya-i-moi-temy.html">Имя Темы и «Мои темы»</a>
+<a href="uvedomleniya-o-sboyah.html">Уведомления о сбоях</a>
+<div class="g">Пресеты</div>
+<a href="presety.html">Пресеты: что это (/preset)</a>
+<a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a>
+<a href="preset-semplery.html">Сэмплеры и контекст пресета</a>
+<a href="preset-regex-makrosy.html">Regex и макросы в пресете</a>
+<a href="preset-import.html">Импорт, включение и хранение пресета</a>
+<a href="preset-sovmestimost.html">Пресет, SillyTavern и системы Limerence</a>
+<a href="preset-test.html">Проверить пресет и что делать, если стало хуже</a>
+</details>
+<details><summary>🗂 Кабинет</summary>
+<a href="kabinet.html">Кабинет: как открыть и что внутри</a>
+<a href="kabinet-persony-kartochki.html">Персоны, карточки и лор в Кабинете</a>
+<a href="kabinet-i-bot.html">Кабинет и бот: что где (/app)</a>
+<a href="kabinet-sohranennye-statistika.html">Сохранённые ответы и статистика</a>
+</details>
+<details><summary>💎 Тарифы</summary>
+<a href="probnyy-period.html">Пробный период</a>
+<a href="premium.html">Premium (/premium)</a>
+<a href="tarif-deepseek.html">DeepSeek: пробный и платный</a>
+<a href="kakuyu-shemu.html">Какую схему выбрать</a>
+<a href="oplata.html">Оплата и продление</a>
+<a href="promokody.html">Промокоды (/promo)</a>
+<a href="hranilishche.html">Дополнительное хранилище памяти</a>
+<a href="status-podpiski.html">Где смотреть подписку (/stats)</a>
+</details>
+<details><summary>🛟 Помощь</summary>
+<div class="g">Если что-то не так</div>
+<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="support-ili-diag.html">/support или /diag</a>
+<a href="bag-report.html">Как оформить баг-репорт</a>
+<a href="posle-otpravki.html">После отправки репорта</a>
+<a href="chastye-problemy.html">Частые проблемы</a>
+<div class="g">Правила</div>
+<a href="moderaciya.html">Как работает модерация</a>
+<a href="preduprezhdeniya.html">Предупреждения и блокировки</a>
+<a href="otkaz-modeli.html">Отказ модели или блокировка Limerence</a>
+<a href="izobrazheniya.html">Проверка изображений и PNG-карточек</a>
+<a href="apellyaciya.html">Апелляция (/appeal)</a>
+<div class="g">Данные</div>
+<a href="dannye.html">Какие данные хранятся</a>
+<a href="shifrovanie.html">API-ключи и шифрование</a>
+<a href="chto-vidit-model.html">Что отправляется модели</a>
+<a href="forget-me.html">Удалить аккаунт (/forget_me)</a>
+<a href="dokumenty.html">Юридические документы</a>
+</details>
+<details open><summary>📖 Справочник</summary>
+<a href="komandy.html">Все команды</a>
+<a href="glossariy.html">Глоссарий: основные термины</a>
+<a href="glossariy-generaciya.html" class="cur" aria-current="page">Глоссарий: генерация, история, поддержка</a>
+</details>
+</nav>
+<main class="hc-main">
+<p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-spravochnik.html">📖 Справочник</a></p>
+<div data-pagefind-body data-pagefind-meta="section:Справочник">
+<h1 data-pagefind-meta="title">Глоссарий: генерация, история, поддержка</h1>
+<details class="hc-toc"><summary>На этой странице · 47</summary><ol><li><a href="#preset-preset">Preset / Пресет</a></li><li><a href="#prompt-order">Prompt Order</a></li><li><a href="#takeover">Takeover</a></li><li><a href="#makros">Макрос</a></li><li><a href="#regex-regulyarnoe-vyrazhenie">Regex / Регулярное выражение</a></li><li><a href="#temperature">Temperature</a></li><li><a href="#top-p">Top P</a></li><li><a href="#top-k">Top K</a></li><li><a href="#presence-penalty">Presence Penalty</a></li><li><a href="#frequency-penalty">Frequency Penalty</a></li><li><a href="#sempler-sampler">Сэмплер / Sampler</a></li><li><a href="#prefill-assistant-prefill">Префилл / Assistant Prefill</a></li><li><a href="#kanon">Канон</a></li><li><a href="#kap-kanona">Кап канона</a></li><li><a href="#token">Токен</a></li><li><a href="#kontekstnoe-okno">Контекстное окно</a></li><li><a href="#minimalnaya-dlina-otveta">Минимальная длина ответа</a></li><li><a href="#maksimalnaya-dlina-otveta">Максимальная длина ответа</a></li><li><a href="#ooc-out-of-character">OOC / Out of Character</a></li><li><a href="#popravit-istoriyu">«Поправить историю»</a></li><li><a href="#regenerate-esche-variant">Regenerate / «Ещё вариант»</a></li><li><a href="#variant-otveta">Вариант ответа</a></li><li><a href="#kanonicheskiy-variant">Канонический вариант</a></li><li><a href="#sohranennyy-otvet">Сохранённый ответ</a></li><li><a href="#undo">Undo</a></li><li><a href="#rewrite">Rewrite</a></li><li><a href="#fork">Fork</a></li><li><a href="#clear">Clear</a></li><li><a href="#restore-trash-korzina">Restore / Trash / Корзина</a></li><li><a href="#scene-stsena">Scene / Сцена</a></li><li><a href="#igrovoy-den">Игровой день</a></li><li><a href="#igrovaya-data">Игровая дата</a></li><li><a href="#shapka-stseny">Шапка сцены</a></li><li><a href="#stat-panel">Стат-панель</a></li><li><a href="#vision-zrenie-modeli">Vision / Зрение модели</a></li><li><a href="#kabinet-mini-app">Кабинет / Mini App</a></li><li><a href="#hranilische">Хранилище</a></li><li><a href="#eksport">Экспорт</a></li><li><a href="#bag">Баг</a></li><li><a href="#bag-report-bug-n">Баг-репорт / BUG-N</a></li><li><a href="#support-podderzhka">Support / Поддержка</a></li><li><a href="#moderatsiya-limerence">Модерация Limerence</a></li><li><a href="#preduprezhdenie-strike">Предупреждение / Strike</a></li><li><a href="#appeal-apellyatsiya">Appeal / Апелляция</a></li><li><a href="#chto-chasche-vsego-putayut">Что чаще всего путают</a></li><li><a href="#esli-termin-vse-esche-neponyaten">Если термин всё ещё непонятен</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
+<div class="hc-doc"><p>Вторая часть словаря: настройки генерации, управление историей, поддержка и модерация. Начало — в статье <a href="glossariy.html">Глоссарий Limerence: основные термины</a>.</p>
+<hr />
+<h2 id="preset-preset">Preset / Пресет</h2>
+<p>Готовая система настроек генерации, часто импортированная из SillyTavern.</p>
+<p>Полноценный пресет может содержать:</p>
+<ul>
+<li>несколько prompt-блоков;</li>
+<li>их порядок;</li>
+<li>системные инструкции;</li>
+<li>jailbreak;</li>
+<li>настройки стиля;</li>
+<li>сэмплеры;</li>
+<li>Regex;</li>
+<li>макросы.</li>
+</ul>
+<p>Поэтому пресет — это гораздо больше, чем просто сохранённая Temperature.</p>
+<p>Подробнее: <a href="presety.html">Пресеты: как они работают и как их использовать</a>.</p>
+<hr />
+<h2 id="prompt-order">Prompt Order</h2>
+<p>Порядок блоков внутри сложного SillyTavern-пресета.</p>
+<p>Он определяет:</p>
+<blockquote>
+<p>какие инструкции расположены до истории;</p>
+<p>какие — после;</p>
+<p>в каком порядке модель их получает.</p>
+</blockquote>
+<p>Для некоторых пресетов порядок является критической частью их работы.</p>
+<hr />
+<h2 id="takeover">Takeover</h2>
+<p>Режим, в котором активный сложный пресет получает больше контроля над построением соответствующей части запроса модели.</p>
+<p>Это <strong>не означает</strong>, что пресет полностью удаляет память, историю или все механизмы Limerence.</p>
+<p>Он работает поверх архитектуры продукта.</p>
+<hr />
+<h2 id="makros">Макрос</h2>
+<p>Специальная конструкция, которая автоматически заменяется актуальными данными.</p>
+<p>Например:</p>
+<p><code>{{char}}</code></p>
+<p>может превратиться в имя текущего персонажа.</p>
+<p>А:</p>
+<p><code>{{user}}</code></p>
+<p>— в имя персоны игрока.</p>
+<p>Макросы часто встречаются в Character Cards и SillyTavern-пресетах.</p>
+<hr />
+<h2 id="regex-regulyarnoe-vyrazhenie">Regex / Регулярное выражение</h2>
+<p>Автоматическое правило поиска и замены текста.</p>
+<p>Regex может использоваться, чтобы:</p>
+<ul>
+<li>убрать служебные теги;</li>
+<li>заменить формат;</li>
+<li>скрыть определённую конструкцию;</li>
+<li>изменить текст перед моделью;</li>
+<li>обработать ответ перед показом пользователю.</li>
+</ul>
+<p>Некоторые Regex приходят вместе с карточками или пресетами.</p>
+<p>Подробнее: <a href="generaciya.html">Расширенные настройки истории</a>.</p>
+<hr />
+<h2 id="temperature">Temperature</h2>
+<p>Параметр генерации, влияющий на степень вариативности выбора модели.</p>
+<p>Очень упрощённо:</p>
+<p><strong>ниже</strong></p>
+<p>→ стабильнее и предсказуемее;</p>
+<p><strong>выше</strong></p>
+<p>→ разнообразнее и рискованнее.</p>
+<p>Temperature не является шкалой качества текста.</p>
+<hr />
+<h2 id="top-p">Top P</h2>
+<p>Другой параметр генерации, ограничивающий набор вариантов продолжения по вероятности.</p>
+<p>Он тоже влияет на разнообразие, но работает иначе, чем Temperature.</p>
+<p>Новичку обычно не нужно активно менять оба параметра одновременно.</p>
+<hr />
+<h2 id="top-k">Top K</h2>
+<p>Параметр, ограничивающий число наиболее вероятных вариантов, между которыми модель может выбирать.</p>
+<p>Поддерживается не всеми моделями и API одинаково.</p>
+<p>Часто встречается в импортированных пресетах.</p>
+<hr />
+<h2 id="presence-penalty">Presence Penalty</h2>
+<p>Параметр, который может уменьшать склонность модели снова возвращаться к уже использованным темам или элементам.</p>
+<p>Поддержка зависит от модели.</p>
+<hr />
+<h2 id="frequency-penalty">Frequency Penalty</h2>
+<p>Параметр, который может уменьшать частое повторение уже использованных слов и конструкций.</p>
+<p>Полезен против некоторых типов повторов, но слишком высокое значение может сделать речь неестественной.</p>
+<hr />
+<h2 id="sempler-sampler">Сэмплер / Sampler</h2>
+<p>Общее название настроек, влияющих на то, как модель выбирает следующий фрагмент текста.</p>
+<p>Например:</p>
+<ul>
+<li>Temperature;</li>
+<li>Top P;</li>
+<li>Top K;</li>
+<li>Min P;</li>
+<li>penalties.</li>
+</ul>
+<p>Не все модели поддерживают один и тот же набор сэмплеров.</p>
+<hr />
+<h2 id="prefill-assistant-prefill">Префилл / Assistant Prefill</h2>
+<p>Служебное начало ответа, которое передаётся модели как уже начатый текст.</p>
+<p>Модель должна продолжить его.</p>
+<p>Например:</p>
+<blockquote>
+<p>Адриан несколько секунд молчал, прежде чем ответить:</p>
+</blockquote>
+<p>Префилл может помогать:</p>
+<ul>
+<li>задавать формат;</li>
+<li>стабилизировать начало ответа;</li>
+<li>поддерживать некоторые пресеты.</li>
+</ul>
+<p>Сам технический префилл обычно не показывается пользователю как отдельный текст.</p>
+<hr />
+<h2 id="kanon">Канон</h2>
+<p>Информация, которая считается истинной внутри вашей истории или мира.</p>
+<p>Например:</p>
+<blockquote>
+<p>Адриану 230 лет.</p>
+<p>Совет Семи находится в Праге.</p>
+</blockquote>
+<p>Канон может приходить из:</p>
+<ul>
+<li>промпта;</li>
+<li>лора;</li>
+<li>Character Card;</li>
+<li>памяти уже произошедших событий.</li>
+</ul>
+<p>Если разные источники противоречат друг другу, модели становится значительно сложнее понимать, какой вариант считать правильным.</p>
+<hr />
+<h2 id="kap-kanona">Кап канона</h2>
+<p>Продвинутая настройка, ограничивающая максимальный объём определённого найденного канонического материала, который может быть добавлен в запрос.</p>
+<p>Это <strong>не общий лимит контекста</strong>.</p>
+<p>Используется прежде всего для контроля очень больших поисковых подборок и расхода токенов.</p>
+<hr />
+<h2 id="token">Токен</h2>
+<p>Небольшая единица текста, которой AI-модели измеряют размер входа и ответа.</p>
+<p>Один токен — не обязательно одно слово или один символ.</p>
+<p>Поэтому:</p>
+<blockquote>
+<p>10 000 токенов</p>
+</blockquote>
+<p>и:</p>
+<blockquote>
+<p>10 000 символов</p>
+</blockquote>
+<p>— совершенно разные вещи.</p>
+<p>Токены важны для:</p>
+<ul>
+<li>размера контекста;</li>
+<li>максимального ответа;</li>
+<li>стоимости собственного API.</li>
+</ul>
+<hr />
+<h2 id="kontekstnoe-okno">Контекстное окно</h2>
+<p>Максимальный объём информации, который конкретная модель способна обработать за один запрос.</p>
+<p>В него должны поместиться:</p>
+<ul>
+<li>инструкции;</li>
+<li>история;</li>
+<li>память;</li>
+<li>лор;</li>
+<li>текущая реплика;</li>
+<li>будущий ответ.</li>
+</ul>
+<p>У разных моделей контекстное окно отличается.</p>
+<hr />
+<h2 id="minimalnaya-dlina-otveta">Минимальная длина ответа</h2>
+<p>Инструкция Limerence стремиться к определённой степени подробности ответа.</p>
+<p>Это не абсолютная гарантия точного количества токенов.</p>
+<hr />
+<h2 id="maksimalnaya-dlina-otveta">Максимальная длина ответа</h2>
+<p>Верхняя граница объёма, который разрешено сгенерировать для одного ответа.</p>
+<p>Например:</p>
+<blockquote>
+<p>максимум 8K</p>
+</blockquote>
+<p>не означает:</p>
+<blockquote>
+<p>каждый ответ будет размером 8K.</p>
+</blockquote>
+<p>Это только потолок.</p>
+<hr />
+<h2 id="ooc-out-of-character">OOC / Out of Character</h2>
+<p>Общение с Limerence <strong>вне роли</strong>.</p>
+<p>Например:</p>
+<p><code>(Почему Адриан решил, что дверь открыта?)</code></p>
+<p>или кнопкой <strong>⋯ → 💬 OOC</strong> под последним ответом.</p>
+<p>OOC используется для вопросов автору и управления историей без превращения текста в действие персонажа.</p>
+<p>OOC не считается обычным сюжетным ходом.</p>
+<hr />
+<h2 id="popravit-istoriyu">«Поправить историю»</h2>
+<p>OOC-функция для исправления неправильно запомненного факта.</p>
+<p>Открывается под последним RP-ответом:</p>
+<p><strong>⋯ → 💬 OOC → 🔄 Поправить историю</strong></p>
+<p>После этого можно объяснить, что Limerence запомнил неверно.</p>
+<p>Это правильный пользовательский способ исправления памяти.</p>
+<hr />
+<h2 id="regenerate-esche-variant">Regenerate / «Ещё вариант»</h2>
+<p>Создание нового варианта последнего ответа модели.</p>
+<p>Обычно:</p>
+<p><strong>⋯ → 🔄 Ещё вариант</strong></p>
+<p>Предыдущий ответ не обязательно исчезает — Limerence может хранить несколько вариантов.</p>
+<hr />
+<h2 id="variant-otveta">Вариант ответа</h2>
+<p>Одна из альтернативных генераций для одного и того же пользовательского хода.</p>
+<p>Можно переключаться между существующими вариантами.</p>
+<p>Текущий выбранный вариант становится тем, от которого продолжается история.</p>
+<hr />
+<h2 id="kanonicheskiy-variant">Канонический вариант</h2>
+<p>Выбранный вариант ответа, который сейчас считается частью основной линии истории.</p>
+<p>Если было создано несколько альтернатив, именно текущий выбранный вариант используется как продолжение сюжета.</p>
+<hr />
+<h2 id="sohranennyy-otvet">Сохранённый ответ</h2>
+<p>Отдельная закладка на понравившийся вариант.</p>
+<p>Сохраняется через кнопку:</p>
+<p><strong>💾</strong></p>
+<p>Сохранённый ответ не становится отдельной памятью и не меняет сюжет.</p>
+<p>Это просто удобная копия текста.</p>
+<hr />
+<h2 id="undo">Undo</h2>
+<p>Откат последних игровых обменов.</p>
+<p>Команда:</p>
+<p><code>/undo</code></p>
+<p>или:</p>
+<p><code>/undo N</code></p>
+<p>Удаляет последние ходы из текущей истории и откатывает связанные состояния.</p>
+<p>Удалённое можно некоторое время вернуть через <code>/restore</code>.</p>
+<hr />
+<h2 id="rewrite">Rewrite</h2>
+<p>Изменение старого сообщения игрока с пересборкой всего продолжения после него.</p>
+<p>Например:</p>
+<p>вы написали:</p>
+<blockquote>
+<p>Она открывает дверь.</p>
+</blockquote>
+<p>а через двадцать сообщений решили, что должна была:</p>
+<blockquote>
+<p>отойти к окну.</p>
+</blockquote>
+<p>Rewrite позволяет изменить старый выбор и перестроить последующую историю.</p>
+<hr />
+<h2 id="fork">Fork</h2>
+<p>Создание независимой альтернативной ветки истории.</p>
+<p>Вы выбираете точку прошлого, после чего Limerence создаёт новую Тему с копией истории до этой точки.</p>
+<p>Старая ветка остаётся нетронутой.</p>
+<hr />
+<h2 id="clear">Clear</h2>
+<p>Полная очистка сюжета текущей Темы с сохранением её основной конфигурации.</p>
+<p>Обычно очищаются:</p>
+<ul>
+<li>история;</li>
+<li>память;</li>
+<li>состояние сцены.</li>
+</ul>
+<p>Но остаются многие настройки вроде:</p>
+<ul>
+<li>модели;</li>
+<li>Character Card;</li>
+<li>лора;</li>
+<li>персоны.</li>
+</ul>
+<p>Подходит для нового старта в той же Теме.</p>
+<hr />
+<h2 id="restore-trash-korzina">Restore / Trash / Корзина</h2>
+<p>Система восстановления недавних удалений.</p>
+<p>Команды:</p>
+<p><code>/restore</code></p>
+<p>или:</p>
+<p><code>/trash</code></p>
+<p>показывают удалённые операции текущей Темы.</p>
+<p>Например:</p>
+<ul>
+<li>Undo;</li>
+<li>Rewrite;</li>
+<li>Clear.</li>
+</ul>
+<p>Корзина хранится ограниченное время.</p>
+<hr />
+<h2 id="scene-stsena">Scene / Сцена</h2>
+<p>Текущее состояние происходящего.</p>
+<p>Например:</p>
+<ul>
+<li>где находятся персонажи;</li>
+<li>важные объекты;</li>
+<li>одежда;</li>
+<li>текущая обстановка.</li>
+</ul>
+<p>Посмотреть можно через:</p>
+<p><code>/scene</code></p>
+<hr />
+<h2 id="igrovoy-den">Игровой день</h2>
+<p>Внутренний номер дня истории.</p>
+<p>Например:</p>
+<blockquote>
+<p>День 63.</p>
+</blockquote>
+<p>Он не обязан совпадать с реальной датой.</p>
+<p>Можно управлять через:</p>
+<p><code>/day</code></p>
+<hr />
+<h2 id="igrovaya-data">Игровая дата</h2>
+<p>Календарная дата внутри сюжета.</p>
+<p>Например:</p>
+<blockquote>
+<p>22.01.2026.</p>
+</blockquote>
+<p>Её можно связать с игровым днём.</p>
+<hr />
+<h2 id="shapka-stseny">Шапка сцены</h2>
+<p>Короткая служебная строка в начале ответа.</p>
+<p>Например:</p>
+<blockquote>
+<p>День 63 | Блэкхолл | 22.01.2026 | 23:40</p>
+</blockquote>
+<p>Она помогает быстро видеть состояние сцены, не перечитывая предыдущие сообщения.</p>
+<hr />
+<h2 id="stat-panel">Стат-панель</h2>
+<p>Дополнительный блок отслеживаемых параметров.</p>
+<p>Например:</p>
+<blockquote>
+<p>доверие</p>
+<p>здоровье</p>
+<p>золото</p>
+<p>настроение</p>
+</blockquote>
+<p>Она полезна для RPG-подобных историй, но сама по себе не создаёт строгую математическую игровую систему.</p>
+<hr />
+<h2 id="vision-zrenie-modeli">Vision / Зрение модели</h2>
+<p>Способность AI-модели анализировать изображения.</p>
+<p>Если выбранная модель поддерживает vision, Limerence может передать ей отправленную фотографию.</p>
+<p>Если модель изображений не поддерживает, картинка не сможет использоваться так же полноценно.</p>
+<hr />
+<h2 id="kabinet-mini-app">Кабинет / Mini App</h2>
+<p>Графический интерфейс Limerence внутри Telegram.</p>
+<p>Открывается через:</p>
+<p><code>/app</code></p>
+<p>или:</p>
+<p><code>/cabinet</code></p>
+<p>В Кабинете можно управлять:</p>
+<ul>
+<li>историями;</li>
+<li>настройками;</li>
+<li>промптами;</li>
+<li>Character Cards;</li>
+<li>персонами;</li>
+<li>пресетами;</li>
+<li>Regex;</li>
+<li>частью лора;</li>
+<li>другими функциями.</li>
+</ul>
+<p>Кабинет всё ещё развивается и пока не заменяет все команды бота.</p>
+<hr />
+<h2 id="hranilische">Хранилище</h2>
+<p>Объём данных аккаунта Limerence.</p>
+<p>Посмотреть можно через:</p>
+<p><code>/storage</code></p>
+<p>или Кабинет.</p>
+<p>В него входят данные, используемые системами памяти и связанными функциями.</p>
+<p>Не путайте хранилище с контекстным окном модели.</p>
+<hr />
+<h2 id="eksport">Экспорт</h2>
+<p>Сохранение пользовательских данных в файл.</p>
+<p>Например:</p>
+<p><code>/export</code></p>
+<p>создаёт Markdown-файл текущей истории.</p>
+<p>Экспорт истории — это удобная копия текста, а не полный технический бэкап всей базы памяти и настроек.</p>
+<hr />
+<h2 id="bag">Баг</h2>
+<p>Техническая ошибка в работе Limerence.</p>
+<p>Например:</p>
+<ul>
+<li>настройка не сохраняется;</li>
+<li>Undo откатывает неправильные данные;</li>
+<li>Кабинет и бот показывают разные значения;</li>
+<li>функция стабильно падает.</li>
+</ul>
+<p>Для технического бага используйте:</p>
+<p><code>/diag</code></p>
+<hr />
+<h2 id="bag-report-bug-n">Баг-репорт / BUG-N</h2>
+<p>Зарегистрированное сообщение о технической проблеме.</p>
+<p>После успешной отправки <code>/diag</code> Limerence выдаёт идентификатор вроде:</p>
+<p><code>BUG-184</code></p>
+<p>Он позволяет отслеживать конкретную проблему и не смешивать её с другими обращениями.</p>
+<hr />
+<h2 id="support-podderzhka">Support / Поддержка</h2>
+<p>Канал для вопросов, с которыми нужен человек.</p>
+<p>Используйте:</p>
+<p><code>/support</code></p>
+<p>для:</p>
+<ul>
+<li>вопросов по оплате;</li>
+<li>помощи с настройкой;</li>
+<li>непонятной функции;</li>
+<li>других пользовательских вопросов.</li>
+</ul>
+<p>Для технического бага лучше <code>/diag</code>.</p>
+<hr />
+<h2 id="moderatsiya-limerence">Модерация Limerence</h2>
+<p>Система проверки контента на собственные правила Limerence.</p>
+<p>Не путайте её с ограничениями конкретной AI-модели.</p>
+<p>Например:</p>
+<blockquote>
+<p>Claude отказался продолжать сцену</p>
+</blockquote>
+<p>не обязательно означает:</p>
+<blockquote>
+<p>Limerence заблокировал аккаунт.</p>
+</blockquote>
+<p>Подробнее: <a href="moderaciya.html">Модерация, блокировки и апелляции</a>.</p>
+<hr />
+<h2 id="preduprezhdenie-strike">Предупреждение / Strike</h2>
+<p>Зафиксированное нарушение правил, которое может участвовать в системе последовательных ограничений.</p>
+<p>Обычный отказ внешней модели не является strike Limerence.</p>
+<hr />
+<h2 id="appeal-apellyatsiya">Appeal / Апелляция</h2>
+<p>Обжалование блокировки или решения модерации.</p>
+<p>Команда:</p>
+<p><code>/appeal текст</code></p>
+<p>доступна даже при ограниченном доступе к боту.</p>
+<p>Используйте её, если считаете решение Limerence ошибочным.</p>
+<hr />
+<h2 id="chto-chasche-vsego-putayut">Что чаще всего путают</h2>
+<p><strong>Тема ≠ группа</strong></p>
+<p>Группа содержит Темы.<br />
+Тема — отдельная история.</p>
+<p><strong>Модель ≠ провайдер</strong></p>
+<p>Модель пишет текст.<br />
+Провайдер даёт к ней API-доступ.</p>
+<p><strong>Память ≠ лор</strong></p>
+<p>Память — что произошло в этом RP.<br />
+Лор — заранее заданный канон.</p>
+<p><strong>Character Card ≠ персона</strong></p>
+<p>Character Card — персонаж модели.<br />
+Персона — персонаж игрока.</p>
+<p><strong>Промпт ≠ пресет</strong></p>
+<p>Промпт — ваш основной блок инструкций истории.<br />
+Пресет — целая конфигурация генерации, которая может включать множество блоков, сэмплеров и Regex.</p>
+<p><strong>Хранилище ≠ контекст</strong></p>
+<p>Хранилище — сколько данных сохранено у аккаунта.<br />
+Контекст — что модель получает прямо сейчас.</p>
+<p><strong>Отказ модели ≠ блокировка Limerence</strong></p>
+<p>Внешняя модель может иметь собственные ограничения независимо от Limerence.</p>
+<p><strong>Undo ≠ Rewrite</strong></p>
+<p>Undo удаляет последние ходы.<br />
+Rewrite меняет более старый ход и пересобирает всё после него.</p>
+<p><strong>Clear ≠ удаление аккаунта</strong></p>
+<p>Clear очищает одну историю.<br />
+<code>/forget_me</code> относится ко всему аккаунту Limerence.</p>
+<hr />
+<h2 id="esli-termin-vse-esche-neponyaten">Если термин всё ещё непонятен</h2>
+<p>Почти каждый крупный термин из этого словаря подробно разобран в отдельной статье Справочного центра.</p>
+<p>Если вы не знаете, с чего начать, сначала прочитайте:</p>
+<p><a href="pervyy-zapusk.html">Первый запуск Limerence</a></p>
+<p>и:</p>
+<p><a href="gruppa-i-temy.html">Темы, группы и команды</a></p>
+<p>После них большая часть терминологии обычно перестаёт выглядеть как документация к космическому кораблю.</p>
+<hr />
+<h2 id="chitayte-takzhe">Читайте также</h2>
+<ul>
+<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
+<li><a href="komandy.html">Команды Limerence: полный справочник</a></li>
+<li><a href="presety.html">Пресеты: как они работают и как их использовать</a></li>
+<li><a href="generaciya.html">Расширенные настройки истории</a></li>
+<li><a href="moderaciya.html">Модерация, блокировки и апелляции</a></li>
+</ul></div>
+</div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="moderaciya.html">Как работает модерация</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="komandy.html">Все команды</a></li></ul></div>
+<div class="hc-pn"><a href="glossariy.html"><small>← Назад</small>Глоссарий: основные термины</a></div>
+</main>
+</div>
+<footer class="hc-foot"><a href="https://guide.limerence-ai.com/index.html">Limerence</a> · <a href="https://guide.limerence-ai.com/legal/tos.html">Условия</a> · <a href="https://guide.limerence-ai.com/legal/privacy.html">Конфиденциальность</a> · <a href="https://guide.limerence-ai.com/legal/offer.html">Оферта</a> · 18+</footer>
+<script src="../assets/site.js" defer></script>
+<script src="../assets/help.js" defer></script>
+</body>
+</html>

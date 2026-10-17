@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Персонаж пишет первым · Справочник Limerence</title>
+<meta name="description" content="Разрешает функции инициативных сообщений персонажа работать в этой Теме.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://guide.limerence-ai.com/help-b/help/personazh-pishet-pervym.html">
+<link rel="icon" href="https://guide.limerence-ai.com/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/help.css">
+</head>
+<body class="hc" data-base="/help-b/">
+<header class="hc-head">
+  <button class="hc-menu" id="hcMenu" type="button" aria-label="Разделы справочника">☰</button>
+  <a class="hc-brand" href="index.html">Limerence <b>·</b> <span>Справочник</span></a>
+  <div class="hc-search">
+    <input id="hcQ" type="search" placeholder="Поиск: память, /undo, промокод…" autocomplete="off" enterkeyhint="search" aria-label="Поиск по справочнику">
+    <div class="hc-results" id="hcRes" aria-live="polite"></div>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+</header>
+<div class="hc-backdrop" id="hcBackdrop"></div>
+<div class="hc-layout">
+<nav class="hc-tree" id="hcTree" aria-label="Разделы справочника">
+<details><summary>🚀 Начало</summary>
+<a href="pervyy-zapusk.html">Первый запуск</a>
+<a href="gruppa-i-temy.html">Группа и Темы</a>
+<a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
+<a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
+<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
+</details>
+<details open><summary>🎭 Игра</summary>
+<div class="g">Управление ходом</div>
+<a href="upravlenie-istoriey.html">Управление историей: что выбрать</a>
+<a href="eshche-variant.html">Ещё вариант ответа</a>
+<a href="undo.html">Отменить ход (/undo)</a>
+<a href="rewrite.html">Переписать сообщение (/rewrite)</a>
+<a href="fork.html">Ветка сюжета (/fork)</a>
+<a href="clear.html">Начать сюжет заново (/clear)</a>
+<a href="korzina.html">Корзина и восстановление (/restore, /trash)</a>
+<a href="stop.html">Остановить ответ (/stop)</a>
+<div class="g">Сцена и разговор</div>
+<a href="ooc.html">Разговор вне роли (OOC)</a>
+<a href="scena.html">Сцена (/scene)</a>
+<a href="izobrazheniya-v-scene.html">Изображения в сцене</a>
+<a href="den-i-data.html">Игровой день и дата (/day)</a>
+<a href="personazh-pishet-pervym.html" class="cur" aria-current="page">Персонаж пишет первым</a>
+<a href="eksport.html">Экспорт истории (/export)</a>
+</details>
+<details><summary>🧠 Память и лор</summary>
+<div class="g">Память</div>
+<a href="kak-ustroena-pamyat.html">Как устроена память</a>
+<a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a>
+<a href="chto-kuda.html">Память, промпт, лор и карточка — что куда</a>
+<a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a>
+<a href="udalit-temu.html">Очистить историю или удалить Тему</a>
+<div class="g">Лор</div>
+<a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a>
+<a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a>
+<a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a>
+<a href="lor-sekrety.html">Секреты и границы знаний персонажей</a>
+<a href="lor-ne-srabotal.html">Почему запись лора не сработала</a>
+<a href="lor-struktura.html">Хороший lorebook: структура</a>
+<a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a>
+<a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
+<a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
+<div class="g">Персонажи</div>
+<a href="katalog-geroev.html">Каталог героев (/catalog)</a>
+<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
+<a href="privetstvie.html">Первое сообщение и приветствия</a>
+<a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
+<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
+<a href="persona-igroka.html">Персона игрока (/profile)</a>
+</details>
+<details><summary>⚙️ Настройки</summary>
+<div class="g">Основные</div>
+<a href="nastroyki.html">Настройки истории: обзор (/settings)</a>
+<a href="rezhim-deepseek.html">Режим DeepSeek</a>
+<a href="model-igry.html">Модель игры</a>
+<a href="dlina-otveta.html">Длина ответа</a>
+<a href="prompt.html">Промпт истории</a>
+<a href="prompt-kak-pisat.html">Как писать промпт</a>
+<a href="prompt-shablon.html">Шаблон и пример промпта</a>
+<a href="zametka-avtora.html">Заметка автора</a>
+<div class="g">Генерация</div>
+<a href="generaciya.html">Генерация: обзор</a>
+<a href="temperature.html">Temperature</a>
+<a href="pamyat-dialoga.html">Память диалога</a>
+<a href="top-p-top-k.html">Top P и Top K</a>
+<a href="shtrafy-povtorov.html">Presence и Frequency Penalty</a>
+<a href="kap-kanona.html">Кап канона</a>
+<a href="prefill.html">Префилл</a>
+<a href="anti-klishe.html">Анти-клише стиль</a>
+<div class="g">Отыгрыш DeepSeek</div>
+<a href="zhanry-otkrovennost.html">Жанры и откровенность</a>
+<a href="temp-razvitiya.html">Темп развития</a>
+<a href="kto-vedet-scenu.html">Кто ведёт сцену и второстепенные персонажи</a>
+<a href="harakter-dark.html">Несмягчаемый характер и дарк-режим</a>
+<div class="g">Вид и Тема</div>
+<a href="shapka-sceny.html">Шапка сцены</a>
+<a href="stat-panel.html">Стат-панель</a>
+<a href="striming-oformlenie.html">Стриминг и оформление ответа</a>
+<a href="regex.html">Regex-скрипты (/regex)</a>
+<a href="imya-i-moi-temy.html">Имя Темы и «Мои темы»</a>
+<a href="uvedomleniya-o-sboyah.html">Уведомления о сбоях</a>
+<div class="g">Пресеты</div>
+<a href="presety.html">Пресеты: что это (/preset)</a>
+<a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a>
+<a href="preset-semplery.html">Сэмплеры и контекст пресета</a>
+<a href="preset-regex-makrosy.html">Regex и макросы в пресете</a>
+<a href="preset-import.html">Импорт, включение и хранение пресета</a>
+<a href="preset-sovmestimost.html">Пресет, SillyTavern и системы Limerence</a>
+<a href="preset-test.html">Проверить пресет и что делать, если стало хуже</a>
+</details>
+<details><summary>🗂 Кабинет</summary>
+<a href="kabinet.html">Кабинет: как открыть и что внутри</a>
+<a href="kabinet-persony-kartochki.html">Персоны, карточки и лор в Кабинете</a>
+<a href="kabinet-i-bot.html">Кабинет и бот: что где (/app)</a>
+<a href="kabinet-sohranennye-statistika.html">Сохранённые ответы и статистика</a>
+</details>
+<details><summary>💎 Тарифы</summary>
+<a href="probnyy-period.html">Пробный период</a>
+<a href="premium.html">Premium (/premium)</a>
+<a href="tarif-deepseek.html">DeepSeek: пробный и платный</a>
+<a href="kakuyu-shemu.html">Какую схему выбрать</a>
+<a href="oplata.html">Оплата и продление</a>
+<a href="promokody.html">Промокоды (/promo)</a>
+<a href="hranilishche.html">Дополнительное хранилище памяти</a>
+<a href="status-podpiski.html">Где смотреть подписку (/stats)</a>
+</details>
+<details><summary>🛟 Помощь</summary>
+<div class="g">Если что-то не так</div>
+<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="support-ili-diag.html">/support или /diag</a>
+<a href="bag-report.html">Как оформить баг-репорт</a>
+<a href="posle-otpravki.html">После отправки репорта</a>
+<a href="chastye-problemy.html">Частые проблемы</a>
+<div class="g">Правила</div>
+<a href="moderaciya.html">Как работает модерация</a>
+<a href="preduprezhdeniya.html">Предупреждения и блокировки</a>
+<a href="otkaz-modeli.html">Отказ модели или блокировка Limerence</a>
+<a href="izobrazheniya.html">Проверка изображений и PNG-карточек</a>
+<a href="apellyaciya.html">Апелляция (/appeal)</a>
+<div class="g">Данные</div>
+<a href="dannye.html">Какие данные хранятся</a>
+<a href="shifrovanie.html">API-ключи и шифрование</a>
+<a href="chto-vidit-model.html">Что отправляется модели</a>
+<a href="forget-me.html">Удалить аккаунт (/forget_me)</a>
+<a href="dokumenty.html">Юридические документы</a>
+</details>
+<details><summary>📖 Справочник</summary>
+<a href="komandy.html">Все команды</a>
+<a href="glossariy.html">Глоссарий: основные термины</a>
+<a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a>
+</details>
+</nav>
+<main class="hc-main">
+<p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-igra.html">🎭 Игра</a> › Сцена и разговор</p>
+<div data-pagefind-body data-pagefind-meta="section:Игра">
+<h1 data-pagefind-meta="title">Персонаж пишет первым</h1>
+
+<div class="hc-doc"><h2 id="personazh-pishet-pervym">👋 Персонаж пишет первым</h2>
+<p>Разрешает функции инициативных сообщений персонажа работать в этой Теме.</p>
+<p>Если выключить, персонаж сам первым писать сюда не будет.</p>
+<p>Это настройка конкретной истории.</p>
+<p>Сам факт включения не означает, что персонаж обязан немедленно постучаться вам в три часа ночи. Для инициативного сообщения должны выполниться условия соответствующей функции.</p>
+<hr /></div>
+</div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="ooc.html">Разговор вне роли (OOC)</a></li><li><a href="scena.html">Сцена (/scene)</a></li><li><a href="izobrazheniya-v-scene.html">Изображения в сцене</a></li><li><a href="den-i-data.html">Игровой день и дата (/day)</a></li><li><a href="eksport.html">Экспорт истории (/export)</a></li></ul></div>
+<div class="hc-pn"><a href="den-i-data.html"><small>← Назад</small>Игровой день и дата (/day)</a><a class="n" href="eksport.html"><small>Дальше →</small>Экспорт истории (/export)</a></div>
+</main>
+</div>
+<footer class="hc-foot"><a href="https://guide.limerence-ai.com/index.html">Limerence</a> · <a href="https://guide.limerence-ai.com/legal/tos.html">Условия</a> · <a href="https://guide.limerence-ai.com/legal/privacy.html">Конфиденциальность</a> · <a href="https://guide.limerence-ai.com/legal/offer.html">Оферта</a> · 18+</footer>
+<script src="../assets/site.js" defer></script>
+<script src="../assets/help.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Как оформить баг-репорт · Справочник Limerence</title>
+<meta name="description" content="В проблемной Теме отправьте /diag .">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://guide.limerence-ai.com/help-b/help/bag-report.html">
+<link rel="icon" href="https://guide.limerence-ai.com/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0C0C0E">
+<script>(function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='light'?'#FAFAF9':'#0C0C0E';}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/help.css">
+</head>
+<body class="hc" data-base="/help-b/">
+<header class="hc-head">
+  <button class="hc-menu" id="hcMenu" type="button" aria-label="Разделы справочника">☰</button>
+  <a class="hc-brand" href="index.html">Limerence <b>·</b> <span>Справочник</span></a>
+  <div class="hc-search">
+    <input id="hcQ" type="search" placeholder="Поиск: память, /undo, промокод…" autocomplete="off" enterkeyhint="search" aria-label="Поиск по справочнику">
+    <div class="hc-results" id="hcRes" aria-live="polite"></div>
+  </div>
+  <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Сменить тему">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+  </button>
+</header>
+<div class="hc-backdrop" id="hcBackdrop"></div>
+<div class="hc-layout">
+<nav class="hc-tree" id="hcTree" aria-label="Разделы справочника">
+<details><summary>🚀 Начало</summary>
+<a href="pervyy-zapusk.html">Первый запуск</a>
+<a href="gruppa-i-temy.html">Группа и Темы</a>
+<a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
+<a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
+<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
+</details>
+<details><summary>🎭 Игра</summary>
+<div class="g">Управление ходом</div>
+<a href="upravlenie-istoriey.html">Управление историей: что выбрать</a>
+<a href="eshche-variant.html">Ещё вариант ответа</a>
+<a href="undo.html">Отменить ход (/undo)</a>
+<a href="rewrite.html">Переписать сообщение (/rewrite)</a>
+<a href="fork.html">Ветка сюжета (/fork)</a>
+<a href="clear.html">Начать сюжет заново (/clear)</a>
+<a href="korzina.html">Корзина и восстановление (/restore, /trash)</a>
+<a href="stop.html">Остановить ответ (/stop)</a>
+<div class="g">Сцена и разговор</div>
+<a href="ooc.html">Разговор вне роли (OOC)</a>
+<a href="scena.html">Сцена (/scene)</a>
+<a href="izobrazheniya-v-scene.html">Изображения в сцене</a>
+<a href="den-i-data.html">Игровой день и дата (/day)</a>
+<a href="personazh-pishet-pervym.html">Персонаж пишет первым</a>
+<a href="eksport.html">Экспорт истории (/export)</a>
+</details>
+<details><summary>🧠 Память и лор</summary>
+<div class="g">Память</div>
+<a href="kak-ustroena-pamyat.html">Как устроена память</a>
+<a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a>
+<a href="chto-kuda.html">Память, промпт, лор и карточка — что куда</a>
+<a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a>
+<a href="udalit-temu.html">Очистить историю или удалить Тему</a>
+<div class="g">Лор</div>
+<a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a>
+<a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a>
+<a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a>
+<a href="lor-sekrety.html">Секреты и границы знаний персонажей</a>
+<a href="lor-ne-srabotal.html">Почему запись лора не сработала</a>
+<a href="lor-struktura.html">Хороший lorebook: структура</a>
+<a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a>
+<a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
+<a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
+<div class="g">Персонажи</div>
+<a href="katalog-geroev.html">Каталог героев (/catalog)</a>
+<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
+<a href="privetstvie.html">Первое сообщение и приветствия</a>
+<a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
+<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
+<a href="persona-igroka.html">Персона игрока (/profile)</a>
+</details>
+<details><summary>⚙️ Настройки</summary>
+<div class="g">Основные</div>
+<a href="nastroyki.html">Настройки истории: обзор (/settings)</a>
+<a href="rezhim-deepseek.html">Режим DeepSeek</a>
+<a href="model-igry.html">Модель игры</a>
+<a href="dlina-otveta.html">Длина ответа</a>
+<a href="prompt.html">Промпт истории</a>
+<a href="prompt-kak-pisat.html">Как писать промпт</a>
+<a href="prompt-shablon.html">Шаблон и пример промпта</a>
+<a href="zametka-avtora.html">Заметка автора</a>
+<div class="g">Генерация</div>
+<a href="generaciya.html">Генерация: обзор</a>
+<a href="temperature.html">Temperature</a>
+<a href="pamyat-dialoga.html">Память диалога</a>
+<a href="top-p-top-k.html">Top P и Top K</a>
+<a href="shtrafy-povtorov.html">Presence и Frequency Penalty</a>
+<a href="kap-kanona.html">Кап канона</a>
+<a href="prefill.html">Префилл</a>
+<a href="anti-klishe.html">Анти-клише стиль</a>
+<div class="g">Отыгрыш DeepSeek</div>
+<a href="zhanry-otkrovennost.html">Жанры и откровенность</a>
+<a href="temp-razvitiya.html">Темп развития</a>
+<a href="kto-vedet-scenu.html">Кто ведёт сцену и второстепенные персонажи</a>
+<a href="harakter-dark.html">Несмягчаемый характер и дарк-режим</a>
+<div class="g">Вид и Тема</div>
+<a href="shapka-sceny.html">Шапка сцены</a>
+<a href="stat-panel.html">Стат-панель</a>
+<a href="striming-oformlenie.html">Стриминг и оформление ответа</a>
+<a href="regex.html">Regex-скрипты (/regex)</a>
+<a href="imya-i-moi-temy.html">Имя Темы и «Мои темы»</a>
+<a href="uvedomleniya-o-sboyah.html">Уведомления о сбоях</a>
+<div class="g">Пресеты</div>
+<a href="presety.html">Пресеты: что это (/preset)</a>
+<a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a>
+<a href="preset-semplery.html">Сэмплеры и контекст пресета</a>
+<a href="preset-regex-makrosy.html">Regex и макросы в пресете</a>
+<a href="preset-import.html">Импорт, включение и хранение пресета</a>
+<a href="preset-sovmestimost.html">Пресет, SillyTavern и системы Limerence</a>
+<a href="preset-test.html">Проверить пресет и что делать, если стало хуже</a>
+</details>
+<details><summary>🗂 Кабинет</summary>
+<a href="kabinet.html">Кабинет: как открыть и что внутри</a>
+<a href="kabinet-persony-kartochki.html">Персоны, карточки и лор в Кабинете</a>
+<a href="kabinet-i-bot.html">Кабинет и бот: что где (/app)</a>
+<a href="kabinet-sohranennye-statistika.html">Сохранённые ответы и статистика</a>
+</details>
+<details><summary>💎 Тарифы</summary>
+<a href="probnyy-period.html">Пробный период</a>
+<a href="premium.html">Premium (/premium)</a>
+<a href="tarif-deepseek.html">DeepSeek: пробный и платный</a>
+<a href="kakuyu-shemu.html">Какую схему выбрать</a>
+<a href="oplata.html">Оплата и продление</a>
+<a href="promokody.html">Промокоды (/promo)</a>
+<a href="hranilishche.html">Дополнительное хранилище памяти</a>
+<a href="status-podpiski.html">Где смотреть подписку (/stats)</a>
+</details>
+<details open><summary>🛟 Помощь</summary>
+<div class="g">Если что-то не так</div>
+<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="support-ili-diag.html">/support или /diag</a>
+<a href="bag-report.html" class="cur" aria-current="page">Как оформить баг-репорт</a>
+<a href="posle-otpravki.html">После отправки репорта</a>
+<a href="chastye-problemy.html">Частые проблемы</a>
+<div class="g">Правила</div>
+<a href="moderaciya.html">Как работает модерация</a>
+<a href="preduprezhdeniya.html">Предупреждения и блокировки</a>
+<a href="otkaz-modeli.html">Отказ модели или блокировка Limerence</a>
+<a href="izobrazheniya.html">Проверка изображений и PNG-карточек</a>
+<a href="apellyaciya.html">Апелляция (/appeal)</a>
+<div class="g">Данные</div>
+<a href="dannye.html">Какие данные хранятся</a>
+<a href="shifrovanie.html">API-ключи и шифрование</a>
+<a href="chto-vidit-model.html">Что отправляется модели</a>
+<a href="forget-me.html">Удалить аккаунт (/forget_me)</a>
+<a href="dokumenty.html">Юридические документы</a>
+</details>
+<details><summary>📖 Справочник</summary>
+<a href="komandy.html">Все команды</a>
+<a href="glossariy.html">Глоссарий: основные термины</a>
+<a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a>
+</details>
+</nav>
+<main class="hc-main">
+<p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pomoshch.html">🛟 Помощь</a> › Если что-то не так</p>
+<div data-pagefind-body data-pagefind-meta="section:Помощь">
+<h1 data-pagefind-meta="title">Как оформить баг-репорт</h1>
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#kak-otkryt-formu-baga">Как открыть форму бага</a></li><li><a href="#kak-pravilno-opisat-bag">Как правильно описать баг</a></li><li><a href="#foto-i-fayly">Фото и файлы</a></li><li><a href="#chto-limerence-prikladyvaet-avtomaticheski">Что Limerence прикладывает автоматически</a></li><li><a href="#prilozhit-snimok-temy">«📎 Приложить снимок Темы»</a></li></ol></details>
+<div class="hc-doc"><h2 id="kak-otkryt-formu-baga">Как открыть форму бага</h2>
+<p>В проблемной Теме отправьте <code>/diag</code>.</p>
+<p>Limerence попросит описать проблему одним сообщением.</p>
+<p>Также появится кнопка «📎 Приложить снимок Темы» и «❌ Отмена».</p>
+<p>В самом приглашении Limerence показывает шаблон описания — четыре строки, которые копируются одним касанием и заполняются поверх.</p>
+<h2 id="kak-pravilno-opisat-bag">Как правильно описать баг</h2>
+<p>Хорошее описание должно ответить примерно на четыре вопроса:</p>
+<ul>
+<li><strong>Что я сделал?</strong></li>
+<li><strong>Что произошло?</strong></li>
+<li><strong>Что должно было произойти?</strong></li>
+<li><strong>Можно ли повторить проблему?</strong></li>
+</ul>
+<p>Не нужно писать техническое расследование самостоятельно.</p>
+<p>Вам не требуется угадывать:</p>
+<blockquote>
+<p>«Наверное, у вас MongoDB не синхронизировала индекс после race condition».</p>
+</blockquote>
+<p>Это работа диагностики. Нам важнее получить точные наблюдения.</p>
+<h3 id="horoshiy-primer">Хороший пример</h3>
+<blockquote>
+<p>В Теме «Адриан» нажала «Ещё вариант» на последнем ответе. Появился второй вариант, выбрала его и продолжила игру. Через два сообщения сделала <code>/undo 1</code>. После отката снова показывается первый вариант ответа, хотя выбран был второй. Повторила два раза — происходит одинаково. Ожидала, что после Undo останется выбранный вариант.</p>
+</blockquote>
+<p>Здесь есть:</p>
+<ul>
+<li>конкретная Тема;</li>
+<li>конкретное действие;</li>
+<li>результат;</li>
+<li>ожидаемый результат;</li>
+<li>информация о повторяемости.</li>
+</ul>
+<p>Это великолепный баг-репорт.</p>
+<h3 id="plohoy-primer">Плохой пример</h3>
+<blockquote>
+<p>Не работает.</p>
+</blockquote>
+<p>Из него можно уверенно установить только один факт: что-то где-то кому-то не понравилось.</p>
+<h3 id="esche-odin-plohoy-primer">Ещё один плохой пример</h3>
+<blockquote>
+<p>Память опять говно.</p>
+</blockquote>
+<p>Эмоционально понятно. Диагностически — практически бесполезно.</p>
+<p>Гораздо лучше:</p>
+<blockquote>
+<p>В сообщении №... персонаж узнал, что Марк погиб. Через несколько ходов я исправила это через OOC → «Поправить историю»: Марк жив. Limerence подтвердил исправление. Через три ответа модель снова получила старый факт о его смерти. Повторилось дважды.</p>
+</blockquote>
+<p>Теперь уже есть проблема, которую можно искать.</p>
+<h3 id="ne-boytes-pisat-prostym-yazykom">Не бойтесь писать простым языком</h3>
+<p>Не нужно знать термины Limerence.</p>
+<p>Можно написать:</p>
+<blockquote>
+<p>Я включила вот эту кнопку, а после перезапуска она снова выключена.</p>
+</blockquote>
+<p>или:</p>
+<blockquote>
+<p>Бот ответил так, будто не видел картинку.</p>
+</blockquote>
+<p>или:</p>
+<blockquote>
+<p>Я удалила три последних хода, а персонаж всё равно продолжает говорить о событии из них.</p>
+</blockquote>
+<p>Этого достаточно, если описание конкретное.</p>
+<h3 id="ukazhite-posledovatelnost-deystviy">Укажите последовательность действий</h3>
+<p>Для сложного бага особенно полезно написать шаги.</p>
+<p>Например:</p>
+<blockquote>
+<ol>
+<li>Импортировала Character Card.</li>
+<li>Активировала её в уже начатой Теме.</li>
+<li>Отправила сообщение.</li>
+<li>Нажала «Ещё вариант».</li>
+<li>После этого перестала работать кнопка сохранения варианта.</li>
+</ol>
+</blockquote>
+<p>Если проблему можно воспроизвести по этим шагам, исправлять её становится намного проще.</p>
+<h3 id="napishite-proishodit-li-eto-vsegda">Напишите, происходит ли это всегда</h3>
+<p>Очень полезные формулировки:</p>
+<blockquote>
+<p>Происходит каждый раз.
+Было один раз.
+Повторилось 3 раза из 5.
+Началось сегодня, раньше работало.
+Происходит только с этой моделью.
+В другой Теме всё нормально.
+После выключения пресета проблема исчезает.</p>
+</blockquote>
+<p>Иногда одна такая строка сокращает расследование сильнее, чем пять скриншотов.</p>
+<h3 id="esli-problema-poyavilas-posle-izmeneniya-nastroyki-skazhite-ob-etom">Если проблема появилась после изменения настройки — скажите об этом</h3>
+<p>Например:</p>
+<blockquote>
+<p>До включения Regex всё работало.
+Началось после смены Claude на Gemini.
+После импорта этого пресета ответы стали пустыми.
+В новой Теме проблема отсутствует.
+Если выключить Character Card, ошибка исчезает.</p>
+</blockquote>
+<p>Такие сравнения особенно полезны.</p>
+<h3 id="maksimalnaya-dlina-opisaniya">Максимальная длина описания</h3>
+<p>Описание бага — до <strong>2000 символов</strong>.</p>
+<p>Этого более чем достаточно для нормального отчёта.</p>
+<p>Если вы написали дипломную работу на 14 страниц, скорее всего, проблему можно описать короче.</p>
+<h2 id="foto-i-fayly">Фото и файлы</h2>
+<p>К описанию можно приложить до <strong>5 фотографий или файлов</strong>.</p>
+<p>Можно отправить их вместе с описанием, в том числе альбомом.</p>
+<p>Вложения особенно полезны, если проблема касается:</p>
+<ul>
+<li>интерфейса;</li>
+<li><a href="kabinet.html">Кабинета</a>;</li>
+<li>Telegram-кнопок;</li>
+<li>странного форматирования;</li>
+<li>сообщения об ошибке;</li>
+<li>импорта файла.</li>
+</ul>
+<h3 id="k-vlozheniyu-vse-ravno-nuzhen-tekst">К вложению всё равно нужен текст</h3>
+<p>Не отправляйте один голый скриншот с надеждой «ну там же видно».</p>
+<p>Форма бага требует текстовое описание. Хотя бы:</p>
+<blockquote>
+<p>После нажатия «Сохранить» появляется эта ошибка. Повторяется каждый раз.</p>
+</blockquote>
+<p>Скриншот показывает симптом. Описание объясняет контекст.</p>
+<h3 id="ne-prisylayte-api-klyuch">Не присылайте API-ключ</h3>
+<p>Никогда не вставляйте в баг-репорт:</p>
+<ul>
+<li>полный API-ключ;</li>
+<li>пароль;</li>
+<li>данные банковской карты;</li>
+<li>recovery-коды;</li>
+<li>другие секреты.</li>
+</ul>
+<p>Для технической диагностики Limerence сам видит, есть ли у аккаунта настроенный провайдер.</p>
+<p>Значение вашего API-ключа в автоматический диагностический снимок <strong>не включается</strong>.</p>
+<h2 id="chto-limerence-prikladyvaet-avtomaticheski">Что Limerence прикладывает автоматически</h2>
+<p>При создании <code>/diag</code> Limerence сохраняет технический снимок состояния на момент обращения.</p>
+<p>В него могут входить, например:</p>
+<ul>
+<li>версия Limerence;</li>
+<li>проблемная Тема;</li>
+<li>выбранная модель;</li>
+<li>используемый провайдер;</li>
+<li>наличие настроенных ключей — без самих значений;</li>
+<li>последние зарегистрированные API-ошибки;</li>
+<li>техническое состояние памяти;</li>
+<li>некоторые параметры, нужные для диагностики.</li>
+</ul>
+<p>Это позволяет не заставлять пользователя вручную отвечать на вопросы «какая модель?», «какой провайдер?», «а ключ точно добавлен?», «а что было в ошибке API?».</p>
+<p>Часть этой информации уже прикрепляется автоматически.</p>
+<h3 id="tekst-vashey-istorii-po-umolchaniyu-ne-prikladyvaetsya">Текст вашей истории по умолчанию не прикладывается</h3>
+<p>Обычный технический снимок <code>/diag</code> <strong>не содержит рас<a href="dannye.html">шифрованный</a> текст вашей RP-истории</strong>.</p>
+<p>То есть вызов <code>/diag</code> сам по себе не означает, что владелице отправили весь ваш роман на 600 тысяч слов.</p>
+<p>Нет.</p>
+<p>Если для расследования нужен непосредственный контекст диалога, для этого существует отдельное действие.</p>
+<h2 id="prilozhit-snimok-temy">«📎 Приложить снимок Темы»</h2>
+<p>Эта кнопка нужна для ошибок, которые невозможно понять без самой сцены.</p>
+<p>Например:</p>
+<ul>
+<li>модель проигнорировала конкретный факт;</li>
+<li>память вернула удалённое событие;</li>
+<li>Rewrite оставил кусок старой ветки;</li>
+<li>персонаж внезапно знает то, чего знать не должен;</li>
+<li>система перепутала последовательность событий;</li>
+<li>ошибка появляется только после определённого фрагмента разговора.</li>
+</ul>
+<p>Тогда нажмите «📎 Приложить снимок Темы» до отправки описания.</p>
+<p>Это означает, что вы разрешаете использовать содержимое этой истории при расследовании конкретного бага.</p>
+<p><strong>Что именно попадёт в снимок:</strong></p>
+<ul>
+<li>вся история сообщений этой Темы;</li>
+<li>вся её память — факты, синопсис, состояние сцены;</li>
+<li>пользовательский промпт и Заметка автора;</li>
+<li>лор Темы;</li>
+<li>Regex-скрипты;</li>
+<li>игровые настройки: модель, температура, контекст, пресет, персона, карточка.</li>
+</ul>
+<p><strong>Чего в снимке нет:</strong> ваших API-ключей. Провайдеры при создании снимка вообще не читаются — видно только то, что ключ настроен.</p>
+<p>Снимок относится к одной Теме — той, из которой вызван <code>/diag</code>. Другие ваши истории в него не входят.</p>
+<h3 id="kogda-istoriyu-prikladyvat-ne-nuzhno">Когда историю прикладывать НЕ нужно</h3>
+<p>Не надо прикладывать RP-контекст к проблеме:</p>
+<blockquote>
+<p>кнопка оплаты не открывается;
+Кабинет показывает белый экран;
+API возвращает ошибку авторизации;
+кнопка <code>/cards</code> ничего не делает.</p>
+</blockquote>
+<p>Здесь текст сцены обычно ничего полезного не даст.</p>
+<p>Чем меньше лишних данных — тем лучше.</p>
+<h3 id="kogda-istoriyu-pochti-obyazatelno-stoit-prilozhit">Когда историю почти обязательно стоит приложить</h3>
+<p>Например:</p>
+<ul>
+<li><strong>Проблема памяти</strong> — Limerence вспомнил событие, которое было удалено.</li>
+<li><strong>Проблема Rewrite / Undo</strong> — история откатилась неправильно.</li>
+<li><strong>Проблема контекста</strong> — модель явно не получила несколько предыдущих сообщений.</li>
+<li><strong>Проблема персонажа</strong> — конкретный факт из карточки или памяти применяется неправильно именно в этой сцене.</li>
+</ul>
+<p>В таких случаях без контекста можно увидеть техническое состояние системы, но не сам момент, где поведение стало неправильным.</p></div>
+</div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="dannye.html">Какие данные хранятся</a></li><li><a href="pomoshch.html">С чего начать (/help)</a></li><li><a href="support-ili-diag.html">/support или /diag</a></li><li><a href="posle-otpravki.html">После отправки репорта</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li></ul></div>
+<div class="hc-pn"><a href="support-ili-diag.html"><small>← Назад</small>/support или /diag</a><a class="n" href="posle-otpravki.html"><small>Дальше →</small>После отправки репорта</a></div>
+</main>
+</div>
+<footer class="hc-foot"><a href="https://guide.limerence-ai.com/index.html">Limerence</a> · <a href="https://guide.limerence-ai.com/legal/tos.html">Условия</a> · <a href="https://guide.limerence-ai.com/legal/privacy.html">Конфиденциальность</a> · <a href="https://guide.limerence-ai.com/legal/offer.html">Оферта</a> · 18+</footer>
+<script src="../assets/site.js" defer></script>
+<script src="../assets/help.js" defer></script>
+</body>
+</html>
