@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Top P и Top K · Справочник Limerence</title>
-<meta name="description" content="Доступные значения: выкл, 0.85 , 0.90 , 0.95 , 0.97 .">
+<meta name="description" content="Кнопка: /settings → «⚙️ Расширенные» → «🧪 Генерация» → «🎚 Top_p» . Доступные значения: выкл, 0.85 , 0.90 , 0.95 , 0.97 .">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/top-p-top-k.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,9 +168,9 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Генерация</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Top P и Top K</h1>
-
+<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#top-p">🎚 Top P</a></li><li><a href="#top-k">🎚 Top K</a></li><li><a href="#top-p-i-top-k">🎚 Top P и Top K в Кабинете</a></li></ol></details>
 <div class="hc-doc"><h2 id="top-p">🎚 Top P</h2>
-<p>Доступные значения: выкл, <code>0.85</code>, <code>0.90</code>, <code>0.95</code>, <code>0.97</code>.</p>
+<p>Кнопка: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🧪 Генерация»</strong> → <strong>«🎚 Top_p»</strong>. Доступные значения: выкл, <code>0.85</code>, <code>0.90</code>, <code>0.95</code>, <code>0.97</code>.</p>
 <p>Top P — другой способ управлять разнообразием генерации.</p>
 <p>Модель оценивает множество возможных продолжений. Top P ограничивает набор вариантов теми, которые вместе набирают указанную долю вероятности.</p>
 <p>Упрощённо: меньше Top P — выбор уже и осторожнее; больше Top P — допускается больше менее вероятных вариантов.</p>
@@ -187,9 +188,14 @@
 <p>Это означает, что Limerence не навязывает своё значение Top P и оставляет соответствующее поведение модели или провайдеру.</p>
 <p>То же правило действует для выключенных Presence и Frequency.</p>
 <hr />
-<h2 id="top-p-i-top-k">🎚 Top P и Top K</h2>
+<h2 id="top-k">🎚 Top K</h2>
+<p>Top K — самый простой способ ограничить выбор: на каждом шаге модель выбирает следующее слово только из K самых вероятных вариантов, остальные отбрасываются. Чем меньше K, тем предсказуемее текст; чем больше — тем разнообразнее.</p>
+<p>В Кабинете Top K — число от 1 до 500. Пустое поле — выключено: Limerence ничего не навязывает. В боте (<code>/settings</code>) Top K не настраивается — только в Кабинете или через <a href="presety.html">пресет</a>.</p>
+<p>Поддержка Top K есть не у каждой модели и провайдера: если провайдер параметр не принимает, он просто игнорируется.</p>
+<hr />
+<h2 id="top-p-i-top-k">🎚 Top P и Top K в Кабинете</h2>
 <p>В Кабинете есть отдельный блок «Тонкие настройки сэмплера».</p>
-<p>Здесь можно вручную задать Top P и Top K.</p>
+<p>Здесь можно вручную задать Top P (больше 0 и до 1) и Top K (от 1 до 500).</p>
 <p>Если оставить поле пустым, Limerence не навязывает собственное значение этого параметра.</p>
 <p>Эти настройки предназначены скорее для опытных пользователей и особенно полезны при работе с готовыми SillyTavern-пресетами или при самостоятельном тюнинге конкретной модели.</p>
 <p>Поддержка Top P и Top K зависит от самой модели и API-провайдера.</p>
@@ -210,7 +216,7 @@
 <p>Пресет забирает температуру, длины ответа и тонкие настройки сэмплера. «Память диалога» остаётся доступной в любом случае.</p>
 <p>Если хотите снова управлять этими параметрами вручную — сначала снимите активный пресет.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="pamyat-dialoga.html">Память диалога</a></li><li><a href="shtrafy-povtorov.html">Presence и Frequency Penalty</a></li><li><a href="kap-kanona.html">Кап канона</a></li><li><a href="prefill.html">Префилл</a></li><li><a href="anti-klishe.html">Анти-клише стиль</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="pamyat-dialoga.html">Память диалога</a></li><li><a href="shtrafy-povtorov.html">Presence и Frequency Penalty</a></li><li><a href="kap-kanona.html">Кап канона</a></li><li><a href="prefill.html">Префилл</a></li><li><a href="anti-klishe.html">Анти-клише стиль</a></li></ul></div>
 <div class="hc-pn"><a href="pamyat-dialoga.html"><small>← Назад</small>Память диалога</a><a class="n" href="shtrafy-povtorov.html"><small>Дальше →</small>Presence и Frequency Penalty</a></div>
 </main>
 </div>
@@ -229,7 +235,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

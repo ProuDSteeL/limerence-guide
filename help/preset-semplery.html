@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Сэмплеры и контекст пресета · Справочник Limerence</title>
-<meta name="description" content="Это продолжение статьи «Пресеты: как они работают и как их использовать» . В первой части речь шла о том, что такое пресет , как устроены его блоки и Prompt…">
+<meta name="description" content="Это продолжение страниц о пресетах и устройстве пресета : там — что такое пресет, его блоки и Prompt Order. Здесь — параметры генерации (сэмплеры) и контекст…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/preset-semplery.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -168,11 +169,19 @@
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Сэмплеры и контекст пресета</h1>
 
-<div class="hc-doc"><p>Это продолжение статьи <strong>«Пресеты: как они работают и как их использовать»</strong>. В первой части речь шла о том, что такое <a href="presety.html">пресет</a>, как устроены его блоки и Prompt Order и как управлять отдельными блоками. Здесь — параметры генерации, Regex, макросы, импорт и разбор проблем.</p>
+<div class="hc-doc"><p>Это продолжение страниц о <a href="presety.html">пресетах</a> и <a href="preset-ustroystvo.html">устройстве пресета</a>: там — что такое пресет, его блоки и Prompt Order. Здесь — параметры генерации (сэмплеры) и контекст пресета.</p>
 <hr />
 <h2 id="semplery-v-presete">Сэмплеры в пресете</h2>
 <p>Помимо текстовых инструкций пресет может содержать параметры генерации.</p>
 <p>Limerence поддерживает перенос таких параметров, как Temperature, Top P, Top K, Top A, Min P, Frequency Penalty, Presence Penalty, Repetition Penalty и Seed.</p>
+<p>Что значат менее известные параметры:</p>
+<ul>
+<li><strong>Top A</strong> — отсекает варианты, вероятность которых слишком мала по сравнению с лучшим вариантом; чем выше значение, тем строже отсев. 0 — выключено.</li>
+<li><strong>Min P</strong> — оставляет только варианты, вероятность которых не ниже заданной доли от вероятности лучшего (например, 0.05 — не ниже 5 %). Мягче, чем Top K. 0 — выключено.</li>
+<li><strong>Repetition Penalty</strong> — штраф за слова, которые уже встречались в тексте; снижает повторы. Значение 1 — штрафа нет.</li>
+<li><strong>Seed</strong> — число, фиксирующее случайность: при одинаковом тексте и том же Seed модель стремится выдать тот же ответ. Если Seed не задан (−1), ответы случайны, как обычно.</li>
+</ul>
+<p>Параметр, который в пресете выключен или нейтрален, Limerence модели не передаёт.</p>
 <p>Именно поэтому два пресета с похожими промптами тоже могут ощущаться по-разному.</p>
 <p>Например, пресет A: Temperature 0.7, Top P 0.9. Пресет B: Temperature 1.1, Min P 0.05.</p>
 <p>Даже с одинаковым системным текстом результат может отличаться по вариативности, неожиданности формулировок, повторяемости, стабильности и склонности выбирать более редкие продолжения.</p>
@@ -225,7 +234,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

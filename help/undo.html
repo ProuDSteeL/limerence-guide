@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,18 +168,18 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-igra.html">🎭 Игра</a> › Управление ходом</p>
 <div data-pagefind-body data-pagefind-meta="section:Игра">
 <h1 data-pagefind-meta="title">Отменить ход (/undo)</h1>
-<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#otmenit-posledniy-hod">Отменить последний ход</a></li><li><a href="#otmenit-neskolko-poslednih-hodov">Отменить несколько последних ходов</a></li><li><a href="#chto-proishodit-s-pamyatyu-posle-undo">Что происходит с памятью после Undo</a></li><li><a href="#undo">↩️ /undo</a></li><li><a href="#bolshoy-undo-poprosit-podtverzhdenie">Большой Undo попросит подтверждение</a></li></ol></details>
-<div class="hc-doc"><h2 id="otmenit-posledniy-hod">Отменить последний ход</h2>
+<details class="hc-toc"><summary>На этой странице · 4</summary><ol><li><a href="#otmenit-posledniy-hod">Отменить последний ход</a></li><li><a href="#otmenit-neskolko-poslednih-hodov">Отменить несколько последних ходов</a></li><li><a href="#chto-proishodit-s-pamyatyu-posle-undo">Что происходит с памятью после Undo</a></li><li><a href="#bolshoy-undo-poprosit-podtverzhdenie">Большой Undo попросит подтверждение</a></li></ol></details>
+<div class="hc-doc"><span id="undo"></span><h2 id="otmenit-posledniy-hod">Отменить последний ход</h2>
 <p>Если проблема уже не только в последнем ответе модели и вы хотите убрать весь последний обмен, используйте Undo.</p>
 <p>Под последним ответом: <strong>«⋯»</strong> → <strong>«↩️ Undo»</strong>, или отправьте <code>/undo</code>.</p>
 <p>Один обмен — это ваше сообщение плюс ответ модели на него.</p>
 <p>После Undo этот обмен удаляется из текущей истории, а связанное с ним состояние истории откатывается.</p>
 <hr />
 <h2 id="otmenit-neskolko-poslednih-hodov">Отменить несколько последних ходов</h2>
-<p>Можно сразу убрать несколько обменов. Например, <code>/undo 3</code> отменит три последних обмена.</p>
+<p>Можно сразу убрать несколько обменов. Например, <code>/undo 3</code> отменит три последних обмена (<code>/undo 2</code>, <code>/undo 3</code> и так далее).</p>
 <p>То есть будут убраны три ваших хода и ответы модели, относящиеся к ним.</p>
 <p>За одну операцию можно отменить до 200 обменов.</p>
-<p>Если удаление затрагивает много ходов, Limerence дополнительно попросит подтверждение, чтобы случайная цифра не превратилась в археологические раскопки собственного сюжета.</p>
+<p>Подтверждение запрашивается, если отменить нужно больше трёх обменов (см. ниже).</p>
 <hr />
 <h2 id="chto-proishodit-s-pamyatyu-posle-undo">Что происходит с памятью после Undo</h2>
 <p>Undo предназначен не только для визуального удаления сообщений из Telegram.</p>
@@ -186,29 +187,17 @@
 <p>То есть отменённые события не должны продолжать жить в памяти так, будто они всё ещё произошли.</p>
 <p>Именно поэтому для изменения уже случившегося сюжета лучше использовать встроенные инструменты, а не просто удалить сообщение вручную в Telegram.</p>
 <hr />
-<h2 id="undo">↩️ <code>/undo</code></h2>
-<p>Отменяет последний игровой обмен.</p>
-<p>Обмен — это обычно:</p>
-<p><strong>ваша реплика + ответ модели.</strong></p>
-<p>Просто:</p>
-<p><code>/undo</code></p>
-<p>удаляет последний обмен.</p>
-<p>Можно указать количество:</p>
-<p><code>/undo 2</code></p>
-<p><code>/undo 3</code></p>
-<p>и так далее.</p>
-<hr />
 <h2 id="bolshoy-undo-poprosit-podtverzhdenie">Большой Undo попросит подтверждение</h2>
-<p>Если вы пытаетесь удалить больше нескольких обменов сразу, Limerence попросит подтверждение.</p>
+<p>Если вы пытаетесь удалить больше трёх обменов сразу, Limerence попросит подтверждение.</p>
 <p>Это защита от ситуации:</p>
 <blockquote>
 <p>хотела <code>/undo 4</code>, случайно написала <code>/undo 40</code>, а жизнь мгновенно приобрела философский характер.</p>
 </blockquote>
-<p>Подтверждение запрашивается начиная с четвёртого обмена за один вызов.</p>
+<p>Подтверждение запрашивается начиная с четвёртого обмена за один вызов: <code>/undo 3</code> выполнится сразу, <code>/undo 4</code> спросит «Да, отменить 4».</p>
 <p>Больше 200 обменов за раз Limerence не удалит вообще — такой запрос отклоняется без диалога. Никакое подтверждение не делает разовое удаление пяти тысяч ходов безопасным.</p>
 <p>Удалённые через Undo данные архивируются и могут быть восстановлены через <code>/restore</code> в течение 14 дней.</p>
 <p>Подробнее:</p>
-<p><a href="upravlenie-istoriey.html">Управление историей</a></p>
+<p><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></p>
 <hr /></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="eshche-variant.html">Ещё вариант ответа</a></li><li><a href="rewrite.html">Переписать сообщение (/rewrite)</a></li><li><a href="fork.html">Ветка сюжета (/fork)</a></li><li><a href="clear.html">Начать сюжет заново (/clear)</a></li><li><a href="korzina.html">Корзина и восстановление (/restore, /trash)</a></li><li><a href="stop.html">Остановить ответ (/stop)</a></li></ul></div>
@@ -230,7 +219,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

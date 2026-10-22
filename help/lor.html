@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,18 +168,19 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pamyat-i-lor.html">🧠 Память и лор</a> › Лор</p>
 <div data-pagefind-body data-pagefind-meta="section:Память и лор">
 <h1 data-pagefind-meta="title">Лор: что это и когда он лучше промпта (/lore)</h1>
-<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#prompt-ili-lor-chto-luchshe">Промпт или лор — что лучше?</a></li><li><a href="#pochemu-horoshiy-lorebook-mozhet-silno-menyat-personazha">Почему хороший lorebook может сильно менять персонажа</a></li><li><a href="#kak-otkryt-lor">Как открыть лор</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#lore">📚 /lore</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#prompt-ili-lor-chto-luchshe">Промпт или лор — что лучше?</a></li><li><a href="#zagruzit-mir-faylami">Загрузить целый мир файлами</a></li><li><a href="#pochemu-horoshiy-lorebook-mozhet-silno-menyat-personazha">Почему хороший lorebook может сильно менять персонажа</a></li><li><a href="#kak-otkryt-lor">Как открыть лор</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><p>Лор в Limerence — это не просто место для «дополнительных деталей, которые не поместились в <a href="prompt.html">промпт</a>».</p>
 <p>Правильно настроенный lorebook может хранить целую систему канона: персонажей, отношения, семьи, организации, города, правила мира, способности, прошлое, секреты и другие сведения — и подключать нужную информацию именно тогда, когда она становится актуальна.</p>
 <p>В сложных Character Cards из SillyTavern, Chub и похожих экосистем lorebook нередко является полноценной частью персонажа. Без родного лора такой персонаж действительно может ощущаться заметно беднее: модель знает его базовое описание, но перестаёт понимать окружающий мир, связи, прошлое и контекст, на который он должен реагировать.</p>
 <p>В Limerence работают два основных вида лора:</p>
 <ul>
-<li><strong>карточки лора</strong> — небольшие записи, которые активируются по контексту;</li>
+<li><strong>записи лора</strong> — короткие тексты о месте, правиле или второстепенном персонаже (NPC), которые подключаются по ключам;</li>
 <li><strong><a href="lor-struktura.html">лор-файлы</a></strong> — большие документы, в которых Limerence ищет подходящие к текущей сцене фрагменты.</li>
 </ul>
 <p>Обе системы можно использовать одновременно.</p>
+<p>Лор описывает <strong>мир</strong>. Главного героя, которого играет бот, описывает <a href="kartochka-personazha.html">карточка героя</a>, а вас в истории — <a href="persona-igroka.html">персона</a>. Сравнение на одной странице — <a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>.</p>
 <hr />
-<h2 id="prompt-ili-lor-chto-luchshe">Промпт или лор — что лучше?</h2>
+<span id="razobrat-bolshoy-prompt-v-lor"></span><h2 id="prompt-ili-lor-chto-luchshe">Промпт или лор — что лучше?</h2>
 <p>Нет универсального «лучше». Они устроены по-разному.</p>
 <p><strong>Промпт</strong> передаётся модели постоянно. Он хорошо подходит для правил и информации, которые должны присутствовать практически в каждом ходе. Например:</p>
 <blockquote>
@@ -202,6 +204,19 @@
 <p>Если появляется Совет — модели нужны его правила.</p>
 <p>Вот для такого устройства мира lorebook особенно хорош.</p>
 <hr />
+<h2 id="zagruzit-mir-faylami">Загрузить целый мир файлами</h2>
+<p><strong>Зачем.</strong> Автор мира обычно выкладывает несколько файлов: правила для рассказчика, историю мира, локации, лорбук. Бот разложит их по местам за один раз.</p>
+<p><strong>Как.</strong></p>
+<ol>
+<li>В теме пришлите <code>/world</code>, потом все файлы (<code>.txt</code>, <code>.json</code>, <code>.png</code>) и нажмите <strong>«Готово»</strong>.</li>
+<li>Бот читает тексты. Историю мира и локации он делит на карточки лора: одно место, одна эпоха или один герой — одна карточка, а ключ — её название. Что на карточки не делится (общее описание мира), остаётся справкой: бот ищет в ней нужное по смыслу. Сам текст не переписывается.</li>
+<li>Экран <strong>«Вот что я нашёл»</strong> покажет, какие места, герои, фракции и события есть в текстах и сколько получилось карточек.</li>
+<li>Нажмите <strong>«Начать»</strong>. До этого ничего не записывается.</li>
+</ol>
+<p><strong>Два варианта мира.</strong> Иногда правила приходят в двух версиях, например «лайт» и «дарк». Это не копии: бот спросит, какую играть в этой теме. Кнопка «Оба» положит второй вариант в новую тему рядом, и переключаться между вариантами можно, как между темами. Если бот не понял по названиям файлов, какая история к какому варианту относится, их можно поменять местами в «Поправить».</p>
+<p><strong>Тот же файл дважды</strong> («Локации» и «Локации (1)») бот возьмёт один раз.</p>
+<p><strong>Цена.</strong> Загрузка мира доступна на платных тарифах. Если у вас подключён свой ключ памяти, чтение текстов идёт через него.</p>
+<hr />
 <h2 id="pochemu-horoshiy-lorebook-mozhet-silno-menyat-personazha">Почему хороший lorebook может сильно менять персонажа</h2>
 <p>Представим <a href="kartochka-personazha.html">карточку персонажа</a>:</p>
 <blockquote>
@@ -222,43 +237,28 @@
 <p>И персонаж начинает ощущаться не просто набором черт характера, а человеком с окружающим его миром.</p>
 <p>В этом и сила хорошо настроенного lorebook.</p>
 <hr />
-<h2 id="kak-otkryt-lor">Как открыть лор</h2>
+<span id="lore"></span><h2 id="kak-otkryt-lor">Как открыть лор</h2>
 <p>В нужной Теме отправьте <code>/lore</code>.</p>
 <p>Экран лора — это список того, что Тема знает о мире:</p>
 <ul>
 <li>📖 — книги, подключённые к этой Теме;</li>
-<li>🗂 — карточки лора. 📌 рядом с карточкой означает «добавляется в каждый ход», ⛔ — «выключена».</li>
+<li>🗂 — записи лора. 📌 рядом с записью означает «добавляется в каждый ход», ⛔ — «выключена».</li>
 </ul>
-<p>Тапните любую строку, чтобы открыть её. Ниже списка — действия: добавить карточку, загрузить книгу, библиотека книг, «🔍 Что лор дал на последнем ходу», справка, «📦 Моё место» и удаление всего лора Темы.</p>
-<p>Если лора в Теме ещё нет, вместо списка экран коротко объясняет разницу между книгой и карточкой и подсказывает, с чего начать.</p>
+<p>Тапните любую строку, чтобы открыть её. Ниже списка — действия: добавить запись, загрузить книгу, библиотека книг, «🔍 Что лор дал на последнем ходу», справка, «📦 Моё место» и удаление всего лора Темы.</p>
+<p>Если лора в Теме ещё нет, вместо списка экран коротко объясняет разницу между книгой и записью и подсказывает, с чего начать.</p>
+<p>Через экран <code>/lore</code> можно создавать и редактировать записи, загружать большие лор-файлы, импортировать World Book, подключать книги из библиотеки и экспортировать lorebook. Лор относится к контексту конкретной истории, хотя сохранённые библиотечные книги могут использоваться в нескольких Темах.</p>
 <hr />
 <h2 id="chitayte-takzhe">Читайте также</h2>
 <ul>
-<li><a href="lor-struktura.html">Лор: большие файлы, World Book и библиотека</a></li>
-<li><a href="kartochka-personazha.html">Персонажи и карточки</a></li>
-<li><a href="prompt.html">Промпт для ролевой игры</a></li>
-<li><a href="kak-ustroena-pamyat.html">Память Limerence</a></li>
-<li><a href="presety.html">Пресеты: как они работают и как их использовать</a></li>
-<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
-</ul>
-<h2 id="lore">📚 <code>/lore</code></h2>
-<p>Открывает лор текущей истории.</p>
-<p>Через него можно:</p>
-<ul>
-<li>создавать карточки лора;</li>
-<li>редактировать существующие;</li>
-<li>загружать большие лор-файлы;</li>
-<li>импортировать World Book;</li>
-<li>подключать книги, переименовывать их и удалять из библиотеки;</li>
-<li>смотреть, что из лора попало модели на последнем ходу и почему остальное нет;</li>
-<li>экспортировать lorebook.</li>
-</ul>
-<p>Лор относится к контексту конкретной истории, хотя сохранённые библиотечные книги могут использоваться в нескольких Темах.</p>
-<p>Подробнее:</p>
-<p><a href="lor.html">Лор и канон</a></p>
-<hr /></div>
+<li><a href="lor-struktura.html">Хороший lorebook: структура</a></li>
+<li><a href="kartochka-personazha.html">Карточка героя: что это</a></li>
+<li><a href="prompt.html">Промпт истории</a></li>
+<li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li>
+<li><a href="presety.html">Пресеты: что это (/preset)</a></li>
+<li><a href="glossariy.html">Глоссарий: основные термины</a></li>
+</ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="prompt.html">Промпт истории</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="kartochka-personazha.html">Карточка персонажа: что это</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="prompt.html">Промпт истории</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="kartochka-personazha.html">Карточка героя: что это</a></li><li><a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a></li><li><a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li></ul></div>
 <div class="hc-pn"><a href="udalit-temu.html"><small>← Назад</small>Очистить историю или удалить Тему</a><a class="n" href="lor-kartochki-i-klyuchi.html"><small>Дальше →</small>Записи лора и ключи</a></div>
 </main>
 </div>
@@ -277,7 +277,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

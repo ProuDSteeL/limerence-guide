@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html" class="cur" aria-current="page">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nachalo.html">🚀 Начало</a></p>
 <div data-pagefind-body data-pagefind-meta="section:Начало">
 <h1 data-pagefind-meta="title">Подключить свой API-ключ (/api)</h1>
-<details class="hc-toc"><summary>На этой странице · 6</summary><ol><li><a href="#chto-takoe-api-provayder">Что такое API-провайдер</a></li><li><a href="#kak-podklyuchit-svoy-api-klyuch">Как подключить свой API-ключ</a></li><li><a href="#kak-izmenit-ili-udalit-api-klyuch">Как изменить или удалить API-ключ</a></li><li><a href="#chastye-problemy">Частые проблемы</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#api">🔑 /api</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 6</summary><ol><li><a href="#chto-takoe-api-provayder">Что такое API-провайдер</a></li><li><a href="#kak-podklyuchit-svoy-api-klyuch">Как подключить свой API-ключ</a></li><li><a href="#kak-izmenit-ili-udalit-api-klyuch">Как изменить или удалить API-ключ</a></li><li><a href="#chastye-problemy">Частые проблемы</a></li><li><a href="#api">🔑 /api</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><p>Чтобы начать играть в Limerence, свой API-ключ не обязателен. Во время <a href="probnyy-period.html">пробного периода</a> можно сразу использовать DeepSeek на ключе Limerence — до 50 ходов в день в течение 7 дней.</p>
 <p>Если хочется выбрать другую модель — Claude, Gemini, GPT или любую другую доступную у вашего провайдера — можно подключить собственный API-ключ.</p>
 <p>Если собственного API-ключа нет, в новой истории Limerence автоматически может использовать пробный DeepSeek. В старой Теме бот при необходимости предложит кнопку <strong>«🎁 Включить DeepSeek-режим»</strong>.</p>
@@ -237,7 +238,7 @@
 <ul>
 <li>удалит сообщение с ключом после получения;</li>
 <li>проверит, отвечает ли провайдер;</li>
-<li>сохранит ключ в за<a href="dannye.html">шифрованном</a> виде.</li>
+<li>сохранит ключ в <a href="dannye.html">зашифрованном</a> виде.</li>
 </ul>
 <p>Если это первый добавленный провайдер, он автоматически станет основным.</p>
 <p>После успешного добавления вернитесь в игровую Тему.</p>
@@ -280,15 +281,6 @@ API-ключ уже есть, но для Темы не указана моде�
 <p>Для самого простого старта ничего подключать не нужно: создайте Тему и используйте пробный DeepSeek.</p>
 <p>Собственный API-ключ имеет смысл подключать, когда вы хотите выбрать другую модель, использовать конкретного провайдера или не зависеть от дневного лимита пробного DeepSeek.</p>
 <hr />
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
-<li><a href="probnyy-period.html">Доступ, подписки и оплата</a></li>
-<li><a href="rezhim-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
-<li><a href="dannye.html">Данные и приватность</a></li>
-<li><a href="chastye-problemy.html">Разбор проблем: модель, память, лор и оплата</a></li>
-<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
-</ul>
 <h2 id="api">🔑 <code>/api</code></h2>
 <p>Открывает управление API-провайдерами.</p>
 <p>Можно:</p>
@@ -303,11 +295,20 @@ API-ключ уже есть, но для Темы не указана моде�
 <p>После подключения модель для конкретной истории выбирается через:</p>
 <p><code>/settings</code></p>
 <p>Подробнее:</p>
-<p><a href="api-klyuch.html">Модели и API-ключи</a></p>
-<hr /></div>
+<p><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></p>
+<hr />
+<h2 id="chitayte-takzhe">Читайте также</h2>
+<ul>
+<li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li>
+<li><a href="probnyy-period.html">Пробный период</a></li>
+<li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li>
+<li><a href="dannye.html">Какие данные хранятся</a></li>
+<li><a href="chastye-problemy.html">Частые проблемы</a></li>
+<li><a href="glossariy.html">Глоссарий: основные термины</a></li>
+</ul></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="probnyy-period.html">Пробный период</a></li><li><a href="dannye.html">Какие данные хранятся</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li></ul></div>
-<div class="hc-pn"><a href="gde-vyzyvat-komandy.html"><small>← Назад</small>Где вызывать команды: личка, группа, Тема</a><a class="n" href="vybor-modeli.html"><small>Дальше →</small>Выбрать модель (/current)</a></div>
+<div class="hc-pn"><a href="gde-vyzyvat-komandy.html"><small>← Назад</small>Где вызывать команды: личка, группа, Тема</a><a class="n" href="vybor-modeli.html"><small>Дальше →</small>Выбрать модель и проверить её (/current)</a></div>
 </main>
 </div>
 <footer class="sitefoot">
@@ -325,7 +326,7 @@ API-ключ уже есть, но для Темы не указана моде�
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

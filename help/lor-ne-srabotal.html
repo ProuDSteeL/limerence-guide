@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Почему запись лора не сработала · Справочник Limerence</title>
-<meta name="description" content="Когда подходящая карточка действительно попадает в текущий запрос, Limerence передаёт её модели не как случайное воспоминание, а как канон мира, заданный…">
+<meta name="description" content="Если кажется, что бот забыл про мир, не надо гадать. Откройте /lore → «🔍 Что лор дал на последнем ходу» .">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/lor-ne-srabotal.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,12 +168,30 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pamyat-i-lor.html">🧠 Память и лор</a> › Лор</p>
 <div data-pagefind-body data-pagefind-meta="section:Память и лор">
 <h1 data-pagefind-meta="title">Почему запись лора не сработала</h1>
-<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#limerence-otmechaet-lor-kak-zadannyy-igrokom-kanon">Limerence отмечает лор как заданный игроком канон</a></li><li><a href="#no-model-ne-vidit-ves-lorebook-kazhdyy-hod">Но модель НЕ видит весь lorebook каждый ход</a></li><li><a href="#pochemu-kartochka-ne-srabotala">Почему карточка не сработала</a></li></ol></details>
-<div class="hc-doc"><h2 id="limerence-otmechaet-lor-kak-zadannyy-igrokom-kanon">Limerence отмечает лор как заданный игроком канон</h2>
-<p>Когда подходящая карточка действительно попадает в текущий запрос, Limerence передаёт её модели не как случайное воспоминание, а как канон мира, заданный игроком.</p>
-<p>Если такой лор конфликтует с менее надёжной информацией из памяти или архивного поиска, модели указывается ориентироваться прежде всего на заданный канон.</p>
-<p>Это ещё одна причина, почему правильно настроенный lorebook — совсем не «второстепенные заметочки».</p>
-<p>Он может быть источником истины для устройства мира.</p>
+<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#pochemu-kartochka-ne-srabotala">Почему запись не сработала</a></li><li><a href="#no-model-ne-vidit-ves-lorebook-kazhdyy-hod">Но модель НЕ видит весь lorebook каждый ход</a></li><li><a href="#limerence-otmechaet-lor-kak-zadannyy-igrokom-kanon">Limerence отмечает лор как заданный игроком канон</a></li></ol></details>
+<div class="hc-doc"><h2 id="pochemu-kartochka-ne-srabotala">Почему запись не сработала</h2>
+<p>Если кажется, что бот забыл про мир, не надо гадать. Откройте <code>/lore</code> → <strong>«🔍 Что лор дал на последнем ходу»</strong>.</p>
+<p>Экран показывает по каждой записи и каждой книге, попала она в ответ модели или нет, и по какой причине.</p>
+<p>Запись могла попасть, потому что:</p>
+<ul>
+<li><strong>ключ прозвучал</strong> — сработала по ключевому слову;</li>
+<li><strong>подошла по смыслу</strong> — ключ не прозвучал, но сцена оказалась близка по теме;</li>
+<li><strong>всегда в ответе</strong> — постоянная запись;</li>
+<li><strong>держится с прошлого хода</strong> — сработало временное удержание;</li>
+<li><strong>ключ нашёлся в другой записи</strong> — её подтянула соседняя запись.</li>
+</ul>
+<p>Или не попасть, потому что:</p>
+<ul>
+<li><strong>ключ не прозвучал, по смыслу не подошла</strong> — запись просто не понадобилась в этой сцене;</li>
+<li><strong>сработала, но не влезла в бюджет</strong> — лора больше, чем помещается в один запрос;</li>
+<li><strong>на перезарядке</strong> — запись недавно срабатывала и временно отдыхает;</li>
+<li><strong>не выпала по вероятности</strong> — у записи задана вероятность срабатывания меньше 100%;</li>
+<li><strong>рядом было слово из «не срабатывать, если рядом»</strong> — ключ прозвучал, но сработал запрет, заданный в записи.</li>
+</ul>
+<p>Не уверены, почему запись молчит? Откройте её и нажмите <strong>«🧪 Проверить запись»</strong>: отправьте фразу — бот скажет, сработает ли запись и какое слово тому причиной или помехой.</p>
+<p>Разница между «не влезла в бюджет» и «ключ не прозвучал» — самая важная строка на этом экране. В первом случае ключи в порядке, а лора слишком много: его надо сокращать или понижать значимость менее важным записям. Во втором — наоборот, лор помещается, но запись не нашли: надо чинить ключи.</p>
+<p>Книги отмечаются иначе: <strong>«N фрагментов»</strong>, если модель что-то из книги достала, и <strong>«модель в них не искала»</strong>, если не обращалась. Поиск по книгам модель запускает сама, когда сцене не хватает контекста, — «не искала» не значит «книга сломана».</p>
+<p>Показывается последний ход. Если в этой Теме ещё не было ни одного хода, экран так и скажет.</p>
 <hr />
 <h2 id="no-model-ne-vidit-ves-lorebook-kazhdyy-hod">Но модель НЕ видит весь lorebook каждый ход</h2>
 <p>Вот здесь возникает вторая крайность.</p>
@@ -180,7 +199,7 @@
 <p>Представьте lorebook как библиотеку с умным библиотекарем, а не как раскрытую перед моделью энциклопедию.</p>
 <p>У вас может храниться сто записей. В конкретной сцене релевантны пять.</p>
 <p>Модель получает эти пять, а не все сто. На следующем ходе набор может измениться.</p>
-<h3 id="kak-primerno-vybirayutsya-kartochki">Как примерно выбираются карточки</h3>
+<h3 id="kak-primerno-vybirayutsya-kartochki">Как примерно выбираются записи</h3>
 <p>Без внутренней технической кухни принцип выглядит так:</p>
 <ol>
 <li>Limerence смотрит на текущую сцену и недавний диалог.</li>
@@ -190,35 +209,18 @@
 <li>Если подходит много информации, учитывает её значимость и доступный бюджет.</li>
 <li>Передаёт модели выбранные записи.</li>
 </ol>
-<p>Поэтому «карточка сохранена» ≠ «модель видит её в каждом ответе».</p>
+<p>Поэтому «запись сохранена» ≠ «модель видит её в каждом ответе».</p>
 <p>Именно для постоянных правил существует режим «Добавлять всегда», а для управления конкурирующими записями — значимость.</p>
 <hr />
-<p>Большие лор-файлы, импорт World Book из SillyTavern, Character Book внутри карточки персонажа и библиотека книг — в продолжении: <strong>«Лор: большие файлы, World Book и библиотека»</strong>.</p>
+<h2 id="limerence-otmechaet-lor-kak-zadannyy-igrokom-kanon">Limerence отмечает лор как заданный игроком канон</h2>
+<p>Когда подходящая запись действительно попадает в текущий запрос, Limerence передаёт её модели не как случайное воспоминание, а как канон мира, заданный игроком.</p>
+<p>Если такой лор конфликтует с менее надёжной информацией из памяти или архивного поиска, модели указывается ориентироваться прежде всего на заданный канон.</p>
+<p>Это ещё одна причина, почему правильно настроенный lorebook — совсем не «второстепенные заметочки».</p>
+<p>Он может быть источником истины для устройства мира.</p>
 <hr />
-<h2 id="pochemu-kartochka-ne-srabotala">Почему карточка не сработала</h2>
-<p>Если кажется, что бот забыл про мир, не надо гадать. Откройте <code>/lore</code> → <strong>«🔍 Что лор дал на последнем ходу»</strong>.</p>
-<p>Экран показывает по каждой карточке и каждой книге, попала она в ответ модели или нет, и по какой причине.</p>
-<p>Карточка могла попасть, потому что:</p>
-<ul>
-<li><strong>ключ прозвучал</strong> — сработала по ключевому слову;</li>
-<li><strong>подошла по смыслу</strong> — ключ не прозвучал, но сцена оказалась близка по теме;</li>
-<li><strong>всегда в ответе</strong> — постоянная карточка;</li>
-<li><strong>держится с прошлого хода</strong> — сработало временное удержание;</li>
-<li><strong>ключ нашёлся в другой карточке</strong> — её подтянула соседняя запись.</li>
-</ul>
-<p>Или не попасть, потому что:</p>
-<ul>
-<li><strong>ключ не прозвучал, по смыслу не подошла</strong> — карточка просто не понадобилась в этой сцене;</li>
-<li><strong>сработала, но не влезла в бюджет</strong> — лора больше, чем помещается в один запрос;</li>
-<li><strong>на перезарядке</strong> — карточка недавно срабатывала и временно отдыхает;</li>
-<li><strong>не выпала по вероятности</strong> — у записи задана вероятность срабатывания меньше 100%.</li>
-</ul>
-<p>Разница между «не влезла в бюджет» и «ключ не прозвучал» — самая важная строка на этом экране. В первом случае ключи в порядке, а лора слишком много: его надо сокращать или понижать значимость менее важным записям. Во втором — наоборот, лор помещается, но карточку не нашли: надо чинить ключи.</p>
-<p>Книги отмечаются иначе: <strong>«N фрагментов»</strong>, если модель что-то из книги достала, и <strong>«модель в них не искала»</strong>, если не обращалась. Поиск по книгам модель запускает сама, когда сцене не хватает контекста, — «не искала» не значит «книга сломана».</p>
-<p>Показывается последний ход. Если в этой Теме ещё не было ни одного хода, экран так и скажет.</p>
-<hr /></div>
+<p>Большие лор-файлы, импорт World Book из SillyTavern, Character Book внутри карточки персонажа и библиотека книг — на страницах <a href="lor-struktura.html">Хороший lorebook: структура</a>, <a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a> и <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li><li><a href="lor-sekrety.html">Секреты и границы знаний персонажей</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a></li><li><a href="lor-import-world-book.html">Импорт World Book и Character Book</a></li><li><a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a></li><li><a href="lor-import-world-book.html">Импорт World Book и Character Book</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li><li><a href="lor-sekrety.html">Секреты и границы знаний персонажей</a></li><li><a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a></li></ul></div>
 <div class="hc-pn"><a href="lor-sekrety.html"><small>← Назад</small>Секреты и границы знаний персонажей</a><a class="n" href="lor-struktura.html"><small>Дальше →</small>Хороший lorebook: структура</a></div>
 </main>
 </div>
@@ -237,7 +239,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

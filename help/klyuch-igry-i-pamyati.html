@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html" class="cur" aria-current="page">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nachalo.html">🚀 Начало</a></p>
 <div data-pagefind-body data-pagefind-meta="section:Начало">
 <h1 data-pagefind-meta="title">Ключ игры и ключ памяти</h1>
-
+<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#klyuch-igry-i-klyuch-pamyati-ne-odno-i-to-zhe">Ключ игры и ключ памяти — не одно и то же</a></li><li><a href="#klyuch-igry-dlya-etoy-istorii">Ключ игры для этой истории</a></li><li><a href="#kak-podklyuchit-klyuch-pamyati">Как подключить свой ключ для памяти</a></li></ol></details>
 <div class="hc-doc"><h2 id="klyuch-igry-i-klyuch-pamyati-ne-odno-i-to-zhe">Ключ игры и ключ памяти — не одно и то же</h2>
 <p>Собственный API-ключ для игры не требуется для работы памяти.</p>
 <p>По умолчанию фоновая <a href="kak-ustroena-pamyat.html">память Limerence</a> работает через общий служебный ключ.</p>
@@ -177,7 +178,7 @@
 <li><code>/settings</code> → модель игры.</li>
 </ul>
 <p>Отдельный <strong>«Свой ключ для памяти»</strong> в меню <code>/api</code> — дополнительная возможность. Она нужна только если вы сознательно хотите оплачивать операции памяти собственным ключом.</p>
-<p>Для <a href="pervyy-zapusk.html">первого запуск</a>а её можно вообще не трогать.</p>
+<p>Для <a href="pervyy-zapusk.html">первого запуска</a> её можно вообще не трогать.</p>
 <hr />
 <h2 id="klyuch-igry-dlya-etoy-istorii">Ключ игры для этой истории</h2>
 <p>Кнопка <strong>«🔀 Ключ игры (эта тема)»</strong> позволяет выбрать, через какой из ваших сохранённых API-провайдеров будет работать именно эта история.</p>
@@ -185,10 +186,20 @@
 <p>Например, одна история может работать через OpenRouter, другая — через LiteRouter, а третья — через другой подключённый сервис.</p>
 <p>Если здесь стоит <strong>«по умолчанию»</strong>, Limerence использует ваш основной активный провайдер.</p>
 <p>Если вы играете через встроенный DeepSeek, эту настройку можно не трогать.</p>
-<hr /></div>
+<hr />
+<h2 id="kak-podklyuchit-klyuch-pamyati">Как подключить свой ключ для памяти</h2>
+<p>Нужен только если вы хотите оплачивать операции памяти (факты, сводки, поиск по канону) собственным ключом. По умолчанию память работает на общем ключе Limerence, и вам ничего делать не надо.</p>
+<ol>
+<li>Отправьте <code>/api</code> и нажмите <strong>«🔑 Свой ключ для памяти»</strong>.</li>
+<li>Выберите сервис, от которого у вас ключ: <strong>DeepSeek (оригинал)</strong> (ключи — на platform.deepseek.com → API keys) или <strong>Polza · DeepSeek</strong>.</li>
+<li>Пришлите ключ одним сообщением — только сам ключ, без пробелов и лишних слов. Бот сразу удалит ваше сообщение и сохранит ключ в зашифрованном виде; адрес и модель он подставит сам.</li>
+<li>Больше ничего нажимать не нужно: после сохранения ключа память переключается на него сама. Чтобы проверить, откройте <code>/api</code> заново — кнопка будет называться <strong>«🧠 Память: на твоём ключе ✅ (→ общий)»</strong>. Старое сообщение с меню может ещё показывать «на общем ключе» — это устаревшая подпись, нажимать её не надо: нажатие вернёт память на общий ключ.</li>
+<li>Чтобы вернуться на общий ключ, в свежем меню <code>/api</code> нажмите ту же кнопку — она сменится на «🧠 Память: на общем ключе (→ твой)».</li>
+</ol>
+<p>Если баланс ключа закончится, проверьте его в <code>/api</code> — иначе память может перестать записываться.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="vybor-modeli.html">Выбрать модель (/current)</a></li></ul></div>
-<div class="hc-pn"><a href="vybor-modeli.html"><small>← Назад</small>Выбрать модель (/current)</a><a class="n" href="upravlenie-istoriey.html"><small>Дальше →</small>Управление историей: что выбрать</a></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a></li></ul></div>
+<div class="hc-pn"><a href="vybor-modeli.html"><small>← Назад</small>Выбрать модель и проверить её (/current)</a><a class="n" href="upravlenie-istoriey.html"><small>Дальше →</small>Управление историей: что выбрать</a></div>
 </main>
 </div>
 <footer class="sitefoot">
@@ -206,7 +217,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

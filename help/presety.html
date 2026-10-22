@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Пресеты</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Пресеты: что это (/preset)</h1>
-<details class="hc-toc"><summary>На этой странице · 7</summary><ol><li><a href="#preset-eto-ne-prosto-temperature">Пресет — это не просто Temperature</a></li><li><a href="#otkuda-voobsche-vzyalis-takie-presety">Откуда вообще взялись такие пресеты</a></li><li><a href="#ne-lyuboy-json-iz-sillytavern-yavlyaetsya-presetom">Не любой JSON из SillyTavern является пресетом</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#presety">Пресеты</a></li><li><a href="#preset">🧩 /preset</a></li><li><a href="#preset-2">🧩 Пресет</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 7</summary><ol><li><a href="#preset-eto-ne-prosto-temperature">Пресет — это не просто Temperature</a></li><li><a href="#otkuda-voobsche-vzyalis-takie-presety">Откуда вообще взялись такие пресеты</a></li><li><a href="#ne-lyuboy-json-iz-sillytavern-yavlyaetsya-presetom">Не любой JSON из SillyTavern является пресетом</a></li><li><a href="#presety">Импортированные пресеты SillyTavern</a></li><li><a href="#preset">🧩 /preset</a></li><li><a href="#preset-2">В Кабинете</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><p>Пресет — одна из самых мощных и одновременно самых непонятных вещей в AI-ролевках.</p>
 <p>Если очень грубо, пресет — это готовая система инструкций и настроек для модели.</p>
 <p>Он может задавать:</p>
@@ -195,7 +196,7 @@
 <hr />
 <h2 id="preset-eto-ne-prosto-temperature">Пресет — это не просто Temperature</h2>
 <p>Слово «preset» немного обманчивое.</p>
-<p>Можно подумать, что это обычный набор вроде «<a href="generaciya.html">Temperature</a> 0.8, Top P 0.95, Frequency 0.2».</p>
+<p>Можно подумать, что это обычный набор вроде «<a href="temperature.html">Temperature</a> 0.8, Top P 0.95, Frequency 0.2».</p>
 <p>Такие параметры действительно могут находиться в пресете.</p>
 <p>Но полноценный SillyTavern Chat Completion Preset может содержать намного больше. Например:</p>
 <ul>
@@ -237,17 +238,8 @@
 <p>Само название файла значения не гарантирует — решает его внутренняя структура. Limerence проверяет её при импорте.</p>
 <p>Максимальный размер файла пресета — 8 МБ.</p>
 <hr />
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="preset-semplery.html">Пресеты: сэмплеры, Regex, импорт и диагностика</a></li>
-<li><a href="prompt.html">Промпт для ролевой игры</a></li>
-<li><a href="generaciya.html">Расширенные настройки: генерация</a></li>
-<li><a href="lor.html">Лор: как настроить канон мира и персонажей</a></li>
-<li><a href="kabinet.html">Кабинет Limerence: обзор, истории и настройки</a></li>
-<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
-</ul>
-<h2 id="presety">Пресеты</h2>
-<p>Отдельная большая тема — импортированные пресеты генерации из SillyTavern. Они могут менять и текстовые инструкции модели, и сэмплеры, и Regex одновременно, поэтому разбираются в отдельных статьях: <strong>«Пресеты: как они работают и как их использовать»</strong> и <strong>«Пресеты: сэмплеры, Regex, импорт и диагностика»</strong>.</p>
+<h2 id="presety">Импортированные пресеты SillyTavern</h2>
+<p>Отдельная большая тема — импортированные пресеты генерации из SillyTavern. Они могут менять и текстовые инструкции модели, и сэмплеры, и Regex одновременно, поэтому разбираются на отдельных страницах: <a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a> и <a href="preset-semplery.html">Сэмплеры и контекст пресета</a>.</p>
 <hr />
 <h2 id="preset">🧩 <code>/preset</code></h2>
 <p>Открывает сохранённые генерационные пресеты.</p>
@@ -259,11 +251,9 @@
 <li>вернуть исходную конфигурацию.</li>
 </ul>
 <p>Пресет выбирается отдельно для каждой Темы.</p>
-<p>Подробнее:</p>
-<p><a href="presety.html">Пресеты: как они работают и как их использовать</a></p>
 <hr />
-<h2 id="preset-2">🧩 Пресет</h2>
-<p>В настройках истории отображается текущий генерационный пресет.</p>
+<h2 id="preset-2">В Кабинете</h2>
+<p>В Кабинете в настройках истории отображается текущий генерационный пресет.</p>
 <p>Нажмите «Выбрать», чтобы открыть свои сохранённые пресеты.</p>
 <p>После выбора он сразу применяется к этой истории.</p>
 <p>Если пресет больше не нужен — «Снять».</p>
@@ -271,9 +261,20 @@
 <p>Текущий Кабинет позволяет выбирать уже сохранённые пресеты, но не загружать новый SillyTavern preset.</p>
 <p>Для импорта отправьте файл через бота, а затем он появится в списке Кабинета.</p>
 <p>Также более тонкое управление отдельными блоками пресета пока удобнее делать через <code>/preset</code> → ⚙️.</p>
-<p>То есть сейчас Кабинет отвечает в первую очередь за вопрос «какой пресет используется в этой истории?», а не за полный Prompt Manager SillyTavern.</p></div>
+<p>То есть сейчас Кабинет отвечает в первую очередь за вопрос «какой пресет используется в этой истории?», а не за полный Prompt Manager SillyTavern.</p>
+<hr />
+<h2 id="chitayte-takzhe">Читайте также</h2>
+<ul>
+<li><a href="preset-semplery.html">Сэмплеры и контекст пресета</a></li>
+<li><a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a></li>
+<li><a href="prompt.html">Промпт истории</a></li>
+<li><a href="generaciya.html">Генерация: обзор</a></li>
+<li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li>
+<li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li>
+<li><a href="glossariy.html">Глоссарий: основные термины</a></li>
+</ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="prompt.html">Промпт истории</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="preset-semplery.html">Сэмплеры и контекст пресета</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="prompt.html">Промпт истории</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="preset-ustroystvo.html">Внутри пресета: Prompt Order, takeover, блоки</a></li><li><a href="preset-semplery.html">Сэмплеры и контекст пресета</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li></ul></div>
 <div class="hc-pn"><a href="uvedomleniya-o-sboyah.html"><small>← Назад</small>Уведомления о сбоях</a><a class="n" href="preset-ustroystvo.html"><small>Дальше →</small>Внутри пресета: Prompt Order, takeover, блоки</a></div>
 </main>
 </div>
@@ -292,7 +293,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

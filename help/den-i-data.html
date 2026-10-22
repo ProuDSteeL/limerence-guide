@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Игровой день и дата (/day) · Справочник Limerence</title>
-<meta name="description" content="Показывает и изменяет игровой день и календарную дату.">
+<meta name="description" content="Limerence ведёт счётчик игровых дней. /day показывает и изменяет игровой день и календарную дату. Это удобно для длинных историй, где иначе через 500 сообщений…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/den-i-data.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,9 +168,9 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-igra.html">🎭 Игра</a> › Сцена и разговор</p>
 <div data-pagefind-body data-pagefind-meta="section:Игра">
 <h1 data-pagefind-meta="title">Игровой день и дата (/day)</h1>
-<details class="hc-toc"><summary>На этой странице · 7</summary><ol><li><a href="#day">📅 /day</a></li><li><a href="#ustanovit-igrovoy-den">Установить игровой день</a></li><li><a href="#ustanovit-kalendarnuyu-datu">Установить календарную дату</a></li><li><a href="#ustanovit-den-i-datu-srazu">Установить день и дату сразу</a></li><li><a href="#ubrat-datu">Убрать дату</a></li><li><a href="#otdelnoy-komandy-date-seychas-net">Отдельной команды /date сейчас нет</a></li><li><a href="#den-i-data">📅 День и дата</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#day">📅 /day</a></li><li><a href="#ustanovit-igrovoy-den">Установить игровой день</a></li><li><a href="#ustanovit-kalendarnuyu-datu">Установить календарную дату</a></li><li><a href="#ustanovit-den-i-datu-srazu">Установить день и дату сразу</a></li><li><a href="#ubrat-datu">Убрать дату</a></li><li><a href="#otdelnoy-komandy-date-seychas-net">Отдельной команды /date сейчас нет</a></li><li><a href="#data-i-shapka-svyazany-no-eto-raznye-funktsii">Дата и шапка связаны, но это разные функции</a></li><li><a href="#den-i-data">Кнопками, без команды</a></li></ol></details>
 <div class="hc-doc"><h2 id="day">📅 <code>/day</code></h2>
-<p>Показывает и изменяет игровой день и календарную дату.</p>
+<p>Limerence ведёт счётчик игровых дней. <code>/day</code> показывает и изменяет игровой день и календарную дату. Это удобно для длинных историй, где иначе через 500 сообщений начинается вопрос: «а у нас вообще сейчас среда или уже прошло три месяца?»</p>
 <p>Просто:</p>
 <p><code>/day</code></p>
 <p>показывает текущее состояние.</p>
@@ -204,20 +205,15 @@
 <p>Для даты используйте:</p>
 <p><code>/day</code></p>
 <p>или:</p>
-<p><code>/settings</code> → <strong>Расширенные → Вид → День и дата</strong></p>
+<p><code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🖼 Вид»</strong> → <strong>«📅 День и дата»</strong></p>
 <p>Это важно, потому что в старых инструкциях или сообщениях можно встретить упоминание отдельной <code>/date</code>.</p>
 <p>В текущей версии она не нужна.</p>
 <hr />
-<h2 id="den-i-data">📅 День и дата</h2>
-<p>Limerence ведёт счётчик игровых дней.</p>
-<p>В этом меню можно вручную исправить текущий день, привязать к нему календарную дату или убрать дату.</p>
-<p>Например: День 62 = 21.01.2026.</p>
-<p>После этого при переходе игрового времени вперёд календарь может двигаться вместе с номером дня.</p>
-<p>Это удобно для длинных историй, где иначе через 500 сообщений начинается традиционная ролевая забава: «а у нас вообще сейчас среда или уже прошло три месяца?»</p>
-<h3 id="data-i-shapka-svyazany-no-eto-raznye-funktsii">Дата и шапка связаны, но это разные функции</h3>
-<p>Дата может храниться даже без включённой шапки. Просто пользователь её не увидит в каждом ответе.</p>
-<p>Если хотите отображать её в шапке, шаблон должен содержать соответствующее поле.</p>
-<hr /></div>
+<h2 id="data-i-shapka-svyazany-no-eto-raznye-funktsii">Дата и шапка связаны, но это разные функции</h2>
+<p>Дата может храниться даже без включённой шапки сцены — просто вы не увидите её в каждом ответе. Чтобы отображать дату в шапке, шаблон шапки должен содержать соответствующее поле.</p>
+<hr />
+<h2 id="den-i-data">Кнопками, без команды</h2>
+<p>То же самое можно сделать кнопками: «📅 День и дата» в <code>/settings</code> → «⚙️ Расширенные» → «🖼 Вид» — исправить день, задать или убрать дату. Например, «День 62 = 21.01.2026»: при переходе игрового времени вперёд календарь двигается вместе с номером дня.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="ooc.html">Разговор вне роли (OOC)</a></li><li><a href="scena.html">Сцена (/scene)</a></li><li><a href="izobrazheniya-v-scene.html">Изображения в сцене</a></li><li><a href="personazh-pishet-pervym.html">Персонаж пишет первым</a></li><li><a href="eksport.html">Экспорт истории (/export)</a></li></ul></div>
 <div class="hc-pn"><a href="izobrazheniya-v-scene.html"><small>← Назад</small>Изображения в сцене</a><a class="n" href="personazh-pishet-pervym.html"><small>Дальше →</small>Персонаж пишет первым</a></div>
@@ -238,7 +234,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

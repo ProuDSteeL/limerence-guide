@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Экспорт и удаление лора · Справочник Limerence</title>
-<meta name="description" content="Откройте /lore → «📤 Экспорт карточек» . Кнопка появляется, когда в Теме есть хотя бы одна карточка.">
+<meta name="description" content="Откройте /lore → «📤 Экспорт записей» . Кнопка появляется, когда в Теме есть хотя бы одна запись.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/lor-eksport-udalenie.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html" class="cur" aria-current="page">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -169,21 +170,21 @@
 <h1 data-pagefind-meta="title">Экспорт и удаление лора</h1>
 
 <div class="hc-doc"><h2 id="eksport-lorebook">Экспорт lorebook</h2>
-<p>Откройте <code>/lore</code> → <strong>«📤 Экспорт карточек»</strong>. Кнопка появляется, когда в Теме есть хотя бы одна карточка.</p>
+<p>Откройте <code>/lore</code> → <strong>«📤 Экспорт записей»</strong>. Кнопка появляется, когда в Теме есть хотя бы одна запись.</p>
 <p>Limerence создаст файл <code>lorebook.json</code>. Его можно сохранить или использовать в совместимых сервисах.</p>
 <p>Записи Character Book, пришедшие вместе с Character Card, отдельно не дублируются в пользовательский экспорт — они уже находятся в самой <a href="kartochka-personazha.html">карточке персонажа</a>.</p>
 <hr />
 <h2 id="kak-udalit-lor">Как удалить лор</h2>
-<p>Отдельную карточку можно удалить через <code>/lore</code> → нужная карточка → <strong>«🗑️ Удалить»</strong>.</p>
+<p>Отдельную запись можно удалить через <code>/lore</code> → нужная запись → <strong>«🗑️ Удалить»</strong>.</p>
 <p>Если запись ещё может понадобиться, проще временно её выключить («⚙️ Ещё» → «⛔ Выключить»).</p>
 <p>Отдельную книгу можно убрать из Темы, не трогая библиотеку: <code>/lore</code> → <strong>«📎 Библиотека книг»</strong> → нужная книга → <strong>«📌 Открепить от Темы»</strong>. В других Темах она продолжит работать.</p>
 <p>Чтобы убрать весь лор текущей Темы: <code>/lore</code> → <strong>«🗑️ Удалить весь лор из Темы»</strong>.</p>
-<p>Limerence покажет, что именно будет затронуто, и попросит подтверждение. Карточки и фрагменты файлов удаляются безвозвратно, а прикреплённые книги только открепляются от Темы — сами книги остаются в библиотеке.</p>
+<p>Limerence покажет, что именно будет затронуто, и попросит подтверждение. Записи и фрагменты файлов удаляются безвозвратно, а прикреплённые книги только открепляются от Темы — сами книги остаются в библиотеке.</p>
 <p>Чтобы удалить книгу совсем, из всех Тем и из библиотеки: <code>/lore</code> → <strong>«📎 Библиотека книг»</strong> → нужная книга → <strong>«🗑 Удалить книгу из библиотеки»</strong>. Бот заранее скажет, скольких Тем это коснётся. Вернуть книгу после этого можно только повторной загрузкой файла.</p>
 <hr /></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="kartochka-personazha.html">Карточка персонажа: что это</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li><li><a href="lor-sekrety.html">Секреты и границы знаний персонажей</a></li><li><a href="lor-ne-srabotal.html">Почему запись лора не сработала</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a></li></ul></div>
-<div class="hc-pn"><a href="lor-import-world-book.html"><small>← Назад</small>Импорт World Book и Character Book</a><a class="n" href="katalog-geroev.html"><small>Дальше →</small>Каталог героев (/catalog)</a></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="kartochka-personazha.html">Карточка героя: что это</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li><li><a href="lor-sekrety.html">Секреты и границы знаний персонажей</a></li><li><a href="lor-ne-srabotal.html">Почему запись лора не сработала</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="lor-fayly.html">Лор-файлы и большие .txt/.md</a></li></ul></div>
+<div class="hc-pn"><a href="lor-import-world-book.html"><small>← Назад</small>Импорт World Book и Character Book</a><a class="n" href="geroy-mir-ty.html"><small>Дальше →</small>Герой, мир и вы: карточка, лор и персона</a></div>
 </main>
 </div>
 <footer class="sitefoot">
@@ -201,7 +202,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

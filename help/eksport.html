@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -168,7 +169,7 @@
 <div data-pagefind-body data-pagefind-meta="section:Игра">
 <h1 data-pagefind-meta="title">Экспорт истории (/export)</h1>
 
-<div class="hc-doc"><h2 id="export">📜 <code>/export</code></h2>
+<div class="hc-doc"><span id="eksport-istorii"></span><h2 id="export">📜 <code>/export</code></h2>
 <p>Экспортирует текущую историю в Markdown-файл.</p>
 <p>Используйте внутри Темы:</p>
 <p><code>/export</code></p>
@@ -179,19 +180,7 @@
 <li>ответы модели;</li>
 <li>OOC-сообщения с соответствующей пометкой.</li>
 </ul>
-<p>Экспорт предназначен для удобного сохранения сюжета, а не для полного технического резервного копирования памяти и настроек.</p>
-<hr />
-<h2 id="eksport-istorii">Экспорт истории</h2>
-<p>Чтобы сохранить текст конкретной истории, используйте внутри её Темы <code>/export</code>.</p>
-<p>Limerence создаст Markdown-файл <code>.md</code>.</p>
-<p>В него входит читаемый текст истории:</p>
-<ul>
-<li>сообщения пользователя;</li>
-<li>ответы бота;</li>
-<li>OOC-сообщения с соответствующей пометкой.</li>
-</ul>
-<p>Это экспорт именно <strong>сюжета</strong>, а не полный дамп всех внутренних данных Limerence.</p>
-<p>Например, туда не включается техническая структура памяти, внутренние служебные поля или настройки API.</p></div>
+<p>Экспорт предназначен для удобного сохранения сюжета. Это экспорт именно <strong>сюжета</strong>, а не полный дамп внутренних данных Limerence: техническая структура памяти, служебные поля и настройки API в файл не попадают.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="ooc.html">Разговор вне роли (OOC)</a></li><li><a href="scena.html">Сцена (/scene)</a></li><li><a href="izobrazheniya-v-scene.html">Изображения в сцене</a></li><li><a href="den-i-data.html">Игровой день и дата (/day)</a></li><li><a href="personazh-pishet-pervym.html">Персонаж пишет первым</a></li></ul></div>
 <div class="hc-pn"><a href="personazh-pishet-pervym.html"><small>← Назад</small>Персонаж пишет первым</a><a class="n" href="kak-ustroena-pamyat.html"><small>Дальше →</small>Как устроена память</a></div>
@@ -212,7 +201,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

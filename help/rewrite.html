@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-igra.html">🎭 Игра</a> › Управление ходом</p>
 <div data-pagefind-body data-pagefind-meta="section:Игра">
 <h1 data-pagefind-meta="title">Переписать сообщение (/rewrite)</h1>
-<details class="hc-toc"><summary>На этой странице · 6</summary><ol><li><a href="#perepisat-staroe-soobschenie-i-prodolzhit-istoriyu-zanovo">Переписать старое сообщение и продолжить историю заново</a></li><li><a href="#chto-proishodit-s-soobscheniyami-posle-rewrite">Что происходит с сообщениями после Rewrite</a></li><li><a href="#undo-ili-rewrite-chto-vybrat">Undo или Rewrite — что выбрать</a></li><li><a href="#rewrite">♻️ /rewrite</a></li><li><a href="#mozhno-prosto-otredaktirovat-svoe-soobschenie-telegram">Можно просто отредактировать своё сообщение Telegram</a></li><li><a href="#rewrite-mozhet-izmenit-bolshoy-kusok-istorii">Rewrite может изменить большой кусок истории</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#perepisat-staroe-soobschenie-i-prodolzhit-istoriyu-zanovo">Переписать старое сообщение и продолжить историю заново</a></li><li><a href="#chto-proishodit-s-soobscheniyami-posle-rewrite">Что происходит с сообщениями после Rewrite</a></li><li><a href="#undo-ili-rewrite-chto-vybrat">Undo или Rewrite — что выбрать</a></li></ol></details>
 <div class="hc-doc"><h2 id="perepisat-staroe-soobschenie-i-prodolzhit-istoriyu-zanovo">Переписать старое сообщение и продолжить историю заново</h2>
 <p>Undo удобен, когда ошибка находится недалеко от текущего момента.</p>
 <p>Но представим другую ситуацию.</p>
@@ -180,13 +181,13 @@
 <p>Она отступила от двери и отказалась её открывать.</p>
 </blockquote>
 <p>Можно изменить именно тот старый ход и перестроить дальнейшую историю после него.</p>
-<h3 id="sposob-1-otredaktirovat-svoe-soobschenie-v-telegram">Способ 1. Отредактировать своё сообщение в Telegram</h3>
+<span id="mozhno-prosto-otredaktirovat-svoe-soobschenie-telegram"></span><h3 id="sposob-1-otredaktirovat-svoe-soobschenie-v-telegram">Способ 1. Отредактировать своё сообщение в Telegram</h3>
 <p>Если Telegram всё ещё позволяет редактировать нужное сообщение, просто измените его обычным способом.</p>
 <p>Limerence увидит изменение.</p>
 <p>Всё, что происходило в истории после изменённого сообщения, больше не соответствует новой версии событий, поэтому последующая часть истории будет отброшена.</p>
 <p>После этого Limerence продолжит сюжет уже от исправленного сообщения.</p>
-<h3 id="sposob-2-ispolzovat-rewrite">Способ 2. Использовать <code>/rewrite</code></h3>
-<p>Если старое сообщение уже нельзя отредактировать средствами Telegram, ответьте на него через Reply и напишите <code>/rewrite новый текст сообщения</code>.</p>
+<span id="rewrite"></span><h3 id="sposob-2-ispolzovat-rewrite">Способ 2. Использовать <code>/rewrite</code></h3>
+<p>Если старое сообщение уже нельзя отредактировать средствами Telegram, сделайте Reply на него и напишите <code>/rewrite новый текст сообщения</code>.</p>
 <p>Например, сделайте Reply на:</p>
 <blockquote>
 <p>Она согласилась открыть дверь.</p>
@@ -195,9 +196,9 @@
 <blockquote>
 <p>/rewrite Она отступила от двери и отказалась её открывать.</p>
 </blockquote>
-<p>Переписывать таким способом можно только свои сообщения.</p>
+<p>Переписывать таким способом можно только свои сообщения. Limerence заменит старый ход и пересоберёт историю после него.</p>
 <hr />
-<h2 id="chto-proishodit-s-soobscheniyami-posle-rewrite">Что происходит с сообщениями после Rewrite</h2>
+<span id="rewrite-mozhet-izmenit-bolshoy-kusok-istorii"></span><h2 id="chto-proishodit-s-soobscheniyami-posle-rewrite">Что происходит с сообщениями после Rewrite</h2>
 <p>Rewrite меняет не только одно предложение.</p>
 <p>Представьте историю как цепочку:</p>
 <blockquote>
@@ -211,39 +212,15 @@
 <li>откатывает связанное состояние;</li>
 <li>продолжает историю уже от новой версии.</li>
 </ol>
-<p>Если правка затрагивает большую часть последующей переписки, Limerence сначала попросит подтверждение.</p>
-<p>Ничего не удаляется, пока вы его не подтвердите.</p>
+<p>Если правка затрагивает много последующих сообщений, Limerence сначала попросит подтверждение — ничего не удаляется, пока вы его не дадите. Rewrite откатывает и связанные слои памяти и сцены. Заменённое попадает в <a href="korzina.html">корзину</a>.</p>
 <hr />
 <h2 id="undo-ili-rewrite-chto-vybrat">Undo или Rewrite — что выбрать</h2>
 <p>Используйте <strong>Undo</strong>, если хотите просто вернуться на несколько последних ходов назад. Например: «Последние два ответа мне вообще не нравятся, хочу вернуться назад» → <code>/undo 2</code>.</p>
 <p>Используйте <strong>Rewrite</strong>, если знаете конкретное старое сообщение, которое хотите изменить. Например: «Проблема началась двадцать сообщений назад, когда я выбрал неправильное действие» → Reply на это сообщение и <code>/rewrite …</code>.</p>
 <p>Так не приходится вручную считать и удалять десятки последних ходов.</p>
-<hr />
-<h2 id="rewrite">♻️ <code>/rewrite</code></h2>
-<p>Позволяет переписать старое <strong>своё</strong> сообщение и пересобрать всё продолжение после него.</p>
-<p>Использование:</p>
-<ol>
-<li>сделайте Reply на своё старое сообщение;</li>
-<li>отправьте:</li>
-</ol>
-<p><code>/rewrite новый текст сообщения</code></p>
-<p>Например:</p>
-<p><code>/rewrite Я не открываю дверь. Вместо этого отступаю к окну.</code></p>
-<p>Limerence заменит старый ход и пересоберёт историю после него.</p>
-<hr />
-<h2 id="mozhno-prosto-otredaktirovat-svoe-soobschenie-telegram">Можно просто отредактировать своё сообщение Telegram</h2>
-<p>Если Telegram ещё позволяет изменить старое сообщение, обычное редактирование тоже может запустить Rewrite.</p>
-<p>Команда <code>/rewrite</code> особенно полезна, когда Telegram уже не даёт нормально изменить старое сообщение.</p>
-<hr />
-<h2 id="rewrite-mozhet-izmenit-bolshoy-kusok-istorii">Rewrite может изменить большой кусок истории</h2>
-<p>Если после переписываемого сообщения уже произошло много событий, они зависят от старой версии хода.</p>
-<p>Поэтому Limerence может попросить подтверждение перед большим каскадным изменением.</p>
-<p>Rewrite также откатывает связанные слои памяти и сцены.</p>
-<p>Подробнее:</p>
-<p><a href="upravlenie-istoriey.html">Управление историей</a></p>
-<hr /></div>
+<p>Подробнее — <a href="upravlenie-istoriey.html">Управление историей: что выбрать</a>.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="eshche-variant.html">Ещё вариант ответа</a></li><li><a href="undo.html">Отменить ход (/undo)</a></li><li><a href="fork.html">Ветка сюжета (/fork)</a></li><li><a href="clear.html">Начать сюжет заново (/clear)</a></li><li><a href="korzina.html">Корзина и восстановление (/restore, /trash)</a></li><li><a href="stop.html">Остановить ответ (/stop)</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="korzina.html">Корзина и восстановление (/restore, /trash)</a></li><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="eshche-variant.html">Ещё вариант ответа</a></li><li><a href="undo.html">Отменить ход (/undo)</a></li><li><a href="fork.html">Ветка сюжета (/fork)</a></li><li><a href="clear.html">Начать сюжет заново (/clear)</a></li><li><a href="stop.html">Остановить ответ (/stop)</a></li></ul></div>
 <div class="hc-pn"><a href="undo.html"><small>← Назад</small>Отменить ход (/undo)</a><a class="n" href="fork.html"><small>Дальше →</small>Ветка сюжета (/fork)</a></div>
 </main>
 </div>
@@ -262,7 +239,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

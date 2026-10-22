@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html" class="cur" aria-current="page">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nachalo.html">🚀 Начало</a></p>
 <div data-pagefind-body data-pagefind-meta="section:Начало">
 <h1 data-pagefind-meta="title">Где вызывать команды: личка, группа, Тема</h1>
-<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#chto-takoe-glavnyy-chat-gruppy">Что такое главный чат группы</a></li><li><a href="#glavnoe-pravilo">Главное правило</a></li><li><a href="#menu-zavisit-ot-togo-gde-ego-vyzvat">/menu зависит от того, где его вызвать</a></li><li><a href="#ne-vse-komandy-vidny-v-menyu-telegram">Не все команды видны в меню Telegram</a></li><li><a href="#menu">🧭 /menu</a></li><li><a href="#komandy-i-obychnyy-tekst-eto-raznye-veschi">Команды и обычный текст — это разные вещи</a></li><li><a href="#chto-proishodit-esli-otpravit-komandu-ne-tuda">Что происходит, если отправить команду не туда</a></li><li><a href="#pochemu-limerence-inogda-perevodit-deystvie-v-lichku">Почему Limerence иногда переводит действие в личку</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 7</summary><ol><li><a href="#chto-takoe-glavnyy-chat-gruppy">Что такое главный чат группы</a></li><li><a href="#glavnoe-pravilo">Главное правило</a></li><li><a href="#menu-zavisit-ot-togo-gde-ego-vyzvat">/menu зависит от того, где его вызвать</a></li><li><a href="#ne-vse-komandy-vidny-v-menyu-telegram">Не все команды видны в меню Telegram</a></li><li><a href="#komandy-i-obychnyy-tekst-eto-raznye-veschi">Команды и обычный текст — это разные вещи</a></li><li><a href="#chto-proishodit-esli-otpravit-komandu-ne-tuda">Что происходит, если отправить команду не туда</a></li><li><a href="#pochemu-limerence-inogda-perevodit-deystvie-v-lichku">Почему Limerence иногда переводит действие в личку</a></li></ol></details>
 <div class="hc-doc"><h2 id="chto-takoe-glavnyy-chat-gruppy">Что такое главный чат группы</h2>
 <p>В Telegram-группе с Topics кроме отдельных Тем есть общий поток.</p>
 <p>Он <strong>не является обычной игровой Темой Limerence</strong>.</p>
@@ -201,28 +202,21 @@
 <p><code>/preset</code></p>
 <p>и другим настройкам истории.</p>
 <hr />
-<h2 id="menu-zavisit-ot-togo-gde-ego-vyzvat"><code>/menu</code> зависит от того, где его вызвать</h2>
+<span id="menu"></span><h2 id="menu-zavisit-ot-togo-gde-ego-vyzvat"><code>/menu</code> зависит от того, где его вызвать</h2>
 <p>Это одна из самых полезных команд для понимания структуры Limerence.</p>
 <h3 id="menu-vnutri-temy"><code>/menu</code> внутри Темы</h3>
-<p>Открывает меню <strong>этой истории</strong>.</p>
-<p>Там находятся быстрые переходы к:</p>
+<p>Открывает меню <strong>этой истории</strong>. В нём кнопки:</p>
 <ul>
-<li>настройкам;</li>
-<li>статистике;</li>
-<li>игровым действиям;</li>
-<li>памяти;</li>
-<li>другим возможностям сюжета.</li>
+<li>«⚙️ Настройки»;</li>
+<li>«📚 Лор истории»;</li>
+<li>«🃏 Карточка героя»;</li>
+<li>«📊 Статистика темы» (расход за сегодня, хранилище);</li>
+<li>«⚡ Быстрые действия» (отмена последнего обмена, экспорт истории).</li>
 </ul>
 <h3 id="menu-v-lichnom-chate-s-botom"><code>/menu</code> в личном чате с ботом</h3>
-<p>Открывает меню <strong>аккаунта</strong>.</p>
-<p>То есть уже не конкретного сюжета, а вещей вроде:</p>
-<ul>
-<li>тарифа;</li>
-<li>документов;</li>
-<li>помощи.</li>
-</ul>
+<p>Открывает меню <strong>аккаунта</strong>: кнопки «💎 Тариф» и «📄 Документы · 🛟 Помощь». Игровых настроек в личке нет — они живут в Темах.</p>
 <h3 id="menu-v-gruppe-vne-temy"><code>/menu</code> в группе вне Темы</h3>
-<p>Не может открыть меню конкретной истории, потому что история не выбрана.</p>
+<p>Бот отвечает, что <code>/menu</code> работает в Теме (меню сюжета) или в личке (меню аккаунта): без выбранной истории открывать нечего.</p>
 <hr />
 <h2 id="ne-vse-komandy-vidny-v-menyu-telegram">Не все команды видны в меню Telegram</h2>
 <p>Telegram показывает небольшой список slash-команд после ввода:</p>
@@ -250,19 +244,7 @@
 <p><code>/lore</code></p>
 <p>и другие.</p>
 <p>Поэтому отсутствие команды в выпадающей подсказке Telegram не означает, что её не существует.</p>
-<p>Эта статья как раз служит полной картой основных пользовательских команд.</p>
-<hr />
-<h2 id="menu">🧭 <code>/menu</code></h2>
-<p>Открывает главное меню.</p>
-<p>В Теме:</p>
-<blockquote>
-<p>меню текущей истории.</p>
-</blockquote>
-<p>В личке:</p>
-<blockquote>
-<p>меню аккаунта.</p>
-</blockquote>
-<p>Если не знаете, где искать функцию — <code>/menu</code> обычно хороший первый шаг.</p>
+<p>Полный список команд с описаниями — на странице <a href="komandy.html">«Все команды»</a>.</p>
 <hr />
 <h2 id="komandy-i-obychnyy-tekst-eto-raznye-veschi">Команды и обычный текст — это разные вещи</h2>
 <p>Сообщение:</p>
@@ -297,7 +279,7 @@
 <p>Это не создание второй истории и не потеря текущей Темы.</p>
 <hr /></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="vybor-modeli.html">Выбрать модель (/current)</a></li><li><a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="komandy.html">Все команды</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a></li><li><a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a></li></ul></div>
 <div class="hc-pn"><a href="gruppa-i-temy.html"><small>← Назад</small>Группа и Темы</a><a class="n" href="api-klyuch.html"><small>Дальше →</small>Подключить свой API-ключ (/api)</a></div>
 </main>
 </div>
@@ -316,7 +298,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

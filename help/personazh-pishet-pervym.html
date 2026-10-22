@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Персонаж пишет первым · Справочник Limerence</title>
-<meta name="description" content="Разрешает функции инициативных сообщений персонажа работать в этой Теме.">
+<meta name="description" content="Если вы надолго замолчали в истории, персонаж может сам написать в ту же Тему короткое сообщение — в своём характере, без ожидания вашего хода.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/personazh-pishet-pervym.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -169,11 +170,24 @@
 <h1 data-pagefind-meta="title">Персонаж пишет первым</h1>
 
 <div class="hc-doc"><h2 id="personazh-pishet-pervym">👋 Персонаж пишет первым</h2>
-<p>Разрешает функции инициативных сообщений персонажа работать в этой Теме.</p>
-<p>Если выключить, персонаж сам первым писать сюда не будет.</p>
-<p>Это настройка конкретной истории.</p>
-<p>Сам факт включения не означает, что персонаж обязан немедленно постучаться вам в три часа ночи. Для инициативного сообщения должны выполниться условия соответствующей функции.</p>
-<hr /></div>
+<p>Если вы надолго замолчали в истории, персонаж может сам написать в ту же Тему короткое сообщение — в своём характере, без ожидания вашего хода.</p>
+<h3 id="gde-vklyuchaetsya">Где включается</h3>
+<p><code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🗂 Тема»</strong> → <strong>«👋 Персонаж пишет первым: вкл / выкл»</strong>. Настройка действует на одну историю. Пока функция для вашего аккаунта не открыта, на кнопке написано «скоро».</p>
+<h3 id="kogda-personazh-pishet">Когда персонаж пишет</h3>
+<p>Сообщения приходят по лесенке молчания игрока:</p>
+<ol>
+<li>примерно через <strong>2 дня</strong> тишины;</li>
+<li>затем через <strong>7 дней</strong>;</li>
+<li>затем через <strong>21 день</strong>.</li>
+</ol>
+<p>После третьего сообщения без вашего ответа персонаж замолкает в этой Теме насовсем — пока вы сами не напишете в ней. Любой ваш ход сбрасывает лесенку.</p>
+<p>Сообщения отправляются в дневное время (примерно с 11:00 до 22:00 по Москве). Ограничения: не больше одного такого сообщения за раз и не чаще одного раза в 48 часов на весь аккаунт — даже если у вас много историй. Включённая функция не значит, что персонаж обязательно напишет «в три часа ночи»: он пишет только когда выполнены эти условия.</p>
+<h3 id="chto-nuzhno-znat">Что нужно знать</h3>
+<ul>
+<li>Такое сообщение не тратит ход вашего тарифа.</li>
+<li>Под ним есть кнопка <strong>«🗑 Убрать»</strong>; если не нажимать — сообщение просто остаётся частью истории.</li>
+<li>Если выключить функцию, персонаж первым в эту Тему писать не будет.</li>
+</ul></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="ooc.html">Разговор вне роли (OOC)</a></li><li><a href="scena.html">Сцена (/scene)</a></li><li><a href="izobrazheniya-v-scene.html">Изображения в сцене</a></li><li><a href="den-i-data.html">Игровой день и дата (/day)</a></li><li><a href="eksport.html">Экспорт истории (/export)</a></li></ul></div>
 <div class="hc-pn"><a href="den-i-data.html"><small>← Назад</small>Игровой день и дата (/day)</a><a class="n" href="eksport.html"><small>Дальше →</small>Экспорт истории (/export)</a></div>
@@ -194,7 +208,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

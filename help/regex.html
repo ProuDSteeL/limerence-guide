@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Regex-скрипты (/regex) · Справочник Limerence</title>
-<meta name="description" content="Вот это уже полноценный продвинутый инструмент.">
+<meta name="description" content="Regex-скрипт — правило «найти определённый текст → заменить его».">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/regex.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -169,7 +170,6 @@
 <h1 data-pagefind-meta="title">Regex-скрипты (/regex)</h1>
 
 <div class="hc-doc"><h2 id="regex-skripty">🔤 Regex-скрипты</h2>
-<p>Вот это уже полноценный продвинутый инструмент.</p>
 <p>Regex-скрипт — правило «найти определённый текст → заменить его».</p>
 <p>Причём такие правила могут работать:</p>
 <ul>
@@ -199,9 +199,10 @@
 <p>Поэтому Limerence не должен бездумно включать все потенциально изменяющие промпт скрипты из незнакомой карточки.</p>
 <p>Такие скрипты импортируются в безопасном состоянии и при необходимости включаются пользователем вручную.</p>
 <p>Перед включением непонятного regex полезно посмотреть, что он ищет, чем заменяет и где применяется.</p>
-<h3 id="upravlenie-regex">Управление Regex</h3>
-<p>Открыть можно через <code>/settings</code> → <strong>«Расширенные»</strong> → <strong>«Вид»</strong> → <strong>«🔤 Regex-скрипты»</strong> или командой <code>/regex</code>.</p>
+<span id="regex"></span><h3 id="upravlenie-regex">Управление Regex</h3>
+<p>Открыть можно через <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🖼 Вид»</strong> → <strong>«🔤 Regex-скрипты»</strong> или командой <code>/regex</code>.</p>
 <p>Можно включать и выключать скрипты, менять Find-паттерн и замену, удалять, экспортировать, импортировать JSON и создавать собственные.</p>
+<p>Самый простой способ завести своё правило — кнопка <strong>«✨ Описать словами»</strong>. Напишите обычными словами, что нужно сделать с текстом: «убери звёздочки вокруг действий», «вместо Ли пиши Лиам», «убирай фразы в скобках с мыслями модели». Бот сам составит правило и покажет, как оно сработает на последних сообщениях этой Темы: что было и что станет. Дальше три кнопки: <strong>«✅ Сохранить»</strong>, <strong>«✏️ Поправить»</strong> (уточнить словами, и бот составит правило заново) и <strong>«Отмена»</strong>. Если в последних сообщениях такого текста нет, бот скажет об этом и спросит, всё равно ли сохранять. Не получилось с двух попыток — бот честно скажет об этом, и можно описать иначе. Количество попыток в час ограничено; остальные способы (мастер, JSON-файл) работают без этого ограничения.</p>
 <h3 id="osnovy-find-patterna">Основы Find-паттерна</h3>
 <p>Поддерживается привычная regex-запись, например <code>/text/gi</code>.</p>
 <p>Основные флаги:</p>
@@ -211,7 +212,7 @@
 <li><code>m</code> — многострочный режим;</li>
 <li><code>s</code> — точка может захватывать перевод строки.</li>
 </ul>
-<p>Если вы никогда не пользовались регулярными выражениями, ничего страшного: эта функция действительно относится к категории «не трогай, пока не понадобилось».</p>
+<p>Если вы никогда не пользовались регулярными выражениями, ничего страшного: проще всего описать правило словами кнопкой «✨ Описать словами», бот составит паттерн сам.</p>
 <h3 id="zamena-v-regex">Замена в Regex</h3>
 <p>Можно использовать группы <code>$1</code>, <code>$2</code> и так далее.</p>
 <p>Есть специальные значения:</p>
@@ -225,12 +226,8 @@
 <p>Плохой паттерн может менять не тот текст, портить форматирование, вмешиваться в промпт и создавать странные ответы.</p>
 <p>Если после включения нового скрипта модель внезапно начала вести себя иначе — regex вполне заслуживает места среди первых подозреваемых.</p>
 <hr />
-<h1 id="tema">🗂 Тема</h1>
-<p>Путь: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🗂 Тема»</strong>.</p>
-<p>Здесь находятся настройки самой истории, а не модели.</p>
-<hr />
-<h2 id="regex-skripty-2">🔤 Regex-скрипты</h2>
-<p>А вот Regex в Кабинете уже можно управлять значительно подробнее.</p>
+<h2 id="regex-skripty-2">В Кабинете</h2>
+<p>В Кабинете Regex можно настраивать подробнее.</p>
 <p>В истории отображается список всех её Regex-скриптов.</p>
 <p>Рядом с импортированными может быть показан источник: карточка, файл, пресет.</p>
 <p>Каждый скрипт можно быстро включить или выключить.</p>
@@ -252,19 +249,7 @@
 <h3 id="udalenie-regex">Удаление Regex</h3>
 <p>В редакторе есть «🗑 Удалить скрипт».</p>
 <p>Перед удалением Кабинет попросит подтверждение. Удаление необратимо.</p>
-<p>Если вы просто хотите временно проверить историю без конкретного Regex, обычно безопаснее сначала выключить его переключателем.</p>
-<h2 id="regex">🔤 <code>/regex</code></h2>
-<p>Открывает Regex-скрипты текущей истории.</p>
-<p>Regex может автоматически преобразовывать:</p>
-<ul>
-<li>текст игрока;</li>
-<li>ответ модели;</li>
-<li>текст до отправки модели;</li>
-<li>отображаемый пользователю результат.</li>
-</ul>
-<p>Некоторые Regex приходят вместе с Character Cards или пресетами.</p>
-<p>Используйте осторожно: Regex обладает удивительной способностью за три символа сделать с текстом то, ради чего обычному багу понадобилась бы неделя разработки.</p>
-<hr /></div>
+<p>Если вы просто хотите временно проверить историю без конкретного Regex, обычно безопаснее сначала выключить его переключателем.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="shapka-sceny.html">Шапка сцены</a></li><li><a href="stat-panel.html">Стат-панель</a></li><li><a href="striming-oformlenie.html">Стриминг и оформление ответа</a></li><li><a href="imya-i-moi-temy.html">Имя Темы и «Мои темы»</a></li><li><a href="uvedomleniya-o-sboyah.html">Уведомления о сбоях</a></li></ul></div>
 <div class="hc-pn"><a href="striming-oformlenie.html"><small>← Назад</small>Стриминг и оформление ответа</a><a class="n" href="imya-i-moi-temy.html"><small>Дальше →</small>Имя Темы и «Мои темы»</a></div>
@@ -285,7 +270,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Хороший lorebook: структура · Справочник Limerence</title>
-<meta name="description" content="Это продолжение статьи «Лор: как настроить канон мира и персонажей» . В первой части речь шла о карточках лора , ключах, значимости и о том, как Limerence…">
+<meta name="description" content="Это продолжение страницы Лор: что это и когда он лучше промпта (/lore) , где речь шла о записях лора, ключах, значимости и о том, как Limerence выбирает записи…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/lor-struktura.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -168,7 +169,7 @@
 <div data-pagefind-body data-pagefind-meta="section:Память и лор">
 <h1 data-pagefind-meta="title">Хороший lorebook: структура</h1>
 <details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#horoshaya-struktura-lorebook-personazha">Хорошая структура lorebook персонажа</a></li><li><a href="#ne-dubliruyte-ves-prompt-v-lore">Не дублируйте весь промпт в лоре</a></li><li><a href="#ne-sozdavayte-protivorechaschiy-kanon">Не создавайте противоречащий канон</a></li><li><a href="#horoshiy-lorebook-eto-ne-sklad-a-sistema">Хороший lorebook — это не склад, а система</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
-<div class="hc-doc"><p>Это продолжение статьи <strong>«Лор: как настроить канон мира и персонажей»</strong>. В первой части речь шла о карточках <a href="lor.html">лора</a>, ключах, значимости и о том, как Limerence выбирает записи для конкретной сцены. Здесь — о больших документах, готовых книгах из других сервисов и библиотеке лора.</p>
+<div class="hc-doc"><p>Это продолжение страницы <a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a>, где речь шла о записях лора, ключах, значимости и о том, как Limerence выбирает записи для конкретной сцены. Здесь — о больших документах, готовых книгах из других сервисов и библиотеке лора.</p>
 <hr />
 <h2 id="horoshaya-struktura-lorebook-personazha">Хорошая структура lorebook персонажа</h2>
 <p>Если хочется добиться эффекта сложной Tavern-карточки, не обязательно делать одну запись «Биография персонажа».</p>
@@ -189,7 +190,7 @@
 <hr />
 <h2 id="ne-dubliruyte-ves-prompt-v-lore">Не дублируйте весь промпт в лоре</h2>
 <p>Комбинировать <a href="prompt.html">промпт</a> и lorebook — нормально. Дублировать двадцать одинаковых правил в обоих местах — уже не очень.</p>
-<p>Если в промпте написано «Адриан никогда не говорит о своих чувствах прямо», а в пяти карточках lorebook написано то же самое другими словами, вы просто создаёте лишний шум.</p>
+<p>Если в промпте написано «Адриан никогда не говорит о своих чувствах прямо», а в пяти записях lorebook написано то же самое другими словами, вы просто создаёте лишний шум.</p>
 <p>Лучше разделить функции. Например:</p>
 <ul>
 <li><strong>Промпт</strong> — общий характер Адриана и стиль его отыгрыша.</li>
@@ -200,7 +201,7 @@
 <hr />
 <h2 id="ne-sozdavayte-protivorechaschiy-kanon">Не создавайте противоречащий канон</h2>
 <p>Гораздо опаснее размера лора — его противоречивость.</p>
-<p>Например, промпт: «Адриану 230 лет». Карточка: «Адриану 180 лет». World Book: «Адриан родился в 1742 году».</p>
+<p>Например, промпт: «Адриану 230 лет». Запись: «Адриану 180 лет». World Book: «Адриан родился в 1742 году».</p>
 <p>Теперь модели предлагается провести историко-математическое расследование прямо посреди эротической сцены. Она обязательно оценит.</p>
 <p>Следите, чтобы один факт не существовал в нескольких несовместимых версиях.</p>
 <hr />
@@ -221,14 +222,14 @@
 <hr />
 <h2 id="chitayte-takzhe">Читайте также</h2>
 <ul>
-<li><a href="lor.html">Лор: как настроить канон мира и персонажей</a></li>
-<li><a href="kartochka-personazha.html">Персонажи и карточки</a></li>
-<li><a href="presety.html">Пресеты: как они работают и как их использовать</a></li>
-<li><a href="kak-ustroena-pamyat.html">Память Limerence</a></li>
-<li><a href="kabinet.html">Кабинет Limerence: обзор, истории и настройки</a></li>
+<li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li>
+<li><a href="kartochka-personazha.html">Карточка героя: что это</a></li>
+<li><a href="presety.html">Пресеты: что это (/preset)</a></li>
+<li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li>
+<li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li>
 </ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="kartochka-personazha.html">Карточка персонажа: что это</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="kartochka-personazha.html">Карточка героя: что это</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li></ul></div>
 <div class="hc-pn"><a href="lor-ne-srabotal.html"><small>← Назад</small>Почему запись лора не сработала</a><a class="n" href="lor-fayly.html"><small>Дальше →</small>Лор-файлы и большие .txt/.md</a></div>
 </main>
 </div>
@@ -247,7 +248,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

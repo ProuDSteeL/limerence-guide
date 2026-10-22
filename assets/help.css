@@ -46,6 +46,7 @@ body.hc{line-height:1.6}
 .hc-doc{overflow-wrap:anywhere}
 .hc-doc h2{font-size:20px;margin:1.6em 0 .4em;padding:0;border:0;scroll-margin-top:72px}
 .hc-doc h3{font-size:17px;margin:1.3em 0 .3em;scroll-margin-top:72px}
+.hc-doc span[id]:empty{scroll-margin-top:72px}
 .hc-doc :is(h2,h3) .pl{opacity:0;margin-left:6px;text-decoration:none;color:var(--tx3);font-weight:400}
 .hc-doc :is(h2,h3):hover .pl,.hc-doc :is(h2,h3) .pl:focus-visible{opacity:1}
 .hc-doc p,.hc-doc li{color:var(--tx)}
@@ -53,6 +54,7 @@ body.hc{line-height:1.6}
 .hc-doc pre code{border:0;padding:0;background:none}
 .hc-doc blockquote{margin:1em 0;padding:2px 16px;border-left:3px solid var(--line2);color:var(--tx2)}
 .hc-doc .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1em 0}
+.hc-doc .tbl :is(th,td):first-child{white-space:nowrap}
 .hc-doc :is(h2,h3).hit{animation:hc-fl 1.6s}
 @keyframes hc-fl{0%{background:var(--mark)}100%{background:transparent}}
 .hc-see{margin-top:40px;border-top:1px solid var(--line);padding-top:10px}

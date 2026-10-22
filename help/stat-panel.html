@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -175,7 +176,8 @@
 Алиса: ❤️ 73/100 · gold 120 · настроение тревожное</p>
 </blockquote>
 <p>По умолчанию предлагаются <code>hp</code>, <code>gold</code> и <code>настроение</code>.</p>
-<p>Но список можно заменить своим. Поддерживается до 12 названий. Например: «доверие, стресс, репутация, энергия».</p>
+<p>Список можно заменить своим: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🖼 Вид»</strong> → <strong>«📋 Статы…»</strong>, затем пришлите названия через запятую. Например: «доверие, стресс, репутация, энергия».</p>
+<p>Правила для названий: до 12 штук; только буквы (латиница и кириллица), цифры и подчёркивание; регистр не важен — всё приводится к нижнему; повторы отбрасываются. Чтобы вернуть список по умолчанию, пришлите <code>-</code> или <code>none</code>. Включить и выключить саму панель можно там же, в «🖼 Вид».</p>
 <h3 id="stat-panel-ne-prevraschaet-limerence-v-zhestkuyu-rpg-sistemu">Стат-панель не превращает Limerence в жёсткую RPG-систему</h3>
 <p>Сами названия статов не создают сложную математическую механику.</p>
 <p>Это инструмент отслеживания состояния. Модель и система сцены используют накопленные значения, а панель показывает их пользователю.</p>
@@ -184,17 +186,8 @@
 <p>Панель добавляется при отображении ответа отдельно.</p>
 <p>Это сделано, чтобы служебные строки не засоряли художественную историю и память как обычная проза персонажа.</p>
 <hr />
-<h2 id="stat-panel-2">📊 Стат-панель</h2>
-<p>В Кабинете можно включить дополнительную панель отслеживаемых параметров.</p>
-<p>Например: «настроение», «доверие», «hp», «gold».</p>
-<p>Можно:</p>
-<ul>
-<li>включить или выключить панель;</li>
-<li>самостоятельно задать названия показателей.</li>
-</ul>
-<p>Названия вводятся через запятую.</p>
-<p>Limerence поддерживает до 12 показателей одновременно. В названиях допустимы только буквы, цифры и подчёркивание, и они приводятся к нижнему регистру.</p>
-<p>Стат-панель не создаёт автоматически сложную RPG-математику. Она предназначена для отображения и отслеживания состояния.</p></div>
+<h2 id="stat-panel-2">В Кабинете</h2>
+<p>В Кабинете панель включается и выключается переключателем, а названия показателей вводятся через запятую по тем же правилам, что и в боте (до 12, буквы/цифры/подчёркивание).</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="shapka-sceny.html">Шапка сцены</a></li><li><a href="striming-oformlenie.html">Стриминг и оформление ответа</a></li><li><a href="regex.html">Regex-скрипты (/regex)</a></li><li><a href="imya-i-moi-temy.html">Имя Темы и «Мои темы»</a></li><li><a href="uvedomleniya-o-sboyah.html">Уведомления о сбоях</a></li></ul></div>
 <div class="hc-pn"><a href="shapka-sceny.html"><small>← Назад</small>Шапка сцены</a><a class="n" href="striming-oformlenie.html"><small>Дальше →</small>Стриминг и оформление ответа</a></div>
@@ -215,7 +208,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

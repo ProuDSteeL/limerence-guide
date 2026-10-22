@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -170,7 +171,7 @@
 
 <div class="hc-doc"><h2 id="lor-fayly-rabotayut-esche-inache">Лор-файлы работают ещё иначе</h2>
 <p>Теперь самое важное различие.</p>
-<p>Карточки lorebook и большой файл — это не одна и та же система в красивых разных кнопках.</p>
+<p>Записи lorebook и большой файл — это не одна и та же система в красивых разных кнопках.</p>
 <p>Если загрузить <code>.txt</code> или <code>.md</code>, Limerence разбивает большой документ на фрагменты и создаёт по нему поиск.</p>
 <p>Когда модели требуется информация, система ищет части документа, наиболее связанные с текущим запросом.</p>
 <p>Упрощённо:</p>
@@ -214,12 +215,12 @@
 <p>В 812 году началась война. В 817 пал Эллохар. В 821 был подписан мир.</p>
 </blockquote>
 <p>Это уже нормальный лор.</p>
-<p>Но если отдельные события должны активно влиять на конкретные сцены, полезнее разбить особо важные события на самостоятельные карточки — «Падение Эллохара», «Война Трёх Корон», «Рианский договор» — с хорошими ключами.</p>
+<p>Но если отдельные события должны активно влиять на конкретные сцены, полезнее разбить особо важные события на самостоятельные записи — «Падение Эллохара», «Война Трёх Корон», «Рианский договор» — с хорошими ключами.</p>
 <p>Тогда системе гораздо проще принести модели именно нужный кусок исторического контекста.</p>
 <hr />
 <h2 id="bolshie-txt-i-md">Большие <code>.txt</code> и <code>.md</code></h2>
 <p>Для больших документов используйте <code>/lore</code> → <strong>«📚 Загрузить книгу»</strong>.</p>
-<p>Поддерживаются <code>.txt</code>, <code>.md</code> и <code>.markdown</code>. Максимальный размер — 5 МБ.</p>
+<p>Поддерживаются <code>.txt</code>, <code>.md</code> и <code>.markdown</code>. Максимальный размер — 5 МБ. Это лимит для обычных текстовых файлов; World Book из SillyTavern (<code>.json</code>) — отдельный формат с лимитом 2 МБ и 100 записей, см. <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>.</p>
 <p>Для такого лора требуется настроенный поиск по смыслу: <code>/settings</code> → <strong>«🧩 Поиск по смыслу»</strong>.</p>
 <p>Если используется собственный провайдер, он также должен поддерживать эту функцию.</p>
 <h3 id="imya-i-rol-knigi">Имя и роль книги</h3>
@@ -248,7 +249,7 @@
 <p>Например, одна общая энциклопедия мира может обслуживать десять независимых RP. Их сюжетная память при этом остаётся раздельной.</p>
 <hr /></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li><li><a href="lor-sekrety.html">Секреты и границы знаний персонажей</a></li><li><a href="lor-ne-srabotal.html">Почему запись лора не сработала</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li><li><a href="lor-import-world-book.html">Импорт World Book и Character Book</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="lor-import-world-book.html">Импорт World Book и Character Book</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="lor-kartochki-i-klyuchi.html">Записи лора и ключи</a></li><li><a href="lor-znachimost.html">Значимость и «Добавлять всегда»</a></li><li><a href="lor-sekrety.html">Секреты и границы знаний персонажей</a></li><li><a href="lor-ne-srabotal.html">Почему запись лора не сработала</a></li><li><a href="lor-struktura.html">Хороший lorebook: структура</a></li></ul></div>
 <div class="hc-pn"><a href="lor-struktura.html"><small>← Назад</small>Хороший lorebook: структура</a><a class="n" href="lor-import-world-book.html"><small>Дальше →</small>Импорт World Book и Character Book</a></div>
 </main>
 </div>
@@ -267,7 +268,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

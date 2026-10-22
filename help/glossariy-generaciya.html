@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Глоссарий: генерация, история, поддержка · Справочник Limerence</title>
-<meta name="description" content="Вторая часть словаря: настройки генерации, управление историей, поддержка и модерация. Начало — в статье Глоссарий Limerence: основные термины .">
+<meta name="description" content="Вторая часть словаря: настройки генерации, управление историей, поддержка и модерация. Начало — в статье Глоссарий: основные термины .">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/glossariy-generaciya.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -168,7 +169,7 @@
 <div data-pagefind-body data-pagefind-meta="section:Справочник">
 <h1 data-pagefind-meta="title">Глоссарий: генерация, история, поддержка</h1>
 <details class="hc-toc"><summary>На этой странице · 47</summary><ol><li><a href="#preset-preset">Preset / Пресет</a></li><li><a href="#prompt-order">Prompt Order</a></li><li><a href="#takeover">Takeover</a></li><li><a href="#makros">Макрос</a></li><li><a href="#regex-regulyarnoe-vyrazhenie">Regex / Регулярное выражение</a></li><li><a href="#temperature">Temperature</a></li><li><a href="#top-p">Top P</a></li><li><a href="#top-k">Top K</a></li><li><a href="#presence-penalty">Presence Penalty</a></li><li><a href="#frequency-penalty">Frequency Penalty</a></li><li><a href="#sempler-sampler">Сэмплер / Sampler</a></li><li><a href="#prefill-assistant-prefill">Префилл / Assistant Prefill</a></li><li><a href="#kanon">Канон</a></li><li><a href="#kap-kanona">Кап канона</a></li><li><a href="#token">Токен</a></li><li><a href="#kontekstnoe-okno">Контекстное окно</a></li><li><a href="#minimalnaya-dlina-otveta">Минимальная длина ответа</a></li><li><a href="#maksimalnaya-dlina-otveta">Максимальная длина ответа</a></li><li><a href="#ooc-out-of-character">OOC / Out of Character</a></li><li><a href="#popravit-istoriyu">«Поправить историю»</a></li><li><a href="#regenerate-esche-variant">Regenerate / «Ещё вариант»</a></li><li><a href="#variant-otveta">Вариант ответа</a></li><li><a href="#kanonicheskiy-variant">Канонический вариант</a></li><li><a href="#sohranennyy-otvet">Сохранённый ответ</a></li><li><a href="#undo">Undo</a></li><li><a href="#rewrite">Rewrite</a></li><li><a href="#fork">Fork</a></li><li><a href="#clear">Clear</a></li><li><a href="#restore-trash-korzina">Restore / Trash / Корзина</a></li><li><a href="#scene-stsena">Scene / Сцена</a></li><li><a href="#igrovoy-den">Игровой день</a></li><li><a href="#igrovaya-data">Игровая дата</a></li><li><a href="#shapka-stseny">Шапка сцены</a></li><li><a href="#stat-panel">Стат-панель</a></li><li><a href="#vision-zrenie-modeli">Vision / Зрение модели</a></li><li><a href="#kabinet-mini-app">Кабинет / Mini App</a></li><li><a href="#hranilische">Хранилище</a></li><li><a href="#eksport">Экспорт</a></li><li><a href="#bag">Баг</a></li><li><a href="#bag-report-bug-n">Баг-репорт / BUG-N</a></li><li><a href="#support-podderzhka">Support / Поддержка</a></li><li><a href="#moderatsiya-limerence">Модерация Limerence</a></li><li><a href="#preduprezhdenie-strike">Предупреждение / Strike</a></li><li><a href="#appeal-apellyatsiya">Appeal / Апелляция</a></li><li><a href="#chto-chasche-vsego-putayut">Что чаще всего путают</a></li><li><a href="#esli-termin-vse-esche-neponyaten">Если термин всё ещё непонятен</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
-<div class="hc-doc"><p>Вторая часть словаря: настройки генерации, управление историей, поддержка и модерация. Начало — в статье <a href="glossariy.html">Глоссарий Limerence: основные термины</a>.</p>
+<div class="hc-doc"><p>Вторая часть словаря: настройки генерации, управление историей, поддержка и модерация. Начало — в статье <a href="glossariy.html">Глоссарий: основные термины</a>.</p>
 <hr />
 <h2 id="preset-preset">Preset / Пресет</h2>
 <p>Готовая система настроек генерации, часто импортированная из SillyTavern.</p>
@@ -184,7 +185,7 @@
 <li>макросы.</li>
 </ul>
 <p>Поэтому пресет — это гораздо больше, чем просто сохранённая Temperature.</p>
-<p>Подробнее: <a href="presety.html">Пресеты: как они работают и как их использовать</a>.</p>
+<p>Подробнее: <a href="presety.html">Пресеты: что это (/preset)</a>.</p>
 <hr />
 <h2 id="prompt-order">Prompt Order</h2>
 <p>Порядок блоков внутри сложного SillyTavern-пресета.</p>
@@ -222,7 +223,7 @@
 <li>обработать ответ перед показом пользователю.</li>
 </ul>
 <p>Некоторые Regex приходят вместе с карточками или пресетами.</p>
-<p>Подробнее: <a href="generaciya.html">Расширенные настройки истории</a>.</p>
+<p>Подробнее: <a href="generaciya.html">Генерация: обзор</a>.</p>
 <hr />
 <h2 id="temperature">Temperature</h2>
 <p>Параметр генерации, влияющий на степень вариативности выбора модели.</p>
@@ -332,7 +333,7 @@
 <p>У разных моделей контекстное окно отличается.</p>
 <hr />
 <h2 id="minimalnaya-dlina-otveta">Минимальная длина ответа</h2>
-<p>Инструкция Limerence стремиться к определённой степени подробности ответа.</p>
+<p>Инструкция модели стремиться к определённой степени подробности ответа.</p>
 <p>Это не абсолютная гарантия точного количества токенов.</p>
 <hr />
 <h2 id="maksimalnaya-dlina-otveta">Максимальная длина ответа</h2>
@@ -350,10 +351,10 @@
 <h2 id="ooc-out-of-character">OOC / Out of Character</h2>
 <p>Общение с Limerence <strong>вне роли</strong>.</p>
 <p>Например:</p>
-<p><code>(Почему Адриан решил, что дверь открыта?)</code></p>
+<p><code>((Почему Адриан решил, что дверь открыта?))</code></p>
 <p>или кнопкой <strong>⋯ → 💬 OOC</strong> под последним ответом.</p>
-<p>OOC используется для вопросов автору и управления историей без превращения текста в действие персонажа.</p>
-<p>OOC не считается обычным сюжетным ходом.</p>
+<p>OOC используется для вопросов автору и для исправления памяти без превращения текста в действие персонажа.</p>
+<p>OOC не считается обычным сюжетным ходом и не записывается в память сюжета. Одинарные скобки <code>(…)</code> OOC не включают: это обычный ход игры. Подробная таблица — на странице <a href="ooc.html">Разговор вне роли (OOC)</a>.</p>
 <hr />
 <h2 id="popravit-istoriyu">«Поправить историю»</h2>
 <p>OOC-функция для исправления неправильно запомненного факта.</p>
@@ -574,7 +575,7 @@
 <blockquote>
 <p>Limerence заблокировал аккаунт.</p>
 </blockquote>
-<p>Подробнее: <a href="moderaciya.html">Модерация, блокировки и апелляции</a>.</p>
+<p>Подробнее: <a href="moderaciya.html">Как работает модерация</a>.</p>
 <hr />
 <h2 id="preduprezhdenie-strike">Предупреждение / Strike</h2>
 <p>Зафиксированное нарушение правил, которое может участвовать в системе последовательных ограничений.</p>
@@ -616,23 +617,23 @@ Rewrite меняет более старый ход и пересобирает 
 <code>/forget_me</code> относится ко всему аккаунту Limerence.</p>
 <hr />
 <h2 id="esli-termin-vse-esche-neponyaten">Если термин всё ещё непонятен</h2>
-<p>Почти каждый крупный термин из этого словаря подробно разобран в отдельной статье Справочного центра.</p>
+<p>Почти каждый крупный термин из этого словаря подробно разобран на отдельной странице справочника.</p>
 <p>Если вы не знаете, с чего начать, сначала прочитайте:</p>
-<p><a href="pervyy-zapusk.html">Первый запуск Limerence</a></p>
+<p><a href="pervyy-zapusk.html">Первый запуск</a></p>
 <p>и:</p>
-<p><a href="gruppa-i-temy.html">Темы, группы и команды</a></p>
+<p><a href="gruppa-i-temy.html">Группа и Темы</a></p>
 <p>После них большая часть терминологии обычно перестаёт выглядеть как документация к космическому кораблю.</p>
 <hr />
 <h2 id="chitayte-takzhe">Читайте также</h2>
 <ul>
-<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
-<li><a href="komandy.html">Команды Limerence: полный справочник</a></li>
-<li><a href="presety.html">Пресеты: как они работают и как их использовать</a></li>
-<li><a href="generaciya.html">Расширенные настройки истории</a></li>
-<li><a href="moderaciya.html">Модерация, блокировки и апелляции</a></li>
+<li><a href="glossariy.html">Глоссарий: основные термины</a></li>
+<li><a href="komandy.html">Все команды</a></li>
+<li><a href="presety.html">Пресеты: что это (/preset)</a></li>
+<li><a href="generaciya.html">Генерация: обзор</a></li>
+<li><a href="moderaciya.html">Как работает модерация</a></li>
 </ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="moderaciya.html">Как работает модерация</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="komandy.html">Все команды</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="ooc.html">Разговор вне роли (OOC)</a></li><li><a href="moderaciya.html">Как работает модерация</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="komandy.html">Все команды</a></li></ul></div>
 <div class="hc-pn"><a href="glossariy.html"><small>← Назад</small>Глоссарий: основные термины</a></div>
 </main>
 </div>
@@ -651,7 +652,7 @@ Rewrite меняет более старый ход и пересобирает 
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

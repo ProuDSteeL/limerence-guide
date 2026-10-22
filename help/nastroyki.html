@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Настройки истории: обзор (/settings) · Справочник Limerence</title>
-<meta name="description" content="У каждой истории в Limerence есть собственные настройки.">
+<meta name="description" content="У каждой истории в Limerence есть собственные настройки; открываются командой /settings внутри Темы (модель, ключ, память диалога, длина ответа, промпт…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/nastroyki.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,11 +168,11 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Основные</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Настройки истории: обзор (/settings)</h1>
-<details class="hc-toc"><summary>На этой странице · 9</summary><ol><li><a href="#kak-otkryt-nastroyki">Как открыть настройки</a></li><li><a href="#rasshirennye-nastroyki">Расширенные настройки</a></li><li><a href="#chto-nastroit-novichku">Что настроить новичку</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#settings">⚙️ /settings</a></li><li><a href="#samoe-glavnoe-kakuyu-nastroyku-ispolzovat">Самое главное: какую настройку использовать</a></li><li><a href="#chto-menyat-esli-vam-ne-nravitsya-rezultat">Что менять, если вам не нравится результат</a></li><li><a href="#chto-luchshe-ostavit-novichku">Что лучше оставить новичку</a></li><li><a href="#chitayte-takzhe-2">Читайте также</a></li></ol></details>
-<div class="hc-doc"><p>У каждой истории в Limerence есть собственные настройки.</p>
+<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#kak-otkryt-nastroyki">Как открыть настройки</a></li><li><a href="#rasshirennye-nastroyki">Расширенные настройки</a></li><li><a href="#chto-nastroit-novichku">Что настроить новичку</a></li><li><a href="#kakaya-nastroyka-za-chto-otvechaet">Какая настройка за что отвечает</a></li><li><a href="#samoe-glavnoe-kakuyu-nastroyku-ispolzovat">Самое главное: какую настройку использовать</a></li><li><a href="#chto-menyat-esli-vam-ne-nravitsya-rezultat">Что менять, если вам не нравится результат</a></li><li><a href="#chto-luchshe-ostavit-novichku">Что лучше оставить новичку</a></li><li><a href="#chitayte-takzhe-2">Читайте также</a></li></ol></details>
+<div class="hc-doc"><p>У каждой истории в Limerence есть собственные настройки; открываются командой <code>/settings</code> внутри Темы (модель, ключ, память диалога, длина ответа, промпт, заметка автора, расширенные настройки, DeepSeek, вид ответа, сама Тема).</p>
 <p>Здесь можно включить DeepSeek, выбрать модель и <a href="api-klyuch.html">API-ключ</a>, настроить длину ответов, добавить собственный <a href="prompt.html">промпт</a> и Заметку автора.</p>
 <p>Если вы только начинаете, не нужно настраивать всё подряд. Для нормального старта достаточно разобраться с несколькими основными пунктами.</p>
-<h2 id="kak-otkryt-nastroyki">Как открыть настройки</h2>
+<span id="settings"></span><h2 id="kak-otkryt-nastroyki">Как открыть настройки</h2>
 <p>Откройте нужную Тему в своей игровой группе и отправьте <code>/settings</code>.</p>
 <p>Команда работает внутри Темы. Если у вас несколько историй, у каждой из них будут собственные настройки.</p>
 <hr />
@@ -189,7 +190,7 @@
 <p>Их мы разбираем отдельно в более подробных статьях.</p>
 <hr />
 <h2 id="chto-nastroit-novichku">Что настроить новичку</h2>
-<p>Для <a href="pervyy-zapusk.html">первого запуск</a>а достаточно:</p>
+<p>Для <a href="pervyy-zapusk.html">первого запуска</a> достаточно:</p>
 <ol>
 <li>Открыть нужную Тему и отправить <code>/settings</code>.</li>
 <li>Включить DeepSeek, если хотите использовать встроенную модель.</li>
@@ -201,40 +202,11 @@
 <p>После этого можно вернуться в Тему и продолжить историю.</p>
 <p>Все эти настройки относятся к конкретной истории, поэтому разные Темы можно настраивать совершенно по-разному.</p>
 <hr />
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="prompt.html">Промпт для ролевой игры</a></li>
-<li><a href="nastroyki.html">Стиль и поведение истории</a></li>
-<li><a href="generaciya.html">Расширенные настройки: генерация</a></li>
-<li><a href="rezhim-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
-<li><a href="kabinet.html">Кабинет Limerence: обзор, истории и настройки</a></li>
-<li><a href="komandy.html">Команды Limerence: полный справочник</a></li>
-</ul>
-<h2 id="settings">⚙️ <code>/settings</code></h2>
-<p>Открывает настройки текущей истории.</p>
-<p>Здесь можно управлять:</p>
-<ul>
-<li>моделью;</li>
-<li>провайдером истории;</li>
-<li>памятью диалога;</li>
-<li>длиной ответа;</li>
-<li>промптом;</li>
-<li>Заметкой автора;</li>
-<li>расширенными настройками;</li>
-<li>DeepSeek-настройками;</li>
-<li>внешним видом ответа;</li>
-<li>самой Темой.</li>
-</ul>
-<p>Используйте внутри игровой группы.</p>
-<p>Подробнее:</p>
-<p><a href="nastroyki.html">Основные настройки истории</a></p>
-<p>и:</p>
-<p><a href="generaciya.html">Расширенные настройки истории</a></p>
-<hr />
+<h2 id="kakaya-nastroyka-za-chto-otvechaet">Какая настройка за что отвечает</h2>
 <p>В Limerence не обязательно переписывать <a href="prompt.html">промпт</a> каждый раз, когда хочется немного изменить поведение модели.</p>
-<p>Для этого у истории есть несколько отдельных настроек: <a href="nastroyki.html">Заметка автора</a>, длина ответа, <a href="kak-ustroena-pamyat.html">память</a> диалога, температура и другие параметры генерации.</p>
+<p>Для этого у истории есть несколько отдельных настроек: <a href="zametka-avtora.html">Заметка автора</a>, длина ответа, <a href="kak-ustroena-pamyat.html">память</a> диалога, температура и другие параметры генерации.</p>
 <p>Главное — понимать, какая настройка за что отвечает. Тогда вместо случайного тыканья кнопок можно менять именно то, что вам мешает.</p>
-<p>Все настройки конкретной истории открываются внутри её Темы командой <code>/settings</code>. Затем нажмите <strong>«⚙️ Расширенные →»</strong>.</p>
+<p>Базовые настройки (модель, ключ, «📤 Макс», «📥 Мин», промпт, заметка автора) лежат на первом экране <code>/settings</code>; параметры генерации — за кнопкой <strong>«⚙️ Расширенные →»</strong>.</p>
 <hr />
 <h2 id="samoe-glavnoe-kakuyu-nastroyku-ispolzovat">Самое главное: какую настройку использовать</h2>
 <p>Если очень коротко:</p>
@@ -270,17 +242,16 @@
 </ol>
 <p>Чем меньше настроек вы меняете просто «на всякий случай», тем легче потом понять, что именно улучшило или испортило результат.</p>
 <hr />
-<h2 id="chitayte-takzhe-2">Читайте также</h2>
+<span id="chitayte-takzhe"></span><h2 id="chitayte-takzhe-2">Читайте также</h2>
 <ul>
-<li><a href="generaciya.html">Расширенные настройки: генерация</a></li>
-<li><a href="prompt.html">Промпт для ролевой игры</a></li>
-<li><a href="rezhim-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
-<li><a href="kak-ustroena-pamyat.html">Память Limerence</a></li>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
+<li><a href="generaciya.html">Генерация: обзор</a></li>
+<li><a href="prompt.html">Промпт истории</a></li>
+<li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li>
+<li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li>
 </ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="komandy.html">Все команды</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li></ul></div>
-<div class="hc-pn"><a href="persona-igroka.html"><small>← Назад</small>Персона игрока (/profile)</a><a class="n" href="rezhim-deepseek.html"><small>Дальше →</small>Режим DeepSeek</a></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="zametka-avtora.html">Заметка автора</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="model-igry.html">Модель игры</a></li></ul></div>
+<div class="hc-pn"><a href="persona-igroka.html"><small>← Назад</small>Вы в истории: персона игрока (/profile)</a><a class="n" href="rezhim-deepseek.html"><small>Дальше →</small>Режим DeepSeek</a></div>
 </main>
 </div>
 <footer class="sitefoot">
@@ -298,7 +269,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

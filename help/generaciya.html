@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Генерация: обзор · Справочник Limerence</title>
-<meta name="description" content="Это продолжение статьи «Расширенные настройки: отыгрыш DeepSeek» . В первой части речь шла о настройках отыгрыша, которые относятся именно к режиму DeepSeek.…">
+<meta name="description" content="Это обзор технических параметров генерации. Настройки отыгрыша, которые относятся именно к режиму DeepSeek, описаны отдельно: Режим DeepSeek .">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/generaciya.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,24 +168,26 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Генерация</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Генерация: обзор</h1>
-
-<div class="hc-doc"><p>Это продолжение статьи <strong>«Расширенные настройки: отыгрыш DeepSeek»</strong>. В первой части речь шла о настройках отыгрыша, которые относятся именно к режиму DeepSeek. Здесь — о технических параметрах генерации, отображении ответа и настройках самой Темы.</p>
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#obschie-nastroyki-generatsii">Общие настройки генерации</a></li><li><a href="#esli-problema-otnositsya-k-generatsii-nezavisimo-ot-rolevogo-rezhima">Если проблема относится к генерации независимо от ролевого режима</a></li><li><a href="#ne-menyayte-pyat-tehnicheskih-nastroek-odnovremenno">Не меняйте пять технических настроек одновременно</a></li><li><a href="#tehnicheskie-parametry-generatsii">Технические параметры генерации</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
+<div class="hc-doc"><p>Это обзор технических параметров генерации. Настройки отыгрыша, которые относятся именно к режиму DeepSeek, описаны отдельно: <a href="rezhim-deepseek.html">Режим DeepSeek</a>.</p>
 <hr />
-<h1 id="obschie-nastroyki-generatsii">Общие настройки генерации</h1>
+<h2 id="obschie-nastroyki-generatsii">Общие настройки генерации</h2>
 <p>Следующие параметры относятся уже не к ролевым настройкам DeepSeek, а к самой генерации.</p>
 <p>Они могут использоваться с разными моделями, если выбранная модель и API-провайдер поддерживают соответствующий параметр.</p>
 <p>Путь: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🧪 Генерация»</strong>.</p>
 <p>Здесь находятся:</p>
 <ul>
-<li>Temperature;</li>
-<li>Память диалога;</li>
-<li>Top P;</li>
+<li><a href="temperature.html">Temperature</a>;</li>
+<li><a href="pamyat-dialoga.html">Память диалога</a>;</li>
+<li><a href="top-p-top-k.html">Top P</a>;</li>
 <li>Presence Penalty;</li>
 <li>Frequency Penalty;</li>
-<li>Кап канона;</li>
-<li>Префилл;</li>
-<li>Анти-клише стиль.</li>
+<li><a href="kap-kanona.html">Кап канона</a>;</li>
+<li><a href="prefill.html">Префилл</a>;</li>
+<li><a href="anti-klishe.html">Анти-клише стиль</a>;</li>
+<li>Лицо повествования.</li>
 </ul>
+<p>Top K в боте не настраивается — только в Кабинете или через <a href="presety.html">пресет</a>; подробности — в <a href="top-p-top-k.html">Top P и Top K</a>.</p>
 <p>Вот тут уже начинаются настоящие ручки модели.</p>
 <hr />
 <h2 id="esli-problema-otnositsya-k-generatsii-nezavisimo-ot-rolevogo-rezhima">Если проблема относится к генерации независимо от ролевого режима</h2>
@@ -197,7 +200,7 @@
 <li>Получает слишком много найденного канона и запрос становится огромным → разобраться с <strong>Капом канона</strong>.</li>
 <li>Должна начинать ответы определённым способом → <strong>Префилл</strong>.</li>
 <li>Выдаёт служебные теги или нужен автоматический Find/Replace → <strong>Regex</strong>.</li>
-<li>Нужно видеть время, локацию и одежду в каждом ответе → <strong>Шапка сцены</strong>.</li>
+<li>Нужно видеть время, локацию и одежду в каждом ответе → <strong><a href="shapka-sceny.html">Шапка сцены</a></strong>.</li>
 </ul>
 <hr />
 <h2 id="ne-menyayte-pyat-tehnicheskih-nastroek-odnovremenno">Не меняйте пять технических настроек одновременно</h2>
@@ -211,15 +214,6 @@
 </ol>
 <p>Если одновременно изменить Temperature, Top P, Presence, Frequency, промпт и модель, а потом ответ вдруг стал великолепным — поздравляю, вы провели эксперимент без контрольной группы и теперь понятия не имеете, почему он сработал.</p>
 <hr />
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="shapka-sceny.html">Расширенные настройки: вид и Тема</a></li>
-<li><a href="nastroyki.html">Стиль и поведение истории</a></li>
-<li><a href="rezhim-deepseek.html">Расширенные настройки: отыгрыш DeepSeek</a></li>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
-<li><a href="presety.html">Пресеты: как они работают и как их использовать</a></li>
-<li><a href="glossariy-generaciya.html">Глоссарий Limerence: генерация, история и поддержка</a></li>
-</ul>
 <h2 id="tehnicheskie-parametry-generatsii">Технические параметры генерации</h2>
 <p>Эти ручки живут в <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🧪 Генерация»</strong> и работают одинаково в любом режиме игры.</p>
 <div class="tbl"><table>
@@ -231,32 +225,39 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>📖 Память диалога</strong></td>
+<td><strong>📖 <a href="pamyat-dialoga.html">Память диалога</a></strong></td>
 <td>Модель теряет недавние события длинной истории</td>
 </tr>
 <tr>
-<td><strong>🌡 Температура</strong></td>
+<td><strong>🌡 <a href="temperature.html">Температура</a></strong></td>
 <td>Текст слишком хаотичный или, наоборот, однообразный</td>
 </tr>
 <tr>
-<td><strong>🎚 Top P, ➕ Presence, 📉 Frequency</strong></td>
+<td><strong>🎚 <a href="top-p-top-k.html">Top P</a>, ➕ Presence, 📉 Frequency</strong></td>
 <td>Нужен ручной контроль над выбором слов и повторами, и вы понимаете их назначение</td>
 </tr>
 <tr>
-<td><strong>✨ Анти-клише стиль</strong></td>
+<td><strong>✨ <a href="anti-klishe.html">Анти-клише стиль</a></strong></td>
 <td>В ответах повторяются характерные шаблонные обороты модели</td>
 </tr>
 <tr>
-<td><strong>🪄 Префилл</strong></td>
+<td><strong>🪄 <a href="prefill.html">Префилл</a></strong></td>
 <td>Продвинутая настройка: задать служебное начало ответа и стабилизировать формат</td>
 </tr>
 </tbody>
 </table></div>
-<p>Что именно делает каждый параметр, какие у него значения, чем грозит перебор и почему на некоторых шлюзах префилл игнорируется — подробно разобрано в статье <a href="generaciya.html">Расширенные настройки: генерация</a>.</p>
-<p>Здесь важно другое: менять их стоит <strong>по одному</strong> и только тогда, когда понятно, какую именно проблему вы решаете.</p>
-<hr /></div>
+<p>Здесь важно: менять их стоит <strong>по одному</strong> и только тогда, когда понятно, какую именно проблему вы решаете.</p>
+<hr />
+<h2 id="chitayte-takzhe">Читайте также</h2>
+<ul>
+<li><a href="shapka-sceny.html">Шапка сцены</a></li>
+<li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li>
+<li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li>
+<li><a href="presety.html">Пресеты: что это (/preset)</a></li>
+<li><a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a></li>
+</ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="shapka-sceny.html">Шапка сцены</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="pamyat-dialoga.html">Память диалога</a></li><li><a href="top-p-top-k.html">Top P и Top K</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="pamyat-dialoga.html">Память диалога</a></li><li><a href="top-p-top-k.html">Top P и Top K</a></li><li><a href="kap-kanona.html">Кап канона</a></li><li><a href="prefill.html">Префилл</a></li><li><a href="anti-klishe.html">Анти-клише стиль</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li></ul></div>
 <div class="hc-pn"><a href="zametka-avtora.html"><small>← Назад</small>Заметка автора</a><a class="n" href="temperature.html"><small>Дальше →</small>Temperature</a></div>
 </main>
 </div>
@@ -275,7 +276,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

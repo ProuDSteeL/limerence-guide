@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Все команды · Справочник Limerence</title>
-<meta name="description" content="Ниже — команды, которые полезно знать при обычной игре.">
+<meta name="description" content="Эти команды набирают внутри Темы с историей (о Темах — Группа и Темы ); часть из них работает и вне Темы, но смысл имеют именно там.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/komandy.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,15 +168,211 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-spravochnik.html">📖 Справочник</a></p>
 <div data-pagefind-body data-pagefind-meta="section:Справочник">
 <h1 data-pagefind-meta="title">Все команды</h1>
-<details class="hc-toc"><summary>На этой странице · 7</summary><ol><li><a href="#osnovnye-komandy-istorii">Основные команды истории</a></li><li><a href="#komandy-api-i-modeli">Команды API и модели</a></li><li><a href="#akkaunt-podpiska-i-kabinet">Аккаунт, подписка и Кабинет</a></li><li><a href="#pomosch-i-dokumenty">Помощь и документы</a></li><li><a href="#cancel">/cancel</a></li><li><a href="#bystraya-shpargalka">Быстрая шпаргалка</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#osnovnye-komandy-istorii">Основные команды истории</a></li><li><a href="#komandy-api-i-modeli">Команды API и модели</a></li><li><a href="#komandy-personazhi">Персонажи</a></li><li><a href="#akkaunt-podpiska-i-kabinet">Аккаунт, подписка и Кабинет</a></li><li><a href="#pomosch-i-dokumenty">Помощь и документы</a></li><li><a href="#cancel">/cancel</a></li><li><a href="#bystraya-shpargalka">Быстрая шпаргалка</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><h2 id="osnovnye-komandy-istorii">Основные команды истории</h2>
-<p>Ниже — команды, которые полезно знать при обычной игре.</p>
+<p>Эти команды набирают внутри Темы с историей (о Темах — <a href="gruppa-i-temy.html">Группа и Темы</a>); часть из них работает и вне Темы, но смысл имеют именно там.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/menu</code></td>
+<td>открывает меню текущей истории</td>
+</tr>
+<tr>
+<td><code>/settings</code></td>
+<td>настройки истории: модель, длина ответа, память, лор и другое</td>
+</tr>
+<tr>
+<td><code>/stop</code></td>
+<td>останавливает зависшую генерацию</td>
+</tr>
+<tr>
+<td><code>/undo</code></td>
+<td>отменяет последний обмен</td>
+</tr>
+<tr>
+<td><code>/rewrite</code></td>
+<td>переписывает вашу прежнюю реплику</td>
+</tr>
+<tr>
+<td><code>/fork</code></td>
+<td>создаёт ответвление сюжета в новой Теме</td>
+</tr>
+<tr>
+<td><code>/clear</code></td>
+<td>начинает историю заново с теми же настройками</td>
+</tr>
+<tr>
+<td><code>/restore</code></td>
+<td>возвращает удалённое из корзины (то же — <code>/trash</code>)</td>
+</tr>
+<tr>
+<td><code>/scene</code></td>
+<td>показывает состояние текущей сцены</td>
+</tr>
+<tr>
+<td><code>/day</code></td>
+<td>исправляет игровой день или дату</td>
+</tr>
+<tr>
+<td><code>/export</code></td>
+<td>сохраняет историю файлом</td>
+</tr>
+<tr>
+<td><code>/saved</code></td>
+<td>открывает сохранённые отрывки этой Темы</td>
+</tr>
+<tr>
+<td><code>/lore</code></td>
+<td>настройки лора</td>
+</tr>
+<tr>
+<td><code>/world</code></td>
+<td>загружает целый мир одной пачкой файлов (правила, лор, карточки героев)</td>
+</tr>
+<tr>
+<td><code>/profile</code></td>
+<td>настраивает вашего героя</td>
+</tr>
+<tr>
+<td><code>/regex</code></td>
+<td>управление Regex</td>
+</tr>
+<tr>
+<td><code>/regex_add</code></td>
+<td>сразу открывает мастер добавления своего правила Regex</td>
+</tr>
+</tbody>
+</table></div>
 <hr />
 <h2 id="komandy-api-i-modeli">Команды API и модели</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api</code></td>
+<td>список ваших API-ключей: добавить, изменить, удалить</td>
+</tr>
+<tr>
+<td><code>/current</code></td>
+<td>показывает, какая модель и какой провайдер работают в этой Теме на самом деле (выбор модели — в <code>/settings</code>)</td>
+</tr>
+<tr>
+<td><code>/preset</code></td>
+<td>выбор генерационного пресета (то же — <code>/presets</code>)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="komandy-personazhi">Персонажи</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/cards</code></td>
+<td>ваши карточки персонажей, выбор персонажа</td>
+</tr>
+<tr>
+<td><code>/newcard</code></td>
+<td>создаёт карточку по шагам</td>
+</tr>
+<tr>
+<td><code>/import</code></td>
+<td>импортирует карточку из файла (PNG или JSON)</td>
+</tr>
+<tr>
+<td><code>/catalog</code></td>
+<td>каталог героев по популярности</td>
+</tr>
+</tbody>
+</table></div>
 <hr />
 <h2 id="akkaunt-podpiska-i-kabinet">Аккаунт, подписка и Кабинет</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/premium</code></td>
+<td>подписка и оплата (то же — <code>/upgrade</code>)</td>
+</tr>
+<tr>
+<td><code>/promo КОД</code></td>
+<td>активирует промокод (только в личном чате с ботом)</td>
+</tr>
+<tr>
+<td><code>/storage</code></td>
+<td>хранилище: сколько места занято и список ваших Тем</td>
+</tr>
+<tr>
+<td><code>/stats</code></td>
+<td>дневной пул платного DeepSeek: сколько ходов осталось</td>
+</tr>
+<tr>
+<td><code>/app</code></td>
+<td>открывает Кабинет (то же — <code>/cabinet</code>)</td>
+</tr>
+<tr>
+<td><code>/forget_me</code></td>
+<td>удаляет ваш аккаунт и данные</td>
+</tr>
+</tbody>
+</table></div>
 <hr />
 <h2 id="pomosch-i-dokumenty">Помощь и документы</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Что делает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/start</code></td>
+<td>приветствие и первый запуск</td>
+</tr>
+<tr>
+<td><code>/help</code></td>
+<td>экран помощи со ссылками на справку (то же — <code>/guide</code>)</td>
+</tr>
+<tr>
+<td><code>/docs</code></td>
+<td>Условия, Политика приватности и Оферта</td>
+</tr>
+<tr>
+<td><code>/support</code></td>
+<td>вопрос поддержке</td>
+</tr>
+<tr>
+<td><code>/diag</code></td>
+<td>сообщение о баге с диагностикой</td>
+</tr>
+<tr>
+<td><code>/appeal</code></td>
+<td>апелляция на блокировку</td>
+</tr>
+</tbody>
+</table></div>
 <hr />
 <h2 id="cancel"><code>/cancel</code></h2>
 <p>Многие пошаговые формы Limerence можно отменить командой:</p>
@@ -200,65 +397,123 @@
 <p>и вы передумали — <code>/cancel</code> обычно является правильным выходом.</p>
 <hr />
 <h2 id="bystraya-shpargalka">Быстрая шпаргалка</h2>
-<p>Если хотите…</p>
-<p><strong>открыть меню истории</strong><br />
-→ <code>/menu</code></p>
-<p><strong>изменить настройки</strong><br />
-→ <code>/settings</code></p>
-<p><strong>проверить реальную модель и провайдер</strong><br />
-→ <code>/current</code></p>
-<p><strong>остановить зависшую генерацию</strong><br />
-→ <code>/stop</code></p>
-<p><strong>отменить последний обмен</strong><br />
-→ <code>/undo</code></p>
-<p><strong>переписать старую реплику</strong><br />
-→ <code>/rewrite</code></p>
-<p><strong>создать альтернативную ветку</strong><br />
-→ <code>/fork</code></p>
-<p><strong>начать историю заново с теми же настройками</strong><br />
-→ <code>/clear</code></p>
-<p><strong>вернуть удалённое</strong><br />
-→ <code>/restore</code></p>
-<p><strong>посмотреть состояние текущей сцены</strong><br />
-→ <code>/scene</code></p>
-<p><strong>исправить игровой день или дату</strong><br />
-→ <code>/day</code></p>
-<p><strong>сохранить историю файлом</strong><br />
-→ <code>/export</code></p>
-<p><strong>настроить лор</strong><br />
-→ <code>/lore</code></p>
-<p><strong>выбрать персонажа</strong><br />
-→ <code>/cards</code></p>
-<p><strong>настроить своего героя</strong><br />
-→ <code>/profile</code></p>
-<p><strong>выбрать генерационный пресет</strong><br />
-→ <code>/preset</code></p>
-<p><strong>управлять Regex</strong><br />
-→ <code>/regex</code></p>
-<p><strong>посмотреть хранилище</strong><br />
-→ <code>/storage</code></p>
-<p><strong>настроить API</strong><br />
-→ <code>/api</code></p>
-<p><strong>открыть Кабинет</strong><br />
-→ <code>/app</code></p>
-<p><strong>задать вопрос поддержке</strong><br />
-→ <code>/support</code></p>
-<p><strong>сообщить о баге</strong><br />
-→ <code>/diag</code></p>
-<p><strong>обжаловать блокировку</strong><br />
-→ <code>/appeal</code></p>
-<hr />
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Если хотите…</th>
+<th>Команда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>открыть меню истории</td>
+<td><code>/menu</code></td>
+</tr>
+<tr>
+<td>изменить настройки</td>
+<td><code>/settings</code></td>
+</tr>
+<tr>
+<td>проверить реальную модель и провайдера</td>
+<td><code>/current</code></td>
+</tr>
+<tr>
+<td>остановить зависшую генерацию</td>
+<td><code>/stop</code></td>
+</tr>
+<tr>
+<td>отменить последний обмен</td>
+<td><code>/undo</code></td>
+</tr>
+<tr>
+<td>переписать старую реплику</td>
+<td><code>/rewrite</code></td>
+</tr>
+<tr>
+<td>создать альтернативную ветку</td>
+<td><code>/fork</code></td>
+</tr>
+<tr>
+<td>начать историю заново с теми же настройками</td>
+<td><code>/clear</code></td>
+</tr>
+<tr>
+<td>вернуть удалённое</td>
+<td><code>/restore</code></td>
+</tr>
+<tr>
+<td>посмотреть состояние сцены</td>
+<td><code>/scene</code></td>
+</tr>
+<tr>
+<td>исправить игровой день или дату</td>
+<td><code>/day</code></td>
+</tr>
+<tr>
+<td>сохранить историю файлом</td>
+<td><code>/export</code></td>
+</tr>
+<tr>
+<td>настроить лор</td>
+<td><code>/lore</code></td>
+</tr>
+<tr>
+<td>загрузить целый мир</td>
+<td><code>/world</code></td>
+</tr>
+<tr>
+<td>выбрать персонажа</td>
+<td><code>/cards</code></td>
+</tr>
+<tr>
+<td>настроить своего героя</td>
+<td><code>/profile</code></td>
+</tr>
+<tr>
+<td>выбрать генерационный пресет</td>
+<td><code>/preset</code></td>
+</tr>
+<tr>
+<td>управлять Regex</td>
+<td><code>/regex</code></td>
+</tr>
+<tr>
+<td>посмотреть хранилище</td>
+<td><code>/storage</code></td>
+</tr>
+<tr>
+<td>настроить API</td>
+<td><code>/api</code></td>
+</tr>
+<tr>
+<td>открыть Кабинет</td>
+<td><code>/app</code></td>
+</tr>
+<tr>
+<td>задать вопрос поддержке</td>
+<td><code>/support</code></td>
+</tr>
+<tr>
+<td>сообщить о баге</td>
+<td><code>/diag</code></td>
+</tr>
+<tr>
+<td>обжаловать блокировку</td>
+<td><code>/appeal</code></td>
+</tr>
+</tbody>
+</table></div>
 <hr />
 <h2 id="chitayte-takzhe">Читайте также</h2>
 <ul>
-<li><a href="gruppa-i-temy.html">Темы, группы и команды</a></li>
-<li><a href="upravlenie-istoriey.html">Управление историей</a></li>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
+<li><a href="gruppa-i-temy.html">Группа и Темы</a></li>
+<li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li>
+<li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li>
 <li><a href="pomoshch.html">Если Limerence работает неправильно</a></li>
-<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
+<li><a href="glossariy.html">Глоссарий: основные термины</a></li>
 </ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="pomoshch.html">С чего начать (/help)</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="pomoshch.html">Если Limerence работает неправильно</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a></li></ul></div>
 <div class="hc-pn"><a href="dokumenty.html"><small>← Назад</small>Юридические документы</a><a class="n" href="glossariy.html"><small>Дальше →</small>Глоссарий: основные термины</a></div>
 </main>
 </div>
@@ -277,7 +532,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

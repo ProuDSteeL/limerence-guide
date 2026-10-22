@@ -84,7 +84,7 @@ h3{font-size:17px;margin:0 0 6px}
 .chat .msg{max-width:100%;padding:10px 14px;border-radius:14px;background:var(--bg);border:1px solid var(--line);font-size:15px;overflow-wrap:anywhere}
 .chat .msg.me{align-self:flex-end;background:var(--s2);border-color:var(--line2);max-width:88%}
 .chat .msg .who{display:block;font-size:12px;font-weight:600;color:var(--tx3);margin-bottom:2px}
-.chat .msg mark{background:var(--mark);color:inherit;border-radius:3px;padding:0 2px}
+.chat .msg mark,.chat .msg .mk{background:var(--mark);color:inherit;border-radius:3px;padding:0 2px}
 .chat .msg p{margin:0 0 .7em}.chat .msg p:last-child{margin-bottom:0}
 .chat .clip{position:relative}
 .chat .more{display:none;font:13px var(--sans);margin-top:8px;padding:6px 14px;min-height:36px;border-radius:999px;border:1px solid var(--line2);background:transparent;color:var(--acc);cursor:pointer;touch-action:manipulation}

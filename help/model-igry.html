@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -179,16 +180,15 @@
 <li><code>openai/gpt-4o</code></li>
 </ul>
 <p>ID модели нужно брать у вашего API-провайдера. Это не произвольное название: если провайдер не знает такой ID, модель не запустится.</p>
-<p>Подробнее о подключении ключей и моделей — в статье <strong>«Модели и API-ключи»</strong>.</p>
+<p>Подробнее — <a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a> и <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>.</p>
 <hr />
-<h2 id="model-igry-2">🤖 Модель игры</h2>
-<p>В поле «Модель игры» можно указать ID модели, используемой этой историей.</p>
+<h2 id="model-igry-2">В Кабинете</h2>
+<p>В Кабинете в поле «Модель игры» можно указать ID модели, используемой этой историей.</p>
 <p>Например: <code>anthropic/claude-sonnet-4-5</code> или другой ID, который принимает ваш <a href="api-klyuch.html">API-провайдер</a>.</p>
 <p>Это тот же выбор игровой модели, который доступен через <code>/settings</code>.</p>
-<p>Кабинет не добавляет новый API-провайдер и не хранит здесь его ключ.</p>
-<p>Для подключения самого API используйте <code>/api</code>.</p></div>
+<p>Кабинет не добавляет новый API-провайдер и не хранит здесь его ключ: для подключения самого API используйте <code>/api</code>.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="dlina-otveta.html">Длина ответа</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="prompt-kak-pisat.html">Как писать промпт</a></li><li><a href="prompt-shablon.html">Шаблон и пример промпта</a></li><li><a href="zametka-avtora.html">Заметка автора</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="dlina-otveta.html">Длина ответа</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="prompt-kak-pisat.html">Как писать промпт</a></li><li><a href="prompt-shablon.html">Шаблон и пример промпта</a></li></ul></div>
 <div class="hc-pn"><a href="rezhim-deepseek.html"><small>← Назад</small>Режим DeepSeek</a><a class="n" href="dlina-otveta.html"><small>Дальше →</small>Длина ответа</a></div>
 </main>
 </div>
@@ -207,7 +207,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

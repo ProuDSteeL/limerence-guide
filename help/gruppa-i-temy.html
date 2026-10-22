@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html" class="cur" aria-current="page">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -170,7 +171,11 @@
 <details class="hc-toc"><summary>На этой странице · 14</summary><ol><li><a href="#samaya-prostaya-shema">Самая простая схема</a></li><li><a href="#chto-takoe-igrovaya-gruppa">Что такое игровая группа</a></li><li><a href="#chto-takoe-tema">Что такое Тема</a></li><li><a href="#chto-hranitsya-otdelno-dlya-kazhdoy-temy">Что хранится отдельно для каждой Темы</a></li><li><a href="#primer">Пример</a></li><li><a href="#a-chto-otnositsya-ko-vsemu-akkauntu">А что относится ко всему аккаунту?</a></li><li><a href="#biblioteka-i-aktivnyy-vybor-ne-odno-i-to-zhe">Библиотека и активный выбор — не одно и то же</a></li><li><a href="#mozhno-li-imet-mnogo-tem">Можно ли иметь много Тем</a></li><li><a href="#mozhno-li-imet-neskolko-igrovyh-grupp">Можно ли иметь несколько игровых групп</a></li><li><a href="#kak-luchshe-organizovat-istorii">Как лучше организовать истории</a></li><li><a href="#tema-i-character-card-ne-odno-i-to-zhe">Тема и Character Card — не одно и то же</a></li><li><a href="#tema-i-vetka-tozhe-ne-odno-i-to-zhe">Тема и ветка — тоже не одно и то же</a></li><li><a href="#glavnoe-chto-stoit-zapomnit">Главное, что стоит запомнить</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><p>Limerence устроен немного иначе, чем обычный Telegram-бот.</p>
 <p>Здесь важно понимать три уровня:</p>
-<p><strong>аккаунт → игровая группа → Тема.</strong></p>
+<ol>
+<li><strong>Аккаунт</strong> — вы: ваши ключи, подписка, сохранённые карточки;</li>
+<li><strong>Игровая группа</strong> — ваша группа в Telegram с включёнными Темами;</li>
+<li><strong>Тема</strong> — одна отдельная история внутри группы.</li>
+</ol>
 <p>Именно <strong>Тема</strong> является основой отдельной истории.</p>
 <p>Если разобраться с этим один раз, становится гораздо понятнее:</p>
 <ul>
@@ -224,7 +229,7 @@
 <li>Claude;</li>
 <li>свой промпт;</li>
 <li>одну Character Card;</li>
-<li>один lorebook;</li>
+<li>один lorebook (книга лора — записи о мире);</li>
 <li>свою память.</li>
 </ul>
 <p>А:</p>
@@ -398,14 +403,14 @@
 <hr />
 <h2 id="chitayte-takzhe">Читайте также</h2>
 <ul>
-<li><a href="pervyy-zapusk.html">Первый запуск Limerence</a></li>
-<li><a href="komandy.html">Команды Limerence: полный справочник</a></li>
-<li><a href="glossariy.html">Глоссарий Limerence: основные термины</a></li>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
-<li><a href="upravlenie-istoriey.html">Управление историей</a></li>
+<li><a href="pervyy-zapusk.html">Первый запуск</a></li>
+<li><a href="komandy.html">Все команды</a></li>
+<li><a href="glossariy.html">Глоссарий: основные термины</a></li>
+<li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li>
+<li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li>
 </ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="komandy.html">Все команды</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="vybor-modeli.html">Выбрать модель (/current)</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="komandy.html">Все команды</a></li><li><a href="glossariy.html">Глоссарий: основные термины</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a></li></ul></div>
 <div class="hc-pn"><a href="pervyy-zapusk.html"><small>← Назад</small>Первый запуск</a><a class="n" href="gde-vyzyvat-komandy.html"><small>Дальше →</small>Где вызывать команды: личка, группа, Тема</a></div>
 </main>
 </div>
@@ -424,7 +429,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,8 +168,8 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Основные</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Заметка автора</h1>
-<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#zametka-avtora">Заметка автора</a></li><li><a href="#zametka-avtora-2">Заметка автора</a></li><li><a href="#zametka-avtora-3">📝 Заметка автора</a></li></ol></details>
-<div class="hc-doc"><h2 id="zametka-avtora">Заметка автора</h2>
+
+<div class="hc-doc"><span id="zametka-avtora-2"></span><h2 id="zametka-avtora">Заметка автора</h2>
 <p>Рядом с промптом находится <strong>«📝 Заметка автора»</strong>.</p>
 <p>Она тоже передаёт модели инструкции, но предназначена для другой задачи.</p>
 <p><strong>Промпт</strong> — это постоянные правила всей истории. Например:</p>
@@ -183,25 +184,6 @@
 <p>Персонаж всё ещё скрывает от остальных свою травму.</p>
 </blockquote>
 <p>Limerence добавляет Заметку автора модели каждый ход рядом с текущим действием, поэтому она хорошо подходит для временных режиссёрских указаний.</p>
-<h3 id="kak-dobavit-zametku-avtora">Как добавить Заметку автора</h3>
-<p>Откройте <code>/settings</code> → <strong>«📝 Заметка автора»</strong> и отправьте текст.</p>
-<p>Максимальный размер Заметки автора — 6000 символов.</p>
-<p>Если текст не помещается в одно сообщение Telegram, его можно отправить файлом <code>.txt</code> или добавить продолжение отдельным сообщением, начав его с <code>+</code>.</p>
-<p>Чтобы удалить Заметку автора, отправьте <code>-</code>.</p>
-<hr />
-<h2 id="zametka-avtora-2">Заметка автора</h2>
-<p>Заметка автора — одна из самых полезных настроек после промпта.</p>
-<p>Она находится прямо в основном меню: <code>/settings</code> → <strong>«📝 Заметка автора»</strong>.</p>
-<p>Это короткая инструкция, которую Limerence показывает модели на каждом ходе рядом с текущим действием.</p>
-<p>Именно поэтому она хорошо подходит для информации, которая важна сейчас, но не должна навсегда становиться правилом всей истории.</p>
-<p>Например:</p>
-<blockquote>
-<p>Сейчас зима. На улице сильный снег и мороз.</p>
-<p>Не раскрывай пока, кто убийца.</p>
-<p>Следующие несколько сцен должны быть более тревожными.</p>
-<p>Персонаж ранен и пытается скрыть это от остальных.</p>
-<p>Сейчас он злится на неё, даже если всё ещё испытывает к ней чувства.</p>
-</blockquote>
 <h3 id="chem-zametka-avtora-otlichaetsya-ot-prompta">Чем Заметка автора отличается от промпта</h3>
 <p>Самое простое правило:</p>
 <ul>
@@ -224,18 +206,13 @@
 <li>«После последней ссоры персонаж пока не готов первым идти на примирение» → <strong>Заметка автора</strong></li>
 </ul>
 <p>Не стоит постоянно переписывать большой промпт из-за каждой новой сцены. Для таких изменений и существует Заметка автора.</p>
-<h3 id="kak-dobavit-ili-izmenit-zametku-avtora">Как добавить или изменить Заметку автора</h3>
-<p>Откройте <code>/settings</code> → <strong>«📝 Заметка автора»</strong> и отправьте новый текст.</p>
-<p>Максимальный размер заметки — 6000 символов.</p>
-<p>Обычное сообщение Telegram не позволяет отправить такой объём целиком, поэтому длинную заметку можно загрузить файлом <code>.txt</code>.</p>
-<p>Также можно дописать текст к уже существующей заметке. Для этого начните новое сообщение со знака <code>+</code>. Например:</p>
-<blockquote>
-<ul>
-<li>Алексей всё ещё не знает о разговоре в больнице.</li>
-</ul>
-</blockquote>
-<p>Новый текст добавится к существующей Заметке автора.</p>
-<p>Чтобы удалить её, отправьте <code>-</code>.</p>
+<span id="kak-dobavit-zametku-avtora"></span><h3 id="kak-dobavit-ili-izmenit-zametku-avtora">Как добавить или изменить Заметку автора</h3>
+<p>Откройте <code>/settings</code> → <strong>«📝 Заметка автора»</strong> и отправьте текст. Новый текст заменяет прежнюю заметку.</p>
+<p>Максимальный размер — 6000 символов. Если текст не помещается в одно сообщение Telegram, отправьте его файлом <code>.txt</code>.</p>
+<p>Чтобы <strong>дописать</strong> текст к уже существующей заметке, начните новое сообщение со знака <code>+</code>. Например, отправьте:</p>
+<p><code>+ Алексей всё ещё не знает о разговоре в больнице.</code></p>
+<p>Бот отбросит <code>+</code> и добавит остальное к заметке.</p>
+<p>Чтобы <strong>удалить</strong> заметку, отправьте <code>-</code>.</p>
 <p>Изменения начинают действовать со следующего игрового хода.</p>
 <h3 id="ne-prevraschayte-zametku-avtora-vo-vtoroy-ogromnyy-prompt">Не превращайте Заметку автора во второй огромный промпт</h3>
 <p>Заметка автора передаётся модели каждый ход, поэтому лучше держать там именно актуальные указания.</p>
@@ -251,16 +228,8 @@
 </blockquote>
 <p>Здесь модель получает именно актуальное состояние текущей истории.</p>
 <hr />
-<h2 id="zametka-avtora-3">📝 Заметка автора</h2>
-<p>Ниже находится Заметка автора.</p>
-<p>Она предназначена для текущих акцентов истории:</p>
-<blockquote>
-<p>«Сейчас Адриан скрывает, что уже видел письмо.»<br />
-«Эта сцена должна оставаться напряжённой и камерной.»<br />
-«Не переводить сцену в романтику.»</p>
-</blockquote>
-<p>Поле рассчитано на до 6000 символов — ровно столько же, сколько принимает Заметка автора в самом боте. Длинную заметку можно писать прямо здесь, в большом текстовом поле.</p>
-<p>Кнопка «Сбросить» удаляет текущую заметку.</p></div>
+<h2 id="zametka-avtora-3">В Кабинете</h2>
+<p>В Кабинете заметка редактируется прямо в большом текстовом поле, с тем же лимитом — до 6000 символов. Кнопка «Сбросить» удаляет текущую заметку.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="rezhim-deepseek.html">Режим DeepSeek</a></li><li><a href="model-igry.html">Модель игры</a></li><li><a href="dlina-otveta.html">Длина ответа</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="prompt-kak-pisat.html">Как писать промпт</a></li><li><a href="prompt-shablon.html">Шаблон и пример промпта</a></li></ul></div>
 <div class="hc-pn"><a href="prompt-shablon.html"><small>← Назад</small>Шаблон и пример промпта</a><a class="n" href="generaciya.html"><small>Дальше →</small>Генерация: обзор</a></div>
@@ -281,7 +250,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details open><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html" class="cur" aria-current="page">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,20 +168,20 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pomoshch.html">🛟 Помощь</a> › Если что-то не так</p>
 <div data-pagefind-body data-pagefind-meta="section:Помощь">
 <h1 data-pagefind-meta="title">/support или /diag</h1>
-<details class="hc-toc"><summary>На этой странице · 4</summary><ol><li><a href="#support-i-diag-ne-odno-i-to-zhe">/support и /diag — не одно и то же</a></li><li><a href="#vyzyvayte-diag-imenno-tam-gde-proizoshla-problema">Вызывайте /diag именно там, где произошла проблема</a></li><li><a href="#support-2">✍️ /support</a></li><li><a href="#diag">🐛 /diag</a></li></ol></details>
+
 <div class="hc-doc"><h2 id="support-i-diag-ne-odno-i-to-zhe"><code>/support</code> и <code>/diag</code> — не одно и то же</h2>
-<h3 id="support"><code>/support</code></h3>
+<span id="support-2"></span><h3 id="support"><code>/support</code></h3>
 <p>Используйте поддержку, если вам нужен <strong>ответ человека</strong>.</p>
-<p>Например:</p>
+<p>Например (вопрос по настройке, проблема с оплатой, непонятное поведение интерфейса, вопрос по API):</p>
 <blockquote>
 <p>Я оплатила Premium, но не понимаю, активировался ли он.
 Как подключить такой-то API?
 Я не понимаю, где изменить персону.
 Помогите разобраться с настройками пресета.</p>
 </blockquote>
-<p>Команда <code>/support</code> открывает поддержку Limerence.</p>
+<p>Команда <code>/support</code> открывает поддержку Limerence. Для технического бага лучше <code>/diag</code>.</p>
 <p>Если для аккаунта доступен отдельный бот поддержки, Limerence переведёт вас туда.</p>
-<h3 id="diag-otlichie"><code>/diag</code></h3>
+<span id="diag-otlichie"></span><h3 id="diag"><code>/diag</code></h3>
 <p>Используйте <code>/diag</code>, если вы хотите сказать: вот конкретная функция Limerence работает неправильно, это нужно расследовать как баг.</p>
 <p>Например:</p>
 <blockquote>
@@ -199,28 +200,10 @@
 <p>Так Limerence сможет привязать техническую диагностику именно к проблемной истории.</p>
 <p>Если вызвать <code>/diag</code> где-то ещё, часть информации о конкретной Теме может отсутствовать.</p>
 <p>Поэтому хороший порядок такой: проблема возникла → остаёмся в этой Теме → <code>/diag</code>.</p>
-<h2 id="support-2">✍️ <code>/support</code></h2>
-<p>Используйте, если вам нужна помощь человека.</p>
-<p>Например:</p>
-<ul>
-<li>вопрос по настройке;</li>
-<li>проблема с оплатой;</li>
-<li>непонятное поведение интерфейса;</li>
-<li>вопрос по API;</li>
-<li>помощь с функцией.</li>
-</ul>
-<p>Для технического бага лучше использовать <code>/diag</code>.</p>
-<hr />
-<h2 id="diag">🐛 <code>/diag</code></h2>
-<p>Создаёт баг-репорт.</p>
-<p>Если проблема относится к конкретной истории, вызывайте <code>/diag</code> <strong>внутри этой Темы</strong>.</p>
-<p>Так к обращению можно привязать диагностику именно проблемной истории.</p>
-<p>Подробнее:</p>
-<p><a href="pomoshch.html">Если Limerence работает неправильно</a></p>
-<hr /></div>
+<p>Подробнее: <a href="pomoshch.html">Если Limerence работает неправильно</a>.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="pomoshch.html">С чего начать (/help)</a></li><li><a href="bag-report.html">Как оформить баг-репорт</a></li><li><a href="posle-otpravki.html">После отправки репорта</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li></ul></div>
-<div class="hc-pn"><a href="pomoshch.html"><small>← Назад</small>С чего начать (/help)</a><a class="n" href="bag-report.html"><small>Дальше →</small>Как оформить баг-репорт</a></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="pomoshch.html">Если Limerence работает неправильно</a></li><li><a href="bag-report.html">Как оформить баг-репорт</a></li><li><a href="posle-otpravki.html">После отправки репорта</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li></ul></div>
+<div class="hc-pn"><a href="pomoshch.html"><small>← Назад</small>Если Limerence работает неправильно</a><a class="n" href="bag-report.html"><small>Дальше →</small>Как оформить баг-репорт</a></div>
 </main>
 </div>
 <footer class="sitefoot">
@@ -238,7 +221,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

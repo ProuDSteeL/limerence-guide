@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Память диалога · Справочник Limerence</title>
-<meta name="description" content="Доступные значения: 15 000 , 25 000 , 35 000 , 50 000 .">
+<meta name="description" content="Настройка находится здесь: /settings → «⚙️ Расширенные» → «🧪 Генерация» → «📖 Память диалога» . Значения (в токенах): 15 000, 25 000, 35 000, 50 000; по…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/pamyat-dialoga.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,16 +168,15 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Генерация</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Память диалога</h1>
-<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#pamyat-dialoga">📖 Память диалога</a></li><li><a href="#pamyat-dialoga-2">📖 Память диалога</a></li><li><a href="#chto-oznachaet-pamyat-dialoga">Что означает «Память диалога»</a></li></ol></details>
-<div class="hc-doc"><h2 id="pamyat-dialoga">📖 Память диалога</h2>
-<p>Доступные значения: <code>15 000</code>, <code>25 000</code>, <code>35 000</code>, <code>50 000</code>.</p>
-<p>Она определяет размер динамического контекста истории.</p>
-<p>Как мы уже разбирали отдельно, значение 15 000 — это не весь запрос модели.</p>
-<p>В текущей архитектуре ориентир примерно такой:</p>
+
+<div class="hc-doc"><span id="chto-oznachaet-pamyat-dialoga"></span><h2 id="pamyat-dialoga">📖 Память диалога</h2>
+<p>Настройка находится здесь: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🧪 Генерация»</strong> → <strong>«📖 Память диалога»</strong>. Значения (в токенах): 15 000, 25 000, 35 000, 50 000; по умолчанию 15 000. Кнопка переключает их по кругу.</p>
+<p>Она определяет размер динамического контекста истории — сколько недавнего отыгрыша и памяти попадает в запрос к модели.</p>
+<p>Название легко понять неправильно. Значение 15 000 токенов не означает, что вся история и память вместе ограничены пятнадцатью тысячами. При стандартном значении ориентир такой:</p>
 <blockquote>
-<p>до 15k недавнего отыгрыша + до 15k памяти и другого динамического контекста = примерно до 30k динамического контекста при базовом значении.</p>
+<p>до 15 000 токенов недавнего отыгрыша + до 15 000 токенов памяти и другого динамического контекста = примерно до 30 000 токенов динамического контекста.</p>
 </blockquote>
-<p>Пользовательский промпт учитывается отдельно.</p>
+<p>Это не размер всей <a href="kak-ustroena-pamyat.html">памяти Limerence</a> и не длина вашего промпта: постоянный <a href="prompt.html">промпт</a> учитывается отдельно.</p>
 <h3 id="bolshe-pamyati-ne-vsegda-avtomaticheski-luchshe">Больше памяти — не всегда автоматически лучше</h3>
 <p>Увеличенный контекст позволяет модели видеть больше материала. Но есть обратная сторона:</p>
 <ul>
@@ -185,26 +185,10 @@
 <li>модели приходится обрабатывать больше текста;</li>
 <li>огромный контекст иногда снижает внимание к мелким деталям.</li>
 </ul>
-<p>Поэтому не обязательно первым делом ставить 50k просто потому, что кнопка существует.</p>
-<p>Увеличивайте контекст, если действительно замечаете, что длинной истории не хватает недавнего материала.</p>
+<p>Поэтому не обязательно первым делом ставить 50 000 просто потому, что кнопка существует. Увеличивайте контекст, если действительно замечаете, что длинной истории не хватает недавнего материала.</p>
 <hr />
-<h2 id="pamyat-dialoga-2">📖 Память диалога</h2>
-<p>Можно выбрать размер динамического контекста: 15K, 25K, 35K, 50K.</p>
-<p>Это та же настройка памяти диалога, которая доступна через <code>/settings</code>.</p>
-<p>Большое значение позволяет держать больше недавнего материала, но одновременно увеличивает объём запроса к модели.</p>
-<p>Это не размер всей <a href="kak-ustroena-pamyat.html">памяти Limerence</a> и не количество символов вашего промпта.</p>
-<h2 id="chto-oznachaet-pamyat-dialoga">Что означает «Память диалога»</h2>
-<p>Настройка находится здесь: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🧪 Генерация»</strong> → <strong>«📖 Память диалога»</strong>.</p>
-<p>Название легко понять неправильно.</p>
-<p>Например, значение 15 000 токенов не означает, что вся история и память вместе ограничены пятнадцатью тысячами токенов.</p>
-<p>При стандартном значении Limerence может использовать примерно:</p>
-<blockquote>
-<p>до 15 000 токенов недавнего отыгрыша плюс до 15 000 токенов памяти и других данных истории.</p>
-</blockquote>
-<p>То есть динамический контекст может составлять примерно 30 000 токенов.</p>
-<p>Ваш постоянный пользовательский <a href="prompt.html">промпт</a> учитывается отдельно.</p>
-<p>Более высокие значения памяти диалога позволяют использовать больше контекста, но могут также увеличивать размер запросов к модели.</p>
-<hr /></div>
+<h2 id="pamyat-dialoga-2">В Кабинете</h2>
+<p>В Кабинете та же настройка — размер динамического контекста: 15K, 25K, 35K, 50K.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="top-p-top-k.html">Top P и Top K</a></li><li><a href="shtrafy-povtorov.html">Presence и Frequency Penalty</a></li><li><a href="kap-kanona.html">Кап канона</a></li><li><a href="prefill.html">Префилл</a></li></ul></div>
 <div class="hc-pn"><a href="temperature.html"><small>← Назад</small>Temperature</a><a class="n" href="top-p-top-k.html"><small>Дальше →</small>Top P и Top K</a></div>
@@ -225,7 +209,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

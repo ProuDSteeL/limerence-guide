@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,20 +168,20 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-igra.html">🎭 Игра</a> › Управление ходом</p>
 <div data-pagefind-body data-pagefind-meta="section:Игра">
 <h1 data-pagefind-meta="title">Корзина и восстановление (/restore, /trash)</h1>
-<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#udalennoe-ne-ischezaet-srazu">Удалённое не исчезает сразу</a></li><li><a href="#kak-rabotaet-korzina">Как работает корзина</a></li><li><a href="#chto-vosstanavlivaetsya">Что восстанавливается</a></li><li><a href="#pochemu-vosstanovlennye-soobscheniya-mogut-vyglyadet-inache-v-telegram">Почему восстановленные сообщения могут выглядеть иначе в Telegram</a></li><li><a href="#kak-ochistit-korzinu-okonchatelno">Как очистить корзину окончательно</a></li><li><a href="#restore-i-trash">♻️ /restore и /trash</a></li><li><a href="#kazhdaya-zapis-korziny-vosstanavlivaetsya-otdelno">Каждая запись корзины восстанавливается отдельно</a></li><li><a href="#mozhno-ochistit-korzinu-nasovsem">Можно очистить корзину насовсем</a></li></ol></details>
-<div class="hc-doc"><h2 id="udalennoe-ne-ischezaet-srazu">Удалённое не исчезает сразу</h2>
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#udalennoe-ne-ischezaet-srazu">Удалённое не исчезает сразу</a></li><li><a href="#kak-rabotaet-korzina">Как работает корзина</a></li><li><a href="#chto-vosstanavlivaetsya">Что восстанавливается</a></li><li><a href="#pochemu-vosstanovlennye-soobscheniya-mogut-vyglyadet-inache-v-telegram">Почему восстановленные сообщения могут выглядеть иначе в Telegram</a></li><li><a href="#kak-ochistit-korzinu-okonchatelno">Как очистить корзину окончательно</a></li></ol></details>
+<div class="hc-doc"><span id="restore-i-trash"></span><h2 id="udalennoe-ne-ischezaet-srazu">Удалённое не исчезает сразу</h2>
 <p>Undo, Rewrite и <code>/clear</code> используют корзину Limerence.</p>
 <p>Это означает, что после большинства таких изменений у вас остаётся возможность передумать.</p>
-<p>Удаления хранятся в корзине 14 дней.</p>
+<p>Удаления хранятся в корзине 14 дней (стандартный срок; после удаления всей Темы — всегда 14 дней).</p>
 <p>Чтобы открыть её, отправьте внутри Темы <code>/restore</code> или <code>/trash</code>. Обе команды открывают один и тот же экран.</p>
 <hr />
-<h2 id="kak-rabotaet-korzina">Как работает корзина</h2>
+<span id="kazhdaya-zapis-korziny-vosstanavlivaetsya-otdelno"></span><h2 id="kak-rabotaet-korzina">Как работает корзина</h2>
 <p>Limerence показывает отдельные операции удаления. Например:</p>
 <ul>
 <li>↩️ отмена;</li>
 <li>✏️ правка;</li>
 <li>🧹 очистка;</li>
-<li>другие сохранённые операции.</li>
+<li>удалённые варианты и другие поддерживаемые откаты.</li>
 </ul>
 <p>Рядом указано время и объём удалённого.</p>
 <p>Это важно: <code>/restore</code> не означает «вернуть вообще всё, что когда-либо удалялось».</p>
@@ -199,45 +200,12 @@
 <p>Это нормально.</p>
 <p>Для самой истории Limerence восстановленные данные снова считаются её частью.</p>
 <hr />
-<h2 id="kak-ochistit-korzinu-okonchatelno">Как очистить корзину окончательно</h2>
+<span id="mozhno-ochistit-korzinu-nasovsem"></span><h2 id="kak-ochistit-korzinu-okonchatelno">Как очистить корзину окончательно</h2>
 <p>В <code>/restore</code> или <code>/trash</code> есть кнопка <strong>«🧹 Очистить корзину»</strong>.</p>
 <p>После неё Limerence ещё раз попросит подтверждение.</p>
 <p>Если подтвердить, содержимое корзины этой Темы будет удалено без возможности восстановления.</p>
 <p>Это уже настоящая красная кнопка.</p>
-<p>Если вы не уверены, корзину лучше просто не трогать: записи сами хранятся ограниченное время.</p>
-<hr />
-<h2 id="restore-i-trash">♻️ <code>/restore</code> и <code>/trash</code></h2>
-<p>Это две команды для одного экрана корзины текущей Темы:</p>
-<p><code>/restore</code></p>
-<p>или:</p>
-<p><code>/trash</code></p>
-<p>Здесь отображаются недавние удаления.</p>
-<p>Например:</p>
-<ul>
-<li>Undo;</li>
-<li>Rewrite;</li>
-<li>Clear;</li>
-<li>удалённые варианты;</li>
-<li>другие поддерживаемые откаты.</li>
-</ul>
-<hr />
-<h2 id="kazhdaya-zapis-korziny-vosstanavlivaetsya-otdelno">Каждая запись корзины восстанавливается отдельно</h2>
-<p>Корзина не работает как:</p>
-<blockquote>
-<p>«вернуть вообще всё, что когда-либо удалялось».</p>
-</blockquote>
-<p>Каждая запись соответствует конкретному действию.</p>
-<p>Вы выбираете, какое именно удаление восстановить.</p>
-<p>Данные хранятся в корзине:</p>
-<p><strong>14 дней.</strong></p>
-<p>После этого восстановление не гарантируется.</p>
-<hr />
-<h2 id="mozhno-ochistit-korzinu-nasovsem">Можно очистить корзину насовсем</h2>
-<p>В <code>/restore</code> есть действие:</p>
-<p><strong>«🧹 Очистить корзину»</strong></p>
-<p>Оно удаляет содержимое корзины текущей Темы без возможности восстановления.</p>
-<p>Перед этим Limerence попросит подтверждение.</p>
-<hr /></div>
+<p>Если вы не уверены, корзину лучше просто не трогать: записи сами удаляются через 14 дней.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="eshche-variant.html">Ещё вариант ответа</a></li><li><a href="undo.html">Отменить ход (/undo)</a></li><li><a href="rewrite.html">Переписать сообщение (/rewrite)</a></li><li><a href="fork.html">Ветка сюжета (/fork)</a></li><li><a href="clear.html">Начать сюжет заново (/clear)</a></li><li><a href="stop.html">Остановить ответ (/stop)</a></li></ul></div>
 <div class="hc-pn"><a href="clear.html"><small>← Назад</small>Начать сюжет заново (/clear)</a><a class="n" href="stop.html"><small>Дальше →</small>Остановить ответ (/stop)</a></div>
@@ -258,7 +226,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

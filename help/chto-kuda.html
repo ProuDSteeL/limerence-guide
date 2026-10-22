@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,19 +168,21 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pamyat-i-lor.html">🧠 Память и лор</a> › Память</p>
 <div data-pagefind-body data-pagefind-meta="section:Память и лор">
 <h1 data-pagefind-meta="title">Память, промпт, лор и карточка — что куда</h1>
-<details class="hc-toc"><summary>На этой странице · 4</summary><ol><li><a href="#pamyat-prompt-lor-i-kartochka-eto-raznye-veschi">Память, промпт, лор и карточка — это разные вещи</a></li><li><a href="#prompt-zametka-avtora-kartochka-ili-lor">Промпт, Заметка автора, карточка или лор?</a></li><li><a href="#chto-vybrat-prompt-kartochku-ili-profile">Что выбрать: промпт, карточку или /profile</a></li><li><a href="#kak-ponyat-chto-kuda-klast">Как понять, что куда класть</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#pamyat-prompt-lor-i-kartochka-eto-raznye-veschi">Память, промпт, лор и карточка — это разные вещи</a></li><li><a href="#prompt-zametka-avtora-kartochka-ili-lor">Промпт, Заметка автора, карточка или лор?</a></li><li><a href="#gde-derzhat-npc">Где держать NPC</a></li><li><a href="#chto-vybrat-prompt-kartochku-ili-profile">Что выбрать: промпт, карточку героя или /profile</a></li><li><a href="#kak-ponyat-chto-kuda-klast">Как понять, что куда класть</a></li></ol></details>
 <div class="hc-doc"><h2 id="pamyat-prompt-lor-i-kartochka-eto-raznye-veschi">Память, промпт, лор и карточка — это разные вещи</h2>
 <p>Чтобы история работала стабильнее, информацию лучше хранить там, где ей место.</p>
 <ul>
 <li><strong>Память</strong> — то, что произошло во время игры.</li>
-<li><strong>Карточка персонажа</strong> — кто персонаж изначально: его характер, биография и особенности.</li>
-<li><strong>Лор</strong> — устройство мира: места, организации, правила сеттинга, термины и другая справочная информация.</li>
+<li><strong>Карточка героя</strong> — кто главный герой изначально, тот, кого играет бот: его характер, биография и особенности.</li>
+<li><strong>Лор</strong> — записи о мире: места, организации, правила сеттинга, термины, второстепенные персонажи (NPC) и другая справочная информация.</li>
+<li><strong>Персона</strong> — вы в истории: ваше имя и описание.</li>
 <li><strong>Промпт</strong> — как модель должна вести повествование.</li>
-<li><strong><a href="nastroyki.html">Заметка автора</a></strong> — что особенно важно учитывать прямо сейчас.</li>
+<li><strong><a href="zametka-avtora.html">Заметка автора</a></strong> — что особенно важно учитывать прямо сейчас.</li>
 </ul>
+<p>Три из них описывают людей и мир истории: <strong>герой</strong> (карточка), <strong>мир</strong> (лор) и <strong>вы</strong> (персона). Сравнение — на странице <a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>.</p>
 <p>Например:</p>
 <ul>
-<li>«Виктор по характеру крайне недоверчив» → <strong>Карточка персонажа</strong></li>
+<li>«Виктор по характеру крайне недоверчив» → <strong>Карточка героя</strong></li>
 <li>«Орден Серого Пламени существует триста лет» → <strong>Лор</strong></li>
 <li>«Виктор вчера узнал, что Анна его обманула» → <strong>Память</strong></li>
 <li>«Не смягчай характер Виктора после развития отношений» → <strong>Промпт</strong></li>
@@ -205,12 +208,20 @@
 <td>Заметка автора</td>
 </tr>
 <tr>
-<td>Описание персонажа</td>
-<td>Карточка персонажа</td>
+<td>Описание главного героя, которого играет бот</td>
+<td>Карточка героя</td>
+</tr>
+<tr>
+<td>Описание вас в истории</td>
+<td>Персона</td>
 </tr>
 <tr>
 <td>Устройство мира, места, организации, термины</td>
-<td>Лор</td>
+<td>Лор (запись лора)</td>
+</tr>
+<tr>
+<td>Второстепенный персонаж (NPC)</td>
+<td>Лор (запись лора, шаблон «Персонаж (NPC)»)</td>
 </tr>
 <tr>
 <td>События, уже произошедшие в истории</td>
@@ -218,34 +229,39 @@
 </tr>
 </tbody>
 </table></div>
-<p>Разбор с примерами — в статье <a href="prompt.html">Промпт для ролевой игры</a>.</p>
+<p>Разбор с примерами — в статье <a href="prompt.html">Промпт истории</a>.</p>
 <hr />
-<h2 id="chto-vybrat-prompt-kartochku-ili-profile">Что выбрать: промпт, карточку или <code>/profile</code></h2>
-<p>Жёсткого правила нет.</p>
-<p>Можно использовать только промпт. Можно использовать карточку вместе с промптом. Можно добавить ещё и персону игрока.</p>
+<h2 id="gde-derzhat-npc">Где держать NPC</h2>
+<p><strong>По умолчанию — в лоре, записью лора.</strong> Откройте <code>/lore</code> → <strong>«➕ Запись»</strong> → <strong>«🧍 Персонаж (NPC)»</strong>. Такая запись подаётся модели, когда о персонаже заходит речь, и не раздувает постоянную часть запроса.</p>
+<p>Отдельную <a href="kartochka-personazha.html">карточку героя</a> для NPC заводите, если это второй главный герой, которого вы хотите включать и выключать целиком, переносить между историями или выкладывать как готового героя.</p>
+<p>Если в истории всего один-два второстепенных персонажа, их можно кратко описать в <a href="prompt.html">промпте</a>. Это тоже рабочий вариант, просто промпт передаётся модели в каждом ходе.</p>
+<hr />
+<h2 id="chto-vybrat-prompt-kartochku-ili-profile">Что выбрать: промпт, карточку героя или <code>/profile</code></h2>
+<p>Можно использовать только промпт. Можно использовать карточку героя вместе с промптом. Можно добавить ещё и персону.</p>
 <p>Например:</p>
 <ul>
-<li><strong>Карточка</strong> — подробно описывает Адриана и содержит его стартовую сцену.</li>
-<li><strong>Промпт</strong> — задаёт правила отыгрыша, а заодно содержит нескольких других постоянных персонажей истории.</li>
-<li><strong>Персона <code>/profile</code></strong> — хранит описание Алисы, которой играет пользователь.</li>
+<li><strong>Карточка героя</strong> — подробно описывает Адриана и содержит его стартовую сцену.</li>
+<li><strong>Промпт</strong> — задаёт правила отыгрыша.</li>
+<li><strong>Лор</strong> — записи о других людях и местах: советник Адриана, таверна «Ржавый якорь».</li>
+<li><strong>Персона <code>/profile</code></strong> — хранит описание Алисы, которой играете вы.</li>
 </ul>
-<p>А в другой истории вы можете вообще отказаться от карточек и написать весь состав персонажей непосредственно в промпте.</p>
+<p>А в другой истории можно вообще отказаться от карточек и написать весь состав персонажей непосредственно в промпте.</p>
 <p>Выбирайте структуру, которая удобнее именно для вашей истории.</p>
 <hr />
 <h2 id="kak-ponyat-chto-kuda-klast">Как понять, что куда класть</h2>
 <p>Нет универсальной схемы, но полезно думать не в категориях «важное / неважное», а в категориях «должно быть постоянно / должно появляться по контексту».</p>
 <ul>
-<li>Постоянно нужно модели → промпт или постоянная карточка.</li>
-<li>Нужно только рядом с конкретным персонажем, местом или темой → обычная карточка lorebook.</li>
+<li>Постоянно нужно модели → промпт или запись лора с режимом «📌 Добавлять всегда».</li>
+<li>Нужно только рядом с конкретным персонажем, местом или темой → обычная запись лора.</li>
 <li>Очень большой справочный материал → лор-файл.</li>
 <li>Готовый сложный World Book → импорт JSON.</li>
 <li>Произошло непосредственно в текущем RP → память истории.</li>
 </ul>
-<p>Например, информация о семье главного героя может быть чрезвычайно важной — и всё равно прекрасно жить в lorebook, если она нужна прежде всего тогда, когда сцена действительно касается семьи.</p>
+<p>Например, информация о семье главного героя может быть чрезвычайно важной — и всё равно прекрасно жить в лоре, если она нужна прежде всего тогда, когда сцена действительно касается семьи.</p>
 <p>«Важно» не означает «обязательно засунуть в промпт».</p>
 <hr /></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a></li><li><a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a></li><li><a href="udalit-temu.html">Очистить историю или удалить Тему</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="zametka-avtora.html">Заметка автора</a></li><li><a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="kartochka-personazha.html">Карточка героя: что это</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a></li><li><a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a></li><li><a href="udalit-temu.html">Очистить историю или удалить Тему</a></li></ul></div>
 <div class="hc-pn"><a href="ispravit-pamyat.html"><small>← Назад</small>Исправить память («Поправить историю»)</a><a class="n" href="obem-pamyati.html"><small>Дальше →</small>Состояние и объём памяти (/storage)</a></div>
 </main>
 </div>
@@ -264,7 +280,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,12 +168,12 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Основные</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Режим DeepSeek</h1>
-
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#rezhim-deepseek">Режим DeepSeek</a></li><li><a href="#nastroyki-deepseek">Настройки DeepSeek</a></li><li><a href="#deepseek-bez-dopolnitelnyh-nadstroek-limerence">🧪 DeepSeek без дополнительных надстроек Limerence</a></li><li><a href="#esli-problema-imenno-v-povedenii-deepseek">Если проблема именно в поведении DeepSeek</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><h2 id="rezhim-deepseek">Режим DeepSeek</h2>
 <p>Самый простой способ начать играть — использовать встроенный <a href="rezhim-deepseek.html">режим DeepSeek</a>.</p>
 <p>Он доступен сразу и не требует собственного API-ключа.</p>
 <p>В <a href="probnyy-period.html">пробный период</a> доступно 50 ходов DeepSeek в день.</p>
-<p>После окончания пробного периода встроенный режим DeepSeek продолжает работать только с <strong>Тарифом DeepSeek</strong> — это дополнение к Премиуму, поэтому он требует действующей подписки Премиум. Без него для игры понадобится собственный API-ключ.</p>
+<p>После окончания пробного периода встроенный режим DeepSeek продолжает работать только с <strong>Тарифом DeepSeek</strong> — это дополнение к Premium, поэтому он требует действующей подписки Премиум. Без него для игры понадобится собственный API-ключ.</p>
 <p>Чтобы использовать его, откройте <code>/settings</code> и убедитесь, что:</p>
 <blockquote>
 <p><strong>«🤖 Режим DeepSeek» → вкл ✅</strong></p>
@@ -184,7 +185,7 @@
 <p>Если история играет через собственный API-ключ, эта команда сообщит, что подробная статистика отключена.</p>
 <p>Если дневные ходы закончились, можно дождаться обновления лимита или переключить историю на собственный API-ключ.</p>
 <hr />
-<p>Большинству историй достаточно модели, <a href="prompt.html">промпта</a>, <a href="nastroyki.html">Заметки автора</a> и длины ответа.</p>
+<p>Большинству историй достаточно модели, <a href="prompt.html">промпта</a>, <a href="zametka-avtora.html">Заметки автора</a> и длины ответа.</p>
 <p>Но если вы хотите точнее управлять отыгрышем, контекстом, стилем генерации или отображением ответа, в Limerence есть расширенные настройки.</p>
 <p>Откройте нужную Тему: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong>.</p>
 <p>Настройки разделены на четыре группы:</p>
@@ -197,9 +198,9 @@
 <p>Необязательно настраивать всё.</p>
 <p>Если история уже работает хорошо, массовое выкручивание всех ползунков одновременно обычно не превращает её в шедевр. Зато прекрасно превращает поиск причины проблем в археологию.</p>
 <p>Меняйте параметры под конкретную задачу.</p>
-<p>Эта статья — про первую группу, настройки отыгрыша DeepSeek. Остальные три разобраны в продолжении: <strong>«Расширенные настройки: генерация»</strong>.</p>
+<p>Эта статья — про первую группу, настройки отыгрыша DeepSeek. Остальные три разобраны в <a href="generaciya.html">обзоре генерации</a>.</p>
 <hr />
-<h1 id="nastroyki-deepseek">Настройки DeepSeek</h1>
+<h2 id="nastroyki-deepseek">Настройки DeepSeek</h2>
 <p>В Limerence у режима DeepSeek есть отдельный набор настроек отыгрыша.</p>
 <p>Они предназначены именно для игры через DeepSeek и позволяют менять не технические параметры генерации, а то, <strong>как</strong> DeepSeek ведёт ролевую сцену:</p>
 <ul>
@@ -212,7 +213,7 @@
 <li>дополнительные режимы поведения DeepSeek.</li>
 </ul>
 <p>Открыть их можно: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🎭 Отыгрыш»</strong>.</p>
-<p>Это не те же самые настройки, что <a href="generaciya.html">Temperature</a>, Top P или Presence Penalty.</p>
+<p>Это не те же самые настройки, что <a href="temperature.html">Temperature</a>, Top P или Presence Penalty.</p>
 <p>Temperature и другие сэмплеры меняют технический способ генерации текста.</p>
 <p>Настройки отыгрыша DeepSeek добавляют модели более понятные ролевые инструкции: например, вести отношения медленнее, активнее двигать сцену или уделять больше внимания второстепенным персонажам.</p>
 <p>Если вы играете через другой режим или модель, ориентируйтесь прежде всего на промпт и общие настройки генерации.</p>
@@ -239,18 +240,18 @@
 <li>Персонаж со временем становится слишком мягким → <strong>Несмягчаемый характер</strong>.</li>
 </ul>
 <hr />
-<p>Технические параметры генерации, отображение ответа и настройки самой Темы разобраны в продолжении: <strong>«Расширенные настройки: генерация»</strong>.</p>
+<p>Технические параметры генерации, отображение ответа и настройки самой Темы разобраны на странице <a href="generaciya.html">Генерация: обзор</a>.</p>
 <hr />
 <h2 id="chitayte-takzhe">Читайте также</h2>
 <ul>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
-<li><a href="generaciya.html">Расширенные настройки: генерация</a></li>
-<li><a href="nastroyki.html">Стиль и поведение истории</a></li>
-<li><a href="probnyy-period.html">Доступ, подписки и оплата</a></li>
-<li><a href="chastye-problemy.html">Разбор проблем: модель, память, лор и оплата</a></li>
+<li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li>
+<li><a href="generaciya.html">Генерация: обзор</a></li>
+<li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li>
+<li><a href="probnyy-period.html">Пробный период</a></li>
+<li><a href="chastye-problemy.html">Частые проблемы</a></li>
 </ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="probnyy-period.html">Пробный период</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li><li><a href="model-igry.html">Модель игры</a></li><li><a href="dlina-otveta.html">Длина ответа</a></li><li><a href="prompt-kak-pisat.html">Как писать промпт</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="probnyy-period.html">Пробный период</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="zametka-avtora.html">Заметка автора</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li><li><a href="model-igry.html">Модель игры</a></li></ul></div>
 <div class="hc-pn"><a href="nastroyki.html"><small>← Назад</small>Настройки истории: обзор (/settings)</a><a class="n" href="model-igry.html"><small>Дальше →</small>Модель игры</a></div>
 </main>
 </div>
@@ -269,7 +270,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

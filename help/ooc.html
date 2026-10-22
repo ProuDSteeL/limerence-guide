@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Разговор вне роли (OOC) · Справочник Limerence</title>
-<meta name="description" content="В меню OOC есть ещё одна кнопка — «❓ Спросить автора» .">
+<meta name="description" content="OOC (оос, «out of character») — всё, что вы говорите боту как автор истории, а не как ваш персонаж. Скобки и пометки подсказывают боту, как прочитать…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/ooc.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,9 +168,50 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-igra.html">🎭 Игра</a> › Сцена и разговор</p>
 <div data-pagefind-body data-pagefind-meta="section:Игра">
 <h1 data-pagefind-meta="title">Разговор вне роли (OOC)</h1>
-<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#ooc-vne-roli">OOC — это разговор вне роли</a></li><li><a href="#ooc-mozhno-vyzvat-i-tekstom">OOC можно вызвать и текстом</a></li><li><a href="#a-skobki-ooc">А скобки (OOC)?</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 4</summary><ol><li><a href="#ooc-vne-roli">OOC — это разговор вне роли</a></li><li><a href="#sprosit-avtora">❓ Спросить автора</a></li><li><a href="#ooc-mozhno-vyzvat-i-tekstom">OOC можно вызвать и текстом</a></li><li><a href="#a-skobki-ooc">А одинарные скобки (OOC)?</a></li></ol></details>
 <div class="hc-doc"><h2 id="ooc-vne-roli">OOC — это разговор вне роли</h2>
-<p>В меню OOC есть ещё одна кнопка — <strong>«❓ Спросить автора»</strong>.</p>
+<p>OOC (оос, «out of character») — всё, что вы говорите боту как автор истории, а не как ваш персонаж. Скобки и пометки подсказывают боту, как прочитать сообщение. Вот что делает каждый способ:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Что вы пишете</th>
+<th>Что делает бот</th>
+<th>Запомнит ли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Обычный текст или одинарные скобки: <code>(он усмехнулся)</code></td>
+<td>Это ход игры. Бот отвечает в роли</td>
+<td>Да, как любой ход</td>
+</tr>
+<tr>
+<td>Одинарные скобки с пометкой: <code>(Оос: пиши короче)</code></td>
+<td>Ремарка автора внутри хода. Бот учтёт её в ответе на этот ход, но останется в роли и отдельно не ответит</td>
+<td>Это часть хода, а не поправка памяти. Исправить ею запомненное нельзя</td>
+</tr>
+<tr>
+<td>Двойные скобки, <code>оос:</code> или <code>ooc:</code> в начале, или <code>/ooc</code>: <code>((почему он так сказал?))</code></td>
+<td>Бот выходит из роли и отвечает как автор</td>
+<td>Нет. Разговор виден в чате и влияет на ближайшие ходы, но в память сюжета не пишется</td>
+</tr>
+<tr>
+<td>Хочется другой ответ на тот же ход</td>
+<td>Кнопка <strong>«⋯» → «🔄 Ещё вариант»</strong>: бот напишет новый ответ, а прежний останется, его можно вернуть стрелками ⬅️ ➡️</td>
+<td>Запомнится тот вариант, который остался на экране</td>
+</tr>
+<tr>
+<td>Нужно исправить то, что бот помнит неверно</td>
+<td>Кнопка <strong>«⋯» → «💬 OOC» → «🔄 Поправить историю»</strong>, затем обычным текстом, что исправить</td>
+<td>Да: бот покажет, что изменит, и применит после вашего подтверждения</td>
+</tr>
+</tbody>
+</table></div>
+<p>Главное: запомненное исправляет только «Поправить историю». Скобки память не правят.</p>
+<p>Фраза <code>вне роли:</code> в начале сообщения пометкой не считается: такое сообщение уйдёт в игру как обычный ход.</p>
+<hr />
+<h2 id="sprosit-avtora">❓ Спросить автора</h2>
+<p>В меню <strong>«💬 OOC»</strong> есть кнопка — <strong>«❓ Спросить бота»</strong>.</p>
 <p>Она предназначена не для изменения памяти, а для разговора с Limerence вне ролевой сцены.</p>
 <p>Например, можно спросить:</p>
 <blockquote>
@@ -183,22 +225,19 @@
 <p>То есть вопрос «Почему он ей не доверяет?» не превращается в событие «персонаж спросил, почему он ей не доверяет».</p>
 <hr />
 <h2 id="ooc-mozhno-vyzvat-i-tekstom">OOC можно вызвать и текстом</h2>
-<p>Для обычного разговора вне роли можно также использовать <code>/ooc вопрос</code> или написать сообщение целиком в скобках:</p>
+<p>Чтобы выйти из роли без кнопки, начните сообщение с <code>оос:</code> или <code>ooc:</code>, напишите его целиком в двойных скобках либо отправьте командой <code>/ooc вопрос</code>:</p>
 <ul>
 <li><code>((почему он так отреагировал?))</code></li>
-<li><code>(что сейчас знает Алекс?)</code></li>
+<li><code>оос: что сейчас знает Алекс?</code></li>
+<li><code>/ooc как развиваются их отношения?</code></li>
 </ul>
-<p>Также работают префиксы <code>ooc:</code> и <code>оос:</code>.</p>
-<p>Но для исправления памяти самый понятный способ — использовать <strong>«⋯»</strong> → <strong>«💬 OOC»</strong> → <strong>«🔄 Поправить историю»</strong>.</p>
-<p>Так Limerence точно понимает, что вы хотите не просто поговорить об истории, а исправить сохранённую информацию.</p>
+<p>Ответ в этом случае придёт с пометкой <strong>«❓ Автор:»</strong>. Исправлять запомненное этим способом ненадёжно: бот сам решает, вопрос это или жалоба на память, и может принять просьбу за обычный вопрос. Для правки используйте кнопку <strong>«⋯» → «💬 OOC» → «🔄 Поправить историю»</strong>: так Limerence точно понимает, что нужно исправить сохранённое, а не просто поговорить.</p>
 <hr />
-<h2 id="a-skobki-ooc">А скобки <code>(OOC)</code>?</h2>
-<p>Для разговора вне роли можно написать, например:</p>
-<p><code>(Почему он решил, что дверь открыта?)</code></p>
-<p>или использовать OOC через меню под последним ответом.</p>
-<p>OOC не является обычным сюжетным ходом и обрабатывается отдельно.</p>
+<h2 id="a-skobki-ooc">А одинарные скобки <code>(OOC)</code>?</h2>
+<p>Одинарные скобки бот читает как часть игры: <code>(он молча вышел)</code> — это действие вашего персонажа. Если в них стоит пометка, например <code>(Оос: пиши короче)</code>, бот понимает её как ремарку автора внутри хода и учитывает в этом ответе, оставаясь в роли.</p>
+<p>Такая ремарка не вопрос автору и не исправление памяти. Хотите получить ответ вне роли — пишите в двойных скобках или с <code>оос:</code> в начале. Хотите поправить запомненное — используйте «Поправить историю» (см. таблицу выше).</p>
 <p>Подробнее:</p>
-<p><a href="kak-ustroena-pamyat.html">Память Limerence</a></p>
+<p><a href="kak-ustroena-pamyat.html">Как устроена память</a></p>
 <hr /></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="scena.html">Сцена (/scene)</a></li><li><a href="izobrazheniya-v-scene.html">Изображения в сцене</a></li><li><a href="den-i-data.html">Игровой день и дата (/day)</a></li><li><a href="personazh-pishet-pervym.html">Персонаж пишет первым</a></li><li><a href="eksport.html">Экспорт истории (/export)</a></li></ul></div>
@@ -220,7 +259,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

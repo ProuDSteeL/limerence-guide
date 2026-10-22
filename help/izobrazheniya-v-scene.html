@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details open><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -170,7 +171,7 @@
 <details class="hc-toc"><summary>На этой странице · 4</summary><ol><li><a href="#kartinka-v-teme">🖼 Картинка в Теме</a></li><li><a href="#chto-model-vidit">Что модель видит</a></li><li><a href="#model-bez-zreniya">Если модель не умеет смотреть фото</a></li><li><a href="#ogranicheniya">Ограничения</a></li></ol></details>
 <div class="hc-doc"><h2 id="kartinka-v-teme">🖼 Картинка в Теме</h2>
 <p>В Тему можно прислать фото вместо текстового сообщения или вместе с ним. Подпись к фото бот читает как вашу реплику. Без подписи он передаёт модели пометку «фото прислано без подписи», а ход всё равно проходит.</p>
-<p>Перед ходом картинка проходит проверку безопасности. Если она не прошла, в игру она не попадает, и это может засчитаться как предупреждение. Подробности — на странице <a href="izobrazheniya.html">Проверка изображений</a>.</p>
+<p>Перед ходом картинка проходит проверку безопасности. Если она не прошла, в игру она не попадает, и это может засчитаться как предупреждение. Подробности — на странице <a href="izobrazheniya.html">Проверка изображений и PNG-карточек</a>.</p>
 <hr />
 <h2 id="chto-model-vidit">Что модель видит</h2>
 <p>Картинку модель получает только в этом ходу. В историю сохраняется текст сообщения, самого изображения в ней нет. Поэтому через несколько ходов модель помнит о картинке ровно то, что о ней сказали в тексте. Если на фото важная деталь, напишите о ней в подписи или в одном из следующих сообщений.</p>
@@ -183,7 +184,7 @@
 <ul>
 <li><strong>По умолчанию не больше пяти фото в минуту на одну Тему.</strong> Следующее фото в эту минуту пройдёт как обычный текстовый ход, без картинки.</li>
 <li><strong>Альбом из нескольких фото.</strong> В ход идёт только первое. Бот пишет: «Взяла в ход только первое фото альбома — остальные пропустила». Если подпись была под другим фото, в ход она не попадёт, пришлите её отдельным сообщением.</li>
-<li><strong>Подпись в формате OOC.</strong> Если подпись написана как вопрос автору, например в двойных скобках, фото к такому вопросу не прикладывается. Бот попросит прислать вопрос текстом без фото. Как работает OOC — на странице <a href="ooc.html">Разговор вне роли</a>.</li>
+<li><strong>Подпись в формате OOC.</strong> Если подпись начинается с <code>оос:</code> или целиком стоит в двойных скобках, это вопрос автору, а не реплика в сцене: к OOC-вопросам фото не прикладывается, и бот попросит прислать вопрос обычным текстом без фото. Одинарные скобки, даже <code>(Оос: …)</code>, остаются обычной подписью к ходу, а исправить подписью запомненное нельзя — для этого кнопка «Поправить историю». Как работает OOC — на странице <a href="ooc.html">Разговор вне роли (OOC)</a>.</li>
 </ul></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="izobrazheniya.html">Проверка изображений и PNG-карточек</a></li><li><a href="model-igry.html">Модель игры</a></li><li><a href="glossariy-generaciya.html">Глоссарий: генерация, история, поддержка</a></li><li><a href="ooc.html">Разговор вне роли (OOC)</a></li><li><a href="scena.html">Сцена (/scene)</a></li><li><a href="den-i-data.html">Игровой день и дата (/day)</a></li><li><a href="personazh-pishet-pervym.html">Персонаж пишет первым</a></li><li><a href="eksport.html">Экспорт истории (/export)</a></li></ul></div>
@@ -205,7 +206,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

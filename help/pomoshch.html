@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>С чего начать (/help) · Справочник Limerence</title>
+<title>Если Limerence работает неправильно · Справочник Limerence</title>
 <meta name="description" content="Если Limerence не отвечает, ведёт себя странно, забывает то, что должен помнить, неправильно применяет настройки или какая-то кнопка просто решила сегодня не…">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/pomoshch.html">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details open><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html" class="cur" aria-current="page">С чего начать (/help)</a>
+<a href="pomoshch.html" class="cur" aria-current="page">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -166,8 +167,8 @@
 <main class="hc-main">
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pomoshch.html">🛟 Помощь</a> › Если что-то не так</p>
 <div data-pagefind-body data-pagefind-meta="section:Помощь">
-<h1 data-pagefind-meta="title">С чего начать (/help)</h1>
-<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#snachala-opredelite-tip-problemy">Сначала определите тип проблемы</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#help">🛟 /help</a></li><li><a href="#guide">/guide</a></li><li><a href="#docs">📄 /docs</a></li></ol></details>
+<h1 data-pagefind-meta="title">Если Limerence работает неправильно</h1>
+<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#snachala-opredelite-tip-problemy">Сначала определите тип проблемы</a></li><li><a href="#help">🛟 /help</a></li><li><a href="#guide">/guide</a></li><li><a href="#docs">📄 /docs</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><p>Если Limerence не отвечает, ведёт себя странно, забывает то, что должен помнить, неправильно применяет настройки или какая-то кнопка просто решила сегодня не существовать — сначала стоит понять, где именно возникла проблема.</p>
 <p>Не каждая неудачная генерация является багом.</p>
 <p>Но и не нужно полчаса самостоятельно чинить то, что сломалось на стороне Limerence.</p>
@@ -222,14 +223,14 @@
 <p>Сначала стоит проверить:</p>
 <ul>
 <li>промпт;</li>
-<li><a href="nastroyki.html">Заметку автора</a>;</li>
+<li><a href="zametka-avtora.html">Заметку автора</a>;</li>
 <li>выбранную модель;</li>
 <li>активный <a href="presety.html">пресет</a>;</li>
 <li>Regex;</li>
 <li>Character Card;</li>
 <li><a href="lor.html">лор</a>;</li>
 <li>настройки DeepSeek;</li>
-<li><a href="generaciya.html">Temperature</a> и другие параметры генерации.</li>
+<li><a href="temperature.html">Temperature</a> и другие параметры генерации.</li>
 </ul>
 <p>Если после изменения конкретной настройки поведение резко сломалось — первым подозреваемым обычно является именно она.</p>
 <h3 id="4-vam-nuzhna-pomosch-a-ne-ispravlenie-baga">4. Вам нужна помощь, а не исправление бага</h3>
@@ -242,16 +243,7 @@
 <li>не понимаете, как работает функция.</li>
 </ul>
 <p>Для этого лучше использовать <code>/support</code>.</p>
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="chastye-problemy.html">Разбор проблем: модель, память, лор и оплата</a></li>
-<li><a href="dannye.html">Данные и приватность</a></li>
-<li><a href="upravlenie-istoriey.html">Управление историей: варианты, откат, ветки и восстановление</a></li>
-<li><a href="kak-ustroena-pamyat.html">Память Limerence</a></li>
-<li><a href="api-klyuch.html">Модели и API-ключи</a></li>
-<li><a href="moderaciya.html">Модерация, блокировки и апелляции</a></li>
-<li><a href="komandy.html">Команды Limerence: полный справочник</a></li>
-</ul>
+<hr />
 <h2 id="help">🛟 <code>/help</code></h2>
 <p>Открывает главный экран помощи.</p>
 <p>Здесь можно:</p>
@@ -276,9 +268,19 @@
 <li>Политику приватности;</li>
 <li>публичную оферту.</li>
 </ul>
-<hr /></div>
+<hr />
+<h2 id="chitayte-takzhe">Читайте также</h2>
+<ul>
+<li><a href="chastye-problemy.html">Частые проблемы</a></li>
+<li><a href="dannye.html">Какие данные хранятся</a></li>
+<li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li>
+<li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li>
+<li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li>
+<li><a href="moderaciya.html">Как работает модерация</a></li>
+<li><a href="komandy.html">Все команды</a></li>
+</ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li><li><a href="dannye.html">Какие данные хранятся</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="prompt.html">Промпт истории</a></li><li><a href="zametka-avtora.html">Заметка автора</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="chastye-problemy.html">Частые проблемы</a></li><li><a href="dannye.html">Какие данные хранятся</a></li></ul></div>
 <div class="hc-pn"><a href="status-podpiski.html"><small>← Назад</small>Где смотреть подписку (/stats)</a><a class="n" href="support-ili-diag.html"><small>Дальше →</small>/support или /diag</a></div>
 </main>
 </div>
@@ -297,7 +299,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

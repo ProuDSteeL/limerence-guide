@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Выбрать модель (/current) · Справочник Limerence</title>
+<title>Выбрать модель и проверить её (/current) · Справочник Limerence</title>
 <meta name="description" content="Откройте Тему, в которой хотите играть, и отправьте /settings .">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/vybor-modeli.html">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html" class="cur" aria-current="page">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html" class="cur" aria-current="page">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -166,8 +167,8 @@
 <main class="hc-main">
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nachalo.html">🚀 Начало</a></p>
 <div data-pagefind-body data-pagefind-meta="section:Начало">
-<h1 data-pagefind-meta="title">Выбрать модель (/current)</h1>
-<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#kak-vybrat-model">Как выбрать модель</a></li><li><a href="#esli-podklyucheno-neskolko-provayderov">Если подключено несколько провайдеров</a></li><li><a href="#kak-proverit-kakoy-klyuch-i-model-ispolzuyutsya">Как проверить, какой ключ и модель используются</a></li><li><a href="#current">🔎 /current</a></li><li><a href="#current-2">/current</a></li></ol></details>
+<h1 data-pagefind-meta="title">Выбрать модель и проверить её (/current)</h1>
+<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#kak-vybrat-model">Как выбрать модель</a></li><li><a href="#esli-podklyucheno-neskolko-provayderov">Если подключено несколько провайдеров</a></li><li><a href="#current">🔎 /current показывает, что реально работает</a></li></ol></details>
 <div class="hc-doc"><h2 id="kak-vybrat-model">Как выбрать модель</h2>
 <p>Откройте Тему, в которой хотите играть, и отправьте <code>/settings</code>.</p>
 <p>Нажмите <strong>«🎭 Модель игры»</strong>.</p>
@@ -201,45 +202,14 @@
 <p>Откройте нужную Тему: <code>/settings</code> → <strong>«🔀 Ключ игры (эта тема)»</strong> и выберите провайдера.</p>
 <p>Этот выбор относится только к текущей истории и не меняет основной ключ для остальных Тем.</p>
 <hr />
-<h2 id="kak-proverit-kakoy-klyuch-i-model-ispolzuyutsya">Как проверить, какой ключ и модель используются</h2>
-<p>Внутри нужной Темы отправьте <code>/current</code>.</p>
-<p>Limerence покажет основную информацию о текущей истории, в том числе:</p>
-<ul>
-<li>модель игры;</li>
-<li>ключ для игры;</li>
-<li>часть параметров генерации;</li>
-<li>техническую информацию о памяти.</li>
-</ul>
-<p>Это полезно, если подключено несколько ключей и непонятно, через какой именно сейчас работает история.</p>
-<hr />
-<h2 id="current">🔎 <code>/current</code></h2>
-<p>Показывает <strong>фактическую текущую конфигурацию истории</strong>.</p>
-<p>Особенно полезно для диагностики.</p>
-<p>Можно проверить, например:</p>
-<ul>
-<li>какая игровая модель используется;</li>
-<li>через какой провайдер идёт запрос;</li>
-<li>есть ли отдельный провайдер именно для этой Темы;</li>
-<li>какие модели используются вспомогательными системами;</li>
-<li>состояние контекста и памяти.</li>
-</ul>
+<span id="current-2"></span><span id="kak-proverit-kakoy-klyuch-i-model-ispolzuyutsya"></span><h2 id="current">🔎 <code>/current</code> показывает, что реально работает</h2>
+<p><code>/current</code> показывает <strong>фактическую текущую конфигурацию истории</strong>: игровую модель, провайдера, отдельный провайдер этой Темы (если задан), модели вспомогательных систем, состояние контекста и памяти. Команда работает внутри Темы.</p>
+<p>Различие простое: <code>/api</code> отвечает на вопрос «какие провайдеры вообще есть у моего аккаунта?», а <code>/current</code> — «что реально используется прямо сейчас в этой Теме?».</p>
 <p>Если кажется:</p>
 <blockquote>
 <p>«Я точно выбрала один API, а отвечает как будто другой»</p>
 </blockquote>
-<p>— первым делом имеет смысл посмотреть <code>/current</code>.</p>
-<p>Команда работает внутри Темы.</p>
-<hr />
-<h2 id="current-2"><code>/current</code></h2>
-<p>Если <code>/api</code> отвечает на вопрос:</p>
-<blockquote>
-<p>какие провайдеры вообще есть у моего аккаунта?</p>
-</blockquote>
-<p>то <code>/current</code> отвечает:</p>
-<blockquote>
-<p>что реально используется прямо сейчас в этой Теме?</p>
-</blockquote>
-<p>Это очень полезное различие.</p>
+<p>— первым делом посмотрите <code>/current</code>.</p>
 <hr /></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="pervyy-zapusk.html">Первый запуск</a></li><li><a href="gruppa-i-temy.html">Группа и Темы</a></li><li><a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a></li><li><a href="api-klyuch.html">Подключить свой API-ключ (/api)</a></li><li><a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a></li></ul></div>
@@ -261,7 +231,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

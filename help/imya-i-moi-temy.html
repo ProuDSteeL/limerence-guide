@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Имя Темы и «Мои темы» · Справочник Limerence</title>
-<meta name="description" content="Можно переименовать историю. Новое имя — от 1 до 30 символов.">
+<meta name="description" content="Можно переименовать историю: /settings → «⚙️ Расширенные» → «🗂 Тема» → «✏️ Имя» . Новое имя — от 1 до 30 символов, лишние пробелы схлопываются.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://limerence-ai.com/help/imya-i-moi-temy.html">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details open><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,9 +168,9 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-nastroyki.html">⚙️ Настройки</a> › Вид и Тема</p>
 <div data-pagefind-body data-pagefind-meta="section:Настройки">
 <h1 data-pagefind-meta="title">Имя Темы и «Мои темы»</h1>
-<details class="hc-toc"><summary>На этой странице · 5</summary><ol><li><a href="#imya-temy">✏️ Имя Темы</a></li><li><a href="#moi-temy">💾 Мои темы</a></li><li><a href="#samoe-vazhnoe">Самое важное</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#nazvanie-istorii">✏️ Название истории</a></li></ol></details>
-<div class="hc-doc"><h2 id="imya-temy">✏️ Имя Темы</h2>
-<p>Можно переименовать историю. Новое имя — от 1 до 30 символов.</p>
+<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#imya-temy">✏️ Имя Темы</a></li><li><a href="#moi-temy">💾 Мои темы</a></li><li><a href="#nazvanie-istorii">В Кабинете</a></li></ol></details>
+<div class="hc-doc"><span id="chitayte-takzhe"></span><span id="samoe-vazhnoe"></span><h2 id="imya-temy">✏️ Имя Темы</h2>
+<p>Можно переименовать историю: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🗂 Тема»</strong> → <strong>«✏️ Имя»</strong>. Новое имя — от 1 до 30 символов, лишние пробелы схлопываются.</p>
 <p>Limerence сохранит его у себя и попробует также переименовать Telegram-Тему.</p>
 <p>Для изменения названия непосредственно в Telegram боту нужны права управления Темами.</p>
 <hr />
@@ -177,36 +178,11 @@
 <p>Открывает список сохранённых историй Limerence.</p>
 <p>Оттуда можно управлять существующими сессиями и их данными.</p>
 <hr />
-<h2 id="samoe-vazhnoe">Самое важное</h2>
-<p>Расширенные настройки не предназначены для того, чтобы заменить хороший промпт, память, карточку или lorebook.</p>
-<p>Они дают дополнительный контроль над уже работающей системой.</p>
-<p>Условно:</p>
-<ul>
-<li><strong>Промпт</strong> — что модель должна делать.</li>
-<li><strong>Лор и память</strong> — что она должна знать.</li>
-<li><strong>Отыгрыш</strong> — как должна развиваться сцена.</li>
-<li><strong>Сэмплеры</strong> — как модель выбирает продолжение текста.</li>
-<li><strong>Вид</strong> — как результат показывается пользователю.</li>
-<li><strong>Regex</strong> — как текст автоматически преобразуется до или после генерации.</li>
-</ul>
-<p>Когда понимаешь эти слои, <code>/settings</code> перестаёт выглядеть как пульт управления атомным реактором и начинает быть вполне логичной системой.</p>
-<hr />
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="generaciya.html">Расширенные настройки: генерация</a></li>
-<li><a href="kabinet.html">Кабинет Limerence: обзор, истории и настройки</a></li>
-<li><a href="upravlenie-istoriey.html">Управление историей: варианты, откат, ветки и восстановление</a></li>
-<li><a href="nastroyki.html">Основные настройки истории</a></li>
-<li><a href="komandy.html">Команды Limerence: полный справочник</a></li>
-</ul>
-<h2 id="nazvanie-istorii">✏️ Название истории</h2>
-<p>В Кабинете можно задать собственное название истории.</p>
-<p>Например: «Блэкхолл», «Cyberpunk AU», «Адриан — основная ветка».</p>
-<p>Название используется в списке историй Limerence и других интерфейсах бота.</p>
-<p>Текущая форма Кабинета принимает название до 64 символов.</p>
-<p>Если имя Telegram-Темы уже было подхвачено Limerence, оно появится здесь автоматически. Его всё равно можно заменить своим.</p></div>
+<h2 id="nazvanie-istorii">В Кабинете</h2>
+<p>В Кабинете название истории задаётся там же, где в боте, и по тому же правилу: от 1 до 30 символов. Например: «Блэкхолл», «Cyberpunk AU».</p>
+<p>Название видно в списке историй Limerence и в других интерфейсах бота. Если имя Telegram-Темы уже было подхвачено Limerence, оно появится в Кабинете автоматически; его можно заменить своим.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="nastroyki.html">Настройки истории: обзор (/settings)</a></li><li><a href="komandy.html">Все команды</a></li><li><a href="shapka-sceny.html">Шапка сцены</a></li><li><a href="stat-panel.html">Стат-панель</a></li><li><a href="striming-oformlenie.html">Стриминг и оформление ответа</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="shapka-sceny.html">Шапка сцены</a></li><li><a href="stat-panel.html">Стат-панель</a></li><li><a href="striming-oformlenie.html">Стриминг и оформление ответа</a></li><li><a href="regex.html">Regex-скрипты (/regex)</a></li><li><a href="uvedomleniya-o-sboyah.html">Уведомления о сбоях</a></li></ul></div>
 <div class="hc-pn"><a href="regex.html"><small>← Назад</small>Regex-скрипты (/regex)</a><a class="n" href="uvedomleniya-o-sboyah.html"><small>Дальше →</small>Уведомления о сбоях</a></div>
 </main>
 </div>
@@ -225,7 +201,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

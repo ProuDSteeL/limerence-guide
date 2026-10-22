@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pamyat-i-lor.html">🧠 Память и лор</a> › Память</p>
 <div data-pagefind-body data-pagefind-meta="section:Память и лор">
 <h1 data-pagefind-meta="title">Состояние и объём памяти (/storage)</h1>
-<details class="hc-toc"><summary>На этой странице · 3</summary><ol><li><a href="#kak-posmotret-sostoyanie-pamyati">Как посмотреть состояние памяти</a></li><li><a href="#kak-posmotret-obem-pamyati-i-hranilischa">Как посмотреть объём памяти и хранилища</a></li><li><a href="#storage">📦 /storage</a></li></ol></details>
+
 <div class="hc-doc"><h2 id="kak-posmotret-sostoyanie-pamyati">Как посмотреть состояние памяти</h2>
 <p>Откройте нужную Тему и отправьте <code>/menu</code>.</p>
 <p>В меню истории есть строка <strong>«🧠 Память»</strong>.</p>
@@ -183,7 +184,7 @@
 <p>Важно: этот индикатор показывает техническое состояние системы памяти, а не ставит оценку тому, насколько хорошо модель помнит конкретную сцену.</p>
 </blockquote>
 <hr />
-<h2 id="kak-posmotret-obem-pamyati-i-hranilischa">Как посмотреть объём памяти и хранилища</h2>
+<span id="storage"></span><h2 id="kak-posmotret-obem-pamyati-i-hranilischa">Как посмотреть объём памяти и хранилища</h2>
 <p>Отправьте <code>/storage</code>.</p>
 <p>Limerence покажет общую статистику вашего хранилища:</p>
 <ul>
@@ -192,22 +193,10 @@
 <li>сохранённые данные памяти;</li>
 <li>объём <a href="lor.html">лора</a>;</li>
 <li>общий занятый объём;</li>
-<li>доступный лимит.</li>
+<li>доступный лимит (хранилище — функция уровня аккаунта, а не одной Темы).</li>
 </ul>
 <p>Нажмите <strong>«💾 Мои темы»</strong>, чтобы посмотреть, сколько места занимает каждая история.</p>
-<p>Память отыгрыша постепенно растёт вместе с историей — это нормально.</p>
-<hr />
-<h2 id="storage">📦 <code>/storage</code></h2>
-<p>Открывает управление хранилищем Limerence.</p>
-<p>Здесь можно посмотреть:</p>
-<ul>
-<li>используемый объём;</li>
-<li>данные по историям;</li>
-<li>общее использование хранилища;</li>
-<li>доступные действия очистки.</li>
-</ul>
-<p>Это уже скорее функция уровня аккаунта, а не управление одним игровым ходом.</p>
-<hr /></div>
+<p>Память отыгрыша постепенно растёт вместе с историей — это нормально.</p></div>
 </div>
 <div class="hc-see"><h2>См. также</h2><ul><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a></li><li><a href="chto-kuda.html">Память, промпт, лор и карточка — что куда</a></li><li><a href="udalit-temu.html">Очистить историю или удалить Тему</a></li></ul></div>
 <div class="hc-pn"><a href="chto-kuda.html"><small>← Назад</small>Память, промпт, лор и карточка — что куда</a><a class="n" href="udalit-temu.html"><small>Дальше →</small>Очистить историю или удалить Тему</a></div>
@@ -228,7 +217,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

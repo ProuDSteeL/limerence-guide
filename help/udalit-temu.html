@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,24 +168,25 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-pamyat-i-lor.html">🧠 Память и лор</a> › Память</p>
 <div data-pagefind-body data-pagefind-meta="section:Память и лор">
 <h1 data-pagefind-meta="title">Очистить историю или удалить Тему</h1>
-<details class="hc-toc"><summary>На этой странице · 6</summary><ol><li><a href="#ochistit-istoriyu-ili-udalit-temu-ne-odno-i-to-zhe">Очистить историю или удалить Тему — не одно и то же</a></li><li><a href="#kak-polnostyu-udalit-temu-iz-limerence">Как полностью удалить Тему из Limerence</a></li><li><a href="#mozhno-li-vosstanovit-udalennuyu-temu">Можно ли восстановить удалённую Тему</a></li><li><a href="#ne-udalyayte-vsyu-istoriyu-radi-odnoy-oshibki">Не удаляйте всю историю ради одной ошибки</a></li><li><a href="#udalit-temu">🗑 Удалить тему</a></li><li><a href="#udalenie-dannyh-odnoy-istorii">Удаление данных одной истории</a></li></ol></details>
-<div class="hc-doc"><h2 id="ochistit-istoriyu-ili-udalit-temu-ne-odno-i-to-zhe">Очистить историю или удалить Тему — не одно и то же</h2>
+<details class="hc-toc"><summary>На этой странице · 4</summary><ol><li><a href="#ochistit-istoriyu-ili-udalit-temu-ne-odno-i-to-zhe">Очистить историю или удалить Тему — не одно и то же</a></li><li><a href="#kak-polnostyu-udalit-temu-iz-limerence">Как полностью удалить Тему из Limerence</a></li><li><a href="#mozhno-li-vosstanovit-udalennuyu-temu">Можно ли восстановить удалённую Тему</a></li><li><a href="#ne-udalyayte-vsyu-istoriyu-radi-odnoy-oshibki">Не удаляйте всю историю ради одной ошибки</a></li></ol></details>
+<div class="hc-doc"><span id="udalenie-dannyh-odnoy-istorii"></span><h2 id="ochistit-istoriyu-ili-udalit-temu-ne-odno-i-to-zhe">Очистить историю или удалить Тему — не одно и то же</h2>
 <p>В Limerence есть два разных действия.</p>
-<h3 id="clear-nachat-etu-istoriyu-zanovo"><code>/clear</code> — начать эту историю заново</h3>
+<span id="clear"></span><h3 id="clear-nachat-etu-istoriyu-zanovo"><code>/clear</code> — начать эту историю заново</h3>
 <p>Используйте <code>/clear</code>, если сама Тема и её настройки вам нужны, но вы хотите стереть произошедший сюжет.</p>
 <p>Отправьте внутри Темы <code>/clear</code>. Limerence попросит подтверждение.</p>
 <p>После очистки удаляются данные самого отыгрыша:</p>
 <ul>
 <li>сообщения истории;</li>
-<li>память о произошедших событиях;</li>
-<li>состояние сцены;</li>
+<li>память о произошедших событиях и сюжетные сводки;</li>
+<li>состояние сцены и игровой день;</li>
+<li>заметка автора;</li>
 <li>другие данные, сформированные из прошедшего сюжета.</li>
 </ul>
-<p>При этом остаётся сама конфигурация истории — например, её настройки, карточка и подключённые к ней инструменты.</p>
+<p>При этом остаётся сама конфигурация истории: модель и контекст, лор, карточка персонажа, персона, подключённые API-провайдеры.</p>
 <p>То есть <code>/clear</code> означает примерно: «Оставить эту Тему, но начать сюжет с чистого листа».</p>
-<p>Удалённые данные предварительно попадают в <a href="upravlenie-istoriey.html">корзину</a> и могут быть восстановлены через <code>/restore</code>.</p>
+<p>Удалённые данные предварительно попадают в <a href="korzina.html">корзину</a> и могут быть восстановлены через <code>/restore</code>.</p>
 <hr />
-<h2 id="kak-polnostyu-udalit-temu-iz-limerence">Как полностью удалить Тему из Limerence</h2>
+<span id="polnoe-udalenie-temy-iz-limerence"></span><span id="udalit-temu"></span><h2 id="kak-polnostyu-udalit-temu-iz-limerence">Как полностью удалить Тему из Limerence</h2>
 <p>Если история больше вообще не нужна, её можно удалить целиком.</p>
 <p>Откройте внутри нужной Темы: <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🗂 Тема»</strong> → <strong>«🗑️ Удалить тему»</strong>.</p>
 <p>Limerence попросит подтверждение.</p>
@@ -201,7 +203,7 @@
 <p>Она останется в группе, но для Limerence будет выглядеть как новая: бот больше не будет использовать удалённую сессию и её настройки.</p>
 <hr />
 <h2 id="mozhno-li-vosstanovit-udalennuyu-temu">Можно ли восстановить удалённую Тему</h2>
-<p>После удаления через настройки основную сессию и историю можно восстановить в течение 14 дней командой <code>/restore</code>.</p>
+<p>После удаления через настройки основную сессию и историю можно восстановить в течение 14 дней командой <code>/restore</code> (подробнее — <a href="korzina.html">корзина</a>).</p>
 <p>После этого срока резервная копия удаляется.</p>
 <blockquote>
 <p>Важно: полное удаление Темы затрагивает больше типов данных, чем обычный <code>/clear</code>, поэтому не следует использовать его просто для перезапуска сюжета.</p>
@@ -214,45 +216,11 @@
 <li>Если модель неправильно запомнила один факт → используйте OOC → <strong>«Поправить историю»</strong>.</li>
 <li>Если неправильное событие появилось в недавнем отыгрыше → исправьте или перепишите саму историю.</li>
 <li>Если хотите начать сюжет заново, но сохранить настройки → <code>/clear</code>.</li>
-<li>Если история больше вообще не нужна → <code>/settings</code> → <strong>«Расширенные»</strong> → <strong>«Тема»</strong> → <strong>«Удалить тему»</strong>.</li>
+<li>Если история больше вообще не нужна → <code>/settings</code> → <strong>«⚙️ Расширенные»</strong> → <strong>«🗂 Тема»</strong> → <strong>«🗑️ Удалить тему»</strong>.</li>
 </ul>
-<p>Это четыре совершенно разных задачи. Выбирайте инструмент по проблеме, а не по тому, у какой кнопки страшнее значок.</p>
-<hr />
-<h2 id="udalit-temu">🗑 Удалить тему</h2>
-<p>Полностью удаляет сессию Limerence для текущей Telegram-Темы: историю, память, настройки, связанный лор и состояние сцены.</p>
-<p>Сама Telegram-Тема остаётся на месте.</p>
-<p>Восстановить удалённую сессию можно через <code>/restore</code> в течение 14 дней.</p>
-<p>Подробнее удаление и восстановление мы разбирали в статье <strong>«Управление историей: варианты, откат, ветки и восстановление»</strong>.</p>
-<hr />
-<h2 id="udalenie-dannyh-odnoy-istorii">Удаление данных одной истории</h2>
-<p>Полное удаление аккаунта нужно далеко не всегда.</p>
-<p>Если вы хотите избавиться только от одной истории, есть более точные инструменты.</p>
-<h3 id="clear"><code>/clear</code></h3>
-<p><code>/clear</code> очищает содержимое текущей истории:</p>
-<ul>
-<li>историю сообщений;</li>
-<li>память;</li>
-<li>состояние сцены;</li>
-<li>сюжетные сводки.</li>
-</ul>
-<p>При этом сохраняются многие настройки Темы и пользовательские объекты.</p>
-<p>Например:</p>
-<ul>
-<li>модель;</li>
-<li>контекст;</li>
-<li>Character Card;</li>
-<li>лор;</li>
-<li>персона;</li>
-<li>API-провайдеры.</li>
-</ul>
-<p>Используйте <code>/clear</code>, если хотите начать новую историю в той же Теме, сохранив её конфигурацию.</p>
-<h3 id="polnoe-udalenie-temy-iz-limerence">Полное удаление Темы из Limerence</h3>
-<p>Есть более сильное действие: <code>/settings</code> → «⚙️ Расширенные» → «Тема» → удаление сессии.</p>
-<p>Оно удаляет саму сессию Limerence этой Темы вместе с основной историей и её настройками.</p>
-<p>При этом Telegram-Тема физически остаётся.</p>
-<p>Основные данные удалённой сессии можно восстановить через <code>/restore</code> в течение <strong>14 дней</strong>. Это страховка от случайного удаления.</p></div>
+<p>Это четыре совершенно разных задачи. Выбирайте инструмент по проблеме, а не по тому, у какой кнопки страшнее значок.</p></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="upravlenie-istoriey.html">Управление историей: что выбрать</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a></li><li><a href="chto-kuda.html">Память, промпт, лор и карточка — что куда</a></li><li><a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="korzina.html">Корзина и восстановление (/restore, /trash)</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="ispravit-pamyat.html">Исправить память («Поправить историю»)</a></li><li><a href="chto-kuda.html">Память, промпт, лор и карточка — что куда</a></li><li><a href="obem-pamyati.html">Состояние и объём памяти (/storage)</a></li></ul></div>
 <div class="hc-pn"><a href="obem-pamyati.html"><small>← Назад</small>Состояние и объём памяти (/storage)</a><a class="n" href="lor.html"><small>Дальше →</small>Лор: что это и когда он лучше промпта (/lore)</a></div>
 </main>
 </div>
@@ -271,7 +239,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>

@@ -34,7 +34,7 @@
 <a href="gruppa-i-temy.html">Группа и Темы</a>
 <a href="gde-vyzyvat-komandy.html">Где вызывать команды: личка, группа, Тема</a>
 <a href="api-klyuch.html">Подключить свой API-ключ (/api)</a>
-<a href="vybor-modeli.html">Выбрать модель (/current)</a>
+<a href="vybor-modeli.html">Выбрать модель и проверить её (/current)</a>
 <a href="klyuch-igry-i-pamyati.html">Ключ игры и ключ памяти</a>
 </details>
 <details><summary>🎭 Игра</summary>
@@ -73,13 +73,14 @@
 <a href="lor-import-world-book.html">Импорт World Book и Character Book</a>
 <a href="lor-eksport-udalenie.html">Экспорт и удаление лора</a>
 <div class="g">Персонажи</div>
+<a href="geroy-mir-ty.html">Герой, мир и вы: карточка, лор и персона</a>
 <a href="katalog-geroev.html">Каталог героев (/catalog)</a>
-<a href="kartochka-personazha.html">Карточка персонажа: что это</a>
+<a href="kartochka-personazha.html">Карточка героя: что это</a>
 <a href="import-kartochki.html">Импорт готовой карточки (/import)</a>
 <a href="privetstvie.html">Первое сообщение и приветствия</a>
 <a href="svoya-kartochka.html">Своя карточка (/newcard)</a>
-<a href="moi-kartochki.html">Мои карточки и смена персонажа (/cards)</a>
-<a href="persona-igroka.html">Персона игрока (/profile)</a>
+<a href="moi-kartochki.html">Мои карточки героев и смена героя (/cards)</a>
+<a href="persona-igroka.html">Вы в истории: персона игрока (/profile)</a>
 </details>
 <details><summary>⚙️ Настройки</summary>
 <div class="g">Основные</div>
@@ -139,7 +140,7 @@
 </details>
 <details><summary>🛟 Помощь</summary>
 <div class="g">Если что-то не так</div>
-<a href="pomoshch.html">С чего начать (/help)</a>
+<a href="pomoshch.html">Если Limerence работает неправильно</a>
 <a href="support-ili-diag.html">/support или /diag</a>
 <a href="bag-report.html">Как оформить баг-репорт</a>
 <a href="posle-otpravki.html">После отправки репорта</a>
@@ -167,7 +168,7 @@
 <p class="hc-crumbs"><a href="index.html">Справочник</a> › <a href="razdel-kabinet.html">🗂 Кабинет</a></p>
 <div data-pagefind-body data-pagefind-meta="section:Кабинет">
 <h1 data-pagefind-meta="title">Кабинет и бот: что где (/app)</h1>
-<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#kabinet-i-bot-dopolnyayut-drug-druga">Кабинет и бот дополняют друг друга</a></li><li><a href="#izmeneniya-obychno-primenyayutsya-srazu">Изменения обычно применяются сразу</a></li><li><a href="#esli-kabinet-pokazyvaet-ne-to-chto-bot">Если Кабинет показывает не то, что бот</a></li><li><a href="#esli-kabinet-ne-otkryvaetsya">Если Кабинет не открывается</a></li><li><a href="#chto-kabinet-ne-delaet-s-vashey-istoriey-sam">Что Кабинет НЕ делает с вашей историей сам</a></li><li><a href="#korotko">Коротко</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li><li><a href="#app-i-cabinet">🗂 /app и /cabinet</a></li></ol></details>
+<details class="hc-toc"><summary>На этой странице · 8</summary><ol><li><a href="#kabinet-i-bot-dopolnyayut-drug-druga">Кабинет и бот дополняют друг друга</a></li><li><a href="#izmeneniya-obychno-primenyayutsya-srazu">Изменения обычно применяются сразу</a></li><li><a href="#esli-kabinet-pokazyvaet-ne-to-chto-bot">Если Кабинет показывает не то, что бот</a></li><li><a href="#esli-kabinet-ne-otkryvaetsya">Если Кабинет не открывается</a></li><li><a href="#chto-kabinet-ne-delaet-s-vashey-istoriey-sam">Что Кабинет НЕ делает с вашей историей сам</a></li><li><a href="#korotko">Коротко</a></li><li><a href="#app-i-cabinet">🗂 /app и /cabinet</a></li><li><a href="#chitayte-takzhe">Читайте также</a></li></ol></details>
 <div class="hc-doc"><h2 id="kabinet-i-bot-dopolnyayut-drug-druga">Кабинет и бот дополняют друг друга</h2>
 <p>Сейчас правильнее воспринимать Кабинет не как «полную замену всех Telegram-команд», а как более удобный графический интерфейс к значительной части Limerence.</p>
 <p>Особенно хорош Кабинет для того, что неудобно редактировать цепочками сообщений:</p>
@@ -206,7 +207,7 @@
 <p>Например:</p>
 <ul>
 <li>изменили промпт → нажали «Сохранить» у промпта;</li>
-<li>переключили <a href="generaciya.html">Temperature</a> → значение изменилось;</li>
+<li>переключили <a href="temperature.html">Temperature</a> → значение изменилось;</li>
 <li>включили лор-карточку → она включилась;</li>
 <li>выбрали пресет → он применился;</li>
 <li>изменили карточку → нажали «Сохранить» в редакторе карточки.</li>
@@ -283,14 +284,6 @@
 <p>И главное: Кабинет уже является полноценным интерфейсом управления Limerence, но это ещё не его финальная версия.</p>
 <p>Если нужного действия пока нет на экране, проверьте соответствующую команду бота — многие возможности будут постепенно переноситься и расширяться.</p>
 <hr />
-<h2 id="chitayte-takzhe">Читайте также</h2>
-<ul>
-<li><a href="kabinet.html">Кабинет Limerence: обзор, истории и настройки</a></li>
-<li><a href="kartochka-personazha.html">Персонажи и карточки</a></li>
-<li><a href="lor.html">Лор: как настроить канон мира и персонажей</a></li>
-<li><a href="kak-ustroena-pamyat.html">Память Limerence</a></li>
-<li><a href="presety.html">Пресеты: как они работают и как их использовать</a></li>
-</ul>
 <h2 id="app-i-cabinet">🗂 <code>/app</code> и <code>/cabinet</code></h2>
 <p>Открывают Кабинет Limerence.</p>
 <p>Из игровой Темы Кабинет открывается через личный чат, но Limerence может передать ему именно текущую историю.</p>
@@ -305,10 +298,18 @@
 <li>статистикой.</li>
 </ul>
 <p>Подробнее:</p>
-<p><a href="kabinet.html">Кабинет Limerence</a></p>
-<hr /></div>
+<p><a href="kabinet.html">Кабинет: как открыть и что внутри</a></p>
+<hr />
+<h2 id="chitayte-takzhe">Читайте также</h2>
+<ul>
+<li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li>
+<li><a href="kartochka-personazha.html">Карточка героя: что это</a></li>
+<li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li>
+<li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li>
+<li><a href="presety.html">Пресеты: что это (/preset)</a></li>
+</ul></div>
 </div>
-<div class="hc-see"><h2>См. также</h2><ul><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="generaciya.html">Генерация: обзор</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="kartochka-personazha.html">Карточка персонажа: что это</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="kabinet-persony-kartochki.html">Персоны, карточки и лор в Кабинете</a></li><li><a href="kabinet-sohranennye-statistika.html">Сохранённые ответы и статистика</a></li></ul></div>
+<div class="hc-see"><h2>См. также</h2><ul><li><a href="lor.html">Лор: что это и когда он лучше промпта (/lore)</a></li><li><a href="presety.html">Пресеты: что это (/preset)</a></li><li><a href="temperature.html">Temperature</a></li><li><a href="kabinet.html">Кабинет: как открыть и что внутри</a></li><li><a href="kartochka-personazha.html">Карточка героя: что это</a></li><li><a href="kak-ustroena-pamyat.html">Как устроена память</a></li><li><a href="kabinet-persony-kartochki.html">Персоны, карточки и лор в Кабинете</a></li><li><a href="kabinet-sohranennye-statistika.html">Сохранённые ответы и статистика</a></li></ul></div>
 <div class="hc-pn"><a href="kabinet-persony-kartochki.html"><small>← Назад</small>Персоны, карточки и лор в Кабинете</a><a class="n" href="kabinet-sohranennye-statistika.html"><small>Дальше →</small>Сохранённые ответы и статистика</a></div>
 </main>
 </div>
@@ -327,7 +328,7 @@
   <div><h4>Проект</h4><ul>
    <li><a href="../about.html">О проекте</a></li>
    <li><a href="../donate.html">Поддержать</a></li>
-   <li><a href="https://t.me/+NS0PicdhgAwzOTg1" target="_blank" rel="noopener">Сообщество ↗</a></li>
+   <li><a href="https://t.me/Limerence_Stories" target="_blank" rel="noopener">Сообщество ↗</a></li>
   </ul></div>
   <div><h4>Документы</h4><ul>
    <li><a href="../legal/">Все документы</a></li>
